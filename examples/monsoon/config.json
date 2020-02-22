@@ -1,0 +1,51 @@
+{
+  "type": "web",
+  "devices": {
+    "nexus5x": {}
+  },
+  "replications": 1,
+  "browsers": ["firefox"],
+  "paths": [
+    "https://google.com/",
+    "https://apple.com/",
+    "https://wikipedia.com/"
+  ],
+  "profilers":{
+    "monsoon": {
+      "id": 1111,      
+      "voltage": 3.7,
+      "ramp": "False",
+      "max_current": 2,
+      "max_powerup_current": 2,
+      "usb_passthrough": 2,
+      "use_case": "ABC",
+      "sampling_method": {
+	"sample_num": 2,
+	"offset": 1,
+	"live": "True"
+      }
+    },
+      "subject_aggregation": "none",
+      "experiment_aggregation" : "Scripts/aggregate_android_plugin.py",
+      "sample_interval": 200,
+      "data_points": ["cpu", "mem"]
+    }
+  },
+  "scripts": {
+    "before_experiment": "Scripts/before_experiment.py",
+    "before_run": "Scripts/before_run.py",
+    "after_launch": "Scripts/after_launch.py",
+    "interaction": [
+      {
+        "type": "python3",
+        "path": "Scripts/interaction.py",
+        "timeout": 500,
+        "logcat_regex": "some keyword"
+      }
+    ],
+    "before_close": "Scripts/before_close.py",
+    "after_run": "Scripts/after_run.py",
+    "after_experiment": "Scripts/after_experiment.py"
+  },
+  "time_between_run": 100
+}
