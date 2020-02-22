@@ -12,8 +12,7 @@ You'll need:
 - Android SDK Tools (`sudo apt install monkeyrunner`)
 - JDK 8 (NOT JDK 9) (`sudo apt install openjdk-8-jre`)
 - lxml (`sudo apt install python-lxml`)
-- Pluginbase (`pip install pluginbase`)
-- Slugify (`pip install python-slugify`)
+- Install Python requirements (`pip install -r requirements.txt`)
 
 Additionally, the following are also required for the Batterystats method:
 - power_profile.xml (retrievable from the device using [APKTool](https://github.com/iBotPeaches/Apktool))
@@ -54,6 +53,21 @@ Path to power_profile.xml. Example path: `android-runner/example/batterystats/po
 
 **type** *string*
 Type of the experiment. Can be `web`, `native` or 'plugintest'
+
+**device_spec** *string*
+Specify this property inside of your config to specify a `devices.json` outside of the Android Runner repository. For example:
+
+ ``` json
+ {
+   ....
+   "type": "native",
+   "devices_spec": "/home/user/experiments/devices.json",
+   "devices": {
+     "nexus6p": {}
+   },
+   ...
+ }
+ ```
 
 **replications** *positive integer*
 Number of times an experiment is run.
@@ -145,7 +159,9 @@ A JSON object to describe the profilers to be used and their arguments. Below ar
     "batterystats": {
       "cleanup": true,
       "subject_aggregation": "default",
-      "experiment_aggregation": "default"
+      "experiment_aggregation": "default",
+      "enable_systrace_parsing": true,
+      "python2_path": "python2"
     }
   }
 ```
@@ -157,6 +173,12 @@ Specify which experiment aggregation to use. The default is the experiment aggre
 
 **cleanup** *boolean*
 Delete log files required by Batterystats after completion of the experiment. The default is *true*.
+
+**enable_systrace_parsing** *boolean*
+The Batterystats profiler uses the profiling tool Systrace internally to measure CPU specific activity and energy consumption on the mobile device. For some devices the parsing of the output of Systrace fails, causing the experiment run to fail. You can safely disable the Systrace parsing when you encounter Systrace parsing errors given that your experiment does not need rely on CPU specific information, but rather on the overall energy consumption of the mobile device. The overall energy consumption is not affected by the Systrace logs since it is tracked using another tool. The default is *true*.
+
+**python2_path** *string*
+The path to python 2 that is used to launch Systrace. The default is *python2*.
 
 **scripts** *JSON*
 A JSON list of types and paths of scripts to run. Below is an example:
