@@ -5,7 +5,7 @@ import timeit
 import threading
 import csv
 
-from ExperimentRunner.Plugins.Profiler import Profiler
+from .Profiler import Profiler
 
 
 class ConfigError(Exception):

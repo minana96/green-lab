@@ -21,7 +21,7 @@ class PluginHandler(object):
         self.paths = paths.paths_dict()
 
         self.plugin_base = PluginBase(package='ExperimentRunner.plugins')
-        if self.name_lower in ['android', 'trepn', 'batterystats', 'frametimes']:
+        if self.name_lower in ['android', 'trepn', 'batterystats', 'frametimes', 'garbagecollection']:
             plugin_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'Plugins')
             self.plugin_source = self.plugin_base.make_plugin_source(searchpath=[plugin_path])
             self.pluginModule = self.plugin_source.load_plugin(self.moduleName)
