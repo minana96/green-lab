@@ -108,3 +108,6 @@ examples/logs
 .vscode
 
 !com.quicinc.trepn.apk
+
+# ignore any ouputs of experiments
+output/
