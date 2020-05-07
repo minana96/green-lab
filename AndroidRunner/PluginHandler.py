@@ -21,18 +21,20 @@ class PluginHandler(object):
         self.paths = paths.paths_dict()
 
         self.plugin_base = PluginBase(package='AndroidRunner.plugins')
-        if self.name_lower in ['android', 'trepn', 'batterystats', 'frametimes', 'garbagecollection']:
-            plugin_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'Plugins')
-            self.plugin_source = self.plugin_base.make_plugin_source(searchpath=[plugin_path])
+
+        # Check lower-cased plugin directory files without extension for the the requested plugin name
+        runner_plugin_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'Plugins')
+        if self.name_lower in map(lambda x: os.path.splitext(x)[0].lower(), self.list_file_names(runner_plugin_path)):
+            self.plugin_source = self.plugin_base.make_plugin_source(searchpath=[runner_plugin_path])
             self.pluginModule = self.plugin_source.load_plugin(self.moduleName)
             self.currentProfiler = getattr(self.pluginModule, self.moduleName)(params, self.paths)
             self.name = self.name_lower
         else:
-            plugin_path = os.path.join(paths.CONFIG_DIR, 'Plugins')
-            if os.path.isdir(plugin_path):
+            config_plugin_path = os.path.join(paths.CONFIG_DIR, 'Plugins')
+            if os.path.isdir(config_plugin_path):
                 copyfile(os.path.join(paths.ROOT_DIR, 'AndroidRunner', 'Plugins', 'Profiler.py'), os.path.join(
-                    plugin_path, 'Profiler.py'))
-                self.plugin_source = self.plugin_base.make_plugin_source(searchpath=[plugin_path])
+                    config_plugin_path, 'Profiler.py'))
+                self.plugin_source = self.plugin_base.make_plugin_source(searchpath=[config_plugin_path])
                 self.pluginModule = self.plugin_source.load_plugin(self.name)
                 self.currentProfiler = getattr(self.pluginModule, self.name)(params, self.paths)
             else:
@@ -139,3 +141,9 @@ class PluginHandler(object):
         # https://stackoverflow.com/a/800201
         return [name for name in os.listdir(a_dir)
                 if os.path.isdir(os.path.join(a_dir, name))]
+
+    @staticmethod
+    def list_file_names(a_dir):
+        """List the immediate file names found a_dir without file extension"""
+        return [name for name in os.listdir(a_dir)
+                if not os.path.isdir(os.path.join(a_dir, name))]
