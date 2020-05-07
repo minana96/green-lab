@@ -26,7 +26,11 @@ class Garbagecollection(Profiler):
 
     def collect_results(self, device, path=None):
         device.shell('logcat -f /mnt/sdcard/logcat.txt -d')
-        device.pull('/mnt/sdcard/logcat.txt', self.logcat_output)
+
+        if 'error' in device.pull('/mnt/sdcard/logcat.txt', self.logcat_output).decode():
+            self.logger.critical('Failed to pull logcat log file from the device which makes it impossible to gather GC calls.')
+            return
+
         device.shell('rm -f /mnt/sdcard/logcat.txt')
 
         collections_filename = 'collections_{}_{}.csv'.format(device.id, time.strftime('%Y.%m.%d_%H%M%S'))
