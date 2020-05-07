@@ -165,6 +165,29 @@ A JSON object to describe the profilers to be used and their arguments. Below ar
     }
   }
 ```
+
+```json
+  "profilers": {
+    "Garbagecollection": {
+      "subject_aggregation" : "default"
+    }
+  }
+```
+The garbage collection (GC) plugin gathers and counts GC log statements by searching in ADB's logcat for logs that meet the format of a GC call as described [here](https://dzone.com/articles/understanding-android-gc-logs).
+The default subject aggregation lists the counted GC calls in a single file for easy further processing.
+```json
+  "profilers": {
+    "Frametimes": {
+      "subject_aggregation" : "default",
+      "sample_interval": 1000
+    }
+  }
+```
+The frame times plugin gathers unique frame rendering durations (in nanoseconds) by utilizing `dumpsys gfxinfo framestats` and counts the amount of delayed frames that occurred following the 16ms threshold [defined by Google](https://developer.android.com/training/testing/performance). 
+The sample interval is configurable but advised to keep under 120 seconds as the framestats command returns only data from frames rendered in the past 120 seconds as described [here](https://developer.android.com/training/testing/performance).
+Shorter sample intervals will not cause duplication in the frames gathered as only unique frames are kept.
+The default subject aggregation consists of combining both the frametimes as the delayed frames count in single files for easy further processing.
+ 
 **subject_aggregation** *string*
 Specify which subject aggregation to use. The default is the subject aggregation provided by the profiler. If a user specified aggregation script is used then the script should contain a ```bash main(dummy, data_dir)``` method, as this method is used as the entry point to the script.
 
