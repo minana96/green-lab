@@ -5,7 +5,7 @@ import timeit
 import threading
 import csv
 
-from .Profiler import Profiler
+from AndroidRunner.Plugins.Profiler import Profiler
 
 
 class ConfigError(Exception):

@@ -3,7 +3,7 @@ import os
 import time
 import csv
 
-from .Profiler import Profiler
+from AndroidRunner.Plugins.Profiler import Profiler
 
 
 class ConfigError(Exception):

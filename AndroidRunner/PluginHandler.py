@@ -22,10 +22,10 @@ class PluginHandler(object):
 
         self.plugin_base = PluginBase(package='AndroidRunner.plugins')
 
-        # Check lower-cased plugin directory files without extension for the the requested plugin name
+        # Check lower-cased plugin directory's sub-directories for the the requested plugin name
         runner_plugin_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'Plugins')
-        if self.name_lower in map(lambda x: os.path.splitext(x)[0].lower(), self.list_file_names(runner_plugin_path)):
-            self.plugin_source = self.plugin_base.make_plugin_source(searchpath=[runner_plugin_path])
+        if self.name_lower in self.list_subdir(runner_plugin_path):
+            self.plugin_source = self.plugin_base.make_plugin_source(searchpath=[os.path.join(runner_plugin_path, self.name_lower)])
             self.pluginModule = self.plugin_source.load_plugin(self.moduleName)
             self.currentProfiler = getattr(self.pluginModule, self.moduleName)(params, self.paths)
             self.name = self.name_lower
@@ -141,9 +141,3 @@ class PluginHandler(object):
         # https://stackoverflow.com/a/800201
         return [name for name in os.listdir(a_dir)
                 if os.path.isdir(os.path.join(a_dir, name))]
-
-    @staticmethod
-    def list_file_names(a_dir):
-        """List the immediate file names found a_dir without file extension"""
-        return [name for name in os.listdir(a_dir)
-                if not os.path.isdir(os.path.join(a_dir, name))]

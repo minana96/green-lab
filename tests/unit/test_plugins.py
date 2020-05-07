@@ -1,19 +1,14 @@
 import csv
 import os.path as op
-from os import chmod, listdir
 
 import pytest
 from mock import Mock, call, patch
-import pdb
 
 import paths
-from AndroidRunner import util
-from AndroidRunner.Plugins.Android import Android
-from AndroidRunner.Plugins.Batterystats import Batterystats
+from AndroidRunner.Plugins.android.Android import Android
+from AndroidRunner.Plugins.batterystats.Batterystats import Batterystats
 from AndroidRunner.Plugins.Profiler import Profiler
-from AndroidRunner.Plugins.Trepn import Trepn
-
-from AndroidRunner.util import ConfigError, FileNotFoundError, FileFormatError
+from AndroidRunner.Plugins.trepn.Trepn import Trepn
 
 
 class TestPluginTemplate(object):
