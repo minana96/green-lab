@@ -9,7 +9,8 @@ from functools import reduce
 
 from AndroidRunner import util
 from AndroidRunner import Tests
-from .Profiler import Profiler
+from AndroidRunner.Plugins.Profiler import Profiler
+
 
 class Android(Profiler):
     def __init__(self, config, paths):
