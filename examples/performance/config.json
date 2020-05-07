@@ -11,12 +11,10 @@
   "profilers": {
     "Frametimes": {
       "subject_aggregation" : "default",
-      "experiment_aggregation" : "none",
       "sample_interval": 1000
     },
     "Garbagecollection": {
-      "subject_aggregation" : "default",
-      "experiment_aggregation" : "none"
+      "subject_aggregation" : "default"
     },
     "Android": {
       "subject_aggregation": "none",
