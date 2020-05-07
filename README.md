@@ -57,15 +57,15 @@ Type of the experiment. Can be `web`, `native` or 'plugintest'
 **device_spec** *string*
 Specify this property inside of your config to specify a `devices.json` outside of the Android Runner repository. For example:
 
- ``` json
+ ```js
  {
-   ....
+   // ....
    "type": "native",
    "devices_spec": "/home/user/experiments/devices.json",
    "devices": {
      "nexus6p": {}
    },
-   ...
+   // ...
  }
  ```
 
@@ -83,7 +83,7 @@ The time that the framework waits between 2 succesive experiment runs. Default i
 
 **devices** *JSON*
 A JSON object to describe the devices to be used and their arguments. Below are several examples:
-```json
+```js
   "devices": {
     "nexus6p": {
       "root_disable_charging": "True",
@@ -93,7 +93,7 @@ A JSON object to describe the devices to be used and their arguments. Below are 
   }
 ```
 
-```json
+```js
   "devices": {
     "nexus6p": {
       "root_disable_charging": "False"
@@ -101,7 +101,7 @@ A JSON object to describe the devices to be used and their arguments. Below are 
   }
 ```
 
-```json
+```js
   "devices": {
     "nexus6p": {}
   }
@@ -121,7 +121,7 @@ The paths to the APKs/URLs to test with. In case of the APKs, this is the path o
 
 **apps** *Array\<String\>*
 The package names of the apps to test when the apps are already installed on the device. For example:
-```json
+```js
   "apps": [
     "org.mozilla.firefox",
     "com.quicinc.trepn"
@@ -134,7 +134,7 @@ The names of browser(s) to use. Currently supported values are `chrome`.
 
 **profilers** *JSON*
 A JSON object to describe the profilers to be used and their arguments. Below are several examples:
-```json
+```js
   "profilers": {
     "trepn": {
       "sample_interval": 100,
@@ -143,7 +143,7 @@ A JSON object to describe the profilers to be used and their arguments. Below ar
   }
 ```
 
-```json
+```js
   "profilers": {
     "android": {
       "sample_interval": 100,
@@ -154,7 +154,7 @@ A JSON object to describe the profilers to be used and their arguments. Below ar
   }
 ```
 
-```json
+```js
   "profilers": {
     "batterystats": {
       "cleanup": true,
@@ -182,7 +182,7 @@ The path to python 2 that is used to launch Systrace. The default is *python2*.
 
 **scripts** *JSON*
 A JSON list of types and paths of scripts to run. Below is an example:
-```json
+```js
 "scripts": {
   "before_experiment": "before_experiment.py",
   "before_run": "before_run.py",
@@ -208,7 +208,7 @@ Below are the supported types:
   executes once after the last run
   
 Instead of a path to string it is also possible to provide a JSON object in the following form:
-```json
+```js
     "interaction": [
       {
         "type": "python2",
