@@ -187,7 +187,7 @@ class TestPluginHandler(object):
         PluginHandler('Android', android_config)
         plugin_base_init_mock.assert_called_once()
         make_plugin_source_mock.assert_called_once_with(
-            searchpath=[os.path.join(paths.ROOT_DIR, 'AndroidRunner', 'Plugins')])
+            searchpath=[os.path.join(paths.ROOT_DIR, 'AndroidRunner', 'Plugins', 'android')])
         mock_plugin_source.load_plugin.assert_called_once_with('Android')
 
     def test_handler_init_plugin(self, tmpdir, fixture_dir):

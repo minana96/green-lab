@@ -171,7 +171,7 @@ class TestAndroidPlugin(object):
         mock_device.shell.mock_calls[0]('dumpsys meminfo fake.app | grep TOTAL')
         mock_device.shell.mock_calls[1]('dumpsys meminfo fake.app')
 
-    @patch('AndroidRunner.Plugins.Android.Android.get_data')
+    @patch('AndroidRunner.Plugins.android.Android.Android.get_data')
     def test_start_profiling_with_app(self, get_data_mock, android_plugin, mock_device):
         kwargs = {'arg1': 1, 'app': 'test.app'}
         android_plugin.start_profiling(mock_device, **kwargs)
@@ -179,7 +179,7 @@ class TestAndroidPlugin(object):
         assert android_plugin.profile is True
         get_data_mock.assert_called_once_with(mock_device, 'test.app')
 
-    @patch('AndroidRunner.Plugins.Android.Android.get_data')
+    @patch('AndroidRunner.Plugins.android.Android.Android.get_data')
     def test_start_profiling_without_app(self, get_data_mock, android_plugin, mock_device):
         kwargs = {'arg1': 1}
         android_plugin.start_profiling(mock_device, **kwargs)
@@ -189,8 +189,8 @@ class TestAndroidPlugin(object):
 
     @patch('timeit.default_timer')
     @patch('threading.Timer')
-    @patch('AndroidRunner.Plugins.Android.Android.get_cpu_usage')
-    @patch('AndroidRunner.Plugins.Android.Android.get_mem_usage')
+    @patch('AndroidRunner.Plugins.android.Android.Android.get_cpu_usage')
+    @patch('AndroidRunner.Plugins.android.Android.Android.get_mem_usage')
     def test_get_data_all_points(self, get_mem_usage_mock, get_cpu_usage_mock, timer_mock, timeit_mock,
                                  android_plugin, mock_device):
         timeit_mock.side_effect = [100, 200]
@@ -208,8 +208,8 @@ class TestAndroidPlugin(object):
         mock_timer_result.start.assert_called_once()
 
     @patch('timeit.default_timer')
-    @patch('AndroidRunner.Plugins.Android.Android.get_cpu_usage')
-    @patch('AndroidRunner.Plugins.Android.Android.get_mem_usage')
+    @patch('AndroidRunner.Plugins.android.Android.Android.get_cpu_usage')
+    @patch('AndroidRunner.Plugins.android.Android.Android.get_mem_usage')
     def test_get_data_only_mem(self, get_mem_usage_mock, get_cpu_usage_mock, timeit_mock,
                                android_plugin, mock_device):
         timeit_mock.side_effect = [100, 200]
@@ -222,8 +222,8 @@ class TestAndroidPlugin(object):
         assert android_plugin.data[1] == ['device_time', 'mem_usage']
 
     @patch('timeit.default_timer')
-    @patch('AndroidRunner.Plugins.Android.Android.get_cpu_usage')
-    @patch('AndroidRunner.Plugins.Android.Android.get_mem_usage')
+    @patch('AndroidRunner.Plugins.android.Android.Android.get_cpu_usage')
+    @patch('AndroidRunner.Plugins.android.Android.Android.get_mem_usage')
     def test_get_data_only_cpu(self, get_mem_usage_mock, get_cpu_usage_mock, timeit_mock,
                                android_plugin, mock_device):
         timeit_mock.side_effect = [100, 200]
@@ -276,7 +276,7 @@ class TestAndroidPlugin(object):
         assert android_plugin.unload(mock_device) is None
 
     @patch('AndroidRunner.util.write_to_file')
-    @patch('AndroidRunner.Plugins.Android.Android.aggregate_android_subject')
+    @patch('AndroidRunner.Plugins.android.Android.Android.aggregate_android_subject')
     def test_aggregate_subject(self, aggregate_mock, write_to_file_mock, android_plugin):
         test_output_dir = 'test/output/dir'
         android_plugin.output_dir = test_output_dir
@@ -291,7 +291,7 @@ class TestAndroidPlugin(object):
         write_to_file_mock.assert_called_once_with(op.join(test_output_dir, 'Aggregated.csv'), expected_list)
 
     @patch('AndroidRunner.util.write_to_file')
-    @patch('AndroidRunner.Plugins.Android.Android.aggregate_final')
+    @patch('AndroidRunner.Plugins.android.Android.Android.aggregate_final')
     def test_aggregate_end(self, aggregate_mock, write_to_file_mock, android_plugin):
         test_data_dir = 'test/output/dir'
         test_output_file = 'test/output/file.csv'
@@ -311,7 +311,7 @@ class TestAndroidPlugin(object):
         assert test_logs_aggregated['android_cpu'] == 32.94186117467583
         assert test_logs_aggregated['android_mem'] == 1131976.3141113652
 
-    @patch("AndroidRunner.Plugins.Android.Android.aggregate_android_final")
+    @patch("AndroidRunner.Plugins.android.Android.Android.aggregate_android_final")
     def test_aggregate_final_web(self, aggregate_mock, android_plugin, fixture_dir):
         test_struct_dir_web = op.join(fixture_dir, 'test_dir_struct', 'data_web')
         aggregate_mock.side_effect = [{'avg': 1}, {'avg': 2}]
@@ -321,7 +321,7 @@ class TestAndroidPlugin(object):
         assert len(final_aggregated_result) == 2
         assert len(final_aggregated_result[0]) == 4
 
-    @patch("AndroidRunner.Plugins.Android.Android.aggregate_android_final")
+    @patch("AndroidRunner.Plugins.android.Android.Android.aggregate_android_final")
     def test_aggregate_final_native(self, aggregate_mock, android_plugin, fixture_dir):
         test_struct_dir_native = op.join(fixture_dir, 'test_dir_struct', 'data_native')
         aggregate_mock.side_effect = [{'avg': 1}, {'avg': 2}]
@@ -441,7 +441,7 @@ class TestBatterystatsPlugin(object):
         assert test_batterystats.duration == 2
 
     @patch('time.strftime')
-    @patch('AndroidRunner.Plugins.Batterystats.Batterystats.get_data')
+    @patch('AndroidRunner.Plugins.batterystats.Batterystats.Batterystats.get_data')
     def test_start_profiling_native(self, get_data_mock, time_mock, batterystats_plugin, mock_device, tmpdir, capsys):
         batterystats_plugin.type = 'native'
         kwargs = {'app': 'testapp1'}
@@ -455,7 +455,7 @@ class TestBatterystatsPlugin(object):
         assert batterystats_plugin.profile is True
 
     @patch('time.strftime')
-    @patch('AndroidRunner.Plugins.Batterystats.Batterystats.get_data')
+    @patch('AndroidRunner.Plugins.batterystats.Batterystats.Batterystats.get_data')
     def test_start_profiling_web(self, get_data_mock, time_mock, batterystats_plugin, mock_device, tmpdir, capsys):
         batterystats_plugin.type = 'web'
         time_mock.return_value = 'strftime'
@@ -490,7 +490,7 @@ class TestBatterystatsPlugin(object):
         assert batterystats_plugin.profile is False
 
     @patch('time.strftime')
-    @patch('AndroidRunner.Plugins.Batterystats.Batterystats.get_data')
+    @patch('AndroidRunner.Plugins.batterystats.Batterystats.Batterystats.get_data')
     def test_pull_logcat(self, get_data_mock, time_mock, batterystats_plugin, mock_device, tmpdir, capsys):
         get_data_mock.return_value = None
         # set global variables
@@ -508,7 +508,7 @@ class TestBatterystatsPlugin(object):
                           call.shell('rm -f /mnt/sdcard/logcat.txt')]
         assert mock_device.mock_calls[1:] == expected_calls
 
-    @patch('AndroidRunner.Plugins.BatterystatsParser.parse_batterystats')
+    @patch('AndroidRunner.Plugins.batterystats.BatterystatsParser.parse_batterystats')
     @patch('time.strftime')
     @patch('subprocess.Popen')
     def test_get_batterystats_results(self, popen_mock, time_mock, parse_mock, batterystats_plugin, mock_device, tmpdir,
@@ -558,7 +558,7 @@ class TestBatterystatsPlugin(object):
         assert os_remove_mock.call_count == 0
 
     @patch('time.strftime')
-    @patch('AndroidRunner.Plugins.Batterystats.Batterystats.get_data')
+    @patch('AndroidRunner.Plugins.batterystats.Batterystats.Batterystats.get_data')
     @patch('os.remove')
     def test_cleanup_logs_true(self, os_remove_mock, get_data_mock, time_mock, batterystats_plugin, mock_device, tmpdir,
                                capsys):
@@ -579,12 +579,12 @@ class TestBatterystatsPlugin(object):
         assert call(op.join(str(tmpdir), 'logcat_123_strftime.txt')) in os_remove_mock.mock_calls
         assert call(op.join(str(tmpdir), 'batterystats_history_123_strftime.txt')) in os_remove_mock.mock_calls
 
-    @patch("AndroidRunner.Plugins.Batterystats.Batterystats.cleanup_logs")
-    @patch("AndroidRunner.Plugins.Batterystats.Batterystats.write_results")
-    @patch("AndroidRunner.Plugins.Batterystats.Batterystats.get_systrace_results")
-    @patch("AndroidRunner.Plugins.Batterystats.Batterystats.get_consumed_joules")
-    @patch("AndroidRunner.Plugins.Batterystats.Batterystats.get_batterystats_results")
-    @patch("AndroidRunner.Plugins.Batterystats.Batterystats.pull_logcat")
+    @patch("AndroidRunner.Plugins.batterystats.Batterystats.Batterystats.cleanup_logs")
+    @patch("AndroidRunner.Plugins.batterystats.Batterystats.Batterystats.write_results")
+    @patch("AndroidRunner.Plugins.batterystats.Batterystats.Batterystats.get_systrace_results")
+    @patch("AndroidRunner.Plugins.batterystats.Batterystats.Batterystats.get_consumed_joules")
+    @patch("AndroidRunner.Plugins.batterystats.Batterystats.Batterystats.get_batterystats_results")
+    @patch("AndroidRunner.Plugins.batterystats.Batterystats.Batterystats.pull_logcat")
     def test_collect_results(self, pull_logcat_mock, get_batterystats_results_mock, get_consumed_joules_mock,
                              get_systrace_results_mock, write_results_mock, cleanup_logs_mock, batterystats_plugin,
                              mock_device):
@@ -613,7 +613,7 @@ class TestBatterystatsPlugin(object):
                           call.cleanup_logs_managed()]
         assert mock_manager.mock_calls == expected_calls
 
-    @patch('AndroidRunner.Plugins.BatterystatsParser.parse_systrace')
+    @patch('AndroidRunner.Plugins.batterystats.BatterystatsParser.parse_systrace')
     @patch('time.strftime')
     @patch('subprocess.Popen')
     def test_get_systrace_result(self, popen_mock, time_mock, parse_mock, batterystats_plugin, mock_device, tmpdir,
@@ -643,7 +643,7 @@ class TestBatterystatsPlugin(object):
                                            op.join(str(tmpdir), 'batterystats_history_123_strftime.txt'),
                                            batterystats_plugin.powerprofile, 8)
 
-    @patch('AndroidRunner.Plugins.BatterystatsParser.parse_systrace')
+    @patch('AndroidRunner.Plugins.batterystats.BatterystatsParser.parse_systrace')
     @patch('time.strftime')
     @patch('subprocess.Popen')
     def test_get_systrace_result_parsing_disabled(self, popen_mock, time_mock, parse_mock, batterystats_plugin_systrace_parsing_disabled, mock_device, tmpdir,
@@ -671,7 +671,7 @@ class TestBatterystatsPlugin(object):
         parse_mock.assert_not_called()
         
 
-    @patch('AndroidRunner.Plugins.Batterystats.Batterystats.get_data')
+    @patch('AndroidRunner.Plugins.batterystats.Batterystats.Batterystats.get_data')
     @patch('time.strftime')
     def test_write_results(self, time_mock, get_data, batterystats_plugin, mock_device, tmpdir, capsys):
         get_data.return_value = None
@@ -722,7 +722,7 @@ class TestBatterystatsPlugin(object):
         assert batterystats_plugin.unload(mock_device) is None
 
     @patch('AndroidRunner.util.write_to_file')
-    @patch('AndroidRunner.Plugins.Batterystats.Batterystats.aggregate_battery_subject')
+    @patch('AndroidRunner.Plugins.batterystats.Batterystats.Batterystats.aggregate_battery_subject')
     def test_aggregate_subject(self, aggregate_mock, write_to_file_mock, batterystats_plugin):
         test_output_dir = 'test/output/dir'
         batterystats_plugin.output_dir = test_output_dir
@@ -736,7 +736,7 @@ class TestBatterystatsPlugin(object):
         write_to_file_mock.assert_called_once_with(op.join(test_output_dir, 'Aggregated.csv'), expected_list)
 
     @patch('AndroidRunner.util.write_to_file')
-    @patch('AndroidRunner.Plugins.Batterystats.Batterystats.aggregate_final')
+    @patch('AndroidRunner.Plugins.batterystats.Batterystats.Batterystats.aggregate_final')
     def test_aggregate_end(self, aggregate_mock, write_to_file_mock, batterystats_plugin):
         test_data_dir = 'test/output/dir'
         test_output_file = 'test/output/file.csv'
@@ -763,7 +763,7 @@ class TestBatterystatsPlugin(object):
         assert len(test_logs_aggregated) == 1
         assert round(test_logs_aggregated['batterystats_Joule_calculated'],6) == 101.227896
 
-    @patch("AndroidRunner.Plugins.Batterystats.Batterystats.aggregate_battery_final")
+    @patch("AndroidRunner.Plugins.batterystats.Batterystats.Batterystats.aggregate_battery_final")
     def test_aggregate_final_web(self, aggregate_mock, batterystats_plugin, fixture_dir):
         test_struct_dir_web = op.join(fixture_dir, 'test_dir_struct', 'data_web')
         aggregate_mock.side_effect = [{'avg': 1}, {'avg': 2}]
@@ -773,7 +773,7 @@ class TestBatterystatsPlugin(object):
         assert len(final_aggregated_result) == 2
         assert len(final_aggregated_result[0]) == 4
 
-    @patch("AndroidRunner.Plugins.Batterystats.Batterystats.aggregate_battery_final")
+    @patch("AndroidRunner.Plugins.batterystats.Batterystats.Batterystats.aggregate_battery_final")
     def test_aggregate_final_native(self, aggregate_mock, batterystats_plugin, fixture_dir):
         test_struct_dir_native = op.join(fixture_dir, 'test_dir_struct', 'data_native')
         aggregate_mock.side_effect = [{'avg': 1}, {'avg': 2}]
@@ -801,7 +801,7 @@ class TestTrepnPlugin(object):
         return Mock()
 
     @pytest.fixture()
-    @patch('AndroidRunner.Plugins.Trepn.Trepn.build_preferences')
+    @patch('AndroidRunner.Plugins.trepn.Trepn.Trepn.build_preferences')
     @patch('AndroidRunner.Plugins.Profiler.__init__')
     def trepn_plugin(self, super_mock, build_preferences_mock):
         super_mock.return_value = None
@@ -825,7 +825,7 @@ class TestTrepnPlugin(object):
             content_string = myfile.read()
         return content_string
 
-    @patch('AndroidRunner.Plugins.Trepn.Trepn.build_preferences')
+    @patch('AndroidRunner.Plugins.trepn.Trepn.Trepn.build_preferences')
     @patch('AndroidRunner.Plugins.Profiler.__init__')
     def test_int(self, super_mock, build_preferences_mock):
         config_mock = Mock()
@@ -891,7 +891,7 @@ class TestTrepnPlugin(object):
         mock_device.shell.assert_called_once_with('am broadcast -a com.quicinc.trepn.stop_profiling')
 
     @patch('time.sleep')
-    @patch('AndroidRunner.Plugins.Trepn.Trepn.filter_results')
+    @patch('AndroidRunner.Plugins.trepn.Trepn.Trepn.filter_results')
     def test_collect_results(self, filter_results_mock, sleep_mock, trepn_plugin, mock_device, tmpdir):
         tmpdir_str = str(tmpdir)
         trepn_plugin.output_dir = tmpdir_str
@@ -925,9 +925,9 @@ class TestTrepnPlugin(object):
         test_file = op.join(fixture_dir, 'test_trepn_data_to_filter.csv')
         assert trepn_plugin.read_csv(test_file) == self.csv_reader_to_table(test_file)
 
-    @patch('AndroidRunner.Plugins.Trepn.Trepn.write_list_to_file')
-    @patch('AndroidRunner.Plugins.Trepn.Trepn.filter_data')
-    @patch('AndroidRunner.Plugins.Trepn.Trepn.read_csv')
+    @patch('AndroidRunner.Plugins.trepn.Trepn.Trepn.write_list_to_file')
+    @patch('AndroidRunner.Plugins.trepn.Trepn.Trepn.filter_data')
+    @patch('AndroidRunner.Plugins.trepn.Trepn.Trepn.read_csv')
     def test_filter_result(self, read_csv_mock, filter_data_mock, write_mock, trepn_plugin, tmpdir, fixture_dir):
         test_filename = op.join(str(tmpdir), 'test_file.txt')
         test_data = self.csv_reader_to_table(op.join(fixture_dir, 'test_output_orig_trepn.csv'))
@@ -956,8 +956,8 @@ class TestTrepnPlugin(object):
         assert op.isfile(test_filename)
         assert self.csv_reader_to_table(test_filename) == test_data
 
-    @patch('AndroidRunner.Plugins.Trepn.Trepn.filter_columns')
-    @patch('AndroidRunner.Plugins.Trepn.Trepn.get_wanted_columns')
+    @patch('AndroidRunner.Plugins.trepn.Trepn.Trepn.filter_columns')
+    @patch('AndroidRunner.Plugins.trepn.Trepn.Trepn.get_wanted_columns')
     def test_filter_data(self, get_wanted_columns_mock, filter_columns_mock, trepn_plugin):
         wanted_statistics_mock = Mock()
         data_mock = Mock()
@@ -1013,7 +1013,7 @@ class TestTrepnPlugin(object):
         assert trepn_plugin.output_dir == test_output_dir
 
     @patch('AndroidRunner.util.write_to_file')
-    @patch('AndroidRunner.Plugins.Trepn.Trepn.aggregate_trepn_subject')
+    @patch('AndroidRunner.Plugins.trepn.Trepn.Trepn.aggregate_trepn_subject')
     def test_aggregate_subject(self, aggregate_mock, write_to_file_mock, trepn_plugin):
         test_output_dir = 'test/output/dir'
         trepn_plugin.output_dir = test_output_dir
@@ -1028,7 +1028,7 @@ class TestTrepnPlugin(object):
         write_to_file_mock.assert_called_once_with(op.join(test_output_dir, 'Aggregated.csv'), expected_list)
 
     @patch('AndroidRunner.util.write_to_file')
-    @patch('AndroidRunner.Plugins.Trepn.Trepn.aggregate_final')
+    @patch('AndroidRunner.Plugins.trepn.Trepn.Trepn.aggregate_final')
     def test_aggregate_end(self, aggregate_mock, write_to_file_mock, trepn_plugin):
         test_data_dir = 'test/output/dir'
         test_output_file = 'test/output/file.csv'
@@ -1051,7 +1051,7 @@ class TestTrepnPlugin(object):
         assert test_logs_aggregated['Battery Temperature [1/10 C]'] == 300.0
         assert test_logs_aggregated['Memory Usage [KB]'] == 2650836.2352941176
 
-    @patch("AndroidRunner.Plugins.Trepn.Trepn.aggregate_trepn_final")
+    @patch("AndroidRunner.Plugins.trepn.Trepn.Trepn.aggregate_trepn_final")
     def test_aggregate_final_web(self, aggregate_mock, trepn_plugin, fixture_dir):
         test_struct_dir_web = op.join(fixture_dir, 'test_dir_struct', 'data_web')
         aggregate_mock.side_effect = [{'avg': 1}, {'avg': 2}]
@@ -1061,7 +1061,7 @@ class TestTrepnPlugin(object):
         assert len(final_aggregated_result) == 2
         assert len(final_aggregated_result[0]) == 4
 
-    @patch("AndroidRunner.Plugins.Trepn.Trepn.aggregate_trepn_final")
+    @patch("AndroidRunner.Plugins.trepn.Trepn.Trepn.aggregate_trepn_final")
     def test_aggregate_final_native(self, aggregate_mock, trepn_plugin, fixture_dir):
         test_struct_dir_native = op.join(fixture_dir, 'test_dir_struct', 'data_native')
         aggregate_mock.side_effect = [{'avg': 1}, {'avg': 2}]
