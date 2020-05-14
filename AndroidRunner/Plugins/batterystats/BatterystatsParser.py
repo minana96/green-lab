@@ -75,7 +75,6 @@ def parse_batterystats(app, batterystats_file, power_profile):
         bluetooth_pattern = re.compile(r'(0|\+\d.*ms).*([+-])(bluetooth)')
         phone_scanning_pattern = re.compile(r'(0|\+\d.*ms).*([+-])(phone_scanning)')
         time_pattern = re.compile(r'(0|\+\d.*ms).*')
-#        t.sleep(10)
         f = bs_file.read()
         app_start_time = convert_to_s(re.findall(app_pattern, f)[0][0])
         app_end_time = convert_to_s(re.findall(app_pattern, f)[-1][0])
