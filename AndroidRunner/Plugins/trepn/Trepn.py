@@ -8,9 +8,9 @@ from collections import OrderedDict
 
 import lxml.etree as et
 
-from .Profiler import Profiler
+from AndroidRunner.Plugins.Profiler import Profiler
 from functools import reduce
-from ExperimentRunner import util
+from AndroidRunner import util
 
 
 class Trepn(Profiler):
@@ -36,16 +36,16 @@ class Trepn(Profiler):
         self.pref_dir = op.join(self.paths['OUTPUT_DIR'], 'trepn.pref/')
         util.makedirs(self.pref_dir)
 
-        preferences_file = et.parse(op.join(current_dir, 'trepn/preferences.xml'))
+        preferences_file = et.parse(op.join(current_dir, 'preferences.xml'))
         if 'sample_interval' in params:
             for i in preferences_file.getroot().iter('int'):
                 if i.get('name') == 'com.quicinc.preferences.general.profiling_interval':
                     i.set('value', str(params['sample_interval']))
         preferences_file.write(op.join(self.pref_dir, 'com.quicinc.trepn_preferences.xml'), encoding='utf-8',
                                xml_declaration=True, standalone=True)
-        datapoints_file = et.parse(op.join(current_dir, 'trepn/data_points.xml'))
+        datapoints_file = et.parse(op.join(current_dir, 'data_points.xml'))
         dp_root = datapoints_file.getroot()
-        data_points_dict = util.load_json(op.join(current_dir, 'trepn/data_points.json'))
+        data_points_dict = util.load_json(op.join(current_dir, 'data_points.json'))
         for dp in params['data_points']:
             dp = str(data_points_dict[dp])
             self.data_points.append(dp)

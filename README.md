@@ -1,4 +1,4 @@
-[![Github All Releases](https://img.shields.io/github/downloads/kotlin-graphics/kotlin-unsigned/total.svg)]()
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=S2-group_android-runner&metric=alert_status)](https://sonarcloud.io/dashboard?id=S2-group_android-runner)
 [![Build Status](https://travis-ci.org/S2-group/android-runner.svg?branch=master)](https://travis-ci.org/S2-group/android-runner)
 [![Coverage Status](https://coveralls.io/repos/github/S2-group/android-runner/badge.svg?branch=master)](https://coveralls.io/github/S2-group/android-runner?branch=master&service=github)
 # Android Runner
@@ -57,15 +57,15 @@ Type of the experiment. Can be `web`, `native` or 'plugintest'
 **device_spec** *string*
 Specify this property inside of your config to specify a `devices.json` outside of the Android Runner repository. For example:
 
- ``` json
+ ```js
  {
-   ....
+   // ....
    "type": "native",
    "devices_spec": "/home/user/experiments/devices.json",
    "devices": {
      "nexus6p": {}
    },
-   ...
+   // ...
  }
  ```
 
@@ -83,7 +83,7 @@ The time that the framework waits between 2 succesive experiment runs. Default i
 
 **devices** *JSON*
 A JSON object to describe the devices to be used and their arguments. Below are several examples:
-```json
+```js
   "devices": {
     "nexus6p": {
       "root_disable_charging": "True",
@@ -93,7 +93,7 @@ A JSON object to describe the devices to be used and their arguments. Below are 
   }
 ```
 
-```json
+```js
   "devices": {
     "nexus6p": {
       "root_disable_charging": "False"
@@ -101,7 +101,7 @@ A JSON object to describe the devices to be used and their arguments. Below are 
   }
 ```
 
-```json
+```js
   "devices": {
     "nexus6p": {}
   }
@@ -121,7 +121,7 @@ The paths to the APKs/URLs to test with. In case of the APKs, this is the path o
 
 **apps** *Array\<String\>*
 The package names of the apps to test when the apps are already installed on the device. For example:
-```json
+```js
   "apps": [
     "org.mozilla.firefox",
     "com.quicinc.trepn"
@@ -134,7 +134,7 @@ The names of browser(s) to use. Currently supported values are `chrome`.
 
 **profilers** *JSON*
 A JSON object to describe the profilers to be used and their arguments. Below are several examples:
-```json
+```js
   "profilers": {
     "trepn": {
       "sample_interval": 100,
@@ -143,7 +143,7 @@ A JSON object to describe the profilers to be used and their arguments. Below ar
   }
 ```
 
-```json
+```js
   "profilers": {
     "android": {
       "sample_interval": 100,
@@ -154,7 +154,7 @@ A JSON object to describe the profilers to be used and their arguments. Below ar
   }
 ```
 
-```json
+```js
   "profilers": {
     "batterystats": {
       "cleanup": true,
@@ -165,6 +165,29 @@ A JSON object to describe the profilers to be used and their arguments. Below ar
     }
   }
 ```
+
+```json
+  "profilers": {
+    "Garbagecollection": {
+      "subject_aggregation" : "default"
+    }
+  }
+```
+The garbage collection (GC) plugin gathers and counts GC log statements by searching in ADB's logcat for logs that meet the format of a GC call as described [here](https://dzone.com/articles/understanding-android-gc-logs).
+The default subject aggregation lists the counted GC calls in a single file for easy further processing.
+```json
+  "profilers": {
+    "Frametimes": {
+      "subject_aggregation" : "default",
+      "sample_interval": 1000
+    }
+  }
+```
+The frame times plugin gathers unique frame rendering durations (in nanoseconds) by utilizing `dumpsys gfxinfo framestats` and counts the amount of delayed frames that occurred following the 16ms threshold [defined by Google](https://developer.android.com/training/testing/performance). 
+The sample interval is configurable but advised to keep under 120 seconds as the framestats command returns only data from frames rendered in the past 120 seconds as described [here](https://developer.android.com/training/testing/performance).
+Shorter sample intervals will not cause duplication in the frames gathered as only unique frames are kept.
+The default subject aggregation consists of combining both the frametimes as the delayed frames count in single files for easy further processing.
+ 
 **subject_aggregation** *string*
 Specify which subject aggregation to use. The default is the subject aggregation provided by the profiler. If a user specified aggregation script is used then the script should contain a ```bash main(dummy, data_dir)``` method, as this method is used as the entry point to the script.
 
@@ -182,7 +205,7 @@ The path to python 2 that is used to launch Systrace. The default is *python2*.
 
 **scripts** *JSON*
 A JSON list of types and paths of scripts to run. Below is an example:
-```json
+```js
 "scripts": {
   "before_experiment": "before_experiment.py",
   "before_run": "before_run.py",
@@ -208,7 +231,7 @@ Below are the supported types:
   executes once after the last run
   
 Instead of a path to string it is also possible to provide a JSON object in the following form:
-```json
+```js
     "interaction": [
       {
         "type": "python2",

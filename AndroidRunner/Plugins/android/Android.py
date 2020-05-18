@@ -7,9 +7,10 @@ import timeit
 from collections import OrderedDict
 from functools import reduce
 
-from ExperimentRunner import util
-from ExperimentRunner import Tests
-from .Profiler import Profiler
+from AndroidRunner import util
+from AndroidRunner import Tests
+from AndroidRunner.Plugins.Profiler import Profiler
+
 
 class Android(Profiler):
     def __init__(self, config, paths):
