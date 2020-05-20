@@ -248,7 +248,7 @@ Within the JSON object you can use "type" to "python2", "monkeyrunner" or, "monk
 
 ## Plugin profilers
 It is possible to write your own profiler and use this with Android runner. To do so write your profiler in such a way
-that it uses [this profiler.py class](ExperimentRunner/Plugins/Profiler.py) as parent class. The device object that is mentioned within the profiler.py class is based on the device.py of this repo. To see what can be done with this object, see the source code [here](ExperimentRunner/Device.py).
+that it uses [this profiler.py class](AndroidRunner/Plugins/Profiler.py) as parent class. The device object that is mentioned within the profiler.py class is based on the device.py of this repo. To see what can be done with this object, see the source code [here](AndroidRunner/Device.py).
 
 You can use your own profiler in the same way as the default profilers, you just need to make sure that:
 - The profiler name is the same as your python file and class name.
