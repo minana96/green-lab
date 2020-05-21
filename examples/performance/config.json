@@ -3,7 +3,7 @@
   "devices": {
     "nexus6p": {}
   },
-    "replications": 2,
+  "repetitions": 2,
   "apps": [
     "com.google.android.calendar",
     "com.android.chrome"

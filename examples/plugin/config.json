@@ -3,7 +3,7 @@
   "devices": {
     "nexus6p": {}
   },
-  "replications": 1,
+  "repetitions": 1,
   "browsers": ["firefox"],
   "paths": [
     "https://google.com/",

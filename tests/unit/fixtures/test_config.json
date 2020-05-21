@@ -1,7 +1,7 @@
 {
   "type": "web",
   "devices": ["nexus6p"],
-  "replications": 3,
+  "repetitions": 3,
   "randomization": "False",
   "browsers": ["firefox"],
   "paths": [

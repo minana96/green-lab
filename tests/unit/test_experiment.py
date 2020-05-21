@@ -27,7 +27,7 @@ class TestExperiment(object):
         config['randomization'] = True
         config['adb_path'] = 'test_adb'
         config['devices'] = ['dev1', 'dev2']
-        config['replications'] = 10
+        config['repetitions'] = 10
         config['paths'] = ['test/paths/1', 'test/paths/2']
         config['profilers'] = {'fake': {'config1': 1, 'config2': 2}}
         config['monkeyrunner_path'] = 'monkey_path'
@@ -62,7 +62,7 @@ class TestExperiment(object):
         assert experiment.basedir is None
         assert experiment.random is False
         assert isinstance(experiment.devices, Devices)
-        assert experiment.replications == 1
+        assert experiment.repetitions == 1
         assert experiment.paths == []
         assert isinstance(experiment.profilers, Profilers)
         assert isinstance(experiment.scripts, Scripts)
@@ -86,7 +86,7 @@ class TestExperiment(object):
         assert experiment.basedir is None
         assert experiment.random is False
         assert isinstance(experiment.devices, Devices)
-        assert experiment.replications == 1
+        assert experiment.repetitions == 1
         assert experiment.paths == []
         assert isinstance(experiment.profilers, Profilers)
         assert isinstance(experiment.scripts, Scripts)
@@ -118,7 +118,7 @@ class TestExperiment(object):
         assert experiment.basedir is None
         assert experiment.random is True
         assert isinstance(experiment.devices, Devices)
-        assert experiment.replications == 10
+        assert experiment.repetitions == 10
         assert experiment.paths == ['test/paths/1', 'test/paths/2']
         assert 'Profilers()' in str(experiment.profilers)
         assert isinstance(experiment.scripts, Scripts)

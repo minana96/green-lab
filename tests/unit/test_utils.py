@@ -26,7 +26,7 @@ class TestUtilClass(object):
         assert config['type'] == 'web'
         assert config['devices'] == ['nexus6p']
         assert config['randomization'] == 'False'
-        assert config['replications'] == 3
+        assert config['repetitions'] == 3
 
     def test_load_json_file_format_error(self, tmp_file):
         fixtures = op.join(op.dirname(op.realpath(__file__)), "fixtures")
