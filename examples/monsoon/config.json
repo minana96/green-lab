@@ -1,7 +1,9 @@
 {
   "type": "web",
   "devices": {
-    "nexus5x": {}
+    "nexus5x": {
+      "power_device": "/home/exz1199/Documents/Thesis/androidrunner/android-runner/AndroidRunner/Plugins/monsoon/Script/power_device.py"
+    }
   },
   "replications": 1,
   "browsers": ["firefox"],
@@ -12,23 +14,10 @@
   ],
   "profilers":{
     "monsoon": {
-      "id": 1111,      
-      "voltage": 3.7,
-      "ramp": "False",
-      "max_current": 2,
-      "max_powerup_current": 2,
-      "usb_passthrough": 2,
-      "use_case": "ABC",
-      "sampling_method": {
-	"sample_num": 2,
-	"offset": 1,
-	"live": "True"
-      }
-    },
-      "subject_aggregation": "none",
-      "experiment_aggregation" : "Scripts/aggregate_android_plugin.py",
-      "sample_interval": 200,
-      "data_points": ["cpu", "mem"]
+      "use_case": {
+        "name": "Default",
+        "app_version": 1
+        }
     }
   },
   "scripts": {

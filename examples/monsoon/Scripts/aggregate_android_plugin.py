@@ -3,7 +3,6 @@ import os
 import sys
 from collections import OrderedDict
 from functools import reduce
-import pdb
 
 
 def list_subdir(a_dir):
