@@ -216,7 +216,7 @@ class Experiment(object):
             Adb.adb.kill_server()
             time.sleep(4)
             self.logger.info('Restarting adb...')
-            Adb.adb.start_server()
+            Adb.adb.get_devices()
             time.sleep(10)
         self.logger.debug('Sleeping for %s milliseconds' % self.time_between_run)
         time.sleep(self.time_between_run / 1000.0)
