@@ -5,6 +5,7 @@ from os import remove, rmdir, walk
 from threading import Thread
 
 from . import Tests
+from . import Adb
 import paths
 from .Devices import Devices
 from .Profilers import Profilers
@@ -28,6 +29,7 @@ class Experiment(object):
         self.profilers = Profilers(config.get('profilers', {}))
         monkeyrunner_path = config.get('monkeyrunner_path', 'monkeyrunner')
         self.scripts = Scripts(config.get('scripts', {}), monkeyrunner_path=monkeyrunner_path)
+        self.adb_cleanup_per_run = config.get('adb_cleanup_per_run', False)
         self.time_between_run = Tests.is_integer(config.get('time_between_run', 0))
         Tests.check_dependencies(self.devices, self.profilers.dependencies())
         self.output_root = paths.OUTPUT_DIR
@@ -208,6 +210,14 @@ class Experiment(object):
         """Hook executed after a run"""
         self.scripts.run('after_run', device, *args, **kwargs)
         self.profilers.collect_results(device)
+        if self.adb_cleanup_per_run == "restart":
+            self.logger.info('Shutting down adb...')
+            time.sleep(1)
+            Adb.adb.kill_server()
+            time.sleep(4)
+            self.logger.info('Restarting adb...')
+            Adb.adb.start_server()
+            time.sleep(10)
         self.logger.debug('Sleeping for %s milliseconds' % self.time_between_run)
         time.sleep(self.time_between_run / 1000.0)
 
