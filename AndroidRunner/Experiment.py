@@ -211,8 +211,8 @@ class Experiment(object):
         """Hook executed after a run"""
         self.scripts.run('after_run', device, *args, **kwargs)
         self.profilers.collect_results(device)
-        if self.adb_cleanup_per_run:
-            Adb.clean(self.adb_cleanup_per_run)
+        if self.adb_cleanup_per_run == "restart":
+            Adb.restart()
         self.logger.debug('Sleeping for %s milliseconds' % self.time_between_run)
         time.sleep(self.time_between_run / 1000.0)
 
