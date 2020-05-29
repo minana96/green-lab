@@ -1,5 +1,6 @@
 import logging
 import os.path as op
+from .util import ConfigError
 
 from .pyand import ADB
 
@@ -139,3 +140,18 @@ def logcat(device_id, regex=None):
         params += ' -e %s' % regex
     adb.set_target_by_name(device_id)
     return adb.get_logcat(lcfilter=params)
+
+def clean(cmd):
+    if(cmd == "restart"):
+        restart()
+
+
+def restart():
+    from time import sleep
+    logger.info('Shutting down adb...')
+    sleep(1)
+    adb.kill_server()
+    sleep(4)
+    logger.info('Restarting adb...')
+    adb.get_devices()
+    sleep(10)

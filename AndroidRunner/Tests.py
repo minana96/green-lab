@@ -24,3 +24,9 @@ def check_dependencies(devices, dependencies):
             for name in not_installed_apps:
                 logging.error('%s: Required package %s is not installed' % (device.id, name))
             raise ConfigError('Required packages %s are not installed on device %s' % (not_installed_apps, device.id))
+
+def is_valid_option(cmd, valid_options):
+    if cmd:
+        match = [x for x in valid_options if x == cmd]
+        if len(match) != 1:
+            raise ConfigError(""'"%s"'" not recognized.  Use one of: %s" % (cmd, valid_options))
