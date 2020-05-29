@@ -141,10 +141,6 @@ def logcat(device_id, regex=None):
     adb.set_target_by_name(device_id)
     return adb.get_logcat(lcfilter=params)
 
-def clean(cmd):
-    if(cmd == "restart"):
-        restart()
-
 
 def restart():
     from time import sleep
