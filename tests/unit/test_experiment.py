@@ -499,10 +499,10 @@ class TestExperiment(object):
         script_run.assert_called_once_with('before_close', mock_device, 123, current_activity)
 
     @patch('time.sleep')
-    @patch('AndroidRunner.Adb.restart')
+    @patch('AndroidRunner.Adb.cleanup')
     @patch('AndroidRunner.Profilers.Profilers.collect_results')
     @patch('AndroidRunner.Scripts.Scripts.run')
-    def test_after_run(self, script_run, collect_results, restart, sleep, default_experiment):
+    def test_after_run(self, script_run, collect_results, cleanup, sleep, default_experiment):
         args = (1, 2, 3)
         kwargs = {'arg1': 1, 'arg2': 2}
         mock_device = Mock()
@@ -513,13 +513,13 @@ class TestExperiment(object):
         mock_manager = Mock()
         mock_manager.attach_mock(script_run, "script_run_managed")
         mock_manager.attach_mock(collect_results, "collect_results_managed")
-        mock_manager.attach_mock(restart, "restart_managed")
+        mock_manager.attach_mock(cleanup, "cleanup_managed")
         mock_manager.attach_mock(sleep, "sleep_managed")
         default_experiment.after_run(mock_device, path, run, *args, **kwargs)
 
         expected_calls = [call.script_run_managed('after_run', mock_device, *args, **kwargs),
                           call.collect_results_managed(mock_device),
-                          call.restart_managed(),
+                          call.cleanup_managed('restart'),
                           call.sleep_managed(2)
                          ]
         assert mock_manager.mock_calls == expected_calls
