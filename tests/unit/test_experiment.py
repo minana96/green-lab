@@ -32,6 +32,7 @@ class TestExperiment(object):
         config['profilers'] = {'fake': {'config1': 1, 'config2': 2}}
         config['monkeyrunner_path'] = 'monkey_path'
         config['scripts'] = {'script1': 'path/to/1'}
+        config['adb_cleanup_per_run'] = 'restart'
         config['time_between_run'] = 10
         return config
 
@@ -66,6 +67,7 @@ class TestExperiment(object):
         assert experiment.paths == []
         assert isinstance(experiment.profilers, Profilers)
         assert isinstance(experiment.scripts, Scripts)
+        assert experiment.adb_cleanup_per_run is False
         assert experiment.time_between_run == 0
         assert experiment.output_root == paths.OUTPUT_DIR
         assert experiment.result_file_structure is None
@@ -90,6 +92,7 @@ class TestExperiment(object):
         assert experiment.paths == []
         assert isinstance(experiment.profilers, Profilers)
         assert isinstance(experiment.scripts, Scripts)
+        assert experiment.adb_cleanup_per_run is False
         assert experiment.time_between_run == 0
         assert experiment.output_root == paths.OUTPUT_DIR
         assert experiment.result_file_structure is None
@@ -122,6 +125,7 @@ class TestExperiment(object):
         assert experiment.paths == ['test/paths/1', 'test/paths/2']
         assert 'Profilers()' in str(experiment.profilers)
         assert isinstance(experiment.scripts, Scripts)
+        assert experiment.adb_cleanup_per_run == 'restart'
         assert experiment.time_between_run == 10
         assert experiment.output_root == paths.OUTPUT_DIR
         assert experiment.result_file_structure is None
@@ -209,7 +213,7 @@ class TestExperiment(object):
         for item in walk_list:
             for i, file in enumerate(files):
                 flags[i] |= file in item
-        
+
         assert(all(flags))
 
     def test_check_result_files_correct(self, default_experiment, tmpdir):
@@ -495,25 +499,29 @@ class TestExperiment(object):
         script_run.assert_called_once_with('before_close', mock_device, 123, current_activity)
 
     @patch('time.sleep')
+    @patch('AndroidRunner.Adb.restart')
     @patch('AndroidRunner.Profilers.Profilers.collect_results')
     @patch('AndroidRunner.Scripts.Scripts.run')
-    def test_after_run(self, script_run, collect_results, sleep, default_experiment):
+    def test_after_run(self, script_run, collect_results, restart, sleep, default_experiment):
         args = (1, 2, 3)
         kwargs = {'arg1': 1, 'arg2': 2}
         mock_device = Mock()
         path = 'test/path'
         run = 1234566789
+        default_experiment.adb_cleanup_per_run = 'restart'
         default_experiment.time_between_run = 2000
         mock_manager = Mock()
         mock_manager.attach_mock(script_run, "script_run_managed")
         mock_manager.attach_mock(collect_results, "collect_results_managed")
+        mock_manager.attach_mock(restart, "restart_managed")
         mock_manager.attach_mock(sleep, "sleep_managed")
-
         default_experiment.after_run(mock_device, path, run, *args, **kwargs)
 
         expected_calls = [call.script_run_managed('after_run', mock_device, *args, **kwargs),
                           call.collect_results_managed(mock_device),
-                          call.sleep_managed(2)]
+                          call.restart_managed(),
+                          call.sleep_managed(2)
+                         ]
         assert mock_manager.mock_calls == expected_calls
 
     def test_after_last_run(self, default_experiment):
