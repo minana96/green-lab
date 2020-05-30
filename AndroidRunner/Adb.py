@@ -36,7 +36,7 @@ def connect(device_id):
         raise ConnectionError('No devices are connected')
     logger.debug('Device list:\n%s' % device_list)
     if device_id not in list(device_list.values()):
-        raise ConnectionError('%s: Device can not connected' % device_id)
+        raise ConnectionError('%s: Device not recognized' % device_id)
 
 
 def shell_su(device_id, cmd):
@@ -142,12 +142,13 @@ def logcat(device_id, regex=None):
     return adb.get_logcat(lcfilter=params)
 
 
-def restart():
+def cleanup(cmd):
     from time import sleep
-    logger.info('Shutting down adb...')
-    sleep(1)
-    adb.kill_server()
-    sleep(4)
-    logger.info('Restarting adb...')
-    adb.get_devices()
-    sleep(10)
+    if cmd == "restart":
+        logger.info('Shutting down adb...')
+        sleep(1)
+        adb.kill_server()
+        sleep(4)
+        logger.info('Restarting adb...')
+        adb.get_devices()
+        sleep(10)

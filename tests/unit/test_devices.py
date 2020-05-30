@@ -901,3 +901,10 @@ class TestAdb(object):
         expected_calls = [call.set_target_by_name(device_id),
                           call.get_logcat(lcfilter='-d -e {}'.format(test_regex))]
         assert mock_adb.mock_calls == expected_calls
+
+    def test_cleanup_restart(self):
+        Adb.adb = Mock()
+        cmd = 'restart'
+        Adb.cleanup(cmd)
+        expected_calls = [call.kill_server(), call.get_devices()]
+        assert Adb.adb.mock_calls == expected_calls
