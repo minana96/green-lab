@@ -146,6 +146,20 @@ class TestTestsClass(object):
     def test_is_integer_succes(self):
         assert Tests.is_integer(10) == 10
 
+    def test_cmd_not_valid(self):
+        with pytest.raises(util.ConfigError) as except_result:
+            Tests.is_valid_option("r", ["restart", "abc"])
+        assert "'r' not recognized.  Use one of: ['restart', 'abc']" in str(except_result.value)
+
+    def test_more_than_one_cmd(self):
+        with pytest.raises(util.ConfigError) as except_result:
+            Tests.is_valid_option("restart abc", ["restart", "abc"])
+        assert "'restart abc' not recognized.  Use one of: ['restart', 'abc']" in str(except_result.value)
+
+    def test_cmd_is_valid(self):
+        test_command = "foo"
+        assert Tests.is_valid_option(test_command, ["bar","foo"]) == test_command
+
     def test_is_string_fail(self):
         with pytest.raises(util.ConfigError) as except_result:
             Tests.is_string(list())
