@@ -87,11 +87,11 @@ class TestProgressMethods(object):
 
     @pytest.fixture()
     def config_web_dict(self):
-        return {'devices': ['device1'], 'paths': ['path1'], 'type': 'web', 'browsers': ['browser1'], 'replications': 1}
+        return {'devices': ['device1'], 'paths': ['path1'], 'type': 'web', 'browsers': ['browser1'], 'repetitions': 1}
 
     @pytest.fixture()
     def config_native_dict(self):
-        return {'devices': ['device1'], 'paths': ['path1'], 'type': 'native', 'replications': 1}
+        return {'devices': ['device1'], 'paths': ['path1'], 'type': 'native', 'repetitions': 1}
 
     def elements_equal(self, e1, e2):
         if e1.tag != e2.tag:
@@ -154,7 +154,7 @@ class TestProgressMethods(object):
         assert expected_stripped == result_stripped
 
     def test_file_to_hash(self, current_progress, test_config):
-        expected_hash = "c563cc8583486714e40cf74b1fb98577"
+        expected_hash = "fd95f5b33d483e665d32510ae34051db"
         current_hash = current_progress.file_to_hash(test_config)
         assert current_hash == expected_hash
 

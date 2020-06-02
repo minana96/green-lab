@@ -3,7 +3,7 @@
   "devices": {
     "j7duo2": {}
   },
-  "replications": 1,
+  "repetitions": 1,
   "randomization": "False",
   "browsers": ["firefox"],
   "paths": [

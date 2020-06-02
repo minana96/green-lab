@@ -3,7 +3,7 @@
   "devices": {
     "j7duo2": {}
   },
-  "replications": 3,
+  "repetitions": 3,
   "duration": 60000,
   "monkeyrunner_path": "/home/user/Android/Sdk/tools/bin/monkeyrunner",
   "systrace_path": "/home/user/Android/Sdk/platform-tools/systrace/systrace.py",

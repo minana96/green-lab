@@ -67,13 +67,13 @@ class Progress(object):
                 if config['type'] == 'web':
                     for browser in config['browsers']:
                         subject_xml = self.build_subject_xml(device, path, browser)
-                        for run in range(config['replications']):
+                        for run in range(config['repetitions']):
                             runs_xml = runs_xml + '<run runId="{}">{}<runCount>{}</runCount></run>'. \
                                 format(run_id, subject_xml, run + 1)
                             run_id += 1
                 else:
                     subject_xml = self.build_subject_xml(device, path)
-                    for run in range(config['replications']):
+                    for run in range(config['repetitions']):
                         runs_xml = runs_xml + '<run runId="{}">{}<runCount>{}</runCount></run>'. \
                             format(run_id, subject_xml, run + 1)
                         run_id += 1

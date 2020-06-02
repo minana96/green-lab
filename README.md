@@ -69,8 +69,8 @@ Specify this property inside of your config to specify a `devices.json` outside 
  }
  ```
 
-**replications** *positive integer*
-Number of times an experiment is run.
+**repetitions** *positive integer*
+Number of times each experiment is run.
 
 **randomization** *boolean*
 Random order of run execution. Default is *false*.

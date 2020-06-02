@@ -3,7 +3,7 @@
   "devices": {
     "nexus6p": {}
   },
-  "replications": 1,
+  "repetitions": 1,
   "apps": [
     "com.experimental.rvs960.ioapp"
   ],

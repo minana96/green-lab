@@ -3,7 +3,7 @@
   "devices": {
     "nexus6p": {}
   },
-  "replications": 1,
+  "repetitions": 1,
   "duration": 60000,
   "browsers": ["chrome"],
   "monkeyrunner_path": "/home/user/Android/Sdk/tools/bin/monkeyrunner",
