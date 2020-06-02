@@ -78,8 +78,8 @@ Random order of run execution. Default is *false*.
 **duration** *positive integer*
 The duration of each run in milliseconds, default is 0. Setting a too short duration may lead to missing results when running native experiments, it is advised to set a higher duration time if unexpected results appear.
 
-**adb_cleanup_per_run** *string*
-Provides flexibility for restarting adb connections after each run.  This field accepts *restart*.  Recommended to run Android Runner as a privileged user to avoid potential issues with adb device authorizaton.
+**reset_adb_among_runs** *boolean*
+Restarts the adb connection after each run.  Default is *false*.  Recommended to run Android Runner as a privileged user to avoid potential issues with adb device authorizaton.
 
 **time_between_run** *positive integer*
 The time that the framework waits between 2 successive experiment runs. Default is 0.

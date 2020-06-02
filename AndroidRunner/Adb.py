@@ -1,6 +1,7 @@
 import logging
 import os.path as op
 from .util import ConfigError
+from time import sleep
 
 from .pyand import ADB
 
@@ -142,13 +143,12 @@ def logcat(device_id, regex=None):
     return adb.get_logcat(lcfilter=params)
 
 
-def cleanup(cmd):
-    from time import sleep
-    if cmd == "restart":
+def reset(cmd):
+    if cmd == "True":
         logger.info('Shutting down adb...')
         sleep(1)
         adb.kill_server()
-        sleep(4)
+        sleep(2)
         logger.info('Restarting adb...')
         adb.get_devices()
         sleep(10)

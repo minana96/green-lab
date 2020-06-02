@@ -29,8 +29,8 @@ class Experiment(object):
         self.profilers = Profilers(config.get('profilers', {}))
         monkeyrunner_path = config.get('monkeyrunner_path', 'monkeyrunner')
         self.scripts = Scripts(config.get('scripts', {}), monkeyrunner_path=monkeyrunner_path)
-        self.adb_cleanup_per_run = config.get('adb_cleanup_per_run', False)
-        Tests.is_valid_option(self.adb_cleanup_per_run, valid_options=["restart"])
+        self.reset_adb_among_runs = config.get('reset_adb_among_runs', "False")
+        Tests.is_valid_option(self.reset_adb_among_runs, valid_options=["True", "False"])
         self.time_between_run = Tests.is_integer(config.get('time_between_run', 0))
         Tests.check_dependencies(self.devices, self.profilers.dependencies())
         self.output_root = paths.OUTPUT_DIR
@@ -211,8 +211,7 @@ class Experiment(object):
         """Hook executed after a run"""
         self.scripts.run('after_run', device, *args, **kwargs)
         self.profilers.collect_results(device)
-        if self.adb_cleanup_per_run:
-            Adb.cleanup(self.adb_cleanup_per_run)
+        Adb.reset(self.reset_adb_among_runs)
         self.logger.debug('Sleeping for %s milliseconds' % self.time_between_run)
         time.sleep(self.time_between_run / 1000.0)
 

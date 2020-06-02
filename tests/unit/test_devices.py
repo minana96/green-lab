@@ -902,9 +902,23 @@ class TestAdb(object):
                           call.get_logcat(lcfilter='-d -e {}'.format(test_regex))]
         assert mock_adb.mock_calls == expected_calls
 
-    def test_cleanup_restart(self):
+    def test_reset_true(self):
         Adb.adb = Mock()
-        cmd = 'restart'
-        Adb.cleanup(cmd)
+        cmd = 'True'
+        Adb.reset(cmd)
         expected_calls = [call.kill_server(), call.get_devices()]
         assert Adb.adb.mock_calls == expected_calls
+
+    def test_reset_true(self):
+        Adb.adb = Mock()
+        cmd = 'False'
+        Adb.reset(cmd)
+        expected_calls = []
+        assert Adb.adb.mock_calls == expected_calls
+
+    def test_reset_invalid(self):
+        Adb.adb = Mock()
+        cmd = 'terminate'
+        Adb.reset(cmd)
+        assert Adb.adb.kill_server.call_count == 0
+        assert Adb.adb.get_devices.call_count == 0
