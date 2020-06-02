@@ -144,7 +144,7 @@ def logcat(device_id, regex=None):
 
 
 def reset(cmd):
-    if cmd == "True":
+    if cmd:
         logger.info('Shutting down adb...')
         sleep(1)
         adb.kill_server()

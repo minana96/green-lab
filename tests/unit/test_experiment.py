@@ -32,7 +32,7 @@ class TestExperiment(object):
         config['profilers'] = {'fake': {'config1': 1, 'config2': 2}}
         config['monkeyrunner_path'] = 'monkey_path'
         config['scripts'] = {'script1': 'path/to/1'}
-        config['reset_adb_among_runs'] = 'True'
+        config['reset_adb_among_runs'] = True
         config['time_between_run'] = 10
         return config
 
@@ -125,7 +125,7 @@ class TestExperiment(object):
         assert experiment.paths == ['test/paths/1', 'test/paths/2']
         assert 'Profilers()' in str(experiment.profilers)
         assert isinstance(experiment.scripts, Scripts)
-        assert experiment.reset_adb_among_runs == 'True'
+        assert experiment.reset_adb_among_runs is True
         assert experiment.time_between_run == 10
         assert experiment.output_root == paths.OUTPUT_DIR
         assert experiment.result_file_structure is None
@@ -508,7 +508,7 @@ class TestExperiment(object):
         mock_device = Mock()
         path = 'test/path'
         run = 1234566789
-        default_experiment.reset_adb_among_runs = 'True'
+        default_experiment.reset_adb_among_runs = True
         default_experiment.time_between_run = 2000
         mock_manager = Mock()
         mock_manager.attach_mock(script_run, "script_run_managed")
@@ -519,7 +519,7 @@ class TestExperiment(object):
 
         expected_calls = [call.script_run_managed('after_run', mock_device, *args, **kwargs),
                           call.collect_results_managed(mock_device),
-                          call.reset_managed('True'),
+                          call.reset_managed(True),
                           call.sleep_managed(2)
                          ]
         assert mock_manager.mock_calls == expected_calls

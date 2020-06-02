@@ -20,6 +20,7 @@ class Experiment(object):
         self.progress = progress
         self.basedir = None
         self.random = config.get('randomization', False)
+        Tests.is_valid_option(self.random, valid_options=[True, False])
         if 'devices' not in config:
             raise ConfigError('"device" is required in the configuration')
         adb_path = config.get('adb_path', 'adb')
@@ -29,8 +30,8 @@ class Experiment(object):
         self.profilers = Profilers(config.get('profilers', {}))
         monkeyrunner_path = config.get('monkeyrunner_path', 'monkeyrunner')
         self.scripts = Scripts(config.get('scripts', {}), monkeyrunner_path=monkeyrunner_path)
-        self.reset_adb_among_runs = config.get('reset_adb_among_runs', "False")
-        Tests.is_valid_option(self.reset_adb_among_runs, valid_options=["True", "False"])
+        self.reset_adb_among_runs = config.get('reset_adb_among_runs', False)
+        Tests.is_valid_option(self.reset_adb_among_runs, valid_options=[True, False])
         self.time_between_run = Tests.is_integer(config.get('time_between_run', 0))
         Tests.check_dependencies(self.devices, self.profilers.dependencies())
         self.output_root = paths.OUTPUT_DIR

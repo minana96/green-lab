@@ -151,6 +151,11 @@ class TestTestsClass(object):
             Tests.is_valid_option("r", ["restart", "abc"])
         assert "'r' not recognized.  Use one of: ['restart', 'abc']" in str(except_result.value)
 
+    def test_cmd_truthy(self):
+        with pytest.raises(util.ConfigError) as except_result:
+            Tests.is_valid_option("True", [False, True])
+        assert "'True' not recognized.  Use one of: [False, True]" in str(except_result.value)
+
     def test_more_than_one_cmd(self):
         with pytest.raises(util.ConfigError) as except_result:
             Tests.is_valid_option("restart abc", ["restart", "abc"])
