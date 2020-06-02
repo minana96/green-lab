@@ -1,6 +1,5 @@
 import logging
 import os.path as op
-from .util import ConfigError
 from time import sleep
 
 from .pyand import ADB
