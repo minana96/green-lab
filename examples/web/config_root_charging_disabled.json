@@ -8,7 +8,7 @@
     }
    },
   "repetitions": 1,
-  "randomization": "False",
+  "randomization": false,
   "browsers": ["firefox"],
   "paths": [
     "https://google.com/",
