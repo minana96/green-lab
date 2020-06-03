@@ -21,7 +21,7 @@ Additionally, the following are also required for the Batterystats method:
 
 Note: It is important that monkeyrunner shares the same adb the experiment is using. Otherwise, there will be an adb restart and output may be tainted by the notification.
 
-Note 2: You can specifiy the path to ADB and/or Monkeyrunner in the experiment configuration. See the Experiment Configuration section below.
+Note 2: You can specifiy the path to adb and/or Monkeyrunner in the experiment configuration. See the Experiment Configuration section below.
 
 Note 3: To check whether the the device is able to report on the `idle` and `frequency` states of the CPU, you can run the command `python systrace.py -l` and ensure both categories are listed among the supported categories.
 
@@ -34,13 +34,13 @@ Example configuration files can be found in the subdirectories of the `example` 
 
 ## Structure
 ### devices.json
-A JSON config that maps devices names to their ADB ids for easy reference in config files.
+A JSON config that maps devices names to their adb ids for easy reference in config files.
 
 ### Experiment Configuration
 Below is a reference to the fields for the experiment configuration. It is not always updated.
 
 **adb_path** *string*
-Path to ADB. Example path: `/opt/platform-tools/adb`
+Path to adb. Example path: `/opt/platform-tools/adb`
 
 **monkeyrunner_path** *string*
 Path to Monkeyrunner. Example path: `/opt/platform-tools/bin/monkeyrunner`
@@ -76,10 +76,13 @@ Number of times each experiment is run.
 Random order of run execution. Default is *false*.
 
 **duration** *positive integer*
-The duration of each run in milliseconds, default is 0. Setting a too short duration may lead to missing results when running native experiments, adviced is to set a higher duration time if unexpected results appear.
+The duration of each run in milliseconds, default is 0. Setting a too short duration may lead to missing results when running native experiments, it is advised to set a higher duration time if unexpected results appear.
+
+**reset_adb_among_runs** *boolean*
+Restarts the adb connection after each run.  Default is *false*.  Recommended to run Android Runner as a privileged user to avoid potential issues with adb device authorizaton.
 
 **time_between_run** *positive integer*
-The time that the framework waits between 2 succesive experiment runs. Default is 0.
+The time that the framework waits between 2 successive experiment runs. Default is 0.
 
 **devices** *JSON*
 A JSON object to describe the devices to be used and their arguments. Below are several examples:
@@ -108,10 +111,10 @@ A JSON object to describe the devices to be used and their arguments. Below are 
 ```
 Note that the last two examples result in the same behaviour.
 
-The root_disable_charging option specifies if the devices needs to be root charging disabled by writing the charging_disabled_value to the usb_charging_disabled_file. Different devices have different values for the charging_disabled_value and usb_charging_disabled_file, so be carefull when using this feature. Also keep an eye out on the battery percantage when ussing this feature. If the battery dies when the charging is root disabled, it becomes impossible to charge the device via USB. 
+The root_disable_charging option specifies if the devices needs to be root charging disabled by writing the charging_disabled_value to the usb_charging_disabled_file. Different devices have different values for the charging_disabled_value and usb_charging_disabled_file, so be careful when using this feature. Also keep an eye out on the battery percentage when using this feature. If the battery dies when the charging is root disabled, it becomes impossible to charge the device via USB.
 
 **WARNING:** Always check the battery settings of the device for the charging status of the device after using root disable charging.
-If the device isn't charging after the experiment is finished, reset the charging file yourself via ADB SU command line using:
+If the device isn't charging after the experiment is finished, reset the charging file yourself via adb su command line using:
 ```shell
 adb su -c 'echo <charging enabled value> > <usb_charging_disabled_file>'
 ```
@@ -173,7 +176,7 @@ A JSON object to describe the profilers to be used and their arguments. Below ar
     }
   }
 ```
-The garbage collection (GC) plugin gathers and counts GC log statements by searching in ADB's logcat for logs that meet the format of a GC call as described [here](https://dzone.com/articles/understanding-android-gc-logs).
+The garbage collection (GC) plugin gathers and counts GC log statements by searching in adb's logcat for logs that meet the format of a GC call as described [here](https://dzone.com/articles/understanding-android-gc-logs).
 The default subject aggregation lists the counted GC calls in a single file for easy further processing.
 ```json
   "profilers": {
@@ -183,11 +186,11 @@ The default subject aggregation lists the counted GC calls in a single file for 
     }
   }
 ```
-The frame times plugin gathers unique frame rendering durations (in nanoseconds) by utilizing `dumpsys gfxinfo framestats` and counts the amount of delayed frames that occurred following the 16ms threshold [defined by Google](https://developer.android.com/training/testing/performance). 
+The frame times plugin gathers unique frame rendering durations (in nanoseconds) by utilizing `dumpsys gfxinfo framestats` and counts the amount of delayed frames that occurred following the 16ms threshold [defined by Google](https://developer.android.com/training/testing/performance).
 The sample interval is configurable but advised to keep under 120 seconds as the framestats command returns only data from frames rendered in the past 120 seconds as described [here](https://developer.android.com/training/testing/performance).
 Shorter sample intervals will not cause duplication in the frames gathered as only unique frames are kept.
 The default subject aggregation consists of combining both the frametimes as the delayed frames count in single files for easy further processing.
- 
+
 **subject_aggregation** *string*
 Specify which subject aggregation to use. The default is the subject aggregation provided by the profiler. If a user specified aggregation script is used then the script should contain a ```bash main(dummy, data_dir)``` method, as this method is used as the entry point to the script.
 
@@ -229,7 +232,7 @@ Below are the supported types:
   executes after a run completes
 - after_experiment
   executes once after the last run
-  
+
 Instead of a path to string it is also possible to provide a JSON object in the following form:
 ```js
     "interaction": [
@@ -245,7 +248,7 @@ Within the JSON object you can use "type" to "python2", "monkeyrunner" or, "monk
 
 ## Plugin profilers
 It is possible to write your own profiler and use this with Android runner. To do so write your profiler in such a way
-that it uses [this profiler.py class](ExperimentRunner/Plugins/Profiler.py) as parent class. The device object that is mentioned within the profiler.py class is based on the device.py of this repo. To see what can be done with this object, see the source code [here](ExperimentRunner/Device.py).
+that it uses [this profiler.py class](AndroidRunner/Plugins/Profiler.py) as parent class. The device object that is mentioned within the profiler.py class is based on the device.py of this repo. To see what can be done with this object, see the source code [here](AndroidRunner/Device.py).
 
 You can use your own profiler in the same way as the default profilers, you just need to make sure that:
 - The profiler name is the same as your python file and class name.

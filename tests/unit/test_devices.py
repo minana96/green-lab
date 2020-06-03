@@ -901,3 +901,17 @@ class TestAdb(object):
         expected_calls = [call.set_target_by_name(device_id),
                           call.get_logcat(lcfilter='-d -e {}'.format(test_regex))]
         assert mock_adb.mock_calls == expected_calls
+
+    def test_reset_true(self):
+        Adb.adb = Mock()
+        cmd = True
+        Adb.reset(cmd)
+        expected_calls = [call.kill_server(), call.get_devices()]
+        assert Adb.adb.mock_calls == expected_calls
+
+    def test_reset_false(self):
+        Adb.adb = Mock()
+        cmd = False
+        Adb.reset(cmd)
+        expected_calls = []
+        assert Adb.adb.mock_calls == expected_calls

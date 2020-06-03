@@ -154,7 +154,7 @@ class TestProgressMethods(object):
         assert expected_stripped == result_stripped
 
     def test_file_to_hash(self, current_progress, test_config):
-        expected_hash = "fd95f5b33d483e665d32510ae34051db"
+        expected_hash = "df40fc18fd82782d9c2712e5597c15d5"
         current_hash = current_progress.file_to_hash(test_config)
         assert current_hash == expected_hash
 
