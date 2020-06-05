@@ -5,7 +5,7 @@
       "power_device": "/home/exz1199/Documents/Thesis/androidrunner/android-runner/AndroidRunner/Plugins/monsoon/Script/power_device.py"
     }
   },
-  "replications": 1,
+  "repetitions": 2,
   "browsers": ["firefox"],
   "paths": [
     "https://google.com/",
@@ -14,11 +14,9 @@
   ],
   "profilers":{
     "monsoon": {
-      "use_case": {
-        "name": "Default",
-        "app_version": 1
+      "use_case": "test1",
+      "app_version": 1
         }
-    }
   },
   "scripts": {
     "before_experiment": "Scripts/before_experiment.py",

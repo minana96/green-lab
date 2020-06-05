@@ -12,7 +12,7 @@ def list_subdir(a_dir):
             if os.path.isdir(os.path.join(a_dir, name))]
 
 
-def aggregate_android_final(logs_dir):
+def aggregate_monsoon_final(logs_dir):
     def add_row(accum, new):
         row = {k: v + float(new[k]) for k, v in list(accum.items()) if k not in ['Component', 'count']}
         count = accum['count'] + 1
@@ -27,10 +27,11 @@ def aggregate_android_final(logs_dir):
             runs.append({k: v / run_total['count'] for k, v in list(run_total.items()) if k != 'count'})
     runs_total = reduce(lambda x, y: {k: v + y[k] for k, v in list(x.items())}, runs)
     return OrderedDict(
-        sorted(list({'android_' + k: v / len(runs) for k, v in list(runs_total.items())}.items()), key=lambda x: x[0]))
+        sorted(list({'monsoon_' + k: v / len(runs) for k, v in list(runs_total.items())}.items()), key=lambda x: x[0]))
 
 
 def aggregate(data_dir):
+    import pdb; pdb.set_trace()
     rows = []
     for device in list_subdir(data_dir):
         row = OrderedDict({'device': device})
@@ -38,15 +39,15 @@ def aggregate(data_dir):
         for subject in list_subdir(device_dir):
             row.update({'subject': subject})
             subject_dir = os.path.join(device_dir, subject)
-            if os.path.isdir(os.path.join(subject_dir, 'AndroidPlugin')):
-                row.update(aggregate_android_final(os.path.join(subject_dir, 'AndroidPlugin')))
+            if os.path.isdir(os.path.join(subject_dir, 'MonsoonPlugin')):
+                row.update(aggregate_android_final(os.path.join(subject_dir, 'MonsoonPlugin')))
                 rows.append(row.copy())
             else:
                 for browser in list_subdir(subject_dir):
                     row.update({'browser': browser})
                     browser_dir = os.path.join(subject_dir, browser)
-                    if os.path.isdir(os.path.join(browser_dir, 'AndroidPlugin')):
-                        row.update(aggregate_android_final(os.path.join(browser_dir, 'AndroidPlugin')))
+                    if os.path.isdir(os.path.join(browser_dir, 'MonsoonPlugin')):
+                        row.update(aggregate_android_final(os.path.join(browser_dir, 'MonsoonPlugin')))
                         rows.append(row.copy())
     return rows
 
