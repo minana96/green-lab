@@ -1,21 +1,19 @@
 {
-  "type": "web",
+  "type": "native",
   "devices": {
     "nexus5x": {
       "power_device": "/home/exz1199/Documents/Thesis/androidrunner/android-runner/AndroidRunner/Plugins/monsoon/Script/power_device.py"
     }
   },
   "repetitions": 2,
+  "randomization": false,
   "browsers": ["firefox"],
-  "paths": [
-    "https://google.com/",
-    "https://apple.com/",
-    "https://wikipedia.com/"
+  "apps": [
+    "com.google.android.contacts",
+    "com.google.android.music"
   ],
   "profilers":{
     "monsoon": {
-      "use_case": "test1",
-      "app_version": 1
         }
   },
   "scripts": {
@@ -34,5 +32,5 @@
     "after_run": "Scripts/after_run.py",
     "after_experiment": "Scripts/after_experiment.py"
   },
-  "time_between_run": 100
+  "time_between_run": 500
 }

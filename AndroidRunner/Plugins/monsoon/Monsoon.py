@@ -17,14 +17,12 @@ class Monsoon(Profiler):
         self.output_dir = ''
         self.paths = paths
         self.profile = False
-        self.use_case = config['use_case']
+        self.data_points = ["energy_joules", "duration_ms", "error_flag"]
 
     def dependencies(self):
-        """Returns list of needed app dependencies,like com.quicinc.trepn, [] if none"""
         return []
 
     def load(self, device):
-        """Load (and start) the profiler process on the device"""
         return
 
     def start_profiling(self, device, **kwargs):
@@ -41,11 +39,10 @@ class Monsoon(Profiler):
         filename = 'monsoon_{}.csv'.format(time.strftime('%Y.%m.%d_%H%M%S'))
         with open(op.join(self.output_dir, filename), 'w+') as f:
             writer = csv.writer(f)
-            writer.writerow(["energy", "duration", "error_flag"])
-            writer.writerow([self.results[0], self.results[1], self.results[2]])
+            writer.writerow(self.data_points)
+            writer.writerow([self.results[0], round(self.results[1]*1000), self.results[2]])
 
     def unload(self, device):
-        """Stop the profiler, removing configuration files on device"""
         return
 
     def set_output(self, output_dir):
@@ -56,7 +53,7 @@ class Monsoon(Profiler):
         """Aggregate the data at the end of a subject, collect data and save data to location set by 'set output' """
         with open(op.join(self.output_dir, 'aggregated.csv'), 'w+') as output:
             writer = csv.writer(output)
-            writer.writerow(["energy", "duration", "error_flag"])
+            writer.writerow(self.data_points)
             for output_file in os.listdir(self.output_dir):
                 if output_file.startswith("monsoon_"):
                     res = open(op.join(self.output_dir, output_file)).readlines()[1]
@@ -80,28 +77,25 @@ class Monsoon(Profiler):
                 row.update({'subject': subject})
                 subject_dir = os.path.join(device_dir, subject)
                 if os.path.isdir(os.path.join(subject_dir, 'monsoon')):
-                    row.update(self.get_aggregated_runs(
+                    temp_row = row.copy()
+                    row.update(self.get_aggregated_runs_subject(
                         os.path.join(subject_dir, 'monsoon')))
-                    rows.append(row.copy())
+                    self.add_rows(row, temp_row, rows, subject_dir)
+
                 else:
                     for browser in util.list_subdir(subject_dir):
                         row.update({'browser': browser})
                         browser_dir = os.path.join(subject_dir, browser)
                         if os.path.isdir(os.path.join(browser_dir, 'monsoon')):
-                            ind_row = row.copy()
-                            row.update(self.get_aggregated_runs(
+                            temp_row = row.copy()
+                            row.update(self.get_aggregated_runs_subject(
                                 os.path.join(browser_dir, 'monsoon')))
-                            repetition_count = len(os.listdir(os.path.join(browser_dir, 'monsoon'))) - 1
-                            if reptition_count > 1:
-                                for i in range(repetition_count):
-                                    ind_row.update({"energy": row["energy"][i], "duration": row["duration"][i], "error_flag": row['error_flag'][i]})
-                                    rows.append(ind_row.copy())
-                            else:
-                                rows.append(row.copy())
-        return rows
+                            self.add_rows(row, temp_row, rows, browser_dir)
+            return rows
 
     @staticmethod
-    def get_aggregated_runs(logs_dir):
+    def get_aggregated_runs_subject(logs_dir):
+        """Finds the aggregated file for a subject and returns the rows of that file.  The data returned is a key-value pair where the value is a list"""
         for aggregated_file in [f for f in os.listdir(logs_dir) if os.path.isfile(os.path.join(logs_dir, f))]:
             if aggregated_file == "aggregated.csv":
                 with open(os.path.join(logs_dir, aggregated_file), 'r') as aggregated:
@@ -110,11 +104,17 @@ class Monsoon(Profiler):
                     for row in reader:
                         for f in reader.fieldnames:
                             if f in row_dict.keys():
-                                l = list()
-                                l.append(row_dict[f])
-                                l.append(row[f])
-                                row_dict.update({f: l})
+                                temp = row_dict[f]
+                                temp.append(row[f])
+                                row_dict.update({f: temp})
                             else:
-                                row_dict.update({f: row[f]})
-                    print(OrderedDict(row_dict))
+                                row_dict.update({f: [row[f]]})
                     return OrderedDict(row_dict)
+
+    def add_rows(self, row, temp_row, rows, dir):
+        """Retrieves the list values in the key-value pairs from get_aggregated_runs_subject and creates n rows for list of size n"""
+        repetition_count = len(os.listdir(os.path.join(dir, 'monsoon'))) - 1
+        for i in range(repetition_count):
+            temp_row.update({self.data_points[0]: row[self.data_points[0]][i], self.data_points[1]: row[self.data_points[1]][i], self.data_points[2]: row[self.data_points[2]][i]})
+            rows.append(temp_row.copy())
+        return rows
