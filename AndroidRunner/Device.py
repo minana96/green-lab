@@ -21,7 +21,6 @@ class Device:
         self.power_device = settings.get('power_device', None)
         if self.power_device:
             subprocess.call(['python', self.power_device])
-            time.sleep(5)
         Adb.connect(device_id)
 
 
