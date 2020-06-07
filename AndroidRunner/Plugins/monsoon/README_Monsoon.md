@@ -64,13 +64,13 @@ The above steps are necessary only in the case where the phone is not already po
 Monsoon will provide energy usage in joules, the duration in milliseconds and an error flag field per run.  The results will be saved and aggregated in the same way as other plugins.
 
 ## Troubleshooting
-**Phone turns off unexpectedly**
-It's important to give the device time to boot up if you're just turning it on.  Unplugging the device's USB cable from Monsoonwill cause it to turn off otherwise.  
-**Phone turned on but is losing power**
-Make sure the device's time settings are correct.
-**Error device offline**
-adb connections can sometimes go offline.  The easiest way to fix this is to turn off the WiFi connection on the mobile device.  Then, on your computer, type adb connect [ip address:5555].  Then turn on WiFi on the mobile device.
-**Permission error**
-You may need to run the experiment as a privileged user.
-**Bootloop**
+**Phone turns off unexpectedly**\
+It's important to give the device time to boot up if you're just turning it on.  Unplugging the device's USB cable from Monsoon will cause it to turn off otherwise.\
+**Phone turned on but is losing power**\
+Make sure the device's time settings are correct.\
+**Error device offline**\
+adb connections can sometimes go offline.  The easiest way to fix this is to turn off the WiFi connection on the mobile device.  Then, on your computer, type adb connect [ip address:5555].  Then turn on WiFi on the mobile device.\
+**Permission error**\
+You may need to run the experiment as a privileged user.\
+**Bootloop**\
 The Nexus5x phone has a few bugs within the hardware/firmware that can sometimes brick the phone unexpectedly.  It's recommended to perform a factory reset via fastboot and twrp to see if that fixes the bootloop.    
