@@ -69,7 +69,7 @@ It's important to give the device time to boot up if you're just turning it on. 
 **Phone turned on but is losing power**\
 Make sure the device's time settings are correct.\
 **Error device offline**\
-adb connections can sometimes go offline.  The easiest way to fix this is to turn off the WiFi connection on the mobile device.  Then, on your computer, type adb connect [ip address:5555].  Then turn on WiFi on the mobile device.\
+adb connections can sometimes go offline.  The easiest way to fix this is to turn off the WiFi connection on the mobile device.  Then, on your computer, type `adb connect [ip address]:5555`.  Then turn on WiFi on the mobile device.\
 **Permission error**\
 You may need to run the experiment as a privileged user.\
 **Bootloop**\
