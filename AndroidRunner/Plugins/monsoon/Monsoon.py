@@ -57,6 +57,7 @@ class Monsoon(Profiler):
             for output_file in os.listdir(self.output_dir):
                 if output_file.startswith("monsoon_"):
                     res = open(op.join(self.output_dir, output_file)).readlines()[1]
+                    res = res.rstrip()
                     res = res.split(",")
                     writer.writerow([res[0],res[1],res[2]])
 
