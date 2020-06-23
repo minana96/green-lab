@@ -35,8 +35,10 @@ class NativeExperiment(Experiment):
                 device.install(path)
             self.package = op.splitext(op.basename(path))[0]
 
+
     def before_run(self, device, path, run, *args, **kwargs):
         super(NativeExperiment, self).before_run(device, path, run)
+        device.configure_settings_device(self.package, enable=True)
         device.launch_package(self.package)
         time.sleep(1)
         self.after_launch(device, path, run)
@@ -48,6 +50,7 @@ class NativeExperiment(Experiment):
     def after_run(self, device, path, run, *args, **kwargs):
         self.before_close(device, path, run)
         device.force_stop(self.package)
+        device.configure_settings_device(self.package, enable=False)
         time.sleep(3)
         super(NativeExperiment, self).after_run(device, path, run)
 

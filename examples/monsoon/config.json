@@ -2,15 +2,15 @@
   "type": "native",
   "devices": {
     "nexus5x": {
-      "power_device": "/home/exz1199/Documents/Thesis/androidrunner/android-runner/AndroidRunner/Plugins/monsoon/Script/power_device.py"
+      "power_device": "/home/exz1199/Documents/Thesis/androidrunner/android-runner/AndroidRunner/Plugins/monsoon/Script/power_device.py",
+      "device_settings_reqs": {"e.www.gyroscopetest": ["location_high_accuracy"]}
     }
   },
-  "repetitions": 2,
-  "randomization": false,
-  "browsers": ["firefox"],
-  "apps": [
-    "com.google.android.contacts",
-    "com.google.android.music"
+  "repetitions": 3,
+  "duration": 10000,
+  "paths": [
+    "android-runner/Gyroscope/e.www.gyroscopetest.apk",
+    "android-runner/Baseline/e.www.baseline.apk"
   ],
   "profilers":{
     "monsoon": {
@@ -20,17 +20,10 @@
     "before_experiment": "Scripts/before_experiment.py",
     "before_run": "Scripts/before_run.py",
     "after_launch": "Scripts/after_launch.py",
-    "interaction": [
-      {
-        "type": "python3",
-        "path": "Scripts/interaction.py",
-        "timeout": 500,
-        "logcat_regex": "some keyword"
-      }
-    ],
     "before_close": "Scripts/before_close.py",
     "after_run": "Scripts/after_run.py",
     "after_experiment": "Scripts/after_experiment.py"
   },
-  "time_between_run": 500
+  "time_between_run": 8000,
+  "randomization": true
 }
