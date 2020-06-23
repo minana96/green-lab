@@ -1,11 +1,8 @@
 import csv
 import os
 import os.path as op
-import threading
 import time
-import timeit
 from collections import OrderedDict
-from functools import reduce
 
 from AndroidRunner import util
 from AndroidRunner.Plugins.Profiler import Profiler
@@ -27,11 +24,15 @@ class Monsoon(Profiler):
 
     def start_profiling(self, device, **kwargs):
         """Start the profiling process"""
+        device.shell("input keyevent KEYCODE_WAKEUP")
+        time.sleep(5)
+        self.profile = True
         power_meter.start()
 
     def stop_profiling(self, device, **kwargs):
         """Stop the profiling process"""
         self.results = power_meter.stop()
+        device.shell("input keyevent KEYCODE_SLEEP")
         self.profile = False
 
     def collect_results(self, device):
