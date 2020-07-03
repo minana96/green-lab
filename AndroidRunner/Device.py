@@ -26,17 +26,13 @@ class Device:
         Adb.connect(device_id)
 
     def configure_settings_device(self, app, enable=True):
-        #Gets all the settings requirements from config for an app in a list
-        settings_for_app = self.device_settings_reqs.get(app)
-        if settings_for_app is not None:
-            num_settings = len(settings_for_app)
-            #might be more than one setting to enable or disable
-            for setting in range(num_settings):
-                #selects the adb shell command to enable or disable settings
-                #each setting commands with an enable and disable command
-                cmd = Adb.settings_options.get(settings_for_app[setting])[enable]
-                self.logger.info('Enabling ' + str(settings_for_app[setting])) if enable else self.logger.info('Disabling ' + str(settings_for_app[setting]))
-                Adb.shell(self.id, cmd)
+        if self.device_settings_reqs is not None:
+            settings_for_app = self.device_settings_reqs.get(app, None)
+            if settings_for_app is not None:
+                num_settings = len(settings_for_app)
+                for setting in range(num_settings):
+                    self.logger.info('Enabling ' + str(settings_for_app[setting])) if enable else self.logger.info('Disabling ' + str(settings_for_app[setting]))
+                    Adb.configure_settings(self.id, settings_for_app[setting], enable)
 
     def get_version(self):
         """Returns the Android version"""
