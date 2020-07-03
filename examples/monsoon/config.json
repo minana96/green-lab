@@ -2,7 +2,7 @@
   "type": "native",
   "devices": {
     "nexus5x": {
-      "power_device": "/home/exz1199/Documents/Thesis/androidrunner/android-runner/AndroidRunner/Plugins/monsoon/Script/power_device.py",
+      "power_device": "/home/exz1199/Documents/Thesis/androidrunner/android-runner/AndroidRunner/Plugins/monsoon/script/power_device.py",
       "device_settings_reqs": {"e.www.gyroscopetest": ["location_high_accuracy"], "e.www.accelerometertest": ["location_high_accuracy"],
                          "e.www.gpstest": ["location_high_accuracy"], "e.www.gravitytest": ["location_high_accuracy"],
                          "e.www.magneticfieldtest": ["location_high_accuracy"]

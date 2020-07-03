@@ -41,6 +41,7 @@ class Monsoon(Profiler):
         with open(op.join(self.output_dir, filename), 'w+') as f:
             writer = csv.writer(f)
             writer.writerow(self.data_points)
+            #Seconds to milliseconds
             writer.writerow([self.results[0], round(self.results[1]*1000), self.results[2]])
 
     def unload(self, device):
