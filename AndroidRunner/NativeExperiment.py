@@ -50,6 +50,8 @@ class NativeExperiment(Experiment):
     def after_run(self, device, path, run, *args, **kwargs):
         self.before_close(device, path, run)
         device.force_stop(self.package)
+        if self.clear_cache == True:
+            device.clear_app_data(self.package)
         device.configure_settings_device(self.package, enable=False)
         time.sleep(3)
         super(NativeExperiment, self).after_run(device, path, run)

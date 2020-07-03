@@ -21,6 +21,8 @@ class Experiment(object):
         self.basedir = None
         self.random = config.get('randomization', False)
         Tests.is_valid_option(self.random, valid_options=[True, False])
+        self.clear_cache = config.get('clear_cache', False)
+        Tests.is_valid_option(self.clear_cache, valid_options=[True, False])
         if 'devices' not in config:
             raise ConfigError('"device" is required in the configuration')
         adb_path = config.get('adb_path', 'adb')
