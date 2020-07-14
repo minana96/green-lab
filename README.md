@@ -72,6 +72,9 @@ Specify this property inside of your config to specify a `devices.json` outside 
 **repetitions** *positive integer*
 Number of times each experiment is run.
 
+**clear_cache** *boolean*
+Clears the cache before every run for both web and native experiments.  Default is *false*.
+
 **randomization** *boolean*
 Random order of run execution. Default is *false*.
 
@@ -91,7 +94,9 @@ A JSON object to describe the devices to be used and their arguments. Below are 
     "nexus6p": {
       "root_disable_charging": "True",
       "charging_disabled_value": 0,
-      "usb_charging_disabled_file": "/sys/class/power_supply/usb/device/charge"
+      "usb_charging_disabled_file": "/sys/class/power_supply/usb/device/charge",
+      "device_settings_reqs": {"e.www.gyroscopetest": ["location_high_accuracy", ...], ...}
+      }
     }
   }
 ```
@@ -111,7 +116,9 @@ A JSON object to describe the devices to be used and their arguments. Below are 
 ```
 Note that the last two examples result in the same behaviour.
 
-The root_disable_charging option specifies if the devices needs to be root charging disabled by writing the charging_disabled_value to the usb_charging_disabled_file. Different devices have different values for the charging_disabled_value and usb_charging_disabled_file, so be careful when using this feature. Also keep an eye out on the battery percentage when using this feature. If the battery dies when the charging is root disabled, it becomes impossible to charge the device via USB.
+The **root_disable_charging** option specifies if the devices needs to be root charging disabled by writing the **charging_disabled_value** to the **usb_charging_disabled_file**. Different devices have different values for the **charging_disabled_value** and **usb_charging_disabled_file**, so be careful when using this feature. Also keep an eye out on the battery percentage when using this feature. If the battery dies when the charging is root disabled, it becomes impossible to charge the device via USB.
+
+**device_settings_reqs** can be set to programmatically enable and disable settings on the test device.  It was added to automate the process of turning on and off location services in a randomized experiment where some applications required it and others that didn't.  Two options available currently: location services with the help of Google and one without.  **location_high_accuracy** is the option for location services with Google; **location_gps_only** is the other.  More adb commands are likely to be added in the future that work for other sensors.  Turn off location services before the experiment starts.
 
 **WARNING:** Always check the battery settings of the device for the charging status of the device after using root disable charging.
 If the device isn't charging after the experiment is finished, reset the charging file yourself via adb su command line using:
