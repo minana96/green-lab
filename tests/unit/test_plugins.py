@@ -10,6 +10,10 @@ from AndroidRunner.Plugins.batterystats.Batterystats import Batterystats
 from AndroidRunner.Plugins.Profiler import Profiler
 from AndroidRunner.Plugins.trepn.Trepn import Trepn
 
+from physalia.utils.monsoon import is_monsoon_available
+if is_monsoon_available():
+    from AndroidRunner.Plugins.monsoon.Monsoon import Monsoon
+
 
 class TestPluginTemplate(object):
     @pytest.fixture()
@@ -59,6 +63,148 @@ class TestPluginTemplate(object):
         with pytest.raises(NotImplementedError):
             profiler_template.aggregate_end('data/dir', 'output/file.csv')
 
+class TestMonsoonPlugin(object):
+    @pytest.fixture()
+    def mock_device(self):
+        return Mock()
+
+    @pytest.fixture()
+    def fixture_dir(self):
+        return op.join(op.dirname(op.abspath(__file__)), 'fixtures')
+
+    @pytest.mark.skipif(is_monsoon_available() == False, reason="A Monsoon HVPM & Device Required; pytest does not recognize sudo; testing not fully developed")
+    @pytest.fixture()
+    def monsoon_plugin(self):
+        test_config = {}
+        test_paths = {'path1': 'path/1'}
+        return Monsoon(test_config, test_paths)
+
+    @pytest.mark.skipif(is_monsoon_available() == False, reason="A Monsoon HVPM & Device Required; pytest does not recognize sudo; testing not fully developed")
+    @patch('AndroidRunner.Plugins.Profiler.__init__')
+    def test_monsoon_plugin_success(self, super_init):
+        test_config = {}
+        test_paths = {'path1': 'path/1'}
+        ap = Monsoon(test_config, test_paths)
+
+        super_init.assert_called_once_with(test_config, test_paths)
+        assert ap.output_dir == ''
+        assert ap.paths == test_paths
+        assert ap.profile is False
+        assert ap.data_points == ['energy_joules', 'duration_ms', 'error_flag']
+
+    @pytest.mark.skipif(is_monsoon_available() == False, reason="A Monsoon HVPM & Device Required; pytest does not recognize sudo; testing not fully developed")
+    def test_set_output(self, monsoon_plugin):
+        test_output_dir = "asdfgbfsdgbf/hjbdsfavav"
+        monsoon_plugin.set_output(test_output_dir)
+
+        assert monsoon_plugin.output_dir == test_output_dir
+
+    @pytest.mark.skipif(is_monsoon_available() == False, reason="A Monsoon HVPM & Device Required; pytest does not recognize sudo; testing not fully developed")
+    def test_dependencies(self, monsoon_plugin):
+        assert monsoon_plugin.dependencies() == []
+
+    @pytest.mark.skipif(is_monsoon_available() == False, reason="A Monsoon HVPM & Device Required; pytest does not recognize sudo; testing not fully developed")
+    def test_load(self, monsoon_plugin, mock_device):
+        assert monsoon_plugin.load(mock_device) is None
+
+    @pytest.mark.skipif(is_monsoon_available() == False, reason="A Monsoon HVPM & Device Required; pytest does not recognize sudo; testing not fully developed")
+    def test_unload(self, monsoon_plugin, mock_device):
+        assert monsoon_plugin.unload(mock_device) is None
+
+    @pytest.mark.skipif(is_monsoon_available() == False, reason="A Monsoon HVPM & Device Required; pytest does not recognize sudo; testing not fully developed")
+    @patch('AndroidRunner.util.write_to_file')
+    @patch('AndroidRunner.Plugins.monsoon.Monsoon.get_aggregated_runs_subject')
+    def test_get_aggregated_runs_subject(self, aggregate_mock, write_to_file_mock, monsoon_plugin):
+        test_output_dir = 'test/output/dir'
+        monsoon_plugin.output_dir = test_output_dir
+        mock_rows = Mock()
+        aggregate_mock.return_value = mock_rows
+
+        monsoon_plugin.aggregate_subject()
+
+        aggregate_mock.assert_called_once_with(test_output_dir)
+        expected_list = list()
+        expected_list.append(mock_rows)
+        write_to_file_mock.assert_called_once_with(op.join(test_output_dir, 'Aggregated.csv'), expected_list)
+
+    @pytest.mark.skipif(is_monsoon_available() == False, reason="A Monsoon HVPM & Device Required; pytest does not recognize sudo; testing not fully developed")
+    @patch('AndroidRunner.util.write_to_file')
+    @patch('AndroidRunner.Plugins.monsoon.Monsoon.aggregate_final')
+    def test_aggregate_end(self, aggregate_mock, write_to_file_mock, monsoon_plugin):
+        test_data_dir = 'test/output/dir'
+        test_output_file = 'test/output/file.csv'
+        mock_rows = Mock()
+        aggregate_mock.return_value = mock_rows
+
+        monsoon_plugin.aggregate_end(test_data_dir, test_output_file)
+
+        aggregate_mock.assert_called_once_with(test_data_dir)
+        write_to_file_mock.assert_called_once_with(test_output_file, mock_rows)
+
+    @pytest.mark.skipif(is_monsoon_available() == False, reason="A Monsoon HVPM & Device Required; pytest does not recognize sudo; testing not fully developed")
+    def test_aggregate_monsoon_subject(self, monsoon_plugin, fixture_dir):
+        test_subject_log_dir = op.join(fixture_dir, 'monsoon_subject_result')
+
+        test_logs_aggregated = monsoon_plugin.aggregate_monsoon_subject(test_subject_log_dir)
+        assert len(test_logs_aggregated) == 3
+        assert test_logs_aggregated['energy_joules'] == 32.94186117467583
+        assert test_logs_aggregated['duration_ms'] == 1131976.3141113652
+        assert test_logs_aggregated['error_flag'] == 'False'
+
+    @pytest.mark.skipif(is_monsoon_available() == False, reason="A Monsoon HVPM & Device Required; pytest does not recognize sudo; testing not fully developed")
+    @patch("AndroidRunner.Plugins.monsoon.Monsoon.aggregate_monsoon_final")
+    def test_aggregate_final_web(self, aggregate_mock, monsoon_plugin, fixture_dir):
+        test_struct_dir_web = op.join(fixture_dir, 'test_dir_struct', 'data_web')
+        aggregate_mock.side_effect = [{'avg': 1}, {'avg': 2}]
+
+        final_aggregated_result = monsoon_plugin.aggregate_final(test_struct_dir_web)
+
+        assert len(final_aggregated_result) == 2
+        assert len(final_aggregated_result[0]) == 4
+
+    @pytest.mark.skipif(is_monsoon_available() == False, reason="A Monsoon HVPM & Device Required; pytest does not recognize sudo; testing not fully developed")
+    @patch("AndroidRunner.Plugins.monsoon.Monsoon.aggregate_monsoon_final")
+    def test_aggregate_final_native(self, aggregate_mock, monsoon_plugin, fixture_dir):
+        test_struct_dir_native = op.join(fixture_dir, 'test_dir_struct', 'data_native')
+        aggregate_mock.side_effect = [{'avg': 1}, {'avg': 2}]
+
+        final_aggregated_result = monsoon_plugin.aggregate_final(test_struct_dir_native)
+
+        assert len(final_aggregated_result) == 2
+        assert len(final_aggregated_result[0]) == 3
+
+    @pytest.mark.skipif(is_monsoon_available() == False, reason="A Monsoon HVPM & Device Required; pytest does not recognize sudo; testing not fully developed")
+    def test_aggregate_monsoon_final(self, monsoon_plugin, fixture_dir):
+        test_log_dir = op.join(fixture_dir, 'aggregate_final', 'monsoon')
+        aggregated_final_rows = monsoon_plugin_plugin.aggregate_monsoon_plugin_final(test_log_dir)
+
+        assert len(aggregated_final_rows) == 3
+        assert aggregated_final_rows['energy_joules'] == '19.017852474323064'
+        assert aggregated_final_rows['duration_ms'] == '1280213.4222222222'
+        assert aggregated_final_rows['error_flag'] == 'False'
+
+    @pytest.mark.skipif(is_monsoon_available() == False, reason="A Monsoon HVPM & Device Required; pytest does not recognize sudo; testing not fully developed")
+    def test_start_profiling_with_app(self, monsoon_plugin, mock_device):
+        monsoon_plugin.start_profiling(mock_device)
+
+        assert monsoon_plugin.profile is True
+        get_data_mock.assert_called_once_with(mock_device, 'test.app')
+
+    @pytest.mark.skipif(is_monsoon_available() == False, reason="A Monsoon HVPM & Device Required; pytest does not recognize sudo; testing not fully developed")
+    def test_stop_profiling(self, monsoon_plugin, mock_device):
+        monsoon_plugin.profile = True
+
+        monsoon_plugin.stop_profiling(mock_device)
+
+        assert monsoon_plugin.profile is False
+
+    @pytest.mark.skipif(is_monsoon_available() == False, reason="A Monsoon HVPM & Device Required; pytest does not recognize sudo; testing not fully developed")
+    def test_add_rows_empty(self, monsoon_plugin):
+        return
+
+    @pytest.mark.skipif(is_monsoon_available() == False, reason="A Monsoon HVPM & Device Required; pytest does not recognize sudo; testing not fully developed")
+    def test_add_rows(self, monsoon_plugin):
+        return
 
 class TestAndroidPlugin(object):
     @pytest.fixture()
@@ -339,7 +485,7 @@ class TestAndroidPlugin(object):
         assert aggregated_final_rows['android_cpu'] == '19.017852474323064'
         assert aggregated_final_rows['android_mem'] == '1280213.4222222222'
 
-    
+
 class TestBatterystatsPlugin(object):
 
     @staticmethod
@@ -669,7 +815,7 @@ class TestBatterystatsPlugin(object):
         assert get_sysrace_result == []
         popen_return_value.wait.assert_called_once()
         parse_mock.assert_not_called()
-        
+
 
     @patch('AndroidRunner.Plugins.batterystats.Batterystats.Batterystats.get_data')
     @patch('time.strftime')
