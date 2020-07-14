@@ -176,7 +176,7 @@ class TestMonsoonPlugin(object):
     @pytest.mark.skipif(is_monsoon_available() == False, reason="A Monsoon HVPM & Device Required; pytest does not recognize sudo; testing not fully developed")
     def test_aggregate_monsoon_final(self, monsoon_plugin, fixture_dir):
         test_log_dir = op.join(fixture_dir, 'aggregate_final', 'monsoon')
-        aggregated_final_rows = monsoon_plugin_plugin.aggregate_monsoon_plugin_final(test_log_dir)
+        aggregated_final_rows = monsoon_plugin.aggregate_monsoon_plugin_final(test_log_dir)
 
         assert len(aggregated_final_rows) == 3
         assert aggregated_final_rows['energy_joules'] == '19.017852474323064'
@@ -188,7 +188,6 @@ class TestMonsoonPlugin(object):
         monsoon_plugin.start_profiling(mock_device)
 
         assert monsoon_plugin.profile is True
-        get_data_mock.assert_called_once_with(mock_device, 'test.app')
 
     @pytest.mark.skipif(is_monsoon_available() == False, reason="A Monsoon HVPM & Device Required; pytest does not recognize sudo; testing not fully developed")
     def test_stop_profiling(self, monsoon_plugin, mock_device):
