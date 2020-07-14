@@ -6,7 +6,7 @@ from collections import OrderedDict
 
 from AndroidRunner import util
 from AndroidRunner.Plugins.Profiler import Profiler
-from AndroidRunner.Plugins.monsoon.Script.power_device import power_meter
+from AndroidRunner.Plugins.monsoon.script.power_device import power_meter
 
 class Monsoon(Profiler):
     def __init__(self, config, paths):
