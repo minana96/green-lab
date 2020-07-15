@@ -78,7 +78,7 @@ class TestDevice(object):
         device_with_app_settings.configure_settings_device(None)
         device_with_app_settings.configure_settings_device("app3")
 
-        configure_settings.call_count == 3
+        assert configure_settings.call_count == 3
 
     @patch('AndroidRunner.Adb.shell')
     def test_get_version(self, adb_shell, device):
