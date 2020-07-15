@@ -19,6 +19,13 @@ class ConnectionError(Exception):
 
 adb = None
 
+settings_options = {"location_high_accuracy": ("settings put secure location_providers_allowed -gps,network","settings put secure location_providers_allowed +gps,network"),
+                    "location_gps_only": ("settings put secure location_providers_allowed -gps","settings put secure location_providers_allowed +gps")
+                    }
+
+def configure_settings(device_id, setting, enable):
+    cmd = settings_options[setting][enable]
+    return shell(device_id, cmd)
 
 # noinspection PyProtectedMember
 def setup(path='adb'):

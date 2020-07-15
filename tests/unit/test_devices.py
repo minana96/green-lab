@@ -32,12 +32,26 @@ class TestDevice(object):
 
         return Device(name, device_id, device_settings)
 
+    @pytest.fixture()
+    @patch('AndroidRunner.Adb.connect')
+    def device_with_app_settings(self, adb_connect):
+        adb_connect.return_value = None
+        name = 'fake_device'
+        device_id = 123456789
+        device_settings = {"device_settings_reqs": {"app1": ["setting_1"], "app2": ["setting_1", "setting_2"]}}
+
+        return Device(name, device_id, device_settings)
+
     @patch('AndroidRunner.Adb.connect')
     def test_init(self, adb_connect):
         name = 'fake_device'
         device_id = 123456789
         device_settings = {'root_disable_charging': True,
-                           'charging_disabled_value': '0', 'usb_charging_disabled_file': 'test/file'}
+                           'charging_disabled_value': '0',
+                           'usb_charging_disabled_file': 'test/file',
+                           'power_device': 'fake_path',
+                           'device_settings_reqs': {'app1': ['a, b'], 'app2': ['c']}
+                           }
 
         device = Device(name, device_id, device_settings)
 
@@ -47,7 +61,24 @@ class TestDevice(object):
         assert device.root_unplug_file == 'test/file'
         assert device.root_unplug_value == '0'
         assert device.root_unplug is True
+        assert device.power_device == 'fake_path'
+        assert device.device_settings_reqs == {'app1': ['a, b'], 'app2': ['c']}
         adb_connect.assert_called_once_with(device_id)
+
+    @patch('AndroidRunner.Adb.configure_settings')
+    @patch('logging.Logger.info')
+    def test_configure_settings_device(self, logger, configure_settings, device_with_app_settings):
+        device_with_app_settings.configure_settings_device("app1")
+        logger.assert_called_with('Enabling setting_1')
+        configure_settings.assert_called_with(device_with_app_settings.id, "setting_1",True)
+
+        device_with_app_settings.configure_settings_device("app2")
+        logger.assert_called_with('Enabling setting_2')
+
+        device_with_app_settings.configure_settings_device(None)
+        device_with_app_settings.configure_settings_device("app3")
+
+        assert configure_settings.call_count == 3
 
     @patch('AndroidRunner.Adb.shell')
     def test_get_version(self, adb_shell, device):
@@ -915,3 +946,14 @@ class TestAdb(object):
         Adb.reset(cmd)
         expected_calls = []
         assert Adb.adb.mock_calls == expected_calls
+
+    @patch('AndroidRunner.Adb.shell')
+    def test_configure_settings(self, shell):
+        Adb.adb = Mock()
+        device_id = 123
+        setting1 = "location_high_accuracy"
+        setting2 = "location_gps_only"
+        Adb.configure_settings(device_id, setting1, enable=True)
+        shell.assert_called_with(123, "settings put secure location_providers_allowed +gps,network")
+        Adb.configure_settings(device_id, setting2, enable=False)
+        shell.assert_called_with(123, "settings put secure location_providers_allowed -gps")

@@ -34,6 +34,7 @@ class TestExperiment(object):
         config['scripts'] = {'script1': 'path/to/1'}
         config['reset_adb_among_runs'] = True
         config['time_between_run'] = 10
+        config['clear_cache'] = True
         return config
 
     @pytest.fixture()
@@ -69,6 +70,7 @@ class TestExperiment(object):
         assert isinstance(experiment.scripts, Scripts)
         assert experiment.reset_adb_among_runs is False
         assert experiment.time_between_run == 0
+        assert experiment.clear_cache == False
         assert experiment.output_root == paths.OUTPUT_DIR
         assert experiment.result_file_structure is None
         assert mock_prepare.call_count == 0
@@ -94,6 +96,7 @@ class TestExperiment(object):
         assert isinstance(experiment.scripts, Scripts)
         assert experiment.reset_adb_among_runs is False
         assert experiment.time_between_run == 0
+        assert experiment.clear_cache == False
         assert experiment.output_root == paths.OUTPUT_DIR
         assert experiment.result_file_structure is None
         assert mock_prepare.call_count == 3
@@ -127,6 +130,7 @@ class TestExperiment(object):
         assert isinstance(experiment.scripts, Scripts)
         assert experiment.reset_adb_among_runs is True
         assert experiment.time_between_run == 10
+        assert experiment.clear_cache == True
         assert experiment.output_root == paths.OUTPUT_DIR
         assert experiment.result_file_structure is None
         mock_devices.assert_called_once_with(['dev1', 'dev2'], adb_path='test_adb', devices_spec=None)
@@ -1027,6 +1031,7 @@ class TestWebExperiment(object):
         mock_device.current_activity.return_value = current_activity
         path = 'test/path'
         run = 123456789
+        web_experiment.clear_cache = False
         mock_manager = Mock()
         mock_manager.attach_mock(mock_browser, "mock_browser_managed")
         mock_manager.attach_mock(sleep, "sleep_managed")
@@ -1034,7 +1039,16 @@ class TestWebExperiment(object):
 
         web_experiment.after_run(mock_device, path, run, *args, **kwargs)
 
-        expected_calls = [call.mock_browser_managed.stop(mock_device, clear_data=True),
+        expected_calls = [call.mock_browser_managed.stop(mock_device, False),
+                          call.sleep_managed(3),
+                          call.after_run_managed(mock_device, path, run)]
+        assert mock_manager.mock_calls == expected_calls
+
+        mock_manager.reset_mock()
+        web_experiment.clear_cache = True
+        web_experiment.after_run(mock_device, path, run, *args, **kwargs)
+
+        expected_calls = [call.mock_browser_managed.stop(mock_device, True),
                           call.sleep_managed(3),
                           call.after_run_managed(mock_device, path, run)]
         assert mock_manager.mock_calls == expected_calls
@@ -1225,6 +1239,7 @@ class TestNativeExperiment(object):
         native_experiment.before_run(mock_device, path, run, *args, **kwargs)
 
         expected_calls = [call.before_run_managed(mock_device, path, run),
+                          call.mock_device_managed.configure_settings_device('com.test.app', enable=True),
                           call.mock_device_managed.launch_package('com.test.app'),
                           call.after_launch_managed(mock_device, path, run)]
         assert mock_manager.mock_calls == expected_calls
@@ -1259,6 +1274,7 @@ class TestNativeExperiment(object):
         path = 'test/path'
         run = 123456789
         native_experiment.package = 'com.test.app'
+        native_experiment.clear_cache = True
         mock_manager = Mock()
         mock_manager.attach_mock(mock_device, 'mock_device_managed')
         mock_manager.attach_mock(after_run, 'after_run_managed')
@@ -1267,6 +1283,8 @@ class TestNativeExperiment(object):
 
         expected_calls = [call.mock_device_managed.current_activity(),
                           call.mock_device_managed.force_stop(native_experiment.package),
+                          call.mock_device_managed.clear_app_data(native_experiment.package),
+                          call.mock_device_managed.configure_settings_device(native_experiment.package, enable=False),
                           call.after_run_managed(mock_device, path, run)]
         assert mock_manager.mock_calls == expected_calls
 
