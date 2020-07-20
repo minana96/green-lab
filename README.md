@@ -2,7 +2,15 @@
 [![Build Status](https://travis-ci.org/S2-group/android-runner.svg?branch=master)](https://travis-ci.org/S2-group/android-runner)
 [![Coverage Status](https://coveralls.io/repos/github/S2-group/android-runner/badge.svg?branch=master)](https://coveralls.io/github/S2-group/android-runner?branch=master&service=github)
 # Android Runner
-Automated experiment execution on Android devices
+Android Runner (AR) is a tool for automatically executing measurement-based experiments on native and web apps running on Android devices.
+As visualized below, it consists of the following components:
+- **Experiment orchestrator**: Is in charge of executing the whole experiment according to the experiment configuration provided by the user.
+- **Devices manager**: Is responsible for providing a layer of abstraction on the low-level operations involving the Android devices.
+- **Progress manager**: Keeps track of the execution of each run of the experiment.
+- **Plugin handler**: Provides a set of facilities for managing the profilers and an extension point that third-party developers can use for integrating their own measurement tools into AR.
+
+![Overview of Android Runner](./documentation/overview.jpg)
+
 
 ## Install
 This tool is only tested on Ubuntu, but it should work in other linux distributions.
@@ -143,18 +151,13 @@ The package names of the apps to test when the apps are already installed on the
 The names of browser(s) to use. Currently supported values are `chrome`.
 
 **profilers** *JSON*
-A JSON object to describe the profilers to be used and their arguments. Below are several examples:
-```js
+A JSON object to describe the profiler plugins to be used and their arguments. Below, an example is found:
+```json
   "profilers": {
     "trepn": {
       "sample_interval": 100,
       "data_points": ["battery_power", "mem_usage"]
-    }
-  }
-```
-
-```js
-  "profilers": {
+    },
     "android": {
       "sample_interval": 100,
       "data_points": ["cpu", "mem"],
@@ -163,40 +166,16 @@ A JSON object to describe the profilers to be used and their arguments. Below ar
     }
   }
 ```
+Out of the box, AR contains the plugins listed below which can immediately be used as a profiler for an experiment.
 
-```js
-  "profilers": {
-    "batterystats": {
-      "cleanup": true,
-      "subject_aggregation": "default",
-      "experiment_aggregation": "default",
-      "enable_systrace_parsing": true,
-      "python2_path": "python2"
-    }
-  }
-```
-
-```json
-  "profilers": {
-    "Garbagecollection": {
-      "subject_aggregation" : "default"
-    }
-  }
-```
-The garbage collection (GC) plugin gathers and counts GC log statements by searching in adb's logcat for logs that meet the format of a GC call as described [here](https://dzone.com/articles/understanding-android-gc-logs).
-The default subject aggregation lists the counted GC calls in a single file for easy further processing.
-```json
-  "profilers": {
-    "Frametimes": {
-      "subject_aggregation" : "default",
-      "sample_interval": 1000
-    }
-  }
-```
-The frame times plugin gathers unique frame rendering durations (in nanoseconds) by utilizing `dumpsys gfxinfo framestats` and counts the amount of delayed frames that occurred following the 16ms threshold [defined by Google](https://developer.android.com/training/testing/performance).
-The sample interval is configurable but advised to keep under 120 seconds as the framestats command returns only data from frames rendered in the past 120 seconds as described [here](https://developer.android.com/training/testing/performance).
-Shorter sample intervals will not cause duplication in the frames gathered as only unique frames are kept.
-The default subject aggregation consists of combining both the frametimes as the delayed frames count in single files for easy further processing.
+| Name (quality)                                                                       | Description                                                                                                                                                                                                                                                                                 |
+|--------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [batterystats](./AndroidRunner/Plugins/batterystats/README_Batterystats.md) (Energy) | Uses the `batterystats` utility and estimates energy consumption via the algorithm proposed in [this article](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7884613&casa_token=oEEnY7XOip8AAAAA:AyRZxwboUh55-n9vmW5NGT62mL_hv85T4wPGWlDQGJ36VpF3bcAV1ufvYBhsYxlB0lIMOYJ_Hc-O&tag=1). |
+| [monsoon](./AndroidRunner/Plugins/monsoon/README_Monsoon.md) (Energy)                | Collects energy consumption via the Monsoon hard-ware profiler and the [Physalia tool](https://github.com/TQRG/physalia).                                                                                                                                                                   |
+| [trepn](./AndroidRunner/Plugins/trepn/README_Trepn.md) (mixed)                       | Collects data via the Trepn profiler, e.g., power consumption, battery temperature, CPUs frequency.                                                                                                                                                                                         |
+| [mem-CPU](./AndroidRunner/Plugins/android/README_Android.md) (Performance)           | Collects memory and CPU usage via the `cpuinfo` and `meminfo` Android utilities.                                                                                                                                                                                                            |
+| [frametimes](./AndroidRunner/Plugins/frametimes/README_Frametimes.md) (Performance)  | Collects frame rendering durations and the number of delayed frames with the technique used in [this article](https://dl.acm.org/doi/pdf/10.1145/2897073.2897100?casa_token=jD3bYLV001kAAAAA:OZiAzZFwtvSO-uK3hgWlz6iNVcTt6uYoT1UWroDEGhDHrEBvLbsIl4E13RhAtRK4IaEPd6putLTzzZw).              |
+| [gc](./AndroidRunner/Plugins/trepn/README_Trepn.md) (Performance)                    | Collects the number of garbage collections as in [this article](https://dl.acm.org/doi/pdf/10.1145/2897073.2897100?casa_token=jD3bYLV001kAAAAA:OZiAzZFwtvSO-uK3hgWlz6iNVcTt6uYoT1UWroDEGhDHrEBvLbsIl4E13RhAtRK4IaEPd6putLTzzZw).                                                            |
 
 **subject_aggregation** *string*
 Specify which subject aggregation to use. The default is the subject aggregation provided by the profiler. If a user specified aggregation script is used then the script should contain a ```bash main(dummy, data_dir)``` method, as this method is used as the entry point to the script.
@@ -206,12 +185,6 @@ Specify which experiment aggregation to use. The default is the experiment aggre
 
 **cleanup** *boolean*
 Delete log files required by Batterystats after completion of the experiment. The default is *true*.
-
-**enable_systrace_parsing** *boolean*
-The Batterystats profiler uses the profiling tool Systrace internally to measure CPU specific activity and energy consumption on the mobile device. For some devices the parsing of the output of Systrace fails, causing the experiment run to fail. You can safely disable the Systrace parsing when you encounter Systrace parsing errors given that your experiment does not need rely on CPU specific information, but rather on the overall energy consumption of the mobile device. The overall energy consumption is not affected by the Systrace logs since it is tracked using another tool. The default is *true*.
-
-**python2_path** *string*
-The path to python 2 that is used to launch Systrace. The default is *python2*.
 
 **scripts** *JSON*
 A JSON list of types and paths of scripts to run. Below is an example:
