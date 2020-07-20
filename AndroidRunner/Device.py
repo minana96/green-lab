@@ -6,6 +6,8 @@ import time
 from . import Adb
 from .Adb import AdbError
 from .util import ConfigError, makedirs
+from . import Tests
+import subprocess
 
 
 class Device:
@@ -17,7 +19,20 @@ class Device:
         self.root_unplug_value = settings.get('charging_disabled_value', None)
         self.root_unplug_file = settings.get('usb_charging_disabled_file', None)
         self.root_plug_value = None
+        self.power_device = settings.get('power_device', None)
+        self.device_settings_reqs = settings.get('device_settings_reqs', None)
+        if self.power_device:
+            subprocess.call(['python', self.power_device])
         Adb.connect(device_id)
+
+    def configure_settings_device(self, app, enable=True):
+        if self.device_settings_reqs is not None:
+            settings_for_app = self.device_settings_reqs.get(app, None)
+            if settings_for_app is not None:
+                num_settings = len(settings_for_app)
+                for setting in range(num_settings):
+                    self.logger.info('Enabling ' + str(settings_for_app[setting])) if enable else self.logger.info('Disabling ' + str(settings_for_app[setting]))
+                    Adb.configure_settings(self.id, settings_for_app[setting], enable)
 
     def get_version(self):
         """Returns the Android version"""

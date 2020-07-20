@@ -30,7 +30,7 @@ class PluginTests(object):
 
     def check_profilers(self):
         self.check_init_profilers()
-        default_profilers = ['android', 'batterystats', 'trepn']
+        default_profilers = ['android', 'batterystats', 'trepn', 'monsoon']
         for profiler in self.profilers:
             if profiler.name.lower() not in default_profilers:
                 self.check_profiler(profiler.currentProfiler, profiler.name)

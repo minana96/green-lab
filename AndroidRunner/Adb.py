@@ -1,5 +1,6 @@
 import logging
 import os.path as op
+from time import sleep
 
 from .pyand import ADB
 
@@ -18,6 +19,13 @@ class ConnectionError(Exception):
 
 adb = None
 
+settings_options = {"location_high_accuracy": ("settings put secure location_providers_allowed -gps,network","settings put secure location_providers_allowed +gps,network"),
+                    "location_gps_only": ("settings put secure location_providers_allowed -gps","settings put secure location_providers_allowed +gps")
+                    }
+
+def configure_settings(device_id, setting, enable):
+    cmd = settings_options[setting][enable]
+    return shell(device_id, cmd)
 
 # noinspection PyProtectedMember
 def setup(path='adb'):
@@ -35,7 +43,7 @@ def connect(device_id):
         raise ConnectionError('No devices are connected')
     logger.debug('Device list:\n%s' % device_list)
     if device_id not in list(device_list.values()):
-        raise ConnectionError('%s: Device can not connected' % device_id)
+        raise ConnectionError('%s: Device not recognized' % device_id)
 
 
 def shell_su(device_id, cmd):
@@ -139,3 +147,14 @@ def logcat(device_id, regex=None):
         params += ' -e %s' % regex
     adb.set_target_by_name(device_id)
     return adb.get_logcat(lcfilter=params)
+
+
+def reset(cmd):
+    if cmd:
+        logger.info('Shutting down adb...')
+        sleep(1)
+        adb.kill_server()
+        sleep(2)
+        logger.info('Restarting adb...')
+        adb.get_devices()
+        sleep(10)

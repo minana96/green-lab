@@ -61,7 +61,7 @@ class WebExperiment(Experiment):
 
     def after_run(self, device, path, run, *args, **kwargs):
         browser = args[0]
-        browser.stop(device, clear_data=True)
+        browser.stop(device, self.clear_cache)
         time.sleep(3)
         super(WebExperiment, self).after_run(device, path, run)
 

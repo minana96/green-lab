@@ -2,7 +2,7 @@
   "type": "web",
   "devices": ["nexus6p"],
   "repetitions": 3,
-  "randomization": "False",
+  "randomization": false,
   "browsers": ["firefox"],
   "paths": [
     "https://google.com/",
