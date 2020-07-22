@@ -13,3 +13,6 @@ Below an example configuration is found:
 
 **subject_aggregation** *string*
 The default configuration for this plugin is the subject aggregation which lists the counted GC calls in a single file for easy further processing.
+
+**experiment_aggregation** *string*
+This plugin contains no default experiment aggregation.

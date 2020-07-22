@@ -20,3 +20,9 @@ The Batterystats profiler uses the profiling tool Systrace internally to measure
 
 **python2_path** *string*
 The path to python 2 that is used to launch Systrace. The default is *python2*.
+
+**subject_aggregation** *string*
+TODO: default subject aggregation
+
+**experiment_aggregation** *string*
+TODO: default experiment aggregation
