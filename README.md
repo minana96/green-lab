@@ -9,8 +9,9 @@ As visualized below, it consists of the following components:
 - **Progress manager**: Keeps track of the execution of each run of the experiment.
 - **Plugin handler**: Provides a set of facilities for managing the profilers and an extension point that third-party developers can use for integrating their own measurement tools into AR.
 
-![Overview of Android Runner](./documentation/overview.jpg)
-
+<p align="center">
+<img src="./documentation/overview.jpg" alt="Overview of Android Runner" width="500"/>
+</p>
 
 ## Install
 This tool is only tested on Ubuntu, but it should work in other linux distributions.
