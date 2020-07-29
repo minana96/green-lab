@@ -2,7 +2,12 @@
   "type": "web",
   "devices": {
     "nexus5x": {
-      "power_device": "/my_path/androidrunner/android-runner/AndroidRunner/Plugins/monsoon/script/power_device.py"
+      "power_device": {
+        "script_path": "my_path/androidrunner/android-runner/AndroidRunner/Plugins/monsoon/script/power_device.py",
+        "py_path": "python3",
+        "vout": "3.8",
+        "serial_num": "23171"
+        }
     }
   },
   "clear_cache": true,

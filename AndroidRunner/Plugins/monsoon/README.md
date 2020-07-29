@@ -23,19 +23,20 @@ Note, it's advised to not use a USB hub for optimal performance.
 Turn on Monsoon.
 
 ## Configuring Device Settings with First Test Run
-The plugin uses the same structure as other Android Runner plugins.  The only difference is that there's no guarantee that Monsoon is already providing power to the device, which will be the case when the Monsoon is turned on.  To factor in this, we added the Physalia script below.  The serial number of your Monsoon *must* be included in this script. Follow the path **AndroidRunner/Plugins/monsoon/script** and find `power_device.py`. Enter your Monsoon serial number in the serial parameter and save.  This action is required only once.
-```
-from physalia.power_meters import MonsoonHVPMPowerMeter
-power_meter = MonsoonHVPMPowerMeter(voltage=3.8, serial=23171)
-```
+The plugin's user configuration differs from other plugins in the framework.  This is because there's no guarantee that Monsoon is already providing power to the device, which will be the case when the Monsoon is turned on.  Because of this, the plugin is configured under the device section of the configuration file instead of the profiler section.
 
-The configuration file should look like this:
+The configuration file should look something like this:
 ```
 {
 ...
   "devices": {
     "nexus5x": {
-      "power_device": "my_path/androidrunner/android-runner/AndroidRunner/Plugins/monsoon/script/power_device.py"
+      "power_device": {
+        "script_path":"my_path/androidrunner/android-runner/AndroidRunner/Plugins/monsoon/script/power_device.py",
+        "py_path": "python3",
+        "vout": "3.8",
+        "serial_num": "23171"
+      }
     }
 ...
   "profilers":{
@@ -44,11 +45,11 @@ The configuration file should look like this:
 ...
 }
 ```
-As seen above, there are no available options under the Monsoon profiler.  
+If using a **Python3 virtual environment**, the `py_path` field must be changed to reflect the virtual environment's Python binary (ex: `"py_path": "my_path/venv/bin/python"`.  **Most phones operate normally between 3.8 and 4.2 volts.**
 
 Follow these instructions to power on the phone:
 1. Leave the USB-A/B passthrough cable disconnected from host machine.  Note, this is the cable that connects to Monsoon next to the Nexus 5X's USB cable.  
-2. Execute `python android-runner android-runner/examples/monsoon/config.json`.  May need to execute this as a privileged user with something like `sudo`.
+2. Execute `sudo my_path/venv/bin/python3 android-runner android-runner/examples/monsoon/config.json` or whatever configuration path is relevant.  If not using a virtual environment, `sudo python3 ...`.
 3. Turn on the Android device once terminal output shows *Monsoon is ready*.
 4. Ignore the terminal output; the point of this exercise is to power on the device and configure it - not to run experiments just yet.  Wait for phone to boot up.
 5. Ensure the time settings are correct.
@@ -59,34 +60,36 @@ Follow these instructions to power on the phone:
   "nexus5x": "192.168.2.7:5555"
 }
 ```
-8. Disable lock screen in **Security**.  The screen will turn off after a maximum of 30 minutes, so the plugin will ensure that the screen wakes up before every run.  It will also cause the screen to go asleep after every run.  The **Stay Awake** settings under **Developer Options** applies only to devices that are in a charging state, which doesn't apply to Monsoon-configured devices during profiling.
-9. Under **Display** options, make sure the run duration of any future experiment doesn’t exceed the screen timeout (max 30 minutes), plus an extra minute or so to account for sleep calls.
+8. Disable lock screen in *Security*.  The screen will turn off after a maximum of 30 minutes, so the plugin will ensure that the screen wakes up before every run.  It will also cause the screen to go asleep after every run.  The *Stay Awake* settings under *Developer Options* applies only to devices that are in a charging state, which doesn't apply to Monsoon-configured devices during profiling.
+9. Under *Display* options, make sure the run duration of any future experiment doesn't exceed the screen timeout (max 30 minutes), plus an extra minute or so to account for sleep calls.
 
 ## Things to know before running first real experiment
-1. The field `reset_adb_among_runs` should either be set to **false** or not be included in the config.
+1. The field `reset_adb_among_runs` should either be set to *false* or not be included in the configuration file.
 2. The `duration` of each run must not exceed 30 minutes, or 1,800,000 milliseconds if the phone screen needs to be on during the experiment.  Note, `time_between_run` is not affected by this requirement.
 3. Don't forget to add the phone's IP address and port to `devices.json`.
 4. For best stability, make sure the device is as close to the router as possible.  The device may disconnect from the adb server if the WiFi connection isn't stable.
+5. It's not required to turn off Monsoon before changing the `vout` field.  Monsoon can adjust that while it's powered on.
+6. The script will create a csv file in the same directory that will get overwritten every time an experiment is run.  
 
 ## Running the experiment
 It's time to run a real experiment.
 1. Terminate the adb server if one exists.  Leave USB passthrough unplugged from host machine.
-2. Execute `python android-runner android-runner/examples/monsoon/config.json` or whatever path the experiment's config file needs.
+2. Execute Android Runner using the path to the experiment's configuration file.
 3. Once the phone is booted and connected to WiFi, connect USB passthrough to host machine.  Physalia will first connect to the device via USB adb. It will then connect to it via WiFi adb.
 4. The experiment will be automated from this point on.  
 5. The device will remain connected to adb over WiFi after the experiment is over, so any future experiments can be run without disconnecting or reconnecting any cables if desired.
 
 ## Results
-Physalia will provide joules, the duration in milliseconds and an error flag field per run with a default sampling rate of 5 kHz.  The `error_flag` will be set to *False* if Monsoon’s `sampleEngine` returns a list of lists that contains timestamps, current and voltage. The results will be saved and aggregated in the same way as other plugins.
+Physalia will provide joules, the duration in milliseconds and an error flag field per run with a default sampling rate of 5 kHz.  The `error_flag` will be set to *False* if Monsoon’s `sampleEngine` returns a list of lists that contains timestamps, current and voltage. The results will be saved and aggregated from the experiment standpoint and also from the subject standpoint.  The mean of each subject will *not* be provided in the output.
 
 ## Troubleshooting
 **usb.core.USBError: [Errno 32] Pipe error**\
 Restart the Monsoon.  Likely the result of the device disconnecting from the adb server while Monsoon is profiling.\
 **Phone turned on but is losing power**\
-Make sure the device's time settings are correct.\
-**Permission error**\
-You may need to run the experiment as a privileged user.\
+Increase the voltage.  Ensure time settings are correct.\
 **Phone Stuck in Bootloop**\
 The Nexus 5X phone has a few bugs within the hardware/firmware that can sometimes brick the phone unexpectedly.  It's recommended to perform a factory reset via fastboot and twrp to see if that fixes the bootloop before trying other more extreme measures.\
 **Experiment Not Progressing**\
-Occasionally, the test device may go offline in WiFi mode and transition to dropping the connection while the adb server is still up.  Terminate the experiment, re-establish the adb connection with test device and use the experiment's progress xml file to restart where it hanged.      
+Occasionally, the test device may go offline in WiFi mode and transition to dropping the connection while the adb server is still up.  Terminate the experiment, re-establish the adb connection with test device and use the experiment's progress xml file to restart where it hanged.\
+**Other Errors/Warnings**\
+Type `adb kill-server` before running a new experiment.  Let Physalia create the adb server.  Restart the Monsoon if all else fails.     
