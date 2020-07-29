@@ -49,7 +49,12 @@ class TestDevice(object):
         device_settings = {'root_disable_charging': True,
                            'charging_disabled_value': '0',
                            'usb_charging_disabled_file': 'test/file',
-                           'power_device': 'fake_path',
+                           'power_device': {
+                                'script_path': 'fake/path',
+                                'py_path': 'python',
+                                'vout': '3',
+                                'serial_num': '23'
+                                },
                            'device_settings_reqs': {'app1': ['a, b'], 'app2': ['c']}
                            }
 
@@ -61,7 +66,9 @@ class TestDevice(object):
         assert device.root_unplug_file == 'test/file'
         assert device.root_unplug_value == '0'
         assert device.root_unplug is True
-        assert device.power_device == 'fake_path'
+        assert device.power_device is not None
+        assert device.power_device['script_path'] == 'fake/path'
+        assert device.power_device['py_path'] == 'python'
         assert device.device_settings_reqs == {'app1': ['a, b'], 'app2': ['c']}
         adb_connect.assert_called_once_with(device_id)
 

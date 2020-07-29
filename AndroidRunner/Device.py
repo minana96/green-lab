@@ -22,7 +22,7 @@ class Device:
         self.power_device = settings.get('power_device', None)
         self.device_settings_reqs = settings.get('device_settings_reqs', None)
         if self.power_device:
-            subprocess.call(['python', self.power_device])
+            subprocess.call([self.power_device["py_path"], self.power_device["script_path"], self.power_device["vout"], self.power_device["serial_num"]])
         Adb.connect(device_id)
 
     def configure_settings_device(self, app, enable=True):

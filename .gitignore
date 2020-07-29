@@ -104,6 +104,7 @@ ENV/
 examples/trepn.pref
 examples/output
 examples/logs
+AndroidRunner/Plugins/monsoon/script/monsoon_config.csv
 
 .vscode
 

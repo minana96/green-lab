@@ -10,7 +10,6 @@ install:
   - pip install pluginbase
   - pip install python-slugify
   - pip install mock
-  - pip install physalia
 script:
   - coverage run -m py.test --verbose tests/unit
 after_success:
