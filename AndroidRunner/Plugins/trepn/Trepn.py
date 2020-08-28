@@ -7,6 +7,7 @@ import time
 from collections import OrderedDict
 
 import lxml.etree as et
+from lxml.etree import ElementTree
 
 from AndroidRunner.Plugins.Profiler import Profiler
 from functools import reduce
@@ -28,6 +29,28 @@ class Trepn(Profiler):
         self.data_points = []
         self.build_preferences(config)
 
+    def override_preferences(self, params: OrderedDict, preferences_file: ElementTree) -> ElementTree:
+        """Read the preferences XML file and override configurations provided by the user"""
+        # Parse XML preferences only if the user is overriding a preference
+        if 'preferences' not in params:
+            return preferences_file
+
+        # Parse all preferences in the XML file
+        for xml_preference in preferences_file.getroot().iter():
+            # Verifies if this XML contains a preference
+            xml_preference_name = xml_preference.get('name')
+            if xml_preference_name is not None:
+                # Verifies if the user configuration file is overriding this preference
+                xml_preference_override_name = xml_preference.get('name').rsplit('.', 1)[1]
+                if xml_preference_override_name in params['preferences']:
+                    # Replace the default preference with the configuration provided by the user
+                    preference_value = str(params['preferences'][xml_preference_override_name])
+                    if xml_preference.tag == 'string':
+                        xml_preference.text = preference_value
+                    else:
+                        xml_preference.set('value', preference_value)
+        return preferences_file
+
     def build_preferences(self, params):
         """Build the XML files to setup Trepn and the data points"""
         current_dir = op.dirname(op.realpath(__file__))
@@ -37,10 +60,7 @@ class Trepn(Profiler):
         util.makedirs(self.pref_dir)
 
         preferences_file = et.parse(op.join(current_dir, 'preferences.xml'))
-        if 'sample_interval' in params:
-            for i in preferences_file.getroot().iter('int'):
-                if i.get('name') == 'com.quicinc.preferences.general.profiling_interval':
-                    i.set('value', str(params['sample_interval']))
+        preferences_file = self.override_preferences(params, preferences_file)
         preferences_file.write(op.join(self.pref_dir, 'com.quicinc.trepn_preferences.xml'), encoding='utf-8',
                                xml_declaration=True, standalone=True)
         datapoints_file = et.parse(op.join(current_dir, 'data_points.xml'))
@@ -166,7 +186,8 @@ class Trepn(Profiler):
 
     def aggregate_trepn_subject(self, logs_dir):
         def add_row(accum, new):
-            row = {key: value + float(new[key]) for key, value in list(accum.items()) if key not in ['Component', 'count']}
+            row = {key: value + float(new[key]) for key, value in list(accum.items()) if
+                   key not in ['Component', 'count']}
             count = accum['count'] + 1
             return dict(row, **{'count': count})
 
@@ -185,7 +206,8 @@ class Trepn(Profiler):
         init = dict({fn: 0 for fn in list(runs[0].keys())}, **{'count': 0})
         runs_total = reduce(add_row, runs, init)
         return OrderedDict(
-            sorted(list({k: v / len(runs) for k, v in list(runs_total.items()) if not k == 'count'}.items()), key=lambda x: x[0]))
+            sorted(list({k: v / len(runs) for k, v in list(runs_total.items()) if not k == 'count'}.items()),
+                   key=lambda x: x[0]))
 
     @staticmethod
     def split_reader(reader):
