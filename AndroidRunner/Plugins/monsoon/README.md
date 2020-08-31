@@ -85,11 +85,29 @@ Physalia will provide joules, the duration in milliseconds and an error flag fie
 ## Troubleshooting
 **usb.core.USBError: [Errno 32] Pipe error**\
 Restart the Monsoon.  Likely the result of the device disconnecting from the adb server while Monsoon is profiling.\
+
 **Phone turned on but is losing power**\
 Increase the voltage.  Ensure time settings are correct.\
+
 **Phone Stuck in Bootloop**\
 The Nexus 5X phone has a few bugs within the hardware/firmware that can sometimes brick the phone unexpectedly.  It's recommended to perform a factory reset via fastboot and twrp to see if that fixes the bootloop before trying other more extreme measures.\
+
 **Experiment Not Progressing**\
 Occasionally, the test device may go offline in WiFi mode and transition to dropping the connection while the adb server is still up.  Terminate the experiment, re-establish the adb connection with test device and use the experiment's progress xml file to restart where it hanged.\
+
+**ImportError: bad magic number in 'physalia': b'\x03\xf3\r\n'**
+
+Clear up Python compiled bytecode files (`.pyc` files) by running
+
+```
+find . -name \*.pyc -delete
+``` 
+
+**Failing to recognize the mobile device**
+
+This might be caused by not having ADB in the location `/usr/bin/adb`.
+A quick fix is simple copying ADB to this location.
+You can find ADB in the Android SDK directory.
+
 **Other Errors/Warnings**\
 Type `adb kill-server` before running a new experiment.  Let Physalia create the adb server.  Restart the Monsoon if all else fails.     
