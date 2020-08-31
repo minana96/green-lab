@@ -7,7 +7,7 @@ Abstract—We have developed a user interface driven record and replay system fo
 
 A modified android kernel is needed to needed to capture the touch input and create the log. It is not included here due to the size.
 
-download jyson from here: http://downloads.xhaus.com/jyson/
+download jyson from here: https://opensource.xhaus.com/projects/jyson/files
 place the .jar file in your directory so they JSON parsing in the monkeyrunner python scripts run correctly
 
 to run replay:
