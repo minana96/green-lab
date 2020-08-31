@@ -39,7 +39,7 @@ Path to Monkeyrunner. Example path: `/opt/platform-tools/bin/monkeyrunner`
 **type** *string*
 Type of the experiment. Can be `web`, `native` or `plugintest`
 
-**device_spec** *string*
+**devices_spec** *string*
 Specify this property inside of your config to specify a `devices.json` outside of the Android Runner repository. For example:
 
  ```js
