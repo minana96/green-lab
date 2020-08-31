@@ -62,6 +62,7 @@ class Android(Profiler):
 
     def start_profiling(self, device, **kwargs):
         self.profile = True
+        self.data = [['datetime'] + self.data_points]
         app = kwargs.get('app', None)
         self.get_data(device, app)
 
