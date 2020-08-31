@@ -215,7 +215,7 @@ class Experiment(object):
         self.scripts.run('after_run', device, *args, **kwargs)
         self.profilers.collect_results(device)
         Adb.reset(self.reset_adb_among_runs)
-        self.logger.debug('Sleeping for %s milliseconds' % self.time_between_run)
+        self.logger.info('Sleeping for %s milliseconds' % self.time_between_run)
         time.sleep(self.time_between_run / 1000.0)
 
     def after_last_run(self, device, path, *args, **kwargs):
