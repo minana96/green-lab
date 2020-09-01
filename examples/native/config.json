@@ -3,18 +3,22 @@
   "devices": {
     "j7duo2": {}
   },
-  "duration": 5000,
   "repetitions": 1,
   "duration": 5000,
   "apps": [
     "com.samsung.android.messaging"
   ],
   "profilers": {
-     "trepn": {
-      "sample_interval": 200,
-      "data_points": ["battery_power"]
-     }
- },
+    "trepn": {
+      "preferences": {
+        "profiling_interval": 100,
+        "battery_power_source_selection": "Direct Power"
+      },
+      "data_points": [
+        "battery_power"
+      ]
+    }
+  },
   "scripts": {
     "before_experiment": "Scripts/before_experiment.py",
     "before_run": "Scripts/before_run.py",
