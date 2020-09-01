@@ -1,26 +1,38 @@
 {
   "type": "web",
-  "devices": ["nexus6p"],
+  "devices": [
+    "nexus6p"
+  ],
   "repetitions": 3,
   "randomization": false,
-  "browsers": ["firefox"],
+  "browsers": [
+    "firefox"
+  ],
   "paths": [
     "https://google.com/",
     "https://apple.com/",
     "https://wikipedia.com/"
   ],
-  "profilers":{
- "trepn": {
+  "profilers": {
+    "trepn": {
       "subject_aggregation": "none",
-      "experiment_aggregation" : "Scripts/aggregate_trepn.py",
-      "sample_interval": 100,
-      "data_points": ["battery_power", "mem_usage"]
-     },
+      "experiment_aggregation": "Scripts/aggregate_trepn.py",
+      "preferences": {
+        "profiling_interval": 100
+      },
+      "data_points": [
+        "battery_power",
+        "mem_usage"
+      ]
+    },
     "android": {
       "subject_aggregation": "none",
-      "experiment_aggregation" : "Scripts/aggregate_android.py",
+      "experiment_aggregation": "Scripts/aggregate_android.py",
       "sample_interval": 200,
-      "data_points": ["cpu", "mem"]
+      "data_points": [
+        "cpu",
+        "mem"
+      ]
     }
   },
   "scripts": {

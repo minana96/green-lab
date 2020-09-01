@@ -841,7 +841,7 @@ class TestTrepnPlugin(object):
         assert trepn_plugin.dependencies() == ['com.quicinc.trepn']
 
     def test_build_preferences(self, trepn_plugin, tmpdir, fixture_dir):
-        test_params = {'sample_interval': 300, 'data_points': ['battery_power', 'mem_usage']}
+        test_params = {'preferences': {'profiling_interval': 300}, 'data_points': ['battery_power', 'mem_usage']}
         trepn_plugin.paths['OUTPUT_DIR'] = str(tmpdir)
 
         trepn_plugin.build_preferences(test_params)
