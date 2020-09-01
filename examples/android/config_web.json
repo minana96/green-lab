@@ -1,20 +1,26 @@
 {
-  "type": "native",
+  "type": "web",
   "devices": {
     "nexus6p": {}
   },
   "repetitions": 1,
-  "apps": [
-    "com.experimental.rvs960.ioapp"
+  "browsers": [
+    "chrome"
+  ],
+  "paths": [
+    "https://www.google.com"
   ],
   "profilers": {
     "android": {
-      "subject_aggregation" : "default",
-      "experiment_aggregation" : "default",
-      "sample_interval": 0,
-      "data_points": ["cpu", "mem"]
+      "subject_aggregation": "default",
+      "experiment_aggregation": "Scripts/aggregate_android.py",
+      "sample_interval": 100,
+      "data_points": [
+        "cpu",
+        "mem"
+      ]
     }
- },
+  },
   "scripts": {
     "before_experiment": "Scripts/before_experiment.py",
     "before_run": "Scripts/before_run.py",
@@ -22,9 +28,11 @@
     "interaction": [
       {
         "type": "python3",
-        "path": "Scripts/interaction.py",
-        "timeout": 500,
-        "logcat_regex": "some keyword"
+        "path": "Scripts/interaction.py"
+      },
+      {
+        "type": "monkeyreplay",
+        "path": "Scripts/monkey.txt"
       }
     ],
     "before_close": "Scripts/before_close.py",
