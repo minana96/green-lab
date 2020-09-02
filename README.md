@@ -3,7 +3,9 @@
 [![Coverage Status](https://coveralls.io/repos/github/S2-group/android-runner/badge.svg?branch=master)](https://coveralls.io/github/S2-group/android-runner?branch=master&service=github)
 # Android Runner
 Android Runner (AR) is a tool for automatically executing measurement-based experiments on native and web apps running on Android devices.
-As visualized below, it consists of the following components:
+The following scientific publication gives an overview about the main components, plugins, and configurations of Android Runner (as of 2020): [A-Mobile 2020 publication](https://github.com/S2-group/android-runner/blob/master/documentation/A_Mobile_2020.pdf).  
+
+As visualized below, Android Runner consists of the following components:
 - **Experiment orchestrator**: Is in charge of executing the whole experiment according to the experiment configuration provided by the user.
 - **Devices manager**: Is responsible for providing a layer of abstraction on the low-level operations involving the Android devices.
 - **Progress manager**: Keeps track of the execution of each run of the experiment.
@@ -12,6 +14,21 @@ As visualized below, it consists of the following components:
 <p align="center">
 <img src="./documentation/overview.jpg" alt="Overview of Android Runner" width="500"/>
 </p>
+
+## How to cite Android Runner
+
+If Android Runner is helping your research, consider to cite it as follows, thanks!
+
+``` 
+@inproceedings{A_Mobile_2020,
+  title={{A Framework for the Automatic Execution of Measurement-based Experiments on Android Devices}},
+  author={Ivano Malavolta and Eoin Maritno Grua and Cheng-Yu Lam and Randy de Vries and Franky Tan and Eric Zielinski and Michael Peters and Luuk Kaandorp},
+  booktitle={35th IEEE/ACM International Conference on Automated Software Engineering Workshops (ASEW '20)},
+  year={2020},
+  url= {https://github.com/S2-group/android-runner/blob/master/documentation/A_Mobile_2020.pdf},
+  organization={ACM}
+}
+```
 
 ## Setting up environment, installation and dependencies
 Instructions can be found [here](https://github.com/S2-group/android-runner/blob/master/CONTRIBUTING.md).  Instructions for specific plugins are included in the plugins' READMEs.
