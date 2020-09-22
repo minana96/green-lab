@@ -112,3 +112,6 @@ AndroidRunner/Plugins/monsoon/script/monsoon_config.csv
 
 # ignore any ouputs of experiments
 output/
+
+# ignore node_modules folder used by npm
+critical_css_technique/node_modules/
