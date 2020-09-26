@@ -1,0 +1,305 @@
+.kp-left-nav, .kp-aside, .kp-footer, .kp-small, .share, .nav-b, .nav-m, .nav-g, .search, .be_edit, .aside  {
+	display: none;
+}
+.kp-main {
+	width: 100%;
+	margin-top: 90px;
+}
+.kp-wrap {
+	position: relative;
+}
+.kp-full {
+	position: relative;
+}
+a {
+	text-decoration: none;
+	outline: 0;
+}
+h1 {
+	font-size: 1.7rem;
+	line-height: 1.1;
+}
+h2 {
+	font-size: 1.5rem;
+	line-height: 1.2;
+}
+img {
+	max-width: 100%;
+	height: auto !important;
+	overflow: hidden;
+}
+#kopf {
+	top: 0;
+	position: absolute;
+	height: 70px;
+	width: 100%;
+	background-color: #f3e500;
+	xxxz-index: -2;
+}
+#leiste {
+	position: absolute;
+	top: 70px;
+	height: 3px;
+	width: 100%;
+	background-color: #333;
+	z-index: -2;
+}
+#wrapper {
+	max-width: 1040px;
+	margin: 0 auto;
+	padding: 0 .5%;
+}
+#stern {
+	position: absolute;
+	top: 0;
+	margin-left: 0;
+	overflow: hidden;
+	width: 150px;
+	height: 100px;
+}
+#header {
+	/*
+	position: relative;
+	height: 195px;
+	width: 100%;
+	*/
+}
+#map {
+	height: 300px;
+	border: 1px solid black;
+}
+h1.rot {
+	color: #fff;
+	background-color: #E2001A;
+	margin: 0;
+	padding: 3px 10px;
+}
+h2.h2p {
+	position: relative;
+	background-color: #F3E500;
+	margin: 0 0 20px 0 !important;
+	padding: 3px 10px 3px 90px !important;
+}
+h2.h2p img {
+	position:absolute;
+	top: -12px;
+	left: 0;
+}
+.kpoe {
+	position: relative;
+	top: 20px;
+	color: #f00;
+	font-size: 1.2rem;
+	font-weight: bold;
+	xxxheight: 20px;
+	margin: 20px 0 0 150px;
+}
+/*
+.feeds {
+	padding: 0 2% 3% 2%;
+}
+.feeds ul {
+	margin: 0;
+}
+.feeds h3 {
+	color: red;
+}
+.font-sizer {
+	display: none;
+}
+
+.head {
+	height: 195px;
+}
+.article_img {
+	float: left;
+	text-align: center;
+	font-size: 0.8rem;
+}
+.aside {
+	display: none;
+}
+.kpoe {
+	position: absolute;
+	xxxtop: 100px;
+	xxxpadding: 60px 0 0 0;
+	color: #f00;
+	font-size: 1.1rem;
+	font-weight: bold;
+	height: 20px;
+}
+*/
+
+.preview, .preview40 {
+	float: left;
+	margin: 4px 10px 5px 0;
+}
+.preview40 {
+	width: 150px;
+	height: auto;
+}
+.tcent {
+	text-align: center;
+}
+.main {
+	line-height: 1.6;
+	font-size: 1rem;
+}
+.figure {
+	background-color: #eee;
+	text-align: center;
+	padding: 10px;
+}
+.figure p {
+	font-style: italic;
+	padding: 0;
+	margin: 0;
+}
+.foot {
+	border-top: 5px solid #f3e500;
+	text-align: center;
+	padding: 10px;
+}
+/*
+.foot a {
+	color: #000;
+	padding: 1%;
+}
+.pad2p {
+	padding: 0 2% 2% 2%;
+}
+.abox {
+	padding: 0 3% 3% 3%;
+	font-size: .9rem;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+}
+.abox hr {
+	clear: both;
+}
+.abox h2 {
+	font-size: 1.2rem;
+	margin: 0 0 .5rem 0;;
+	padding: 0;
+}
+.abox h3 {
+	font-size: 1rem;
+	margin: 0;
+	padding: 0.5rem 0;
+}
+.abox h3 a, .abox h2 a {
+	color: #000;
+}
+.abox p {
+	position: relative;
+	text-align: right;
+	xxxbackground-color: #fff;
+	padding: 0;
+	margin: 0;
+	line-height: 1rem;
+}
+.abox a {
+	color: #f00;
+}
+.abox hr {
+	color: #ccc;
+	background-color: #ccc;
+	height: 4px;
+	margin: 0 0 5px 0;
+	padding: 0;
+	border: 0;
+}
+.abox ul {
+	margin: 0;
+}
+.marbot {
+	margin-bottom: 5%;
+}
+.uicon {
+	font-family: kpoe-icons;
+	font-size: 1.6rem;
+	margin: 8px 0 3px 5px;
+}	
+*/
+.imgcaption {
+	text-align: center;
+	font-size: 0.9rem;
+}
+.imgcaption img {
+	width: 720px;
+	margin: 0 auto;
+}
+/*
+.right-link {
+	margin-top: 10px;
+}
+.term-tab .term-row > span {
+	font-weight: bold;
+	text-align: right;
+	width: 22%;
+    vertical-align: top;
+	padding: 4px 3% 4px 0;
+	display: inline-block;
+	margin: 0;
+}   
+.term-tab .term-row > div {    
+    width: 72%;
+	padding: 4px 3% 4px 0;
+	display: inline-block;
+	margin: 0;
+	vertical-align: bottom;
+}
+
+.termin h2 {
+	height: 24px;
+	font-size: 22px;
+	line-height: 24px;
+	padding: 1% 3%;
+	margin: 0 0 2% 0;
+	background: rgba(243, 229, 0, 0.5) none repeat scroll 0% 0%;
+	color: #000;
+	font-weight: bold;
+}
+.termin span {
+	display: inline-block;
+	width: 20%;
+	font-size: 20px;
+	line-height: 40px;
+	background-color: #ccc;
+	text-align: center;
+	float: left;
+	margin: 0 3% 3% 0;
+}
+.archiv_block div {
+	position: relative;
+	float: left;
+	background-color: #ddd;
+	width: 31%;
+	margin: 1%;
+	padding: 1% auto;
+	text-align: center;
+}
+.archiv_block h3 {
+	margin: 0 0 0 1%;
+	clear: left;
+}
+.right-single-item {
+	padding: 3%;
+}
+.video16to9 {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 25px;
+	height: 0;
+	max-width: 100%;
+}
+.video16to9 iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+*/

@@ -1,0 +1,1 @@
+chrome-search://most-visited/assert.js

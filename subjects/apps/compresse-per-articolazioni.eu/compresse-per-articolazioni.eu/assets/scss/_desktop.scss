@@ -1,0 +1,214 @@
+.container {
+    max-width:970*$unit;
+}
+
+#search {
+    padding:8*$unit 20*$unit;
+    
+    .name {
+        position:relative; top:5*$unit;
+        font-size:15*$unit;
+    }
+    
+    .search_box {
+        -webkit-border-radius: 10*$unit;
+        -moz-border-radius: 10*$unit;
+        border-radius: 10*$unit;
+        padding:3*$unit 15*$unit;
+
+        input {
+            width:200*$unit;
+            font-size:15*$unit;
+        }
+        
+        span {
+            font-size:15*$unit;
+        }
+    }
+}
+
+#header {
+    height:258*$unit;
+    
+    .logo {
+        margin:80*$unit 0 0 100*$unit;
+        img {
+            width:320*$unit;
+        }
+    }
+    
+    .woman {
+        height:0;
+        position:relative;
+        text-align:left;
+        
+        img {
+            width:203*$unit;
+            position:relative; top:-17*$unit;
+        }
+    }
+}
+
+#container_menu {
+    margin-bottom:15*$unit;
+    
+    #menu {
+        display:inherit;
+        
+        a {
+            width:14.285%;
+            float:left;
+            padding:9*$unit 0;
+            font-size:14*$unit;
+        }
+    }
+}
+
+#page {
+    padding:20*$unit 20*$unit 0;
+    margin-bottom:30*$unit;
+    
+    h3 {
+        font-size:20*$unit;
+        margin-bottom:22*$unit;
+    }
+    
+    .ptop {
+        font-size:16*$unit;
+        margin-bottom:30*$unit;
+        
+        a {
+            font-size:15*$unit;
+        }
+    }
+    
+    .box {
+            
+        .box-margin {
+            margin-top:35*$unit;
+        }
+        
+        .box-title {
+            font-size:24*$unit;
+            padding:20*$unit 0 20*$unit 23*$unit;
+            margin-bottom:13*$unit;
+        }
+        
+        .box-name {
+            font-size:14*$unit;
+            padding:10*$unit 20*$unit;
+            margin-bottom:6*$unit;
+        }
+        
+        img {
+            margin-bottom:10*$unit;
+        }
+        
+        p {
+            font-size:14*$unit;
+            margin-bottom:15*$unit;
+        }
+        
+        .more {
+            font-size:13*$unit;
+        }
+        
+        .subpage-url {
+            font-size: 16*$unit;
+            padding:10*$unit 20*$unit;
+            margin-bottom:4*$unit;
+        }
+    }
+    
+    .rank {
+        margin-bottom:50*$unit;
+        
+        .rank-title {
+            font-size:24*$unit;
+            padding:20*$unit 0 20*$unit 23*$unit;
+        }
+        
+        .rank-content {
+            padding:15*$unit 17*$unit;
+            
+            .rank-top {
+                margin-bottom:15*$unit;
+                
+                .img-box {
+                    padding:10*$unit 0;
+                    
+                    img {
+                        width:194*$unit;
+                    }
+                }
+                
+                .gray_box {
+                    padding:14*$unit 10*$unit;
+                    -webkit-border-radius: 13*$unit;
+                    -moz-border-radius: 13*$unit;
+                    border-radius: 13*$unit;
+                    font-size:14*$unit;
+                    margin-bottom:20*$unit;
+                    margin-top:0;
+                    
+                    img {
+                        width:16*$unit;
+                        margin:10*$unit 2*$unit;
+                    }
+                } 
+            }
+            
+            .btn-black, .btn-red {
+                font-size:18*$unit;
+                padding:9*$unit 20*$unit;
+                display:inline-block;
+                -webkit-border-radius: 9*$unit;
+                -moz-border-radius: 9*$unit;
+                border-radius: 9*$unit;
+                height:40*$unit;
+                float:right;
+            }
+
+            .btn-red {
+                margin-top:25*$unit;
+            }
+
+            h2 {
+                font-size:24*$unit;
+                margin-bottom:13*$unit;
+            }
+            
+            p {
+                font-size:16*$unit;
+            }
+            
+            ul {
+                margin:25*$unit 0;
+                
+                li {
+                    font-size:16*$unit;
+                }
+            }
+            
+            .green {
+                font-size:18*$unit;
+                margin:25*$unit auto;
+            }
+            
+            .hint {   
+                padding:15*$unit 20*$unit;
+                border-left:15*$unit solid #cecece;
+                margin:0 20*$unit;
+                
+                p {
+                    font-size:16*$unit;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    padding:10*$unit 10*$unit;
+    font-size:15*$unit;
+}

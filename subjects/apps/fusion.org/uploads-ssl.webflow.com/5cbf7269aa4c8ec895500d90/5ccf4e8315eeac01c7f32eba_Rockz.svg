@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="140px" height="140px" viewBox="0 0 140 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Rockz</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0.407 0.088 70.834 0.088 70.834 105.2639 0.407 105.2639"></polygon>
+    </defs>
+    <g id="Rockz" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-10" transform="translate(35.000000, 17.000000)">
+            <g id="Group-5" transform="translate(0.000000, 0.912000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-4"></g>
+                <polygon id="Fill-3" fill="#E42421" mask="url(#mask-2)" points="32.752 0.0879 41.601 17.6179 44.469 11.7739 70.834 70.1439 35.62 105.2639 0.407 70.1439"></polygon>
+            </g>
+            <polygon id="Fill-6" fill="#FEFEFE" points="39.9131 65.6078 39.9131 56.9118 31.2181 56.9118 31.2181 65.6078 22.5221 65.6078 22.5221 74.3028 31.2181 74.3028 31.2181 82.9998 39.9131 82.9998 39.9131 74.3038 48.6091 74.3038 48.6091 65.6088"></polygon>
+            <path d="M55.1382,36.8041 L52.9572,50.6701 L70.3462,71.0431 L55.1382,36.8041 Z M39.3302,40.0661 L30.0782,24.4871 L32.1932,1.0001 L11.0612,47.3341 L4.0432,62.7191 L16.2652,45.9961 L39.3302,40.0661 Z M44.2602,12.8911 L41.5432,18.7911 L44.1452,33.5431 L44.2602,12.8911 Z" id="Fill-8" fill="#AF2016"></path>
+        </g>
+    </g>
+</svg>
