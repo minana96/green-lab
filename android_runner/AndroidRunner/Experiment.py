@@ -192,7 +192,7 @@ class Experiment(object):
         self.logger.info('Run %s/%s of subject "%s" on %s' % (run, self.repetitions, path, device.name))
         device.shell('logcat -c')
         self.logger.info('Logcat cleared')
-        self.scripts.run('before_run', device, *args, **kwargs)
+        self.scripts.run('before_run', device, path, *args, **kwargs)
 
     def after_launch(self, device, path, run, *args, **kwargs):
         self.scripts.run('after_launch', device, device.id, device.current_activity())
