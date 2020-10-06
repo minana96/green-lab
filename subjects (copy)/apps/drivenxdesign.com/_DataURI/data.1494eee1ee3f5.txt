@@ -1,0 +1,1 @@
+chrome-search://local-ntp/search-suggestions.js

@@ -40,7 +40,7 @@ div.yyi-rinker-contents div.yyi-rinker-image {
     min-width: 200px;
 }
 
-/* for IE widthに合わせる*/
+/* for IE widthã«åˆã‚ã›ã‚‹*/
 
 div.yyi-rinker-contents.yyi-rinker-img-s div.yyi-rinker-info{
     width: calc(100% - 75px);

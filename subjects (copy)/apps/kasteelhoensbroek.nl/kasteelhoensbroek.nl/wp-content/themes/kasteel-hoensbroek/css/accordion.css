@@ -1,0 +1,11 @@
+.z-accordion, .z-accordion > section, .z-accordion > section > h3, .z-accordion > section > h3 > .z-title, .z-accordion > section > h3 > .z-arrow, .z-accordion > section > .z-content {padding: 0; margin: 0;}
+
+#accordion .z-section h3.z-link {line-height: 25px; display: block; position: relative; outline: none; cursor: pointer; text-decoration: none; background-repeat:no-repeat; clear: both;}
+#accordion .z-accordion > section > h3.z-focus {z-index: 9999 !important;}
+.toggle-block #accordion .z-section.z-active h3.z-link {font-size: 0;}
+
+.z-accordion.vertical > section > .z-content {display: none;}
+
+.z-accordion.transition.vertical > section > .z-content {height: 0px; overflow: hidden; display: block!important;}
+
+.z-accordion *, .z-accordion > section, .z-accordion > section > h3, .z-accordion > section > h3 > .z-title, .z-accordion > section > h3 > .z-arrow, .z-accordion > section > .z-content {-webkit-tap-highlight-color: rgba(255, 255, 255, 0); -webkit-touch-callout: none; outline: none;}

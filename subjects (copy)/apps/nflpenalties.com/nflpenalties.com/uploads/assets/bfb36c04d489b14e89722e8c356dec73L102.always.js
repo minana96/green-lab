@@ -1,0 +1,1 @@
+Foundation.global.namespace="";

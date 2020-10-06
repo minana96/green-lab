@@ -1,0 +1,56 @@
+
+function piResponse() {
+		piSetCookie('visitor_id553992', '181254675', 3650);
+			piSetCookie('visitor_id553992-hash', 'a357eb8d2581fa3c089f72a41b19618e8a8d520021908cfcc36321ebebc4bfdd2c73775df1bdafa3ade5a7fe159df44b7e1af93d', 3650);
+		
+		if (document.location.protocol != "https:" || (document.location.protocol == "https:" && true)) {
+		var analytics_link = document.location.protocol + "//" + "learn.hcss.com/analytics?";
+		pi.tracker.visitor_id='181254675';
+
+				pi.tracker.visitor_id_sign='a357eb8d2581fa3c089f72a41b19618e8a8d520021908cfcc36321ebebc4bfdd2c73775df1bdafa3ade5a7fe159df44b7e1af93d';
+		
+				pi.tracker.campaign_id='13816';
+		
+		var variables = 'conly=true';
+		for (property in pi.tracker) {
+					variables += "&" + property + "=" + encodeURIComponent(pi.tracker[property]);
+				}
+		var headID = document.getElementsByTagName("head")[0];
+		piScriptObj[piScriptNum] = document.createElement('script');
+		piScriptObj[piScriptNum].type = 'text/javascript';
+		piScriptObj[piScriptNum].src = analytics_link + variables;
+		headID.appendChild(piScriptObj[piScriptNum]);
+		piScriptObj[piScriptNum].onload = function() { return; }
+	}
+	
+		// Get script name
+	const pdjsScriptName = typeof window.getPardotUrl === 'function' ? 'pd.js' : 'pi.js';
+
+		// Cache buster
+	if (typeof piVersion === 'undefined' || piVersion !== '1.0.0') {
+		// Get script domain
+		const pdjsDomain = (document.location.protocol === 'https:') ? 'https://pi.pardot.com' : 'http://cdn.pardot.com';
+
+		// Create iframe
+		const pdjsIframe = document.createElement('iframe');
+		pdjsIframe.name = pdjsIframe.id = 'ifr_' + Date.now();
+		pdjsIframe.width = pdjsIframe.height = 0;
+		document.body.appendChild(pdjsIframe);
+
+		// Create form
+		const pdjsForm = document.createElement('form');
+		pdjsForm.method = "POST";
+		pdjsForm.target = pdjsIframe.name;
+		pdjsForm.action = pdjsDomain + '/' + pdjsScriptName;
+		document.body.appendChild(pdjsForm);
+
+		// Request script
+		pdjsForm.submit();
+	}
+	}
+piResponse();
+
+
+
+
+(function(){"use strict";function e(){"undefined"!=typeof wistiaPlaylist?(wistiaPlaylist.ready(function(){i(wistiaPlaylist.currentVideo(),t)}),wistiaPlaylist.bind("afterembed",function(){i(wistiaPlaylist.currentVideo(),t)})):n(function(){void 0!==window.wistiaEmbeds&&window.wistiaEmbeds.onFind(function(e){e.ready(function(){i(e,t)})})})}function i(e,t){e.getVisitorKey()?t(e):setTimeout(function(){i(e,t)},500)}function t(e){"playing"===e.state()||e.params.autoPlay?r(e):e.bind("play",function(){return r(e),this.unbind}),e.bind("conversion",function(i,t){d(i,t,e)})}function n(e){if(f)return e();for(var i=document.getElementsByTagName("script"),t=/embed_shepherd.*\.js/,n=0;i.length>n;n++)if(t.test(i[n].src))return f=!0,e();o("//fast.wistia.com/static/embed_shepherd-v1.js",function(){f=!0,e()})}function o(e,i){var t=document.head||document.getElementsByTagName("head")[0]||document.documentElement,n=document.createElement("script");n.async="async",n.src=e,n.onload=n.onreadystatechange=function(e,o){(o||!n.readyState||/loaded|complete/.test(n.readyState))&&(n.onload=n.onreadystatechange=null,t&&n.parentNode&&t.removeChild(n),n=void 0,o||i())},t.insertBefore(n,t.firstChild)}function a(e){var i={account_id:piAId,campaign_id:piCId,provider:"wistia"};"undefined"!=typeof pi?i.visitor_id=pi.tracker.visitor_id:"undefined"!=typeof pardot&&(i.visitor_id=pardot.tracker.visitor_id),""===i.visitor_id&&(i.visitor_id=piGetCookie("visitor_id"+(piAId-1e3)));var t=c(s(i,e)),n="//"+u+"/video/analytics?"+t;o(n,function(){})}function r(e){a({video_name:e.name(),wistia_visitor_key:e.getVisitorKey(),wistia_event_key:e.getEventKey(),hashed_id:e.hashedId(),type:"play"})}function d(e,i,t){a({video_name:t.name(),wistia_visitor_key:t.getVisitorKey(),wistia_event_key:t.getEventKey(),hashed_id:t.hashedId(),type:"conversion",email:i})}function s(){for(var e,i=arguments[0],t=1;arguments.length>t;t++)for(e in arguments[t])i[e]=arguments[t][e];return i}function c(e){var i="";for(var t in e)e.hasOwnProperty(t)&&(i+=encodeURIComponent(t)+"="+encodeURIComponent(e[t])+"&");return i.substring(0,i.length-1)}if("undefined"!=typeof piAId||"undefined"!=typeof piCId){var u="pi.pardot.com";"string"!=typeof piTUrl||-1===piTUrl.indexOf("localhost")&&-1===piTUrl.indexOf("app.dev.pardot")||(u=piTUrl);var f=!1;return e()}})();

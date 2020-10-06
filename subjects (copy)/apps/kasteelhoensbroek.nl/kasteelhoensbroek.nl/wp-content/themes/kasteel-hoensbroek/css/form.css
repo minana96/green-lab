@@ -1,0 +1,36 @@
+textarea, input {width: 100%; border: 1px solid #d2cfcb; padding: 10px; margin: 5px 0;}
+footer input {border: 0;}
+	
+input[type=file] {border: 0;}
+
+form {margin: auto;}
+form img {display: none;}
+
+input[type="submit"] {display: inline-block; width: auto; background-color: #272a55; color: #fff; border: none; text-transform: uppercase; cursor: pointer;}
+input[type=radio] {width: auto;}
+input[type=checkbox] {width: auto;}
+
+.wpcf7-list-item {width: 100%;}
+.wpcf7-list-item {width: 100%;}
+.wpcf7-not-valid-tip, .wpcf7-response-output.wpcf7-validation-errors {background-color:#ff0000; border: #ff0000; color:#fff; padding:2px; margin:5px 0 0 0; display:block; text-align:center;}
+.wpcf7-response-output.wpcf7-mail-sent-ok {/*background-color:#56ab27; color:#fff; padding:5px; margin:5px 0 0 0; display:block; text-align:center; font-size:17px; border: 2px solid #56ab27;*/ display:none;} 
+span.wpcf7-not-valid-tip {color:#fff !important;}
+
+.mpFormLabel {text-align: left;}
+
+input, input[type=submit] {-webkit-appearance: none; -moz-appearance: none; appearance: none;}
+
+@media (min-width: 980px) {
+	input[type="submit"] {font-size: 26px; line-height: 26px; padding: 12px 20px 10px 20px;}
+	input[type="submit"]:hover {padding: 12px 23px 10px 23px;}	
+}
+
+@media (min-width: 481px) and (max-width: 979px) {
+	input[type="submit"] {font-size: 24px; line-height: 24px; padding: 9px 13px 7px 13px;}
+}
+
+@media (max-width: 480px) {
+	input[type="submit"] {font-size: 22px; line-height: 22px; padding: 8px 10px 6px 10px;}
+}	
+	
+	

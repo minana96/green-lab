@@ -1,0 +1,50 @@
+@media (max-width: 1200px){.custom-navigation li a { padding: 15px 12px;font-size: 13px;}
+.img-content-area sup { padding: 11px 0 0 32px;} .img-content-area span{ padding: 0 0 0 32px; }.img-content-area span { margin-left: 0;} .img-content-area sup { margin-left: 0; }
+ .floating-banner-text{top:28%; } .inner-area-left {width: 40%;float: left;} .inner-area-right { width: calc(100% -  40%);  float: right; }
+.quotes-area { width: 248px; padding: 0 0;}.images-holder img { width: 100%; } .title { line-height: 1.222; font-size: 12px;}
+.text-holder{ padding: 25px 35px 0 35px;}.inner-area-left{ min-height: 400px;}
+.inner-area-left img{ min-height: 400px;} .frnd-title { font-size: 41px; }.title_special {font-size: 22px;}}
+@media (max-width: 1170px){.holi_Special_left_inner.bodr-pnl:after{right: 5px;}}
+@media (max-width: 1024px){ .banner-area p{font-size:15px;}.floating-banner-text{ font-size: 34px; }.ads_img_cover{display: block; width: 100%; max-width: 100%;}
+.ads-promo{ display: block; width: 100%; max-width: 100%;}}
+@media (max-width: 1023px){.navbar-header{ width: 100%;} .navbar-brand{float: left; width: 100%;text-align: center;}
+.navbar-brand>img {  display: block; margin: 0 auto;}}
+@media (max-width: 992px){ .btnt { width: 50%;padding: 15px 0;} .btnp { width: 25%; } .img-content-area span { padding: 0; margin-left: -40px;}
+.img-content-area sup { padding: 11px 0 0 0; margin-left: -40px;}
+.logo-area img { max-width: 90%;} .text-center.left-area a span{line-height: 14px;font-size: 11px;}}
+@media (max-width: 991px){
+.custom-navigation li a { padding: 26px 9px 7px 0;  font-size: 11px; line-height: 0px; }
+.img-content-area span { margin-left: 0px;} .img-content-area sup { margin-left: 0;}.inner-area-left { min-height: 400px;width: 100%;} .inner-area-left img{ width: 100%;}
+.inner-area-right { width: 100%; float: right;}.content{ padding: 15px 0px 15px 12px;} .quotes-area { width: 300px; padding:0 15px;}
+.right-quotes-area {float: right; width: calc(100% - 300px); padding: 15px 0;} .holi_Special_left_inner.bodr-pnl:after{  display: none;}
+.this_week_article .title {font-size: 14px;}}
+@media (max-width: 800px){.floating-banner-text {font-size: 24px; line-height: 14px;top: 24%;}}
+@media (max-width: 767px){
+.navbar-header{ width: auto;}.navbar-brand{ float: left; width: auto;text-align: center; }.navbar-brand>img {display: block; margin: 0 auto;}
+.btnt {width: 50%;float: left;}.btnp {width: 25%; float: left;} .custom-navigation li a{font-size: 14px;}
+.custom-navigation li:first-child a{padding-top: 15px;}  .custom-navigation li:last-child a{padding-bottom: 15px;}
+.floating-banner-text {font-size: 24px; line-height: 14px; top: 24%;}
+ .banner-area p {font-size: 12px; padding: 12px 12px; }.mobile-quotes-area{width: 50%; float:left; } .frnd-title { font-size: 29px;} .text-holder p { font-size: 14px; }
+.title_special { font-size: 20px;padding-bottom: 10px;}.holi_Special_left { width: 100%; float: left; }
+ .Friendship_Special_right { width: 100%; float: right; }.ads-box{ width: 50%; float: left; padding: 15px; text-align:center; }
+.action-box { width: 50%; float: right; padding: 0 15px;}  .ads-box-2{width: 100%; text-align:left;}
+.content{padding: 15px 0;} .text-center.title-botton {font-size:25px; padding:3px 0 15px 0; margin-bottom:6px;}.feature-list h3 {font-size: 15px;} .inner-icons-box a span {font-size: 18px;}
+.footer-logo{ width: 50%;float: left;} .footer-social { float: right; width: 50%;} .social {float: left;} .mobile-device { margin-bottom: 20px;}
+.footerBox span{ font-size: 12px;}.feature-list { margin-right: 0;}  .detail-page { padding-right: 0;} .ad-728{width:100%;} .top-ad{padding:10px 0px;}.hide-img{display:none;}}
+@media (max-width: 760px){.img-content-area span { margin-left: 34px; } .img-content-area sup {margin-left: 34px;}}
+@media (max-width: 640px){.btnt {width: 45%;padding: 23px 0;} .btnp {width: 27%;}
+.img-content-area p{font-size: 34px;} .img-content-area span { margin-left: 34px; padding-top: 6px;font-size: 15px; } .img-content-area span { font-size: 15px; }
+.img-content-area{ width: 136px;background-position: 0 5px;} .inner-icons-box { padding: 8px 20px; margin-bottom: 5px;}
+.inner-icons-box a img { margin-right: 11px; }.inner-icons-box a span { font-size: 15px;padding: 0; margin: 0;}  .mobile-bottom-section{ width: 100%; } .sitemap-area ul{width:100%;}}
+@media (max-width: 550px){.btnp { width: 100%; text-align: center;} .btnt{ width: 100%;text-align: center; padding: 9px 0;}
+.img-content-area { width: 97px; background-position: 0 5px; margin: 0 auto; background-size: contain; }
+.logo-area img {max-width: 57%;}.floating-banner-text {display: none;}.banner-area p{ display: none;}.img-content-area p { font-size: 26px;}
+.img-content-area span { font-size: 13px; padding-top: 12px; }.img-content-area sup { margin-left: 34px; font-size: 13px;} 
+.quotes-area {width: 190px;padding: 0 15px;text-align: center;}.right-quotes-area { float: right; width: calc(100% - 190px); padding: 15px 0; }
+.frm-name{width:94%; margin-left:15px;}.frm-fill{width:94%; margin-top:0px;}}
+@media (max-width: 430px){ .block-lising.list ul li { width: 100%;} .list-inline-box li{list-style: none; width: 100%;}
+.quotes-area{width: 100%;}  .right-quotes-area{ width: 100%; } .mobile-device{ width: 100%; } .footer-logo { width: 100%; margin-bottom: 15px; }
+.footer-logo img{ max-width: 85%; } .footer-social{ width: 100%;margin-bottom: 15px;} .text-follow{ margin-left: 0;}.header {padding: 0;}.quotes-area img { text-align: center; display: block;} .signature{ padding-top: 15px;}.mobile-special-left{ width: 100%; margin-bottom: 15px;} .nxbtn { margin-top: 15px;}
+.article-imgs {width: 100%;padding: 0 15px; margin-bottom: 15px;}
+.article-imgs img{ width: 100%; }.this_week_article { padding: 10px 0 10px 0;}.ads-box {width: 100%;}.action-box { width: 100%;}.text-center.title-botton { font-size: 18px; }   .mobile-quotes-area { width: 100%; float: left;} .middle_area{padding-bottom: 0;}.title_special{padding-top: 0;}}
+@media (max-width: 360px){.middle-ad{width:100%; height:auto;} }   @media (max-width: 320px){.mobile-quotes-area{ width: 100%; }}

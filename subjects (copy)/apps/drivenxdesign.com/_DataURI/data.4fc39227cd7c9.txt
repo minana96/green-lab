@@ -1,0 +1,1 @@
+chrome-search://ntpicon/?size=24%401.100000023841858x&url=http%3A%2F%2Flocalhost%3A8080%2F
