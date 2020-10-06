@@ -1,0 +1,2245 @@
+/*
+* CleanSlate
+*   github.com/premasagar/cleanslate
+*
+*/
+/*
+  An extreme CSS reset stylesheet, for normalising the styling of a container element and its children.
+
+  by Premasagar Rose
+      dharmafly.com
+
+  license
+      opensource.org/licenses/mit-license.php
+
+  **
+
+  v0.9.3
+
+*/
+/* == BLANKET RESET RULES == */
+/* HTML 4.01 */
+.onesignal-reset, .onesignal-reset h1, .onesignal-reset h2, .onesignal-reset h3, .onesignal-reset h4, .onesignal-reset h5, .onesignal-reset h6, .onesignal-reset p, .onesignal-reset td, .onesignal-reset dl, .onesignal-reset tr, .onesignal-reset dt, .onesignal-reset ol, .onesignal-reset form, .onesignal-reset select, .onesignal-reset option, .onesignal-reset pre, .onesignal-reset div, .onesignal-reset table, .onesignal-reset th, .onesignal-reset tbody, .onesignal-reset tfoot, .onesignal-reset caption, .onesignal-reset thead, .onesignal-reset ul, .onesignal-reset li, .onesignal-reset address, .onesignal-reset blockquote, .onesignal-reset dd, .onesignal-reset fieldset, .onesignal-reset li, .onesignal-reset iframe, .onesignal-reset strong, .onesignal-reset legend, .onesignal-reset em, .onesignal-reset summary, .onesignal-reset cite, .onesignal-reset span, .onesignal-reset input, .onesignal-reset sup, .onesignal-reset label, .onesignal-reset dfn, .onesignal-reset object, .onesignal-reset big, .onesignal-reset q, .onesignal-reset samp, .onesignal-reset acronym, .onesignal-reset small, .onesignal-reset img, .onesignal-reset strike, .onesignal-reset code, .onesignal-reset sub, .onesignal-reset ins, .onesignal-reset textarea, .onesignal-reset button, .onesignal-reset var, .onesignal-reset a, .onesignal-reset abbr, .onesignal-reset applet, .onesignal-reset del, .onesignal-reset kbd, .onesignal-reset tt, .onesignal-reset b, .onesignal-reset i, .onesignal-reset hr,
+.onesignal-reset article, .onesignal-reset aside, .onesignal-reset figure, .onesignal-reset figcaption, .onesignal-reset footer, .onesignal-reset header, .onesignal-reset menu, .onesignal-reset nav, .onesignal-reset section, .onesignal-reset time, .onesignal-reset mark, .onesignal-reset audio, .onesignal-reset video, .onesignal-reset abbr, .onesignal-reset address, .onesignal-reset area, .onesignal-reset blockquote, .onesignal-reset canvas, .onesignal-reset caption, .onesignal-reset cite, .onesignal-reset code, .onesignal-reset colgroup, .onesignal-reset col, .onesignal-reset datalist, .onesignal-reset fieldset, .onesignal-reset main, .onesignal-reset map, .onesignal-reset meta, .onesignal-reset optgroup, .onesignal-reset output, .onesignal-reset progress {
+  background-attachment: scroll;
+  background-color: transparent;
+  background-image: none;
+  /* This rule affects the use of pngfix JavaScript http://dillerdesign.com/experiment/DD_BelatedPNG for IE6, which is used to force the browser to recognise alpha-transparent PNGs files that replace the IE6 lack of PNG transparency. (The rule overrides the VML image that is used to replace the given CSS background-image). If you don't know what that means, then you probably haven't used the pngfix script, and this comment may be ignored :) */
+  background-position: 0 0;
+  background-repeat: repeat;
+  border-color: black;
+  border-color: currentColor;
+  /* `border-color` should match font color. Modern browsers (incl. IE9) allow the use of "currentColor" to match the current font 'color' value <http://www.w3.org/TR/css3-color/#currentcolor>. For older browsers, a default of 'black' is given before this rule. Guideline to support older browsers: if you haven't already declared a border-color for an element, be sure to do so, e.g. when you first declare the border-width. */
+  border-radius: 0;
+  border-style: none;
+  border-width: medium;
+  bottom: auto;
+  clear: none;
+  clip: auto;
+  color: inherit;
+  counter-increment: none;
+  counter-reset: none;
+  cursor: auto;
+  direction: inherit;
+  display: inline;
+  float: none;
+  font-family: inherit;
+  /* As with other inherit values, this needs to be set on the root container element */
+  font-size: inherit;
+  font-style: inherit;
+  font-variant: normal;
+  font-weight: inherit;
+  height: auto;
+  left: auto;
+  letter-spacing: normal;
+  line-height: inherit;
+  list-style-type: inherit;
+  /* Could set list-style-type to none */
+  list-style-position: outside;
+  list-style-image: none;
+  margin: 0;
+  max-height: none;
+  max-width: none;
+  min-height: 0;
+  min-width: 0;
+  opacity: 1;
+  outline: invert none medium;
+  overflow: visible;
+  padding: 0;
+  position: static;
+  quotes: "" "";
+  right: auto;
+  table-layout: auto;
+  text-align: inherit;
+  text-decoration: inherit;
+  text-indent: 0;
+  text-transform: none;
+  top: auto;
+  unicode-bidi: normal;
+  vertical-align: baseline;
+  visibility: inherit;
+  white-space: normal;
+  width: auto;
+  word-spacing: normal;
+  z-index: auto;
+  /* CSS3 */
+  /* Including all prefixes according to http://caniuse.com/ */
+  /* CSS Animations don't cascade, so don't require resetting */
+  background-origin: padding-box;
+  background-clip: border-box;
+  background-size: auto;
+  -o-border-image: none;
+  border-image: none;
+  border-radius: 0;
+  box-shadow: none;
+  box-sizing: content-box;
+  column-count: auto;
+  column-gap: normal;
+  column-rule: medium none black;
+  /* doesn't exist yet but probably will */
+  column-span: 1;
+  column-width: auto;
+  -webkit-font-feature-settings: normal;
+          font-feature-settings: normal;
+  overflow-x: visible;
+  overflow-y: visible;
+  -webkit-hyphens: manual;
+  -ms-hyphens: manual;
+      hyphens: manual;
+  -ms-perspective: none;
+  -o-perspective: none;
+  perspective: none;
+  -ms-perspective-origin: 50% 50%;
+  -o-perspective-origin: 50% 50%;
+  perspective-origin: 50% 50%;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+  text-shadow: none;
+  transition: all 0s ease 0s;
+  transform: none;
+  transform-origin: 50% 50%;
+  transform-style: flat;
+  word-break: normal; }
+
+/* == BLOCK-LEVEL == */
+/* Actually, some of these should be inline-block and other values, but block works fine */
+/* HTML 4.01 */
+.onesignal-reset, .onesignal-reset h3, .onesignal-reset h5, .onesignal-reset p, .onesignal-reset h1, .onesignal-reset dl, .onesignal-reset dt, .onesignal-reset h6, .onesignal-reset ol, .onesignal-reset form, .onesignal-reset option, .onesignal-reset pre, .onesignal-reset div, .onesignal-reset h2, .onesignal-reset caption, .onesignal-reset h4, .onesignal-reset ul, .onesignal-reset address, .onesignal-reset blockquote, .onesignal-reset dd, .onesignal-reset fieldset, .onesignal-reset hr,
+.onesignal-reset article, .onesignal-reset dialog, .onesignal-reset figure, .onesignal-reset footer, .onesignal-reset header, .onesignal-reset hgroup, .onesignal-reset menu, .onesignal-reset nav, .onesignal-reset section, .onesignal-reset audio, .onesignal-reset video, .onesignal-reset address, .onesignal-reset blockquote, .onesignal-reset colgroup, .onesignal-reset main, .onesignal-reset progress, .onesignal-reset summary {
+  display: block; }
+
+.onesignal-reset h1, .onesignal-reset h2, .onesignal-reset h3, .onesignal-reset h4, .onesignal-reset h5, .onesignal-reset h6 {
+  font-weight: bold; }
+
+.onesignal-reset h1 {
+  font-size: 2em;
+  padding: .67em 0; }
+
+.onesignal-reset h2 {
+  font-size: 1.5em;
+  padding: .83em 0; }
+
+.onesignal-reset h3 {
+  font-size: 1.17em;
+  padding: .83em 0; }
+
+.onesignal-reset h4 {
+  font-size: 1em; }
+
+.onesignal-reset h5 {
+  font-size: .83em; }
+
+.onesignal-reset p {
+  margin: 1em 0; }
+
+.onesignal-reset table {
+  display: table; }
+
+.onesignal-reset thead {
+  display: table-header-group; }
+
+.onesignal-reset tbody {
+  display: table-row-group; }
+
+.onesignal-reset tfoot {
+  display: table-footer-group; }
+
+.onesignal-reset tr {
+  display: table-row; }
+
+.onesignal-reset th, .onesignal-reset td {
+  display: table-cell;
+  padding: 2px; }
+
+/* == SPECIFIC ELEMENTS == */
+/* Some of these are browser defaults; some are just useful resets */
+.onesignal-reset ol, .onesignal-reset ul {
+  margin: 1em 0; }
+
+.onesignal-reset ul li, .onesignal-reset ul ul li, .onesignal-reset ul ul ul li, .onesignal-reset ol li, .onesignal-reset ol ol li, .onesignal-reset ol ol ol li, .onesignal-reset ul ol ol li, .onesignal-reset ul ul ol li, .onesignal-reset ol ul ul li, .onesignal-reset ol ol ul li {
+  list-style-position: inside;
+  margin-top: .08em; }
+
+.onesignal-reset ol ol, .onesignal-reset ol ol ol, .onesignal-reset ul ul, .onesignal-reset ul ul ul, .onesignal-reset ol ul, .onesignal-reset ol ul ul, .onesignal-reset ol ol ul, .onesignal-reset ul ol, .onesignal-reset ul ol ol, .onesignal-reset ul ul ol {
+  padding-left: 40px;
+  margin: 0; }
+
+/* helper for general navigation */
+.onesignal-reset nav ul, .onesignal-reset nav ol {
+  list-style-type: none; }
+
+.onesignal-reset ul, .onesignal-reset menu {
+  list-style-type: disc; }
+
+.onesignal-reset ol {
+  list-style-type: decimal; }
+
+.onesignal-reset ol ul, .onesignal-reset ul ul, .onesignal-reset menu ul, .onesignal-reset ol menu, .onesignal-reset ul menu, .onesignal-reset menu menu {
+  list-style-type: circle; }
+
+.onesignal-reset ol ol ul, .onesignal-reset ol ul ul, .onesignal-reset ol menu ul, .onesignal-reset ol ol menu, .onesignal-reset ol ul menu, .onesignal-reset ol menu menu, .onesignal-reset ul ol ul, .onesignal-reset ul ul ul, .onesignal-reset ul menu ul, .onesignal-reset ul ol menu, .onesignal-reset ul ul menu, .onesignal-reset ul menu menu, .onesignal-reset menu ol ul, .onesignal-reset menu ul ul, .onesignal-reset menu menu ul, .onesignal-reset menu ol menu, .onesignal-reset menu ul menu, .onesignal-reset menu menu menu {
+  list-style-type: square; }
+
+.onesignal-reset li {
+  display: list-item;
+  /* Fixes IE7 issue with positioning of nested bullets */
+  min-height: auto;
+  min-width: auto;
+  padding-left: 20px;
+  /* replace -webkit-padding-start: 40px; */ }
+
+.onesignal-reset strong {
+  font-weight: bold; }
+
+.onesignal-reset em {
+  font-style: italic; }
+
+.onesignal-reset kbd, .onesignal-reset samp, .onesignal-reset code, .onesignal-reset pre {
+  font-family: monospace; }
+
+.onesignal-reset a {
+  color: blue;
+  text-decoration: underline; }
+
+.onesignal-reset a:visited {
+  color: #529; }
+
+.onesignal-reset a, .onesignal-reset a *, .onesignal-reset input[type=submit], .onesignal-reset input[type=radio], .onesignal-reset input[type=checkbox], .onesignal-reset select {
+  cursor: pointer; }
+
+.onesignal-reset button, .onesignal-reset input[type=submit] {
+  text-align: center;
+  padding: 2px 6px 3px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-family: arial, helvetica, sans-serif;
+  font-size: small;
+  background: white;
+  -webkit-appearance: push-button;
+  color: buttontext;
+  border: 1px #a6a6a6 solid;
+  background: lightgrey;
+  /* Old browsers */
+  background: white;
+  /* Old browsers */
+  /* FF3.6+ */
+  /* Chrome,Safari4+ */
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
+  /* IE10+ */
+  background: linear-gradient(to bottom, white 0%, #dddddd 100%, #d1d1d1 100%, #dddddd 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dddddd',GradientType=0 );
+  /* IE6-9 */
+  -o-box-shadow: 1px 1px 0px #eee;
+  box-shadow: 1px 1px 0px #eee;
+  outline: initial; }
+
+.onesignal-reset button {
+  padding: 1px 6px 2px 6px;
+  margin-right: 5px; }
+
+.onesignal-reset input[type=hidden] {
+  display: none; }
+
+/* restore form defaults */
+.onesignal-reset textarea {
+  -webkit-appearance: textarea;
+  background: white;
+  padding: 2px;
+  margin-left: 4px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  font-size: 11px;
+  font-family: arial, helvetica, sans-serif;
+  line-height: 13px;
+  resize: both; }
+
+.onesignal-reset select, .onesignal-reset textarea, .onesignal-reset input {
+  border: 1px solid #ccc; }
+
+.onesignal-reset select {
+  font-size: 11px;
+  font-family: helvetica, arial, sans-serif;
+  display: inline-block; }
+
+.onesignal-reset textarea:focus, .onesignal-reset input:focus {
+  outline: auto 5px -webkit-focus-ring-color;
+  outline: initial; }
+
+.onesignal-reset input[type=text] {
+  background: white;
+  padding: 1px;
+  font-family: initial;
+  font-size: small; }
+
+.onesignal-reset input[type=checkbox], .onesignal-reset input[type=radio] {
+  border: 1px #2b2b2b solid;
+  border-radius: 4px; }
+
+.onesignal-reset input[type=checkbox], .onesignal-reset input[type=radio] {
+  outline: intial; }
+
+.onesignal-reset input[type=radio] {
+  margin: 2px 2px 3px 2px; }
+
+.onesignal-reset input[type=submit]:active, .onesignal-reset button:active {
+  background: #3b679e;
+  /* Old browsers */
+  /* FF3.6+ */
+  /* Chrome,Safari4+ */
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
+  /* IE10+ */
+  background: linear-gradient(to bottom, #3b679e 0%, #2b88d9 50%, #207cca 51%, #7db9e8 100%);
+  /* W3C */
+  border-color: #5259b0; }
+
+.onesignal-reset abbr[title], .onesignal-reset acronym[title], .onesignal-reset dfn[title] {
+  cursor: help;
+  border-bottom-width: 1px;
+  border-bottom-style: dotted; }
+
+.onesignal-reset ins {
+  background-color: #ff9;
+  color: black; }
+
+.onesignal-reset del {
+  text-decoration: line-through; }
+
+.onesignal-reset blockquote, .onesignal-reset q {
+  quotes: none;
+  /* HTML5 */ }
+
+.onesignal-reset blockquote:before, .onesignal-reset blockquote:after, .onesignal-reset q:before, .onesignal-reset q:after, .onesignal-reset li:before, .onesignal-reset li:after {
+  content: ""; }
+
+.onesignal-reset input, .onesignal-reset select {
+  vertical-align: middle; }
+
+.onesignal-reset table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.onesignal-reset hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0; }
+
+.onesignal-reset *[dir=rtl] {
+  direction: rtl; }
+
+.onesignal-reset mark {
+  background-color: #ff9;
+  color: black;
+  font-style: italic;
+  font-weight: bold; }
+
+.onesignal-reset menu {
+  padding-left: 40px;
+  padding-top: 8px; }
+
+/* additional helpers */
+.onesignal-reset [hidden],
+.onesignal-reset template {
+  display: none; }
+
+.onesignal-reset abbr[title] {
+  border-bottom: 1px dotted; }
+
+.onesignal-reset sub, .onesignal-reset sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+.onesignal-reset sup {
+  top: -0.5em; }
+
+.onesignal-reset sub {
+  bottom: -0.25em; }
+
+.onesignal-reset img {
+  border: 0; }
+
+.onesignal-reset figure {
+  margin: 0; }
+
+.onesignal-reset textarea {
+  overflow: auto;
+  vertical-align: top; }
+
+/* == ROOT CONTAINER ELEMENT == */
+/* This contains default values for child elements to inherit  */
+.onesignal-reset {
+  font-size: medium;
+  line-height: 1;
+  direction: ltr;
+  text-align: left;
+  /* for IE, Opera */
+  text-align: start;
+  /* recommended W3C Spec */
+  font-family: "Times New Roman", Times, serif;
+  /* Override this with whatever font-family is required */
+  color: black;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  list-style-type: disc; }
+
+.onesignal-reset pre {
+  white-space: pre; }
+
+/* http://stackoverflow.com/a/6900392 */
+#onesignal-bell-container.onesignal-reset {
+  z-index: 2147483000;
+  position: fixed; }
+  #onesignal-bell-container.onesignal-reset.onesignal-bell-container-bottom-left {
+    bottom: 0;
+    left: 0; }
+  #onesignal-bell-container.onesignal-reset.onesignal-bell-container-bottom-right {
+    bottom: 0;
+    right: 0; }
+  #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-font-smoothing: initial;
+    position: absolute;
+    z-index: 2147483000;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    transform: scale(0.01) translateZ(0);
+    opacity: 0;
+    transition: transform 175ms ease-in-out, opacity 175ms ease-in-out; }
+    #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-bottom-left {
+      bottom: 20px;
+      left: 20px; }
+      #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-bottom-left.onesignal-bell-launcher-sm {
+        transform-origin: center center;
+        width: 32px; }
+        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-bottom-left.onesignal-bell-launcher-sm .onesignal-bell-launcher-message {
+          left: 42px; }
+        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-bottom-left.onesignal-bell-launcher-sm .onesignal-bell-launcher-dialog {
+          bottom: 39px;
+          left: 0;
+          transform-origin: left bottom; }
+          #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-bottom-left.onesignal-bell-launcher-sm .onesignal-bell-launcher-dialog:before {
+            left: 5px; }
+          #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-bottom-left.onesignal-bell-launcher-sm .onesignal-bell-launcher-dialog:after {
+            left: 7px; }
+      #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-bottom-left.onesignal-bell-launcher-md {
+        transform-origin: center center;
+        width: 48px; }
+        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-bottom-left.onesignal-bell-launcher-md .onesignal-bell-launcher-message {
+          left: 61px; }
+        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-bottom-left.onesignal-bell-launcher-md .onesignal-bell-launcher-dialog {
+          bottom: 58px;
+          left: 0;
+          transform-origin: left bottom; }
+          #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-bottom-left.onesignal-bell-launcher-md .onesignal-bell-launcher-dialog:before {
+            left: 12px; }
+          #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-bottom-left.onesignal-bell-launcher-md .onesignal-bell-launcher-dialog:after {
+            left: 14px; }
+      #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-bottom-left.onesignal-bell-launcher-lg {
+        transform-origin: center center;
+        width: 64px; }
+        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-bottom-left.onesignal-bell-launcher-lg .onesignal-bell-launcher-message {
+          left: 81px; }
+        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-bottom-left.onesignal-bell-launcher-lg .onesignal-bell-launcher-dialog {
+          bottom: 78px;
+          left: 0;
+          transform-origin: left bottom; }
+          #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-bottom-left.onesignal-bell-launcher-lg .onesignal-bell-launcher-dialog:before {
+            left: 18px; }
+          #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-bottom-left.onesignal-bell-launcher-lg .onesignal-bell-launcher-dialog:after {
+            left: 20px; }
+      #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-bottom-left .onesignal-bell-launcher-badge {
+        left: 4px; }
+      #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-bottom-left .onesignal-bell-launcher-message {
+        transform-origin: left center; }
+        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-bottom-left .onesignal-bell-launcher-message:after {
+          right: 100%;
+          border-right-color: black; }
+      #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-bottom-left .onesignal-bell-launcher-button {
+        left: 0px; }
+    #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-bottom-right {
+      bottom: 20px;
+      right: 20px; }
+      #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-bottom-right.onesignal-bell-launcher-sm {
+        transform-origin: center center;
+        width: 32px; }
+        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-bottom-right.onesignal-bell-launcher-sm .onesignal-bell-launcher-message {
+          right: 42px; }
+        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-bottom-right.onesignal-bell-launcher-sm .onesignal-bell-launcher-dialog {
+          bottom: 39px;
+          right: 0;
+          transform-origin: right bottom; }
+          #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-bottom-right.onesignal-bell-launcher-sm .onesignal-bell-launcher-dialog:before {
+            right: 5px; }
+          #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-bottom-right.onesignal-bell-launcher-sm .onesignal-bell-launcher-dialog:after {
+            right: 7px; }
+      #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-bottom-right.onesignal-bell-launcher-md {
+        transform-origin: center center;
+        width: 48px; }
+        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-bottom-right.onesignal-bell-launcher-md .onesignal-bell-launcher-message {
+          right: 61px; }
+        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-bottom-right.onesignal-bell-launcher-md .onesignal-bell-launcher-dialog {
+          bottom: 58px;
+          right: 0;
+          transform-origin: right bottom; }
+          #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-bottom-right.onesignal-bell-launcher-md .onesignal-bell-launcher-dialog:before {
+            right: 12px; }
+          #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-bottom-right.onesignal-bell-launcher-md .onesignal-bell-launcher-dialog:after {
+            right: 14px; }
+      #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-bottom-right.onesignal-bell-launcher-lg {
+        transform-origin: center center;
+        width: 64px; }
+        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-bottom-right.onesignal-bell-launcher-lg .onesignal-bell-launcher-message {
+          right: 81px; }
+        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-bottom-right.onesignal-bell-launcher-lg .onesignal-bell-launcher-dialog {
+          bottom: 78px;
+          right: 0;
+          transform-origin: right bottom; }
+          #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-bottom-right.onesignal-bell-launcher-lg .onesignal-bell-launcher-dialog:before {
+            right: 18px; }
+          #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-bottom-right.onesignal-bell-launcher-lg .onesignal-bell-launcher-dialog:after {
+            right: 20px; }
+      #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-bottom-right .onesignal-bell-launcher-badge {
+        right: 4px; }
+      #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-bottom-right .onesignal-bell-launcher-message {
+        transform-origin: right center; }
+        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-bottom-right .onesignal-bell-launcher-message:after {
+          left: 100%;
+          border-left-color: black; }
+      #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-bottom-right .onesignal-bell-launcher-button {
+        right: 0px; }
+    #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher .onesignal-bell-launcher-button {
+      position: absolute;
+      bottom: 0;
+      border-radius: 50%;
+      transition: transform 175ms ease-in-out, border 175ms ease-in-out, width 175ms ease-in-out, height 175ms ease-in-out;
+      cursor: pointer;
+      z-index: 2147483000; }
+      #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher .onesignal-bell-launcher-button svg {
+        width: 100%;
+        height: 100%;
+        overflow: visible; }
+      #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher .onesignal-bell-launcher-button.onesignal-bell-launcher-button-hover {
+        cursor: pointer; }
+    #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher .onesignal-bell-launcher-badge {
+      position: absolute;
+      bottom: 0;
+      border-radius: 50%;
+      text-align: center;
+      top: 0;
+      cursor: pointer;
+      -webkit-filter: drop-shadow(0 2px 4px rgba(34, 36, 38, 0));
+      filter: drop-shadow(0 2px 4px rgba(34, 36, 38, 0));
+      transition: transform 175ms ease-in-out, border 175ms ease-in-out, opacity 210ms ease-in-out, width 210ms ease-in-out, height 210ms ease-in-out, position 210ms ease-in-out, right 210ms ease-in-out, top 210ms ease-in-out, bottom 210ms ease-in-out, left 210ms ease-in-out;
+      z-index: 2147483400;
+      opacity: 0;
+      transform: scale(0.01);
+      pointer-events: none; }
+      #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher .onesignal-bell-launcher-badge.onesignal-bell-launcher-badge-hover {
+        cursor: pointer; }
+      #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher .onesignal-bell-launcher-badge.onesignal-bell-launcher-badge-opened {
+        opacity: 1;
+        transform: scale(1); }
+    #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher .onesignal-bell-launcher-message {
+      position: absolute;
+      color: white;
+      background: black;
+      cursor: pointer;
+      border-radius: 5px;
+      transform: translateY(-50%) scaleX(0) translateZ(0);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 175ms ease-in-out, opacity 175ms ease-in-out;
+      top: 50%;
+      z-index: 2147481000; }
+      #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher .onesignal-bell-launcher-message:after {
+        top: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-color: transparent; }
+      #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher .onesignal-bell-launcher-message .onesignal-bell-launcher-message-body {
+        z-index: 2147482000;
+        max-width: 100%;
+        white-space: nowrap;
+        text-overflow: ellipsis; }
+      #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher .onesignal-bell-launcher-message.onesignal-bell-launcher-message-opened {
+        pointer-events: auto;
+        opacity: 1;
+        transform: translateY(-50%) scaleX(1) translateZ(0); }
+    #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher .onesignal-bell-launcher-dialog {
+      cursor: pointer;
+      position: absolute;
+      background-color: white;
+      border-radius: 5px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      width: 200px;
+      transform: scale(0, 0) translateZ(0);
+      transition: transform 175ms ease-in-out, opacity 175ms ease-in-out;
+      z-index: 2147481000; }
+      #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher .onesignal-bell-launcher-dialog ol {
+        counter-reset: foo;
+        display: table;
+        border-spacing: 0.3em 0.75em; }
+      #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher .onesignal-bell-launcher-dialog ol > li {
+        counter-increment: foo;
+        display: table-row;
+        margin-bottom: 0.75em; }
+      #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher .onesignal-bell-launcher-dialog ol > li::before {
+        content: counter(foo) ".";
+        display: table-cell;
+        /* aha! */
+        text-align: right; }
+      #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher .onesignal-bell-launcher-dialog:after, #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher .onesignal-bell-launcher-dialog:before {
+        top: 100%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute; }
+      #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body {
+        z-index: 2147482000;
+        max-width: 100%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif; }
+      #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher .onesignal-bell-launcher-dialog.onesignal-bell-launcher-dialog-opened {
+        transform: scale(1, 1) translateZ(0);
+        opacity: 1; }
+      #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher .onesignal-bell-launcher-dialog a {
+        box-sizing: border-box;
+        text-decoration: none;
+        color: initial; }
+        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher .onesignal-bell-launcher-dialog a:visited, #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher .onesignal-bell-launcher-dialog a:hover, #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher .onesignal-bell-launcher-dialog a:hover:active, #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher .onesignal-bell-launcher-dialog a:active, #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher .onesignal-bell-launcher-dialog a:focus {
+          text-decoration: none;
+          color: initial; }
+      #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher .onesignal-bell-launcher-dialog button {
+        box-sizing: border-box;
+        border: 1px solid transparent;
+        padding: 0.625em 1em;
+        box-shadow: none;
+        border-radius: 4px;
+        font-weight: 400;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 12px;
+        letter-spacing: 0.65px;
+        cursor: pointer; }
+        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher .onesignal-bell-launcher-dialog button.action {
+          color: white;
+          background: #e54b4d;
+          width: 100%; }
+          #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher .onesignal-bell-launcher-dialog button.action:hover {
+            background: #dd2022; }
+          #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher .onesignal-bell-launcher-dialog button.action:active {
+            background: #b1191b; }
+    #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-sm {
+      height: 32px; }
+      #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-sm .onesignal-bell-launcher-button {
+        width: 32px;
+        height: 32px; }
+      #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-sm .onesignal-bell-launcher-badge {
+        font-size: 8px;
+        width: 12px;
+        height: 12px;
+        line-height: 12px; }
+      #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-sm .onesignal-bell-launcher-message {
+        padding: 9.6px; }
+        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-sm .onesignal-bell-launcher-message:after {
+          border-width: 6.6px;
+          margin-top: -6.6px; }
+        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-sm .onesignal-bell-launcher-message .onesignal-bell-launcher-message-body {
+          font-size: 14px; }
+      #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-sm .onesignal-bell-launcher-dialog {
+        padding: 0.3em 0.8em 0.6em 0.8em;
+        color: #333333; }
+        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-sm .onesignal-bell-launcher-dialog:after {
+          border-top-color: white;
+          border-width: 6.6px; }
+        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-sm .onesignal-bell-launcher-dialog:before {
+          border-top-color: rgba(180, 180, 180, 0.1);
+          border-width: 8.6px; }
+        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-sm .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body {
+          font-size: 14px;
+          font-family: Helvetica Neue, Helvetica, Arial, sans-serif; }
+          #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-sm .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body h1 {
+            font-size: 15px;
+            line-height: 1.2em;
+            font-weight: 500;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            letter-spacing: 0.2px;
+            text-align: center;
+            color: #41090a; }
+          #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-sm .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body p {
+            font-size: 14px;
+            font-weight: 400;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif; }
+          #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-sm .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body .divider {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            margin: 0.25em -0.93em; }
+          #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-sm .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body .kickback {
+            text-align: center;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-weight: 300;
+            font-size: 9.8px;
+            letter-spacing: 0.5px; }
+          #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-sm .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body .instructions {
+            max-width: 95vw;
+            max-height: 70vh;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-weight: 400;
+            font-size: 14px; }
+            #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-sm .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body .instructions img {
+              width: 100%; }
+          #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-sm .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body .push-notification {
+            display: -ms-flexbox;
+            display: flex;
+            max-width: 330px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 3px;
+            background: rgba(250, 250, 250, 0.5);
+            overflow: auto;
+            margin: 0.5em 0; }
+            #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-sm .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body .push-notification .push-notification-icon {
+              width: 50px;
+              height: 50px;
+              margin: 6px;
+              margin-right: 3px;
+              border-radius: 2px; }
+              #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-sm .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body .push-notification .push-notification-icon.push-notification-icon-default {
+                background: #e3e4e5; }
+              #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-sm .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body .push-notification .push-notification-icon img {
+                width: 50px;
+                height: 50px;
+                border-radius: 1px; }
+            #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-sm .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body .push-notification .push-notification-text-container {
+              margin: 6px;
+              margin-left: 3px;
+              -ms-flex: 1;
+                  flex: 1; }
+              #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-sm .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body .push-notification .push-notification-text-container .push-notification-text {
+                height: 5px;
+                width: 100%;
+                background: #e3e4e5;
+                margin: 5px 0;
+                border-radius: 1px; }
+                #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-sm .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body .push-notification .push-notification-text-container .push-notification-text.push-notification-text-short {
+                  width: 75%; }
+                #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-sm .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body .push-notification .push-notification-text-container .push-notification-text.push-notification-text-medium {
+                  width: 87%; }
+                #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-sm .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body .push-notification .push-notification-text-container .push-notification-text:first-of-type {
+                  margin-top: 2px; }
+                #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-sm .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body .push-notification .push-notification-text-container .push-notification-text:last-of-type {
+                  margin-bottom: 0; }
+    #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-md {
+      height: 48px; }
+      #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-md .onesignal-bell-launcher-button {
+        width: 48px;
+        height: 48px; }
+      #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-md .onesignal-bell-launcher-badge {
+        font-size: 12px;
+        width: 18px;
+        height: 18px;
+        line-height: 18px; }
+      #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-md .onesignal-bell-launcher-message {
+        padding: 14.4px; }
+        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-md .onesignal-bell-launcher-message:after {
+          border-width: 9.9px;
+          margin-top: -9.9px; }
+        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-md .onesignal-bell-launcher-message .onesignal-bell-launcher-message-body {
+          font-size: 14px; }
+      #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-md .onesignal-bell-launcher-dialog {
+        padding: 0.3em 0.8em 0.6em 0.8em;
+        color: #333333; }
+        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-md .onesignal-bell-launcher-dialog:after {
+          border-top-color: white;
+          border-width: 9.9px; }
+        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-md .onesignal-bell-launcher-dialog:before {
+          border-top-color: rgba(180, 180, 180, 0.1);
+          border-width: 11.9px; }
+        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-md .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body {
+          font-size: 14px;
+          font-family: Helvetica Neue, Helvetica, Arial, sans-serif; }
+          #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-md .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body h1 {
+            font-size: 15px;
+            line-height: 1.2em;
+            font-weight: 500;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            letter-spacing: 0.2px;
+            text-align: center;
+            color: #41090a; }
+          #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-md .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body p {
+            font-size: 14px;
+            font-weight: 400;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif; }
+          #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-md .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body .divider {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            margin: 0.25em -0.93em; }
+          #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-md .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body .kickback {
+            text-align: center;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-weight: 300;
+            font-size: 9.8px;
+            letter-spacing: 0.5px; }
+          #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-md .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body .instructions {
+            max-width: 95vw;
+            max-height: 70vh;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-weight: 400;
+            font-size: 14px; }
+            #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-md .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body .instructions img {
+              width: 100%; }
+          #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-md .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body .push-notification {
+            display: -ms-flexbox;
+            display: flex;
+            max-width: 330px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 3px;
+            background: rgba(250, 250, 250, 0.5);
+            overflow: auto;
+            margin: 0.5em 0; }
+            #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-md .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body .push-notification .push-notification-icon {
+              width: 50px;
+              height: 50px;
+              margin: 6px;
+              margin-right: 3px;
+              border-radius: 2px; }
+              #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-md .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body .push-notification .push-notification-icon.push-notification-icon-default {
+                background: #e3e4e5; }
+              #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-md .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body .push-notification .push-notification-icon img {
+                width: 50px;
+                height: 50px;
+                border-radius: 1px; }
+            #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-md .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body .push-notification .push-notification-text-container {
+              margin: 6px;
+              margin-left: 3px;
+              -ms-flex: 1;
+                  flex: 1; }
+              #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-md .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body .push-notification .push-notification-text-container .push-notification-text {
+                height: 5px;
+                width: 100%;
+                background: #e3e4e5;
+                margin: 5px 0;
+                border-radius: 1px; }
+                #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-md .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body .push-notification .push-notification-text-container .push-notification-text.push-notification-text-short {
+                  width: 75%; }
+                #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-md .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body .push-notification .push-notification-text-container .push-notification-text.push-notification-text-medium {
+                  width: 87%; }
+                #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-md .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body .push-notification .push-notification-text-container .push-notification-text:first-of-type {
+                  margin-top: 2px; }
+                #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-md .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body .push-notification .push-notification-text-container .push-notification-text:last-of-type {
+                  margin-bottom: 0; }
+    #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-lg {
+      height: 64px; }
+      #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-lg .onesignal-bell-launcher-button {
+        width: 64px;
+        height: 64px; }
+      #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-lg .onesignal-bell-launcher-badge {
+        font-size: 12px;
+        width: 24px;
+        height: 24px;
+        line-height: 24px; }
+      #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-lg .onesignal-bell-launcher-message {
+        padding: 19.2px; }
+        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-lg .onesignal-bell-launcher-message:after {
+          border-width: 13.2px;
+          margin-top: -13.2px; }
+        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-lg .onesignal-bell-launcher-message .onesignal-bell-launcher-message-body {
+          font-size: 14px; }
+      #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-lg .onesignal-bell-launcher-dialog {
+        padding: 0.3em 0.8em 0.6em 0.8em;
+        color: #333333; }
+        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-lg .onesignal-bell-launcher-dialog:after {
+          border-top-color: white;
+          border-width: 13.2px; }
+        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-lg .onesignal-bell-launcher-dialog:before {
+          border-top-color: rgba(180, 180, 180, 0.1);
+          border-width: 15.2px; }
+        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-lg .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body {
+          font-size: 14px;
+          font-family: Helvetica Neue, Helvetica, Arial, sans-serif; }
+          #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-lg .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body h1 {
+            font-size: 15px;
+            line-height: 1.2em;
+            font-weight: 500;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            letter-spacing: 0.2px;
+            text-align: center;
+            color: #41090a; }
+          #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-lg .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body p {
+            font-size: 14px;
+            font-weight: 400;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif; }
+          #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-lg .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body .divider {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            margin: 0.25em -0.93em; }
+          #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-lg .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body .kickback {
+            text-align: center;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-weight: 300;
+            font-size: 9.8px;
+            letter-spacing: 0.5px; }
+          #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-lg .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body .instructions {
+            max-width: 95vw;
+            max-height: 70vh;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-weight: 400;
+            font-size: 14px; }
+            #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-lg .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body .instructions img {
+              width: 100%; }
+          #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-lg .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body .push-notification {
+            display: -ms-flexbox;
+            display: flex;
+            max-width: 330px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 3px;
+            background: rgba(250, 250, 250, 0.5);
+            overflow: auto;
+            margin: 0.5em 0; }
+            #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-lg .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body .push-notification .push-notification-icon {
+              width: 50px;
+              height: 50px;
+              margin: 6px;
+              margin-right: 3px;
+              border-radius: 2px; }
+              #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-lg .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body .push-notification .push-notification-icon.push-notification-icon-default {
+                background: #e3e4e5; }
+              #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-lg .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body .push-notification .push-notification-icon img {
+                width: 50px;
+                height: 50px;
+                border-radius: 1px; }
+            #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-lg .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body .push-notification .push-notification-text-container {
+              margin: 6px;
+              margin-left: 3px;
+              -ms-flex: 1;
+                  flex: 1; }
+              #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-lg .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body .push-notification .push-notification-text-container .push-notification-text {
+                height: 5px;
+                width: 100%;
+                background: #e3e4e5;
+                margin: 5px 0;
+                border-radius: 1px; }
+                #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-lg .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body .push-notification .push-notification-text-container .push-notification-text.push-notification-text-short {
+                  width: 75%; }
+                #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-lg .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body .push-notification .push-notification-text-container .push-notification-text.push-notification-text-medium {
+                  width: 87%; }
+                #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-lg .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body .push-notification .push-notification-text-container .push-notification-text:first-of-type {
+                  margin-top: 2px; }
+                #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-lg .onesignal-bell-launcher-dialog .onesignal-bell-launcher-dialog-body .push-notification .push-notification-text-container .push-notification-text:last-of-type {
+                  margin-bottom: 0; }
+    #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-theme-default .onesignal-bell-launcher-button svg .background {
+      fill: #e54b4d; }
+    #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-theme-default .onesignal-bell-launcher-button svg .foreground {
+      fill: white; }
+    #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-theme-default .onesignal-bell-launcher-button svg .stroke {
+      fill: none;
+      stroke: white;
+      stroke-width: 3px;
+      stroke-miterlimit: 10; }
+    #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-theme-default .onesignal-bell-launcher-button.onesignal-bell-launcher-button-active svg .background, #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-theme-default .onesignal-bell-launcher-button.onesignal-bell-launcher-badge-active svg .background {
+      fill: #dd2022 !important; }
+    #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-theme-default .onesignal-bell-launcher-button .pulse-ring {
+      border: 7px solid rgba(255, 255, 255, 0.4); }
+    #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-theme-default .onesignal-bell-launcher-badge {
+      border: 1px solid white;
+      background: black;
+      color: white; }
+    #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-theme-inverse .onesignal-bell-launcher-button svg .background {
+      fill: white; }
+    #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-theme-inverse .onesignal-bell-launcher-button svg .foreground {
+      fill: #e54b4d; }
+    #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-theme-inverse .onesignal-bell-launcher-button svg .stroke {
+      fill: none;
+      stroke: #e54b4d;
+      stroke-width: 3px;
+      stroke-miterlimit: 10; }
+    #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-theme-inverse .onesignal-bell-launcher-button.onesignal-bell-launcher-button-active svg .background, #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-theme-inverse .onesignal-bell-launcher-button.onesignal-bell-launcher-badge-active svg .background {
+      fill: #f2f2f2 !important; }
+    #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-theme-inverse .onesignal-bell-launcher-button .pulse-ring {
+      border: 7px solid rgba(229, 75, 77, 0.4); }
+    #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-theme-inverse .onesignal-bell-launcher-badge {
+      border: 1px solid white;
+      background: #e54b4d;
+      color: white; }
+  #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher-enabled, #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher-active {
+    transform: scale(1);
+    opacity: 1; }
+  #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher-disabled {
+    visibility: hidden; }
+  #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher-inactive {
+    opacity: 0.5; }
+  #onesignal-bell-container.onesignal-reset .pulse-ring {
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    animation: notifyButtonPulse 0.35s ease-in-out;
+    animation-iteration-count: 1;
+    opacity: 0;
+    z-index: 1000;
+    pointer-events: none; }
+
+@media print {
+  #onesignal-bell-container {
+    display: none; } }
+
+@keyframes notifyButtonPulse {
+  0% {
+    transform: scale(0.1);
+    opacity: 0.0;
+    border-width: 10px; }
+  50% {
+    opacity: 1.0;
+    border-width: 5px; }
+  100% {
+    transform: scale(1.2);
+    opacity: 0.0;
+    border-width: 1px; } }
+
+/*
+* CleanSlate
+*   github.com/premasagar/cleanslate
+*
+*/
+/*
+  An extreme CSS reset stylesheet, for normalising the styling of a container element and its children.
+
+  by Premasagar Rose
+      dharmafly.com
+
+  license
+      opensource.org/licenses/mit-license.php
+
+  **
+
+  v0.9.3
+
+*/
+/* == BLANKET RESET RULES == */
+/* HTML 4.01 */
+.onesignal-reset, .onesignal-reset h1, .onesignal-reset h2, .onesignal-reset h3, .onesignal-reset h4, .onesignal-reset h5, .onesignal-reset h6, .onesignal-reset p, .onesignal-reset td, .onesignal-reset dl, .onesignal-reset tr, .onesignal-reset dt, .onesignal-reset ol, .onesignal-reset form, .onesignal-reset select, .onesignal-reset option, .onesignal-reset pre, .onesignal-reset div, .onesignal-reset table, .onesignal-reset th, .onesignal-reset tbody, .onesignal-reset tfoot, .onesignal-reset caption, .onesignal-reset thead, .onesignal-reset ul, .onesignal-reset li, .onesignal-reset address, .onesignal-reset blockquote, .onesignal-reset dd, .onesignal-reset fieldset, .onesignal-reset li, .onesignal-reset iframe, .onesignal-reset strong, .onesignal-reset legend, .onesignal-reset em, .onesignal-reset summary, .onesignal-reset cite, .onesignal-reset span, .onesignal-reset input, .onesignal-reset sup, .onesignal-reset label, .onesignal-reset dfn, .onesignal-reset object, .onesignal-reset big, .onesignal-reset q, .onesignal-reset samp, .onesignal-reset acronym, .onesignal-reset small, .onesignal-reset img, .onesignal-reset strike, .onesignal-reset code, .onesignal-reset sub, .onesignal-reset ins, .onesignal-reset textarea, .onesignal-reset button, .onesignal-reset var, .onesignal-reset a, .onesignal-reset abbr, .onesignal-reset applet, .onesignal-reset del, .onesignal-reset kbd, .onesignal-reset tt, .onesignal-reset b, .onesignal-reset i, .onesignal-reset hr,
+.onesignal-reset article, .onesignal-reset aside, .onesignal-reset figure, .onesignal-reset figcaption, .onesignal-reset footer, .onesignal-reset header, .onesignal-reset menu, .onesignal-reset nav, .onesignal-reset section, .onesignal-reset time, .onesignal-reset mark, .onesignal-reset audio, .onesignal-reset video, .onesignal-reset abbr, .onesignal-reset address, .onesignal-reset area, .onesignal-reset blockquote, .onesignal-reset canvas, .onesignal-reset caption, .onesignal-reset cite, .onesignal-reset code, .onesignal-reset colgroup, .onesignal-reset col, .onesignal-reset datalist, .onesignal-reset fieldset, .onesignal-reset main, .onesignal-reset map, .onesignal-reset meta, .onesignal-reset optgroup, .onesignal-reset output, .onesignal-reset progress {
+  background-attachment: scroll;
+  background-color: transparent;
+  background-image: none;
+  /* This rule affects the use of pngfix JavaScript http://dillerdesign.com/experiment/DD_BelatedPNG for IE6, which is used to force the browser to recognise alpha-transparent PNGs files that replace the IE6 lack of PNG transparency. (The rule overrides the VML image that is used to replace the given CSS background-image). If you don't know what that means, then you probably haven't used the pngfix script, and this comment may be ignored :) */
+  background-position: 0 0;
+  background-repeat: repeat;
+  border-color: black;
+  border-color: currentColor;
+  /* `border-color` should match font color. Modern browsers (incl. IE9) allow the use of "currentColor" to match the current font 'color' value <http://www.w3.org/TR/css3-color/#currentcolor>. For older browsers, a default of 'black' is given before this rule. Guideline to support older browsers: if you haven't already declared a border-color for an element, be sure to do so, e.g. when you first declare the border-width. */
+  border-radius: 0;
+  border-style: none;
+  border-width: medium;
+  bottom: auto;
+  clear: none;
+  clip: auto;
+  color: inherit;
+  counter-increment: none;
+  counter-reset: none;
+  cursor: auto;
+  direction: inherit;
+  display: inline;
+  float: none;
+  font-family: inherit;
+  /* As with other inherit values, this needs to be set on the root container element */
+  font-size: inherit;
+  font-style: inherit;
+  font-variant: normal;
+  font-weight: inherit;
+  height: auto;
+  left: auto;
+  letter-spacing: normal;
+  line-height: inherit;
+  list-style-type: inherit;
+  /* Could set list-style-type to none */
+  list-style-position: outside;
+  list-style-image: none;
+  margin: 0;
+  max-height: none;
+  max-width: none;
+  min-height: 0;
+  min-width: 0;
+  opacity: 1;
+  outline: invert none medium;
+  overflow: visible;
+  padding: 0;
+  position: static;
+  quotes: "" "";
+  right: auto;
+  table-layout: auto;
+  text-align: inherit;
+  text-decoration: inherit;
+  text-indent: 0;
+  text-transform: none;
+  top: auto;
+  unicode-bidi: normal;
+  vertical-align: baseline;
+  visibility: inherit;
+  white-space: normal;
+  width: auto;
+  word-spacing: normal;
+  z-index: auto;
+  /* CSS3 */
+  /* Including all prefixes according to http://caniuse.com/ */
+  /* CSS Animations don't cascade, so don't require resetting */
+  background-origin: padding-box;
+  background-clip: border-box;
+  background-size: auto;
+  -o-border-image: none;
+  border-image: none;
+  border-radius: 0;
+  box-shadow: none;
+  box-sizing: content-box;
+  column-count: auto;
+  column-gap: normal;
+  column-rule: medium none black;
+  /* doesn't exist yet but probably will */
+  column-span: 1;
+  column-width: auto;
+  -webkit-font-feature-settings: normal;
+          font-feature-settings: normal;
+  overflow-x: visible;
+  overflow-y: visible;
+  -webkit-hyphens: manual;
+  -ms-hyphens: manual;
+      hyphens: manual;
+  -ms-perspective: none;
+  -o-perspective: none;
+  perspective: none;
+  -ms-perspective-origin: 50% 50%;
+  -o-perspective-origin: 50% 50%;
+  perspective-origin: 50% 50%;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+  text-shadow: none;
+  transition: all 0s ease 0s;
+  transform: none;
+  transform-origin: 50% 50%;
+  transform-style: flat;
+  word-break: normal; }
+
+/* == BLOCK-LEVEL == */
+/* Actually, some of these should be inline-block and other values, but block works fine */
+/* HTML 4.01 */
+.onesignal-reset, .onesignal-reset h3, .onesignal-reset h5, .onesignal-reset p, .onesignal-reset h1, .onesignal-reset dl, .onesignal-reset dt, .onesignal-reset h6, .onesignal-reset ol, .onesignal-reset form, .onesignal-reset option, .onesignal-reset pre, .onesignal-reset div, .onesignal-reset h2, .onesignal-reset caption, .onesignal-reset h4, .onesignal-reset ul, .onesignal-reset address, .onesignal-reset blockquote, .onesignal-reset dd, .onesignal-reset fieldset, .onesignal-reset hr,
+.onesignal-reset article, .onesignal-reset dialog, .onesignal-reset figure, .onesignal-reset footer, .onesignal-reset header, .onesignal-reset hgroup, .onesignal-reset menu, .onesignal-reset nav, .onesignal-reset section, .onesignal-reset audio, .onesignal-reset video, .onesignal-reset address, .onesignal-reset blockquote, .onesignal-reset colgroup, .onesignal-reset main, .onesignal-reset progress, .onesignal-reset summary {
+  display: block; }
+
+.onesignal-reset h1, .onesignal-reset h2, .onesignal-reset h3, .onesignal-reset h4, .onesignal-reset h5, .onesignal-reset h6 {
+  font-weight: bold; }
+
+.onesignal-reset h1 {
+  font-size: 2em;
+  padding: .67em 0; }
+
+.onesignal-reset h2 {
+  font-size: 1.5em;
+  padding: .83em 0; }
+
+.onesignal-reset h3 {
+  font-size: 1.17em;
+  padding: .83em 0; }
+
+.onesignal-reset h4 {
+  font-size: 1em; }
+
+.onesignal-reset h5 {
+  font-size: .83em; }
+
+.onesignal-reset p {
+  margin: 1em 0; }
+
+.onesignal-reset table {
+  display: table; }
+
+.onesignal-reset thead {
+  display: table-header-group; }
+
+.onesignal-reset tbody {
+  display: table-row-group; }
+
+.onesignal-reset tfoot {
+  display: table-footer-group; }
+
+.onesignal-reset tr {
+  display: table-row; }
+
+.onesignal-reset th, .onesignal-reset td {
+  display: table-cell;
+  padding: 2px; }
+
+/* == SPECIFIC ELEMENTS == */
+/* Some of these are browser defaults; some are just useful resets */
+.onesignal-reset ol, .onesignal-reset ul {
+  margin: 1em 0; }
+
+.onesignal-reset ul li, .onesignal-reset ul ul li, .onesignal-reset ul ul ul li, .onesignal-reset ol li, .onesignal-reset ol ol li, .onesignal-reset ol ol ol li, .onesignal-reset ul ol ol li, .onesignal-reset ul ul ol li, .onesignal-reset ol ul ul li, .onesignal-reset ol ol ul li {
+  list-style-position: inside;
+  margin-top: .08em; }
+
+.onesignal-reset ol ol, .onesignal-reset ol ol ol, .onesignal-reset ul ul, .onesignal-reset ul ul ul, .onesignal-reset ol ul, .onesignal-reset ol ul ul, .onesignal-reset ol ol ul, .onesignal-reset ul ol, .onesignal-reset ul ol ol, .onesignal-reset ul ul ol {
+  padding-left: 40px;
+  margin: 0; }
+
+/* helper for general navigation */
+.onesignal-reset nav ul, .onesignal-reset nav ol {
+  list-style-type: none; }
+
+.onesignal-reset ul, .onesignal-reset menu {
+  list-style-type: disc; }
+
+.onesignal-reset ol {
+  list-style-type: decimal; }
+
+.onesignal-reset ol ul, .onesignal-reset ul ul, .onesignal-reset menu ul, .onesignal-reset ol menu, .onesignal-reset ul menu, .onesignal-reset menu menu {
+  list-style-type: circle; }
+
+.onesignal-reset ol ol ul, .onesignal-reset ol ul ul, .onesignal-reset ol menu ul, .onesignal-reset ol ol menu, .onesignal-reset ol ul menu, .onesignal-reset ol menu menu, .onesignal-reset ul ol ul, .onesignal-reset ul ul ul, .onesignal-reset ul menu ul, .onesignal-reset ul ol menu, .onesignal-reset ul ul menu, .onesignal-reset ul menu menu, .onesignal-reset menu ol ul, .onesignal-reset menu ul ul, .onesignal-reset menu menu ul, .onesignal-reset menu ol menu, .onesignal-reset menu ul menu, .onesignal-reset menu menu menu {
+  list-style-type: square; }
+
+.onesignal-reset li {
+  display: list-item;
+  /* Fixes IE7 issue with positioning of nested bullets */
+  min-height: auto;
+  min-width: auto;
+  padding-left: 20px;
+  /* replace -webkit-padding-start: 40px; */ }
+
+.onesignal-reset strong {
+  font-weight: bold; }
+
+.onesignal-reset em {
+  font-style: italic; }
+
+.onesignal-reset kbd, .onesignal-reset samp, .onesignal-reset code, .onesignal-reset pre {
+  font-family: monospace; }
+
+.onesignal-reset a {
+  color: blue;
+  text-decoration: underline; }
+
+.onesignal-reset a:visited {
+  color: #529; }
+
+.onesignal-reset a, .onesignal-reset a *, .onesignal-reset input[type=submit], .onesignal-reset input[type=radio], .onesignal-reset input[type=checkbox], .onesignal-reset select {
+  cursor: pointer; }
+
+.onesignal-reset button, .onesignal-reset input[type=submit] {
+  text-align: center;
+  padding: 2px 6px 3px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-family: arial, helvetica, sans-serif;
+  font-size: small;
+  background: white;
+  -webkit-appearance: push-button;
+  color: buttontext;
+  border: 1px #a6a6a6 solid;
+  background: lightgrey;
+  /* Old browsers */
+  background: white;
+  /* Old browsers */
+  /* FF3.6+ */
+  /* Chrome,Safari4+ */
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
+  /* IE10+ */
+  background: linear-gradient(to bottom, white 0%, #dddddd 100%, #d1d1d1 100%, #dddddd 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dddddd',GradientType=0 );
+  /* IE6-9 */
+  -o-box-shadow: 1px 1px 0px #eee;
+  box-shadow: 1px 1px 0px #eee;
+  outline: initial; }
+
+.onesignal-reset button {
+  padding: 1px 6px 2px 6px;
+  margin-right: 5px; }
+
+.onesignal-reset input[type=hidden] {
+  display: none; }
+
+/* restore form defaults */
+.onesignal-reset textarea {
+  -webkit-appearance: textarea;
+  background: white;
+  padding: 2px;
+  margin-left: 4px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  font-size: 11px;
+  font-family: arial, helvetica, sans-serif;
+  line-height: 13px;
+  resize: both; }
+
+.onesignal-reset select, .onesignal-reset textarea, .onesignal-reset input {
+  border: 1px solid #ccc; }
+
+.onesignal-reset select {
+  font-size: 11px;
+  font-family: helvetica, arial, sans-serif;
+  display: inline-block; }
+
+.onesignal-reset textarea:focus, .onesignal-reset input:focus {
+  outline: auto 5px -webkit-focus-ring-color;
+  outline: initial; }
+
+.onesignal-reset input[type=text] {
+  background: white;
+  padding: 1px;
+  font-family: initial;
+  font-size: small; }
+
+.onesignal-reset input[type=checkbox], .onesignal-reset input[type=radio] {
+  border: 1px #2b2b2b solid;
+  border-radius: 4px; }
+
+.onesignal-reset input[type=checkbox], .onesignal-reset input[type=radio] {
+  outline: intial; }
+
+.onesignal-reset input[type=radio] {
+  margin: 2px 2px 3px 2px; }
+
+.onesignal-reset input[type=submit]:active, .onesignal-reset button:active {
+  background: #3b679e;
+  /* Old browsers */
+  /* FF3.6+ */
+  /* Chrome,Safari4+ */
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
+  /* IE10+ */
+  background: linear-gradient(to bottom, #3b679e 0%, #2b88d9 50%, #207cca 51%, #7db9e8 100%);
+  /* W3C */
+  border-color: #5259b0; }
+
+.onesignal-reset abbr[title], .onesignal-reset acronym[title], .onesignal-reset dfn[title] {
+  cursor: help;
+  border-bottom-width: 1px;
+  border-bottom-style: dotted; }
+
+.onesignal-reset ins {
+  background-color: #ff9;
+  color: black; }
+
+.onesignal-reset del {
+  text-decoration: line-through; }
+
+.onesignal-reset blockquote, .onesignal-reset q {
+  quotes: none;
+  /* HTML5 */ }
+
+.onesignal-reset blockquote:before, .onesignal-reset blockquote:after, .onesignal-reset q:before, .onesignal-reset q:after, .onesignal-reset li:before, .onesignal-reset li:after {
+  content: ""; }
+
+.onesignal-reset input, .onesignal-reset select {
+  vertical-align: middle; }
+
+.onesignal-reset table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.onesignal-reset hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0; }
+
+.onesignal-reset *[dir=rtl] {
+  direction: rtl; }
+
+.onesignal-reset mark {
+  background-color: #ff9;
+  color: black;
+  font-style: italic;
+  font-weight: bold; }
+
+.onesignal-reset menu {
+  padding-left: 40px;
+  padding-top: 8px; }
+
+/* additional helpers */
+.onesignal-reset [hidden],
+.onesignal-reset template {
+  display: none; }
+
+.onesignal-reset abbr[title] {
+  border-bottom: 1px dotted; }
+
+.onesignal-reset sub, .onesignal-reset sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+.onesignal-reset sup {
+  top: -0.5em; }
+
+.onesignal-reset sub {
+  bottom: -0.25em; }
+
+.onesignal-reset img {
+  border: 0; }
+
+.onesignal-reset figure {
+  margin: 0; }
+
+.onesignal-reset textarea {
+  overflow: auto;
+  vertical-align: top; }
+
+/* == ROOT CONTAINER ELEMENT == */
+/* This contains default values for child elements to inherit  */
+.onesignal-reset {
+  font-size: medium;
+  line-height: 1;
+  direction: ltr;
+  text-align: left;
+  /* for IE, Opera */
+  text-align: start;
+  /* recommended W3C Spec */
+  font-family: "Times New Roman", Times, serif;
+  /* Override this with whatever font-family is required */
+  color: black;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  list-style-type: disc; }
+
+.onesignal-reset pre {
+  white-space: pre; }
+
+.onesignal-customlink-subscribe {
+  display: inline-block;
+  transition: all 0.1s;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif; }
+  .onesignal-customlink-subscribe.onesignal-reset {
+    display: inline-block;
+    transition: all 0.1s;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif; }
+  .onesignal-customlink-subscribe.state-subscribed.hide {
+    display: none; }
+  .onesignal-customlink-subscribe.button {
+    text-transform: uppercase;
+    -ms-touch-action: manipulation;
+        touch-action: manipulation;
+    font-weight: 600;
+    border-radius: 4px;
+    box-shadow: 1px 1px 1px grey;
+    cursor: pointer; }
+    .onesignal-customlink-subscribe.button:hover, .onesignal-customlink-subscribe.button:focus, .onesignal-customlink-subscribe.button:active {
+      text-decoration: none;
+      box-shadow: 2px 3px 4px grey; }
+    .onesignal-customlink-subscribe.button.state-subscribed {
+      text-transform: none;
+      font-weight: 400; }
+  .onesignal-customlink-subscribe.link {
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600; }
+    .onesignal-customlink-subscribe.link.state-subscribed {
+      text-transform: none;
+      font-weight: 400; }
+    .onesignal-customlink-subscribe.link:hover, .onesignal-customlink-subscribe.link:focus, .onesignal-customlink-subscribe.link:active {
+      text-decoration: underline; }
+  .onesignal-customlink-subscribe.button.small {
+    font-size: 13px;
+    padding: 4px 12px; }
+  .onesignal-customlink-subscribe.link.small {
+    font-size: 13px; }
+  .onesignal-customlink-subscribe.button.medium {
+    font-size: 15px;
+    padding: 8px 16px; }
+  .onesignal-customlink-subscribe.link.medium {
+    font-size: 15px; }
+  .onesignal-customlink-subscribe.button.large {
+    font-size: 18px;
+    padding: 12px 20px; }
+  .onesignal-customlink-subscribe.link.large {
+    font-size: 18px; }
+
+.onesignal-customlink-explanation {
+  color: rgba(0, 0, 0, 0.64);
+  transition: all 0.1s;
+  font-family: "Proxima-Nova", "Proxima Nova", "Open Sans", Arial, Helvetica, sans-serif;
+  margin-bottom: 12px; }
+  .onesignal-customlink-explanation.onesignal-reset {
+    color: rgba(0, 0, 0, 0.64);
+    transition: all 0.1s;
+    font-family: "Proxima-Nova", "Proxima Nova", "Open Sans", Arial, Helvetica, sans-serif;
+    margin-bottom: 12px; }
+  .onesignal-customlink-explanation.state-subscribed.hide {
+    display: none; }
+  .onesignal-customlink-explanation.small {
+    font-size: 13px; }
+  .onesignal-customlink-explanation.medium {
+    font-size: 15px; }
+  .onesignal-customlink-explanation.large {
+    font-size: 15px; }
+
+/* http://stackoverflow.com/a/6900392 */
+#onesignal-slidedown-container, #onesignal-popover-container {
+  font-size: 16px;
+  position: fixed;
+  z-index: 2258594000;
+  left: 0;
+  right: 0;
+  -webkit-font-smoothing: initial; }
+  #onesignal-slidedown-container.slide-down, #onesignal-popover-container.slide-down {
+    top: 0; }
+    #onesignal-slidedown-container.slide-down.close-slidedown #onesignal-slidedown-dialog, #onesignal-slidedown-container.slide-down.close-slidedown #onesignal-popover-dialog, #onesignal-popover-container.slide-down.close-slidedown #onesignal-slidedown-dialog, #onesignal-popover-container.slide-down.close-slidedown #onesignal-popover-dialog {
+      -webkit-animation-name: slideDownExit;
+      -webkit-animation-iteration-count: 1;
+      -webkit-animation-timing-function: ease-out;
+      -webkit-animation-duration: 400ms;
+      -webkit-animation-fill-mode: forwards;
+      animation-name: slideDownExit;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-out;
+      animation-duration: 400ms;
+      animation-fill-mode: forwards; }
+    #onesignal-slidedown-container.slide-down #onesignal-slidedown-dialog, #onesignal-slidedown-container.slide-down #onesignal-popover-dialog, #onesignal-popover-container.slide-down #onesignal-slidedown-dialog, #onesignal-popover-container.slide-down #onesignal-popover-dialog {
+      width: 500px;
+      -webkit-animation-name: slideDownEnter;
+      -webkit-animation-iteration-count: 1;
+      -webkit-animation-timing-function: ease-out;
+      -webkit-animation-duration: 400ms;
+      -webkit-animation-fill-mode: forwards;
+      animation-name: slideDownEnter;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-out;
+      animation-duration: 400ms;
+      animation-fill-mode: forwards; }
+      #onesignal-slidedown-container.slide-down #onesignal-slidedown-dialog.blocked-dialog, #onesignal-slidedown-container.slide-down #onesignal-popover-dialog.blocked-dialog, #onesignal-popover-container.slide-down #onesignal-slidedown-dialog.blocked-dialog, #onesignal-popover-container.slide-down #onesignal-popover-dialog.blocked-dialog {
+        padding: 1.714em;
+        width: 612px;
+        margin-bottom: 18px; }
+        #onesignal-slidedown-container.slide-down #onesignal-slidedown-dialog.blocked-dialog #blocked-slidedown, #onesignal-slidedown-container.slide-down #onesignal-popover-dialog.blocked-dialog #blocked-slidedown, #onesignal-popover-container.slide-down #onesignal-slidedown-dialog.blocked-dialog #blocked-slidedown, #onesignal-popover-container.slide-down #onesignal-popover-dialog.blocked-dialog #blocked-slidedown {
+          display: block; }
+        #onesignal-slidedown-container.slide-down #onesignal-slidedown-dialog.blocked-dialog #normal-slidedown, #onesignal-slidedown-container.slide-down #onesignal-slidedown-dialog.blocked-dialog #normal-popover, #onesignal-slidedown-container.slide-down #onesignal-popover-dialog.blocked-dialog #normal-slidedown, #onesignal-slidedown-container.slide-down #onesignal-popover-dialog.blocked-dialog #normal-popover, #onesignal-popover-container.slide-down #onesignal-slidedown-dialog.blocked-dialog #normal-slidedown, #onesignal-popover-container.slide-down #onesignal-slidedown-dialog.blocked-dialog #normal-popover, #onesignal-popover-container.slide-down #onesignal-popover-dialog.blocked-dialog #normal-slidedown, #onesignal-popover-container.slide-down #onesignal-popover-dialog.blocked-dialog #normal-popover {
+          display: none; }
+        #onesignal-slidedown-container.slide-down #onesignal-slidedown-dialog.blocked-dialog .slidedown-body-message, #onesignal-slidedown-container.slide-down #onesignal-slidedown-dialog.blocked-dialog .popover-body-message, #onesignal-slidedown-container.slide-down #onesignal-popover-dialog.blocked-dialog .slidedown-body-message, #onesignal-slidedown-container.slide-down #onesignal-popover-dialog.blocked-dialog .popover-body-message, #onesignal-popover-container.slide-down #onesignal-slidedown-dialog.blocked-dialog .slidedown-body-message, #onesignal-popover-container.slide-down #onesignal-slidedown-dialog.blocked-dialog .popover-body-message, #onesignal-popover-container.slide-down #onesignal-popover-dialog.blocked-dialog .slidedown-body-message, #onesignal-popover-container.slide-down #onesignal-popover-dialog.blocked-dialog .popover-body-message {
+          padding: 0 0.2em 0 0.2em;
+          text-align: center;
+          width: 100%; }
+          #onesignal-slidedown-container.slide-down #onesignal-slidedown-dialog.blocked-dialog .slidedown-body-message img, #onesignal-slidedown-container.slide-down #onesignal-slidedown-dialog.blocked-dialog .popover-body-message img, #onesignal-slidedown-container.slide-down #onesignal-popover-dialog.blocked-dialog .slidedown-body-message img, #onesignal-slidedown-container.slide-down #onesignal-popover-dialog.blocked-dialog .popover-body-message img, #onesignal-popover-container.slide-down #onesignal-slidedown-dialog.blocked-dialog .slidedown-body-message img, #onesignal-popover-container.slide-down #onesignal-slidedown-dialog.blocked-dialog .popover-body-message img, #onesignal-popover-container.slide-down #onesignal-popover-dialog.blocked-dialog .slidedown-body-message img, #onesignal-popover-container.slide-down #onesignal-popover-dialog.blocked-dialog .popover-body-message img {
+            width: 100%; }
+          #onesignal-slidedown-container.slide-down #onesignal-slidedown-dialog.blocked-dialog .slidedown-body-message .unblock-image, #onesignal-slidedown-container.slide-down #onesignal-slidedown-dialog.blocked-dialog .popover-body-message .unblock-image, #onesignal-slidedown-container.slide-down #onesignal-popover-dialog.blocked-dialog .slidedown-body-message .unblock-image, #onesignal-slidedown-container.slide-down #onesignal-popover-dialog.blocked-dialog .popover-body-message .unblock-image, #onesignal-popover-container.slide-down #onesignal-slidedown-dialog.blocked-dialog .slidedown-body-message .unblock-image, #onesignal-popover-container.slide-down #onesignal-slidedown-dialog.blocked-dialog .popover-body-message .unblock-image, #onesignal-popover-container.slide-down #onesignal-popover-dialog.blocked-dialog .slidedown-body-message .unblock-image, #onesignal-popover-container.slide-down #onesignal-popover-dialog.blocked-dialog .popover-body-message .unblock-image {
+            margin: 2em 0 0.5em 0; }
+        #onesignal-slidedown-container.slide-down #onesignal-slidedown-dialog.blocked-dialog .slidedown-button.secondary, #onesignal-slidedown-container.slide-down #onesignal-slidedown-dialog.blocked-dialog .popover-button.secondary, #onesignal-slidedown-container.slide-down #onesignal-popover-dialog.blocked-dialog .slidedown-button.secondary, #onesignal-slidedown-container.slide-down #onesignal-popover-dialog.blocked-dialog .popover-button.secondary, #onesignal-popover-container.slide-down #onesignal-slidedown-dialog.blocked-dialog .slidedown-button.secondary, #onesignal-popover-container.slide-down #onesignal-slidedown-dialog.blocked-dialog .popover-button.secondary, #onesignal-popover-container.slide-down #onesignal-popover-dialog.blocked-dialog .slidedown-button.secondary, #onesignal-popover-container.slide-down #onesignal-popover-dialog.blocked-dialog .popover-button.secondary {
+          padding: 0.714em 2em; }
+  #onesignal-slidedown-container #blocked-slidedown, #onesignal-slidedown-container #blocked-popover, #onesignal-popover-container #blocked-slidedown, #onesignal-popover-container #blocked-popover {
+    display: none; }
+  #onesignal-slidedown-container.slide-up, #onesignal-popover-container.slide-up {
+    bottom: 0; }
+    #onesignal-slidedown-container.slide-up.close-slidedown #onesignal-slidedown-dialog, #onesignal-slidedown-container.slide-up.close-slidedown #onesignal-popover-dialog, #onesignal-slidedown-container.slide-up.close-popover #onesignal-slidedown-dialog, #onesignal-slidedown-container.slide-up.close-popover #onesignal-popover-dialog, #onesignal-popover-container.slide-up.close-slidedown #onesignal-slidedown-dialog, #onesignal-popover-container.slide-up.close-slidedown #onesignal-popover-dialog, #onesignal-popover-container.slide-up.close-popover #onesignal-slidedown-dialog, #onesignal-popover-container.slide-up.close-popover #onesignal-popover-dialog {
+      -webkit-animation-name: slideUpExit;
+      -webkit-animation-iteration-count: 1;
+      -webkit-animation-timing-function: ease-out;
+      -webkit-animation-duration: 400ms;
+      -webkit-animation-fill-mode: forwards;
+      animation-name: slideUpExit;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-out;
+      animation-duration: 400ms;
+      animation-fill-mode: forwards; }
+    #onesignal-slidedown-container.slide-up #onesignal-slidedown-dialog, #onesignal-slidedown-container.slide-up #onesignal-popover-dialog, #onesignal-popover-container.slide-up #onesignal-slidedown-dialog, #onesignal-popover-container.slide-up #onesignal-popover-dialog {
+      width: 100%;
+      -webkit-animation-name: slideUpEnter;
+      -webkit-animation-iteration-count: 1;
+      -webkit-animation-timing-function: ease-out;
+      -webkit-animation-duration: 400ms;
+      -webkit-animation-fill-mode: backwards;
+      animation-name: slideUpEnter;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-out;
+      animation-duration: 400ms;
+      animation-fill-mode: backwards; }
+  #onesignal-slidedown-container .tagging-container, #onesignal-popover-container .tagging-container {
+    display: -ms-flexbox;
+    display: flex;
+    margin: 2em 0; }
+  #onesignal-slidedown-container .tagging-container-col, #onesignal-popover-container .tagging-container-col {
+    -ms-flex: 1;
+        flex: 1;
+    padding-left: 1em; }
+  #onesignal-slidedown-container .onesignal-category-label, #onesignal-popover-container .onesignal-category-label {
+    display: block;
+    position: relative;
+    padding-left: 2.5em;
+    margin-bottom: 1.5em;
+    color: #051B2C;
+    font-size: 1em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    height: 1.5em;
+    width: 80%;
+    line-height: 1.5em;
+    float: left;
+    /* On mouse-over, add a grey background color */ }
+    #onesignal-slidedown-container .onesignal-category-label .onesignal-category-label-input, #onesignal-popover-container .onesignal-category-label .onesignal-category-label-input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+      /* When the checkbox is checked, add a blue background */ }
+      #onesignal-slidedown-container .onesignal-category-label .onesignal-category-label-input:checked ~ .onesignal-checkmark, #onesignal-popover-container .onesignal-category-label .onesignal-category-label-input:checked ~ .onesignal-checkmark {
+        transition: ease 75ms;
+        background-color: #0078D1; }
+      #onesignal-slidedown-container .onesignal-category-label .onesignal-category-label-input:checked ~ .onesignal-checkmark:after, #onesignal-popover-container .onesignal-category-label .onesignal-category-label-input:checked ~ .onesignal-checkmark:after {
+        display: block; }
+    #onesignal-slidedown-container .onesignal-category-label:hover input ~ .onesignal-checkmark, #onesignal-popover-container .onesignal-category-label:hover input ~ .onesignal-checkmark {
+      background-color: #dde1e4; }
+    #onesignal-slidedown-container .onesignal-category-label .onesignal-category-label-text, #onesignal-popover-container .onesignal-category-label .onesignal-category-label-text {
+      cursor: pointer;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block; }
+    #onesignal-slidedown-container .onesignal-category-label .onesignal-checkmark, #onesignal-popover-container .onesignal-category-label .onesignal-checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 1.5em;
+      width: 1.5em;
+      border-radius: .25em;
+      cursor: pointer;
+      background-color: #ebedef;
+      /* Create the checkmark/indicator (hidden when not checked) */ }
+      #onesignal-slidedown-container .onesignal-category-label .onesignal-checkmark:after, #onesignal-popover-container .onesignal-category-label .onesignal-checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+        left: 0.5em;
+        top: 0.25em;
+        width: 0.33em;
+        height: 0.66em;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        transform: rotate(45deg); }
+  #onesignal-slidedown-container .onesignal-loading-container, #onesignal-popover-container .onesignal-loading-container {
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center; }
+    #onesignal-slidedown-container .onesignal-loading-container .onesignal-loading-message, #onesignal-popover-container .onesignal-loading-container .onesignal-loading-message {
+      -ms-flex: 1;
+          flex: 1;
+      color: #CED3D8;
+      margin-top: .8125em; }
+  #onesignal-slidedown-container .onesignal-button-indicator-holder, #onesignal-popover-container .onesignal-button-indicator-holder {
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 0.5em; }
+  #onesignal-slidedown-container #onesignal-slidedown-dialog, #onesignal-slidedown-container #onesignal-popover-dialog, #onesignal-popover-container #onesignal-slidedown-dialog, #onesignal-popover-container #onesignal-popover-dialog {
+    box-sizing: border-box;
+    max-width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 1px 6px rgba(5, 27, 44, 0.06), 0 2px 32px rgba(5, 27, 44, 0.16) !important;
+    background: white !important;
+    padding: 1.5em 1.5em;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Seoe UI Symbol"; }
+    #onesignal-slidedown-container #onesignal-slidedown-dialog .slidedown-body, #onesignal-slidedown-container #onesignal-slidedown-dialog .popover-body, #onesignal-slidedown-container #onesignal-popover-dialog .slidedown-body, #onesignal-slidedown-container #onesignal-popover-dialog .popover-body, #onesignal-popover-container #onesignal-slidedown-dialog .slidedown-body, #onesignal-popover-container #onesignal-slidedown-dialog .popover-body, #onesignal-popover-container #onesignal-popover-dialog .slidedown-body, #onesignal-popover-container #onesignal-popover-dialog .popover-body {
+      box-sizing: border-box;
+      margin: 0; }
+    #onesignal-slidedown-container #onesignal-slidedown-dialog .slidedown-body-icon, #onesignal-slidedown-container #onesignal-slidedown-dialog .popover-body-icon, #onesignal-slidedown-container #onesignal-popover-dialog .slidedown-body-icon, #onesignal-slidedown-container #onesignal-popover-dialog .popover-body-icon, #onesignal-popover-container #onesignal-slidedown-dialog .slidedown-body-icon, #onesignal-popover-container #onesignal-slidedown-dialog .popover-body-icon, #onesignal-popover-container #onesignal-popover-dialog .slidedown-body-icon, #onesignal-popover-container #onesignal-popover-dialog .popover-body-icon {
+      box-sizing: border-box;
+      float: left;
+      width: 80px;
+      height: 80px;
+      position: relative; }
+      #onesignal-slidedown-container #onesignal-slidedown-dialog .slidedown-body-icon img, #onesignal-slidedown-container #onesignal-slidedown-dialog .popover-body-icon img, #onesignal-slidedown-container #onesignal-popover-dialog .slidedown-body-icon img, #onesignal-slidedown-container #onesignal-popover-dialog .popover-body-icon img, #onesignal-popover-container #onesignal-slidedown-dialog .slidedown-body-icon img, #onesignal-popover-container #onesignal-slidedown-dialog .popover-body-icon img, #onesignal-popover-container #onesignal-popover-dialog .slidedown-body-icon img, #onesignal-popover-container #onesignal-popover-dialog .popover-body-icon img {
+        width: 100%;
+        height: 100%; }
+        #onesignal-slidedown-container #onesignal-slidedown-dialog .slidedown-body-icon img.default-icon, #onesignal-slidedown-container #onesignal-slidedown-dialog .popover-body-icon img.default-icon, #onesignal-slidedown-container #onesignal-popover-dialog .slidedown-body-icon img.default-icon, #onesignal-slidedown-container #onesignal-popover-dialog .popover-body-icon img.default-icon, #onesignal-popover-container #onesignal-slidedown-dialog .slidedown-body-icon img.default-icon, #onesignal-popover-container #onesignal-slidedown-dialog .popover-body-icon img.default-icon, #onesignal-popover-container #onesignal-popover-dialog .slidedown-body-icon img.default-icon, #onesignal-popover-container #onesignal-popover-dialog .popover-body-icon img.default-icon {
+          width: 45px;
+          top: 3px;
+          left: 50%;
+          transform: translateX(-50%);
+          position: absolute;
+          height: 45px; }
+    #onesignal-slidedown-container #onesignal-slidedown-dialog .slidedown-body-message, #onesignal-slidedown-container #onesignal-slidedown-dialog .popover-body-message, #onesignal-slidedown-container #onesignal-popover-dialog .slidedown-body-message, #onesignal-slidedown-container #onesignal-popover-dialog .popover-body-message, #onesignal-popover-container #onesignal-slidedown-dialog .slidedown-body-message, #onesignal-popover-container #onesignal-slidedown-dialog .popover-body-message, #onesignal-popover-container #onesignal-popover-dialog .slidedown-body-message, #onesignal-popover-container #onesignal-popover-dialog .popover-body-message {
+      box-sizing: border-box;
+      padding: 0 0 0 1em;
+      float: left;
+      width: calc(100% - 80px);
+      line-height: 1.45em;
+      -o-user-select: none;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+      cursor: default;
+      color: #051B2C !important; }
+    #onesignal-slidedown-container #onesignal-slidedown-dialog button, #onesignal-slidedown-container #onesignal-popover-dialog button, #onesignal-popover-container #onesignal-slidedown-dialog button, #onesignal-popover-container #onesignal-popover-dialog button {
+      box-sizing: border-box;
+      display: inline-block;
+      padding: .375rem 1rem;
+      font-size: 0.9625em;
+      font-weight: 400;
+      line-height: 1.5;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      border: 1px solid transparent;
+      border-radius: .25rem;
+      font-family: inherit;
+      letter-spacing: 0.05em;
+      transition: background-color 75ms ease;
+      margin: 0; }
+    #onesignal-slidedown-container #onesignal-slidedown-dialog .slidedown-button, #onesignal-slidedown-container #onesignal-slidedown-dialog .popover-button, #onesignal-slidedown-container #onesignal-popover-dialog .slidedown-button, #onesignal-slidedown-container #onesignal-popover-dialog .popover-button, #onesignal-popover-container #onesignal-slidedown-dialog .slidedown-button, #onesignal-popover-container #onesignal-slidedown-dialog .popover-button, #onesignal-popover-container #onesignal-popover-dialog .slidedown-button, #onesignal-popover-container #onesignal-popover-dialog .popover-button {
+      padding: 0.75em 1.5em;
+      font-size: 1em;
+      border-radius: .25em;
+      font-weight: 400;
+      box-shadow: unset;
+      display: -ms-flexbox;
+      display: flex; }
+      #onesignal-slidedown-container #onesignal-slidedown-dialog .slidedown-button.primary, #onesignal-slidedown-container #onesignal-slidedown-dialog .popover-button.primary, #onesignal-slidedown-container #onesignal-popover-dialog .slidedown-button.primary, #onesignal-slidedown-container #onesignal-popover-dialog .popover-button.primary, #onesignal-popover-container #onesignal-slidedown-dialog .slidedown-button.primary, #onesignal-popover-container #onesignal-slidedown-dialog .popover-button.primary, #onesignal-popover-container #onesignal-popover-dialog .slidedown-button.primary, #onesignal-popover-container #onesignal-popover-dialog .popover-button.primary {
+        background: #0078D1;
+        color: white !important;
+        transition: linear 75ms; }
+        #onesignal-slidedown-container #onesignal-slidedown-dialog .slidedown-button.primary:hover, #onesignal-slidedown-container #onesignal-slidedown-dialog .popover-button.primary:hover, #onesignal-slidedown-container #onesignal-popover-dialog .slidedown-button.primary:hover, #onesignal-slidedown-container #onesignal-popover-dialog .popover-button.primary:hover, #onesignal-popover-container #onesignal-slidedown-dialog .slidedown-button.primary:hover, #onesignal-popover-container #onesignal-slidedown-dialog .popover-button.primary:hover, #onesignal-popover-container #onesignal-popover-dialog .slidedown-button.primary:hover, #onesignal-popover-container #onesignal-popover-dialog .popover-button.primary:hover {
+          background: #0062ab; }
+        #onesignal-slidedown-container #onesignal-slidedown-dialog .slidedown-button.primary:active, #onesignal-slidedown-container #onesignal-slidedown-dialog .popover-button.primary:active, #onesignal-slidedown-container #onesignal-popover-dialog .slidedown-button.primary:active, #onesignal-slidedown-container #onesignal-popover-dialog .popover-button.primary:active, #onesignal-popover-container #onesignal-slidedown-dialog .slidedown-button.primary:active, #onesignal-popover-container #onesignal-slidedown-dialog .popover-button.primary:active, #onesignal-popover-container #onesignal-popover-dialog .slidedown-button.primary:active, #onesignal-popover-container #onesignal-popover-dialog .popover-button.primary:active {
+          background: #004c85; }
+        #onesignal-slidedown-container #onesignal-slidedown-dialog .slidedown-button.primary.disabled, #onesignal-slidedown-container #onesignal-slidedown-dialog .popover-button.primary.disabled, #onesignal-slidedown-container #onesignal-popover-dialog .slidedown-button.primary.disabled, #onesignal-slidedown-container #onesignal-popover-dialog .popover-button.primary.disabled, #onesignal-popover-container #onesignal-slidedown-dialog .slidedown-button.primary.disabled, #onesignal-popover-container #onesignal-slidedown-dialog .popover-button.primary.disabled, #onesignal-popover-container #onesignal-popover-dialog .slidedown-button.primary.disabled, #onesignal-popover-container #onesignal-popover-dialog .popover-button.primary.disabled {
+          background-color: #CED3D8;
+          cursor: default; }
+        #onesignal-slidedown-container #onesignal-slidedown-dialog .slidedown-button.primary.onesignal-saving-state-button, #onesignal-slidedown-container #onesignal-slidedown-dialog .popover-button.primary.onesignal-saving-state-button, #onesignal-slidedown-container #onesignal-popover-dialog .slidedown-button.primary.onesignal-saving-state-button, #onesignal-slidedown-container #onesignal-popover-dialog .popover-button.primary.onesignal-saving-state-button, #onesignal-popover-container #onesignal-slidedown-dialog .slidedown-button.primary.onesignal-saving-state-button, #onesignal-popover-container #onesignal-slidedown-dialog .popover-button.primary.onesignal-saving-state-button, #onesignal-popover-container #onesignal-popover-dialog .slidedown-button.primary.onesignal-saving-state-button, #onesignal-popover-container #onesignal-popover-dialog .popover-button.primary.onesignal-saving-state-button {
+          padding: 0.75em 1em;
+          background: #CED3D8;
+          transition: linear 75ms; }
+        #onesignal-slidedown-container #onesignal-slidedown-dialog .slidedown-button.primary.onesignal-error-state-button, #onesignal-slidedown-container #onesignal-slidedown-dialog .popover-button.primary.onesignal-error-state-button, #onesignal-slidedown-container #onesignal-popover-dialog .slidedown-button.primary.onesignal-error-state-button, #onesignal-slidedown-container #onesignal-popover-dialog .popover-button.primary.onesignal-error-state-button, #onesignal-popover-container #onesignal-slidedown-dialog .slidedown-button.primary.onesignal-error-state-button, #onesignal-popover-container #onesignal-slidedown-dialog .popover-button.primary.onesignal-error-state-button, #onesignal-popover-container #onesignal-popover-dialog .slidedown-button.primary.onesignal-error-state-button, #onesignal-popover-container #onesignal-popover-dialog .popover-button.primary.onesignal-error-state-button {
+          padding: 0.75em 1em;
+          background: #E54A4D;
+          transition: linear 75ms;
+          -ms-flex-align: center;
+              align-items: center; }
+          #onesignal-slidedown-container #onesignal-slidedown-dialog .slidedown-button.primary.onesignal-error-state-button span, #onesignal-slidedown-container #onesignal-slidedown-dialog .popover-button.primary.onesignal-error-state-button span, #onesignal-slidedown-container #onesignal-popover-dialog .slidedown-button.primary.onesignal-error-state-button span, #onesignal-slidedown-container #onesignal-popover-dialog .popover-button.primary.onesignal-error-state-button span, #onesignal-popover-container #onesignal-slidedown-dialog .slidedown-button.primary.onesignal-error-state-button span, #onesignal-popover-container #onesignal-slidedown-dialog .popover-button.primary.onesignal-error-state-button span, #onesignal-popover-container #onesignal-popover-dialog .slidedown-button.primary.onesignal-error-state-button span, #onesignal-popover-container #onesignal-popover-dialog .popover-button.primary.onesignal-error-state-button span {
+            cursor: pointer; }
+      #onesignal-slidedown-container #onesignal-slidedown-dialog .slidedown-button.onesignal-button-indicator-holder, #onesignal-slidedown-container #onesignal-slidedown-dialog .popover-button.onesignal-button-indicator-holder, #onesignal-slidedown-container #onesignal-popover-dialog .slidedown-button.onesignal-button-indicator-holder, #onesignal-slidedown-container #onesignal-popover-dialog .popover-button.onesignal-button-indicator-holder, #onesignal-popover-container #onesignal-slidedown-dialog .slidedown-button.onesignal-button-indicator-holder, #onesignal-popover-container #onesignal-slidedown-dialog .popover-button.onesignal-button-indicator-holder, #onesignal-popover-container #onesignal-popover-dialog .slidedown-button.onesignal-button-indicator-holder, #onesignal-popover-container #onesignal-popover-dialog .popover-button.onesignal-button-indicator-holder {
+        display: -ms-flexbox;
+        display: flex;
+        margin-left: 0.5em;
+        cursor: pointer; }
+      #onesignal-slidedown-container #onesignal-slidedown-dialog .slidedown-button.secondary, #onesignal-slidedown-container #onesignal-slidedown-dialog .popover-button.secondary, #onesignal-slidedown-container #onesignal-popover-dialog .slidedown-button.secondary, #onesignal-slidedown-container #onesignal-popover-dialog .popover-button.secondary, #onesignal-popover-container #onesignal-slidedown-dialog .slidedown-button.secondary, #onesignal-popover-container #onesignal-slidedown-dialog .popover-button.secondary, #onesignal-popover-container #onesignal-popover-dialog .slidedown-button.secondary, #onesignal-popover-container #onesignal-popover-dialog .popover-button.secondary {
+        box-shadow: none;
+        background: white !important;
+        /*
+          We sparingly use an !important tag here because it's important for the user to be able to click "No Thanks".
+          Some sites set their own !important tag for text and we don't want that to be able to override ours.
+         */
+        color: #0078D1 !important; }
+        #onesignal-slidedown-container #onesignal-slidedown-dialog .slidedown-button.secondary:hover, #onesignal-slidedown-container #onesignal-slidedown-dialog .popover-button.secondary:hover, #onesignal-slidedown-container #onesignal-popover-dialog .slidedown-button.secondary:hover, #onesignal-slidedown-container #onesignal-popover-dialog .popover-button.secondary:hover, #onesignal-popover-container #onesignal-slidedown-dialog .slidedown-button.secondary:hover, #onesignal-popover-container #onesignal-slidedown-dialog .popover-button.secondary:hover, #onesignal-popover-container #onesignal-popover-dialog .slidedown-button.secondary:hover, #onesignal-popover-container #onesignal-popover-dialog .popover-button.secondary:hover {
+          color: #005391; }
+        #onesignal-slidedown-container #onesignal-slidedown-dialog .slidedown-button.secondary:active, #onesignal-slidedown-container #onesignal-slidedown-dialog .popover-button.secondary:active, #onesignal-slidedown-container #onesignal-popover-dialog .slidedown-button.secondary:active, #onesignal-slidedown-container #onesignal-popover-dialog .popover-button.secondary:active, #onesignal-popover-container #onesignal-slidedown-dialog .slidedown-button.secondary:active, #onesignal-popover-container #onesignal-slidedown-dialog .popover-button.secondary:active, #onesignal-popover-container #onesignal-popover-dialog .slidedown-button.secondary:active, #onesignal-popover-container #onesignal-popover-dialog .popover-button.secondary:active {
+          color: #001f35; }
+    #onesignal-slidedown-container #onesignal-slidedown-dialog .primary.slidedown-button + .secondary.slidedown-button, #onesignal-slidedown-container #onesignal-slidedown-dialog .primary.popover-button + .secondary.popover-button, #onesignal-slidedown-container #onesignal-popover-dialog .primary.slidedown-button + .secondary.slidedown-button, #onesignal-slidedown-container #onesignal-popover-dialog .primary.popover-button + .secondary.popover-button, #onesignal-popover-container #onesignal-slidedown-dialog .primary.slidedown-button + .secondary.slidedown-button, #onesignal-popover-container #onesignal-slidedown-dialog .primary.popover-button + .secondary.popover-button, #onesignal-popover-container #onesignal-popover-dialog .primary.slidedown-button + .secondary.slidedown-button, #onesignal-popover-container #onesignal-popover-dialog .primary.popover-button + .secondary.popover-button {
+      margin-right: 0.714em; }
+    #onesignal-slidedown-container #onesignal-slidedown-dialog .slidedown-footer, #onesignal-slidedown-container #onesignal-slidedown-dialog .popover-footer, #onesignal-slidedown-container #onesignal-popover-dialog .slidedown-footer, #onesignal-slidedown-container #onesignal-popover-dialog .popover-footer, #onesignal-popover-container #onesignal-slidedown-dialog .slidedown-footer, #onesignal-popover-container #onesignal-slidedown-dialog .popover-footer, #onesignal-popover-container #onesignal-popover-dialog .slidedown-footer, #onesignal-popover-container #onesignal-popover-dialog .popover-footer {
+      position: relative; }
+    #onesignal-slidedown-container #onesignal-slidedown-dialog .align-right, #onesignal-slidedown-container #onesignal-popover-dialog .align-right, #onesignal-popover-container #onesignal-slidedown-dialog .align-right, #onesignal-popover-container #onesignal-popover-dialog .align-right {
+      float: right; }
+    #onesignal-slidedown-container #onesignal-slidedown-dialog .clearfix, #onesignal-slidedown-container #onesignal-popover-dialog .clearfix, #onesignal-popover-container #onesignal-slidedown-dialog .clearfix, #onesignal-popover-container #onesignal-popover-dialog .clearfix {
+      display: block;
+      -webkit-backface-visibility: initial !important;
+              backface-visibility: initial !important; }
+    #onesignal-slidedown-container #onesignal-slidedown-dialog .clearfix:after, #onesignal-slidedown-container #onesignal-popover-dialog .clearfix:after, #onesignal-popover-container #onesignal-slidedown-dialog .clearfix:after, #onesignal-popover-container #onesignal-popover-dialog .clearfix:after {
+      content: '';
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden; }
+    #onesignal-slidedown-container #onesignal-slidedown-dialog .onesignal-tag-failure-message, #onesignal-slidedown-container #onesignal-popover-dialog .onesignal-tag-failure-message, #onesignal-popover-container #onesignal-slidedown-dialog .onesignal-tag-failure-message, #onesignal-popover-container #onesignal-popover-dialog .onesignal-tag-failure-message {
+      display: -ms-flexbox;
+      display: flex;
+      float: left;
+      color: red; }
+
+@keyframes slideDownEnter {
+  0% {
+    transform: translateY(-150%); }
+  100% {
+    transform: translateY(0); } }
+
+@keyframes slideDownExit {
+  0% {
+    transform: translateY(0%); }
+  100% {
+    transform: translateY(-150%); } }
+
+@keyframes slideUpEnter {
+  0% {
+    transform: translateY(150%); }
+  100% {
+    transform: translateY(0); } }
+
+@keyframes slideUpExit {
+  0% {
+    transform: translateY(0%); }
+  100% {
+    transform: translateY(150%); } }
+
+/*
+* CleanSlate
+*   github.com/premasagar/cleanslate
+*
+*/
+/*
+  An extreme CSS reset stylesheet, for normalising the styling of a container element and its children.
+
+  by Premasagar Rose
+      dharmafly.com
+
+  license
+      opensource.org/licenses/mit-license.php
+
+  **
+
+  v0.9.3
+
+*/
+/* == BLANKET RESET RULES == */
+/* HTML 4.01 */
+.onesignal-reset, .onesignal-reset h1, .onesignal-reset h2, .onesignal-reset h3, .onesignal-reset h4, .onesignal-reset h5, .onesignal-reset h6, .onesignal-reset p, .onesignal-reset td, .onesignal-reset dl, .onesignal-reset tr, .onesignal-reset dt, .onesignal-reset ol, .onesignal-reset form, .onesignal-reset select, .onesignal-reset option, .onesignal-reset pre, .onesignal-reset div, .onesignal-reset table, .onesignal-reset th, .onesignal-reset tbody, .onesignal-reset tfoot, .onesignal-reset caption, .onesignal-reset thead, .onesignal-reset ul, .onesignal-reset li, .onesignal-reset address, .onesignal-reset blockquote, .onesignal-reset dd, .onesignal-reset fieldset, .onesignal-reset li, .onesignal-reset iframe, .onesignal-reset strong, .onesignal-reset legend, .onesignal-reset em, .onesignal-reset summary, .onesignal-reset cite, .onesignal-reset span, .onesignal-reset input, .onesignal-reset sup, .onesignal-reset label, .onesignal-reset dfn, .onesignal-reset object, .onesignal-reset big, .onesignal-reset q, .onesignal-reset samp, .onesignal-reset acronym, .onesignal-reset small, .onesignal-reset img, .onesignal-reset strike, .onesignal-reset code, .onesignal-reset sub, .onesignal-reset ins, .onesignal-reset textarea, .onesignal-reset button, .onesignal-reset var, .onesignal-reset a, .onesignal-reset abbr, .onesignal-reset applet, .onesignal-reset del, .onesignal-reset kbd, .onesignal-reset tt, .onesignal-reset b, .onesignal-reset i, .onesignal-reset hr,
+.onesignal-reset article, .onesignal-reset aside, .onesignal-reset figure, .onesignal-reset figcaption, .onesignal-reset footer, .onesignal-reset header, .onesignal-reset menu, .onesignal-reset nav, .onesignal-reset section, .onesignal-reset time, .onesignal-reset mark, .onesignal-reset audio, .onesignal-reset video, .onesignal-reset abbr, .onesignal-reset address, .onesignal-reset area, .onesignal-reset blockquote, .onesignal-reset canvas, .onesignal-reset caption, .onesignal-reset cite, .onesignal-reset code, .onesignal-reset colgroup, .onesignal-reset col, .onesignal-reset datalist, .onesignal-reset fieldset, .onesignal-reset main, .onesignal-reset map, .onesignal-reset meta, .onesignal-reset optgroup, .onesignal-reset output, .onesignal-reset progress {
+  background-attachment: scroll;
+  background-color: transparent;
+  background-image: none;
+  /* This rule affects the use of pngfix JavaScript http://dillerdesign.com/experiment/DD_BelatedPNG for IE6, which is used to force the browser to recognise alpha-transparent PNGs files that replace the IE6 lack of PNG transparency. (The rule overrides the VML image that is used to replace the given CSS background-image). If you don't know what that means, then you probably haven't used the pngfix script, and this comment may be ignored :) */
+  background-position: 0 0;
+  background-repeat: repeat;
+  border-color: black;
+  border-color: currentColor;
+  /* `border-color` should match font color. Modern browsers (incl. IE9) allow the use of "currentColor" to match the current font 'color' value <http://www.w3.org/TR/css3-color/#currentcolor>. For older browsers, a default of 'black' is given before this rule. Guideline to support older browsers: if you haven't already declared a border-color for an element, be sure to do so, e.g. when you first declare the border-width. */
+  border-radius: 0;
+  border-style: none;
+  border-width: medium;
+  bottom: auto;
+  clear: none;
+  clip: auto;
+  color: inherit;
+  counter-increment: none;
+  counter-reset: none;
+  cursor: auto;
+  direction: inherit;
+  display: inline;
+  float: none;
+  font-family: inherit;
+  /* As with other inherit values, this needs to be set on the root container element */
+  font-size: inherit;
+  font-style: inherit;
+  font-variant: normal;
+  font-weight: inherit;
+  height: auto;
+  left: auto;
+  letter-spacing: normal;
+  line-height: inherit;
+  list-style-type: inherit;
+  /* Could set list-style-type to none */
+  list-style-position: outside;
+  list-style-image: none;
+  margin: 0;
+  max-height: none;
+  max-width: none;
+  min-height: 0;
+  min-width: 0;
+  opacity: 1;
+  outline: invert none medium;
+  overflow: visible;
+  padding: 0;
+  position: static;
+  quotes: "" "";
+  right: auto;
+  table-layout: auto;
+  text-align: inherit;
+  text-decoration: inherit;
+  text-indent: 0;
+  text-transform: none;
+  top: auto;
+  unicode-bidi: normal;
+  vertical-align: baseline;
+  visibility: inherit;
+  white-space: normal;
+  width: auto;
+  word-spacing: normal;
+  z-index: auto;
+  /* CSS3 */
+  /* Including all prefixes according to http://caniuse.com/ */
+  /* CSS Animations don't cascade, so don't require resetting */
+  background-origin: padding-box;
+  background-clip: border-box;
+  background-size: auto;
+  -o-border-image: none;
+  border-image: none;
+  border-radius: 0;
+  box-shadow: none;
+  box-sizing: content-box;
+  column-count: auto;
+  column-gap: normal;
+  column-rule: medium none black;
+  /* doesn't exist yet but probably will */
+  column-span: 1;
+  column-width: auto;
+  -webkit-font-feature-settings: normal;
+          font-feature-settings: normal;
+  overflow-x: visible;
+  overflow-y: visible;
+  -webkit-hyphens: manual;
+  -ms-hyphens: manual;
+      hyphens: manual;
+  -ms-perspective: none;
+  -o-perspective: none;
+  perspective: none;
+  -ms-perspective-origin: 50% 50%;
+  -o-perspective-origin: 50% 50%;
+  perspective-origin: 50% 50%;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+  text-shadow: none;
+  transition: all 0s ease 0s;
+  transform: none;
+  transform-origin: 50% 50%;
+  transform-style: flat;
+  word-break: normal; }
+
+/* == BLOCK-LEVEL == */
+/* Actually, some of these should be inline-block and other values, but block works fine */
+/* HTML 4.01 */
+.onesignal-reset, .onesignal-reset h3, .onesignal-reset h5, .onesignal-reset p, .onesignal-reset h1, .onesignal-reset dl, .onesignal-reset dt, .onesignal-reset h6, .onesignal-reset ol, .onesignal-reset form, .onesignal-reset option, .onesignal-reset pre, .onesignal-reset div, .onesignal-reset h2, .onesignal-reset caption, .onesignal-reset h4, .onesignal-reset ul, .onesignal-reset address, .onesignal-reset blockquote, .onesignal-reset dd, .onesignal-reset fieldset, .onesignal-reset hr,
+.onesignal-reset article, .onesignal-reset dialog, .onesignal-reset figure, .onesignal-reset footer, .onesignal-reset header, .onesignal-reset hgroup, .onesignal-reset menu, .onesignal-reset nav, .onesignal-reset section, .onesignal-reset audio, .onesignal-reset video, .onesignal-reset address, .onesignal-reset blockquote, .onesignal-reset colgroup, .onesignal-reset main, .onesignal-reset progress, .onesignal-reset summary {
+  display: block; }
+
+.onesignal-reset h1, .onesignal-reset h2, .onesignal-reset h3, .onesignal-reset h4, .onesignal-reset h5, .onesignal-reset h6 {
+  font-weight: bold; }
+
+.onesignal-reset h1 {
+  font-size: 2em;
+  padding: .67em 0; }
+
+.onesignal-reset h2 {
+  font-size: 1.5em;
+  padding: .83em 0; }
+
+.onesignal-reset h3 {
+  font-size: 1.17em;
+  padding: .83em 0; }
+
+.onesignal-reset h4 {
+  font-size: 1em; }
+
+.onesignal-reset h5 {
+  font-size: .83em; }
+
+.onesignal-reset p {
+  margin: 1em 0; }
+
+.onesignal-reset table {
+  display: table; }
+
+.onesignal-reset thead {
+  display: table-header-group; }
+
+.onesignal-reset tbody {
+  display: table-row-group; }
+
+.onesignal-reset tfoot {
+  display: table-footer-group; }
+
+.onesignal-reset tr {
+  display: table-row; }
+
+.onesignal-reset th, .onesignal-reset td {
+  display: table-cell;
+  padding: 2px; }
+
+/* == SPECIFIC ELEMENTS == */
+/* Some of these are browser defaults; some are just useful resets */
+.onesignal-reset ol, .onesignal-reset ul {
+  margin: 1em 0; }
+
+.onesignal-reset ul li, .onesignal-reset ul ul li, .onesignal-reset ul ul ul li, .onesignal-reset ol li, .onesignal-reset ol ol li, .onesignal-reset ol ol ol li, .onesignal-reset ul ol ol li, .onesignal-reset ul ul ol li, .onesignal-reset ol ul ul li, .onesignal-reset ol ol ul li {
+  list-style-position: inside;
+  margin-top: .08em; }
+
+.onesignal-reset ol ol, .onesignal-reset ol ol ol, .onesignal-reset ul ul, .onesignal-reset ul ul ul, .onesignal-reset ol ul, .onesignal-reset ol ul ul, .onesignal-reset ol ol ul, .onesignal-reset ul ol, .onesignal-reset ul ol ol, .onesignal-reset ul ul ol {
+  padding-left: 40px;
+  margin: 0; }
+
+/* helper for general navigation */
+.onesignal-reset nav ul, .onesignal-reset nav ol {
+  list-style-type: none; }
+
+.onesignal-reset ul, .onesignal-reset menu {
+  list-style-type: disc; }
+
+.onesignal-reset ol {
+  list-style-type: decimal; }
+
+.onesignal-reset ol ul, .onesignal-reset ul ul, .onesignal-reset menu ul, .onesignal-reset ol menu, .onesignal-reset ul menu, .onesignal-reset menu menu {
+  list-style-type: circle; }
+
+.onesignal-reset ol ol ul, .onesignal-reset ol ul ul, .onesignal-reset ol menu ul, .onesignal-reset ol ol menu, .onesignal-reset ol ul menu, .onesignal-reset ol menu menu, .onesignal-reset ul ol ul, .onesignal-reset ul ul ul, .onesignal-reset ul menu ul, .onesignal-reset ul ol menu, .onesignal-reset ul ul menu, .onesignal-reset ul menu menu, .onesignal-reset menu ol ul, .onesignal-reset menu ul ul, .onesignal-reset menu menu ul, .onesignal-reset menu ol menu, .onesignal-reset menu ul menu, .onesignal-reset menu menu menu {
+  list-style-type: square; }
+
+.onesignal-reset li {
+  display: list-item;
+  /* Fixes IE7 issue with positioning of nested bullets */
+  min-height: auto;
+  min-width: auto;
+  padding-left: 20px;
+  /* replace -webkit-padding-start: 40px; */ }
+
+.onesignal-reset strong {
+  font-weight: bold; }
+
+.onesignal-reset em {
+  font-style: italic; }
+
+.onesignal-reset kbd, .onesignal-reset samp, .onesignal-reset code, .onesignal-reset pre {
+  font-family: monospace; }
+
+.onesignal-reset a {
+  color: blue;
+  text-decoration: underline; }
+
+.onesignal-reset a:visited {
+  color: #529; }
+
+.onesignal-reset a, .onesignal-reset a *, .onesignal-reset input[type=submit], .onesignal-reset input[type=radio], .onesignal-reset input[type=checkbox], .onesignal-reset select {
+  cursor: pointer; }
+
+.onesignal-reset button, .onesignal-reset input[type=submit] {
+  text-align: center;
+  padding: 2px 6px 3px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-family: arial, helvetica, sans-serif;
+  font-size: small;
+  background: white;
+  -webkit-appearance: push-button;
+  color: buttontext;
+  border: 1px #a6a6a6 solid;
+  background: lightgrey;
+  /* Old browsers */
+  background: white;
+  /* Old browsers */
+  /* FF3.6+ */
+  /* Chrome,Safari4+ */
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
+  /* IE10+ */
+  background: linear-gradient(to bottom, white 0%, #dddddd 100%, #d1d1d1 100%, #dddddd 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dddddd',GradientType=0 );
+  /* IE6-9 */
+  -o-box-shadow: 1px 1px 0px #eee;
+  box-shadow: 1px 1px 0px #eee;
+  outline: initial; }
+
+.onesignal-reset button {
+  padding: 1px 6px 2px 6px;
+  margin-right: 5px; }
+
+.onesignal-reset input[type=hidden] {
+  display: none; }
+
+/* restore form defaults */
+.onesignal-reset textarea {
+  -webkit-appearance: textarea;
+  background: white;
+  padding: 2px;
+  margin-left: 4px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  font-size: 11px;
+  font-family: arial, helvetica, sans-serif;
+  line-height: 13px;
+  resize: both; }
+
+.onesignal-reset select, .onesignal-reset textarea, .onesignal-reset input {
+  border: 1px solid #ccc; }
+
+.onesignal-reset select {
+  font-size: 11px;
+  font-family: helvetica, arial, sans-serif;
+  display: inline-block; }
+
+.onesignal-reset textarea:focus, .onesignal-reset input:focus {
+  outline: auto 5px -webkit-focus-ring-color;
+  outline: initial; }
+
+.onesignal-reset input[type=text] {
+  background: white;
+  padding: 1px;
+  font-family: initial;
+  font-size: small; }
+
+.onesignal-reset input[type=checkbox], .onesignal-reset input[type=radio] {
+  border: 1px #2b2b2b solid;
+  border-radius: 4px; }
+
+.onesignal-reset input[type=checkbox], .onesignal-reset input[type=radio] {
+  outline: intial; }
+
+.onesignal-reset input[type=radio] {
+  margin: 2px 2px 3px 2px; }
+
+.onesignal-reset input[type=submit]:active, .onesignal-reset button:active {
+  background: #3b679e;
+  /* Old browsers */
+  /* FF3.6+ */
+  /* Chrome,Safari4+ */
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
+  /* IE10+ */
+  background: linear-gradient(to bottom, #3b679e 0%, #2b88d9 50%, #207cca 51%, #7db9e8 100%);
+  /* W3C */
+  border-color: #5259b0; }
+
+.onesignal-reset abbr[title], .onesignal-reset acronym[title], .onesignal-reset dfn[title] {
+  cursor: help;
+  border-bottom-width: 1px;
+  border-bottom-style: dotted; }
+
+.onesignal-reset ins {
+  background-color: #ff9;
+  color: black; }
+
+.onesignal-reset del {
+  text-decoration: line-through; }
+
+.onesignal-reset blockquote, .onesignal-reset q {
+  quotes: none;
+  /* HTML5 */ }
+
+.onesignal-reset blockquote:before, .onesignal-reset blockquote:after, .onesignal-reset q:before, .onesignal-reset q:after, .onesignal-reset li:before, .onesignal-reset li:after {
+  content: ""; }
+
+.onesignal-reset input, .onesignal-reset select {
+  vertical-align: middle; }
+
+.onesignal-reset table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.onesignal-reset hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0; }
+
+.onesignal-reset *[dir=rtl] {
+  direction: rtl; }
+
+.onesignal-reset mark {
+  background-color: #ff9;
+  color: black;
+  font-style: italic;
+  font-weight: bold; }
+
+.onesignal-reset menu {
+  padding-left: 40px;
+  padding-top: 8px; }
+
+/* additional helpers */
+.onesignal-reset [hidden],
+.onesignal-reset template {
+  display: none; }
+
+.onesignal-reset abbr[title] {
+  border-bottom: 1px dotted; }
+
+.onesignal-reset sub, .onesignal-reset sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+.onesignal-reset sup {
+  top: -0.5em; }
+
+.onesignal-reset sub {
+  bottom: -0.25em; }
+
+.onesignal-reset img {
+  border: 0; }
+
+.onesignal-reset figure {
+  margin: 0; }
+
+.onesignal-reset textarea {
+  overflow: auto;
+  vertical-align: top; }
+
+/* == ROOT CONTAINER ELEMENT == */
+/* This contains default values for child elements to inherit  */
+.onesignal-reset {
+  font-size: medium;
+  line-height: 1;
+  direction: ltr;
+  text-align: left;
+  /* for IE, Opera */
+  text-align: start;
+  /* recommended W3C Spec */
+  font-family: "Times New Roman", Times, serif;
+  /* Override this with whatever font-family is required */
+  color: black;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  list-style-type: disc; }
+
+.onesignal-reset pre {
+  white-space: pre; }

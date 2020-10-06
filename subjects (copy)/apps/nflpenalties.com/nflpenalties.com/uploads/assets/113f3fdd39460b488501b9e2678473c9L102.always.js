@@ -1,0 +1,1 @@
+$(window).load(function(){$(".adsbygoogle").each(function(){(adsbygoogle=window.adsbygoogle||[]).push({})})});

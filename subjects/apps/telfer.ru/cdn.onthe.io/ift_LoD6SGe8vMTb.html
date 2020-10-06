@@ -1,0 +1,64 @@
+<script>
+
+var prom_customer_id = get_param('prom_customer_id');
+var origin = get_param('origin');
+var cookie = '__io_v_pv_' + (new Date()).getDate() + '.' + prom_customer_id;
+if ( !get_cookie(cookie) )
+{
+    var date = new Date(new Date().getTime() + 30 * 60 * 1000).toUTCString();
+    set_cookie(cookie, 1, {expires: date});
+    
+    window.parent.postMessage('_io_message', origin);
+}
+
+function get_cookie(name)
+{
+    var matches = document.cookie.match(new RegExp(
+    "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+    ));
+    
+    return matches ? decodeURIComponent(matches[1]) : undefined;
+}
+
+function set_cookie(name, value, options)
+{
+    options = options || {};
+    var expires = options.expires;
+    
+    if (typeof expires == "number" && expires) {
+        var d = new Date();
+        d.setTime(d.getTime() + expires * 1000);
+        expires = options.expires = d;
+    }
+    
+    if (expires && expires.toUTCString) {
+        options.expires = expires.toUTCString();
+    }
+    
+    value = encodeURIComponent(value);
+    
+    var updatedCookie = name + "=" + value;
+    
+    for (var propName in options) {
+        updatedCookie += "; " + propName;
+        var propValue = options[propName];
+        if (propValue !== true) {
+            updatedCookie += "=" + propValue;
+        }
+    }
+    
+    document.cookie = updatedCookie;
+}
+
+function get_param(name)
+{
+    url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+</script>

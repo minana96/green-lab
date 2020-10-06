@@ -1,0 +1,95 @@
+/*
+Theme Name: The Newswire Child
+Template: the-newswire
+Author: WAFIC
+Description: Surfarama Child Theme
+Version: 1.1.0.1433996177
+Updated: 2015-07-12 21:16:16
+*/
+
+@charset "UTF-8";
+
+
+
+#newswire-banner {
+		width: 468px;
+		max-height: 100px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		overflow: hidden;
+	}
+
+h1, .h1, 
+h2, .h2, 
+h3, .h3, 
+h4, .h4, 
+h5, .h5,
+h6, .h6 {
+	font-family: "Open Sans", Arial, Helvetica, sans-serif;
+	font-weight: 300;
+}
+
+h1 a, .h1 a, 
+h2 a, .h2 a, 
+h3 a, .h3 a, 
+h4 a, .h4 a, 
+h5 a, .h5 a { 
+	text-decoration: none;
+}
+
+h1, .h1 {
+	font-size: 35px; /* for ie8 & below */ 
+	font-size: 3.5rem;
+	line-height: 32px; /* for ie8 & below */ 
+	line-height: 3.2rem; 
+}
+
+h2, .h2 {
+	font-size: 24px; /* for ie8 & below */ 
+	font-size: 2.4rem;
+	line-height: 30px; /* for ie8 & below */ 
+	line-height: 3.0rem; 
+}
+
+h3, .h3 {
+	font-size: 19px; /* for ie8 & below */ 
+	font-size: 1.9rem;
+	line-height: 24px; /* for ie8 & below */
+	line-height: 2.4rem;
+}
+
+h4, .h4 {
+	font-size: 16px; /* for ie8 & below */ 
+	font-size: 1.6rem;
+	line-height: 18px; /* for ie8 & below */
+	line-height: 1.8rem;
+}
+
+h5, .h5 {
+	font-size: 12px; /* for ie8 & below */ 
+	font-size: 1.2rem;
+	line-height: 40px; /* for ie8 & below */ 
+	line-height: 4.0rem; 
+	text-transform: uppercase; 
+	letter-spacing: 2px; 
+}
+
+
+.entry-title {
+	font-family: "Open Sans", Arial, Helvetica, sans-serif;
+	font-weight: 300;
+	font-size: 28px; /* for IE8 */
+	font-size: 1.75rem;
+	line-height: 28px; /* for ie8 & below */ 
+	line-height: 2.8rem;
+	-webkit-text-stroke: 0.020rem #222;
+}
+
+/* fix for avatar sizes in comments being too big */
+.commentlist li.comment article[id*=comment-] img, 
+.post-content img {
+	margin: 0 0 24px 0; /* for ie8 & below */
+	margin: 0 0 2.4rem 0;
+	max-width: 100%; 
+	}

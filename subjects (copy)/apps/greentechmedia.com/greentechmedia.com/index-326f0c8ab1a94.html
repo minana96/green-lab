@@ -1,0 +1,18 @@
+// Initialize empty paywall object
+var squaredPaywall = null;
+
+// Wait until the SquaredPaywall "class" has been defined, then create an instance
+var paywall_init_interval = setInterval(function() {
+	// See if the paywall code has been included
+	if (typeof SquaredPaywall === "undefined") {
+		return;
+	}
+
+	if (squaredPaywall === null) {
+		// Initialize the paywall
+		squaredPaywall = new SquaredPaywall({"planCode":"gtmsq1","modalPaywall":false,"completedSubscriptionUrl":"https:\/\/www.greentechmedia.com\/?ACT=154","loggedIn":false,"accountEligible":false,"registrationComplete":false,"email":null,"entryId":null,"userRef":null,"contentCreated":null,"purchaseInfoActionUrl":"https:\/\/www.greentechmedia.com\/?ACT=202","checkoutModalActionUrl":"https:\/\/www.greentechmedia.com\/?ACT=199","processCheckoutUrl":"https:\/\/www.greentechmedia.com\/?ACT=200","checkoutCompleteModalActionUrl":"https:\/\/www.greentechmedia.com\/?ACT=201","accessTestActionUrl":"https:\/\/www.greentechmedia.com\/?ACT=203","existingSquaredUser":false}, {"global:squared_ecomm_product_list":"GTM Squared","global:squared_ecomm_product_id_prefix":"squared_product_","global:squared_ecomm_price":"249.00","global:squared_ecomm_brand":"GTM Squared"});
+	}
+
+	// Clear the interval
+	clearInterval(paywall_init_interval);
+}, 50);

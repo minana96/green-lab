@@ -1,0 +1,8 @@
+exports = module.exports = require("../../node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.id, ".ub-emb-overlay{transition:visibility .3s step-end;visibility:hidden}.ub-emb-overlay.ub-emb-visible{transition:none;visibility:visible}.ub-emb-overlay .ub-emb-backdrop,.ub-emb-overlay .ub-emb-scroll-wrapper{opacity:0;position:fixed;transition:opacity .3s ease,z-index .3s step-end;z-index:-1}.ub-emb-overlay .ub-emb-backdrop{background:rgba(0,0,0,.6);bottom:-1000px;left:-1000px;right:-1000px;top:-1000px}.ub-emb-overlay .ub-emb-scroll-wrapper{-webkit-overflow-scrolling:touch;bottom:0;box-sizing:border-box;left:0;overflow:auto;padding:30px;right:0;text-align:center;top:0;white-space:nowrap;width:100%}.ub-emb-overlay .ub-emb-scroll-wrapper:before{content:\"\";display:inline-block;height:100%;vertical-align:middle}.ub-emb-overlay.ub-emb-mobile .ub-emb-scroll-wrapper{padding:30px 0}.ub-emb-overlay.ub-emb-visible .ub-emb-backdrop,.ub-emb-overlay.ub-emb-visible .ub-emb-scroll-wrapper{opacity:1;transition:opacity .4s ease;z-index:2147483647}", ""]);
+
+// exports

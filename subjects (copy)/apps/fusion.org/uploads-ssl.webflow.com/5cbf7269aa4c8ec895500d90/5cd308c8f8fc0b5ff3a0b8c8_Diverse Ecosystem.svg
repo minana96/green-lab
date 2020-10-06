@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="509px" height="225px" viewBox="0 0 509 225" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Diverse Ecosystem</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#65C1E8" offset="0%"></stop>
+            <stop stop-color="#358DCC" offset="100%"></stop>
+        </linearGradient>
+        <radialGradient cx="50%" cy="12.0597028%" fx="50%" fy="12.0597028%" r="188.396953%" id="radialGradient-2">
+            <stop stop-color="#358DCC" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#5BBBFF" stop-opacity="0.6" offset="100%"></stop>
+        </radialGradient>
+        <rect id="path-3" x="189" y="0" width="112" height="112" rx="56"></rect>
+        <filter x="-35.7%" y="-28.6%" width="171.4%" height="171.4%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="8" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="12" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.149019608   0 0 0 0 0.196078431   0 0 0 0 0.219607843  0 0 0 0.12 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="100%" y1="50%" x2="50%" y2="50%" id="linearGradient-5">
+            <stop stop-color="#C1E2F9" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="3.061617e-15%" id="linearGradient-6">
+            <stop stop-color="#94DEFF" offset="0%"></stop>
+            <stop stop-color="#5BBBFF" offset="100%"></stop>
+        </linearGradient>
+        <polygon id="path-7" points="23.9116882 24.7279221 65.1837662 12 52.4558441 53.2720779 11.1837662 66"></polygon>
+        <filter x="-35.2%" y="-31.5%" width="170.4%" height="170.4%" filterUnits="objectBoundingBox" id="filter-8">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="6" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.149019608   0 0 0 0 0.196078431   0 0 0 0 0.219607843  0 0 0 0.12 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="3.061617e-15%" id="linearGradient-9">
+            <stop stop-color="#94DEFF" offset="0%"></stop>
+            <stop stop-color="#5BBBFF" offset="100%"></stop>
+        </linearGradient>
+        <polygon id="path-10" points="17.0045287 9.86848968 33.863444 81.881734 74.745695 67.609656"></polygon>
+        <filter x="-32.9%" y="-23.6%" width="165.8%" height="152.8%" filterUnits="objectBoundingBox" id="filter-11">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="6" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.149019608   0 0 0 0 0.196078431   0 0 0 0 0.219607843  0 0 0 0.12 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="21.4360771%" y1="88.5350388%" x2="65.4910464%" y2="51.8197079%" id="linearGradient-12">
+            <stop stop-color="#B7E1FF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="100%" y1="50%" x2="50%" y2="50%" id="linearGradient-13">
+            <stop stop-color="#C9E8FF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="3.061617e-15%" id="linearGradient-14">
+            <stop stop-color="#94DEFF" offset="0%"></stop>
+            <stop stop-color="#5BBBFF" offset="100%"></stop>
+        </linearGradient>
+        <ellipse id="path-15" cx="28.5" cy="14.6351351" rx="28.5" ry="14.6351351"></ellipse>
+        <filter x="-33.3%" y="-58.1%" width="166.7%" height="229.8%" filterUnits="objectBoundingBox" id="filter-16">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="6" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.149019608   0 0 0 0 0.196078431   0 0 0 0 0.219607843  0 0 0 0.12 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Diverse-Ecosystem" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2" transform="translate(10.000000, 2.000000)">
+            <rect id="Rectangle" fill="url(#linearGradient-1)" x="51" y="32" width="391" height="169" rx="20"></rect>
+            <ellipse id="Oval" stroke="#FFFFFF" stroke-width="2" opacity="0.5" transform="translate(247.000000, 134.000000) scale(1, -1) translate(-247.000000, -134.000000) " cx="247" cy="134" rx="55" ry="11"></ellipse>
+            <ellipse id="Oval" stroke="#FFFFFF" stroke-width="2" opacity="0.2" transform="translate(247.000000, 136.000000) scale(1, -1) translate(-247.000000, -136.000000) " cx="247" cy="136" rx="195" ry="34"></ellipse>
+            <g id="Rectangle">
+                <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-3"></use>
+                <use fill="url(#radialGradient-2)" fill-rule="evenodd" xlink:href="#path-3"></use>
+            </g>
+            <g id="Group-Copy-4" transform="translate(208.000000, 120.000000)">
+                <path d="M76.3675324,81.6837662 L38.1837662,101.867532 L-2.08189022e-12,81.6837662 L0,39 L76.3675324,39 L76.3675324,81.6837662 Z" id="Combined-Shape" fill="url(#linearGradient-5)"></path>
+                <g id="Rectangle" transform="translate(38.183766, 39.000000) rotate(45.000000) translate(-38.183766, -39.000000) ">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-8)" xlink:href="#path-7"></use>
+                    <use fill="url(#linearGradient-6)" fill-rule="evenodd" xlink:href="#path-7"></use>
+                </g>
+            </g>
+            <g id="Group-Copy-5" transform="translate(0.000000, 66.000000)">
+                <g id="Rectangle" transform="translate(45.875112, 45.875112) rotate(45.000000) translate(-45.875112, -45.875112) ">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-11)" xlink:href="#path-10"></use>
+                    <use fill="url(#linearGradient-9)" fill-rule="evenodd" xlink:href="#path-10"></use>
+                </g>
+                <polygon id="Rectangle" fill="url(#linearGradient-12)" transform="translate(55.775112, 45.875112) scale(-1, 1) rotate(45.000000) translate(-55.775112, -45.875112) " points="26.9045287 9.86848968 43.763444 81.881734 84.645695 67.609656"></polygon>
+            </g>
+            <g id="Group" transform="translate(414.000000, 68.000000)">
+                <path d="M0.353255201,84.7297297 L0,84.7297297 L0,15.4054054 L57,15.4054054 L57,84.7297297 L56.6467448,84.7297297 C54.4892238,91.7145074 42.708911,97.0540541 28.5,97.0540541 C14.291089,97.0540541 2.5107762,91.7145074 0.353255201,84.7297297 Z" id="Combined-Shape" fill="url(#linearGradient-13)"></path>
+                <g id="Oval-Copy">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-16)" xlink:href="#path-15"></use>
+                    <use fill="url(#linearGradient-14)" fill-rule="evenodd" xlink:href="#path-15"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

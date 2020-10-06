@@ -1,0 +1,555 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	color: #000000;
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+	background-image: url(../graphics/1coverskintunisiandarkerbg.jpg);
+	background-repeat: repeat;
+	left: 0px;
+	top: 0px;
+}
+
+a {
+	color: #6F4924;
+}
+#rssfeed {
+	text-align: center;
+	clear: both;
+	height: 400px; /* height fixed to hide google logo */
+	width: 333px;
+	overflow: hidden;
+	position: relative;
+	margin-top: 5px;
+	margin-right: auto;
+	margin-bottom: 5px;
+	margin-left: auto;
+	padding: 0px;
+}
+#comingsoon {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-style: normal;
+	line-height: 1.5em;
+	font-weight: normal;
+	text-align: left;
+	overflow: hidden;
+	position: relative;
+	padding: 0px;
+	height: auto;
+	width: 100%;
+	clear: both;
+	float: left;
+	left: 0px;
+	top: 0px;
+	margin-top: 40px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+#comingsoon ul {
+	list-style-image: none;
+	list-style-type: none;
+}
+.footer ul {
+	list-style-image: none;
+}
+
+
+
+
+#content h1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-style: normal;
+	font-weight: normal;
+	padding: 0px;
+	margin-top: 5px;
+	margin-right: 0px;
+	margin-bottom: 5px;
+	margin-left: 0px;
+}
+
+#content h2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+
+#wrapper {
+	background-color: #000000;
+	text-align: left;
+	padding: 0px;
+	height: auto;
+	width: 887px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	overflow: hidden;
+	position: relative;
+	left: 0px;
+	top: 0px;
+	border: 5px solid #ffbd33;
+}
+#innerwrapper {
+	padding: 0px;
+
+	overflow: hidden;
+	position: relative;
+	left: 0px;
+	top: 0px;
+	background-image: url(../graphics/tunisianblubg2.jpg);
+	background-repeat: repeat;
+	background-color: #CCFFFF;
+	height: auto;
+	width: 100%;
+	margin: 0px;
+}
+
+#banner {
+	width:100%;
+	height: 80px;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+	position: relative;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	background-image: url(/cover/titlebg.jpg);
+	background-repeat:repeat-x;
+}
+
+#gspromo{
+	width: 269px;
+	height: 37px;
+	overflow: hidden;
+	position: absolute;
+	top: 15px;
+	left: 369px;
+	font: normal 16px/normal Verdana, Geneva, sans-serif;
+	font-weight: bold;
+	text-decoration: none;
+	color: #FFC;
+}
+
+#gspromo a, #gspromo a:visited{
+color: #FFC;
+text-decoration:none;
+font-style:italic	
+}
+
+#translation {
+	padding: 0px;
+	height: 60px;
+	width: 160px;
+	overflow: hidden;
+	margin:0;
+	position: absolute;
+	top: 10px;
+	right: 5px;
+	z-index: 3000;
+}
+
+#header {
+	margin: 0px;
+	padding: 0px;
+	height: auto;
+	overflow: hidden;
+	position: relative;
+	left: 0px;
+	top: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+}
+
+#header  h1 {
+	display: inline;
+	padding: 0px;
+	clear: both;
+	float: left;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	width: 100%;
+}
+#header img {
+	margin: 0px;
+	padding: 0px;
+	clear: left;
+	float: left;
+	background-image: url(../cover/titlebg.jpg);
+	background-repeat: repeat-x;
+}
+
+#leftcolumn {
+	margin: 0px;
+	padding: 0px;
+	clear: left;
+	float: left;
+	width: 507px;
+	overflow: hidden;
+	position: relative;
+	height: auto;
+	left: 0px;
+	top: 0px;
+	display: inline;
+}
+#rightcolumn {
+	margin: 0px;
+	padding: 0px;
+	clear: right;
+	float: right;
+	width: 380px;
+	overflow: hidden;
+	position: relative;
+	height: auto;
+	left: 0px;
+	top: 0px;
+	display: inline;
+}
+.footer {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: normal;
+	text-align: center;
+	vertical-align: bottom;
+	margin: 10px;
+	padding: 0px;
+	width: auto;
+	overflow: hidden;
+	position: relative;
+	height: auto;
+	top: 0px;
+	clear: both;
+}
+#serpentcinema {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	text-align: left;
+	clear: both;
+	height: auto;
+	width: 285px;
+	overflow: visible;
+	position: relative;
+	vertical-align: bottom;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-bottom: 10px;
+	margin-left: auto;
+}
+
+
+#thedate {
+	display: block;
+	width: 100%;
+	clear: both;
+	float: left;
+	padding: 0px;
+	margin-top: 4px;
+	margin-right: 0px;
+	margin-bottom: 4px;
+	margin-left: 0px;
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+}
+#content {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	height: auto;
+	left: 0px;
+	top: 0px;
+	clear: both;
+	float: left;
+}
+
+#leftcontent {
+	margin: 0px;
+	padding: 0px;
+	width: 317px;
+	clear: left;
+	float: left;
+	overflow: hidden;
+	position: relative;
+	left: 0px;
+	top: 0px;
+	border-right-width: 2px;
+	border-top-style: none;
+	border-right-style: solid;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-right-color: #FFBB33;
+}
+#coverads img {
+	margin: 1px;
+	padding: 0px;
+	border: 1px solid #6F4924;
+}
+#searchbox {
+	padding: 0px;
+	height: 40px;
+	width: 100%;
+	margin-top: 10px;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	overflow: hidden;
+	position: relative;
+	left: 0px;
+	top: 0px;
+}
+
+#coverads a {
+	color: #6F4924;
+}
+#coverads a:visited {
+	color: #6F4924;
+}
+
+
+
+.sectionheader {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-style: normal;
+	line-height: 20px;
+	font-weight: bold;
+	color: #007966;
+	background-color: #FFBB33;
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+	height: 20px;
+	width: 100%;
+}
+#rightcontent {
+	margin: 0px;
+	padding: 0px;
+	clear: right;
+	float: right;
+	width: 188px;
+	height: auto;
+}
+#slideshow {
+	padding: 0px;
+	width: 188px;
+	overflow: hidden;
+	position: relative;
+	height: auto;
+	left: 0px;
+	top: 0px;
+	text-align: left;
+	margin-top: 2px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+#comingevents {
+	height: 200px;
+	width: 182px;
+	margin-top: 10px;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	border: 0px double #6F4924;
+	overflow: hidden;
+	position: relative;
+	left: 0px;
+	top: 0px;
+	padding-top: 25px;
+	padding-right: 2px;
+	padding-bottom: 2px;
+	padding-left: 2px;
+}
+#coverads {
+	background-color: #000000;
+	margin: 0px;
+	padding: 0px;
+	height: auto;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	left: 0px;
+	top: 0px;
+}
+#header p {
+	clear: both;
+	width: 475px;
+	text-align: center;
+	float: left;
+}
+
+#footer {
+	padding: 0px;
+	height: 100px;
+	margin-top: 5px;
+	margin-right: 0px;
+	margin-bottom: 5px;
+	margin-left: 0px;
+	overflow: hidden;
+	position: relative;
+	left: 0px;
+	top: 0px;
+	background-color: #000000;
+	text-align: center;
+}
+#leftcontent ul.newarticleslist {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	color: #000000;
+	list-style-type: none;
+	padding: 0px;
+	margin-top: 5px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 5px;
+}
+#leftcontent .newarticleslist li {
+	margin-top: 5px;
+	margin-right: 0px;
+	margin-bottom: 5px;
+	margin-left: 0px;
+}
+.keywordslist {
+	font-size: 11px;
+	font-weight: normal;
+}
+#geogold {
+	padding: 0px;
+	width: 180px;
+	position: relative;
+	margin-top: 20px;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	height: auto;
+	text-align: center;
+	border: 0px solid #ffbd33;
+
+}
+#joinsnakebyte {
+	background-image: url(../graphics/joinSB.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding: 0px;
+	height: 126px;
+	width: 103px;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-bottom: 10px;
+	margin-left: auto;
+	position: relative;
+	left: 0px;
+	top: 0px;
+}
+.joinsnakebytetop {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-style: normal;
+	line-height: 1.2em;
+
+	font-weight: bold;
+	color: #000000;
+	text-align: center;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	position: relative;
+	left: 0px;
+	top: 0px;
+	padding-top: 15px;
+	padding-right: 0px;
+	padding-bottom: 12px;
+	padding-left: 0px;
+}
+.joinsnakebytetop a {
+	color: #000000;
+	text-decoration: none;
+}
+.joinsnakebytebottom a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.joinsnakebytebottom {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-style: normal;
+	line-height: 1.2em;
+	font-weight: bold;
+	color: #FFFFFF;
+	padding: 0px;
+	margin-top: 2px;
+	margin-right: 0px;
+	margin-bottom: 5px;
+	margin-left: 0px;
+	text-align: center;
+	position: relative;
+	left: 0px;
+	top: 0px;
+}
+
+#slideshow {
+    position:relative;
+    height:300px;
+	margin:0 2px;
+}
+
+#goldslideshow{
+position:relative;
+height:300px;
+margin:5px 2px;
+padding:0;
+overflow:hidden;
+}
+
+#slideshow img, #goldslideshow img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 8;
+	background-image: url(http://www.gildedserpent.com/cms/2012/10/01/photos-from-ahlan-wa-sahlan-2012/);
+}
+
+#slideshow img.active, #goldslideshow img.active {
+    z-index:10;
+}
+
+#slideshow img.last-active, #goldslideshow img.last-active {
+    z-index:9;
+}

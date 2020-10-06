@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="72px" height="72px" viewBox="0 0 72 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Enhance</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#65C1E8" offset="0%"></stop>
+            <stop stop-color="#358DCC" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="100%" y1="50%" x2="50%" y2="50%" id="linearGradient-2">
+            <stop stop-color="#B1DEFD" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="3.061617e-15%" id="linearGradient-3">
+            <stop stop-color="#94DEFF" offset="0%"></stop>
+            <stop stop-color="#5BBBFF" offset="100%"></stop>
+        </linearGradient>
+        <radialGradient cx="50%" cy="12.0597028%" fx="50%" fy="12.0597028%" r="188.396953%" id="radialGradient-4">
+            <stop stop-color="#358DCC" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#5BBBFF" stop-opacity="0.6" offset="100%"></stop>
+        </radialGradient>
+        <rect id="path-5" x="21" y="12" width="30" height="30" rx="15"></rect>
+        <filter x="-60.0%" y="-60.0%" width="220.0%" height="220.0%" filterUnits="objectBoundingBox" id="filter-6">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="6" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.149019608   0 0 0 0 0.196078431   0 0 0 0 0.219607843  0 0 0 0.28 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Enhance" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-7" transform="translate(4.000000, 4.000000)" fill="url(#linearGradient-1)">
+            <rect id="Rectangle" x="0" y="0" width="64" height="64" rx="20"></rect>
+        </g>
+        <g id="Group-Copy-3" transform="translate(28.000000, 25.000000)">
+            <path d="M16.9705627,18.4852814 L8.48528137,22.9705627 L-3.85469434e-13,18.4852814 L0,9 L16.9705627,9 L16.9705627,18.4852814 Z" id="Combined-Shape" fill="url(#linearGradient-2)"></path>
+            <polygon id="Rectangle" fill="url(#linearGradient-3)" transform="translate(8.485281, 9.000000) rotate(45.000000) translate(-8.485281, -9.000000) " points="5.3137085 5.82842712 14.4852814 3 11.6568542 12.1715729 2.48528137 15"></polygon>
+        </g>
+        <g id="Group" transform="translate(40.000000, 31.000000)">
+            <path d="M16.9705627,18.4852814 L8.48528137,22.9705627 L-3.85469434e-13,18.4852814 L0,9 L16.9705627,9 L16.9705627,18.4852814 Z" id="Combined-Shape" fill="url(#linearGradient-2)"></path>
+            <polygon id="Rectangle" fill="url(#linearGradient-3)" transform="translate(8.485281, 9.000000) rotate(45.000000) translate(-8.485281, -9.000000) " points="5.3137085 5.82842712 14.4852814 3 11.6568542 12.1715729 2.48528137 15"></polygon>
+        </g>
+        <g id="Group-Copy-2" transform="translate(16.000000, 31.000000)">
+            <path d="M16.9705627,18.4852814 L8.48528137,22.9705627 L-3.85469434e-13,18.4852814 L0,9 L16.9705627,9 L16.9705627,18.4852814 Z" id="Combined-Shape" fill="url(#linearGradient-2)"></path>
+            <polygon id="Rectangle" fill="url(#linearGradient-3)" transform="translate(8.485281, 9.000000) rotate(45.000000) translate(-8.485281, -9.000000) " points="5.3137085 5.82842712 14.4852814 3 11.6568542 12.1715729 2.48528137 15"></polygon>
+        </g>
+        <g id="Group-Copy" transform="translate(28.000000, 37.000000)">
+            <path d="M16.9705627,18.4852814 L8.48528137,22.9705627 L-3.85469434e-13,18.4852814 L0,9 L16.9705627,9 L16.9705627,18.4852814 Z" id="Combined-Shape" fill="url(#linearGradient-2)"></path>
+            <polygon id="Rectangle" fill="url(#linearGradient-3)" transform="translate(8.485281, 9.000000) rotate(45.000000) translate(-8.485281, -9.000000) " points="5.3137085 5.82842712 14.4852814 3 11.6568542 12.1715729 2.48528137 15"></polygon>
+        </g>
+        <g id="Rectangle">
+            <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-5"></use>
+            <use fill="url(#radialGradient-4)" fill-rule="evenodd" xlink:href="#path-5"></use>
+        </g>
+    </g>
+</svg>

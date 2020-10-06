@@ -1,0 +1,690 @@
+
+		function formValidateform1553 () {
+		var previousClicked=false;
+		var	validateInlineClass = "inlineValidated";
+		var lastActiveElement = null;
+		var jquery = jQuery.noConflict();
+		var formId = "form1553";
+		jquery(".previousPageButton", "#"+formId).click(function() {
+		  previousClicked=true;return true;
+		});
+	
+	var validator = jquery("#form1553").validate({ 
+	
+		invalidHandler: function(form, validator) {
+		var matrixMessages = new Object();
+	
+
+			jquery(".mpErrorSummary ul li", "#"+formId).remove();
+			if ( jquery(".mpErrorSummary", "#"+formId ).length == 0 ) {
+				jquery("#"+formId).prepend("<div class='mpErrorSummary'><label>" + jquery("input[name='errorText']","#"+formId ).val() + "</label><ul></ul></div>");
+			}
+			var errorElements = validator.errorList;		
+			var len = errorElements.length;
+			if (len > 0) {
+				var matrixQuestions = new Object();			
+				jquery(".mpErrorSummary", "#"+formId).show();			
+				for(var i=0; i<len; i++) {
+					var message = errorElements[i].message || "";
+					var element = errorElements[i].element;	
+					var container = getContainer(element);	
+					if (container.is('tr')) {
+						container = container.parents('.mpMatrixTable');
+						var matrixId = container.attr("id");
+						if (typeof matrixQuestions[matrixId] == "undefined") {
+							matrixQuestions[matrixId] = matrixId;
+							message = matrixMessages[matrixId];
+							var topContainer = getTopContainer(element);
+							topContainerId = topContainer.attr("id");							
+							var errorId = "errorfield-" + topContainerId;
+							jquery(".mpErrorSummary ul", "#"+formId).append( "<li id=" + errorId + ">"+message+"</li>"); 							
+						}
+					} else {
+						var label = getLabel(element);
+						message = message +" ("+label.text()+")";							
+						var errorId = "errorfield-" + container.attr("id");	
+						jquery(".mpErrorSummary ul", "#"+formId).append( "<li id=" + errorId + ">"+message+"</li>" );
+					}
+				}
+			} else {
+				jquery(".mpErrorSummary", "#"+formId).hide();
+			}
+		},
+		errorPlacement: function(error, element) {
+		    var container = getContainer(element);
+		    if (container.is('table')) {
+		       var errorRow = jquery(".mpErrorRow", container);
+			   if (errorRow.length == 0) {
+			      if (jquery("input[name='formLayout']","#"+formId).val() == 'N') {
+			      	 errorRow = jquery('<tr class="mpErrorRow"><td colspan="2"></td></tr>');
+			      } else {
+			          errorRow = jquery('<tr class="mpErrorRow"><td></td></tr>');
+			      }
+			      container.append(errorRow);
+			   }else {
+			   	jquery("td", errorRow).empty();	
+			   }			   
+			   jquery("td", errorRow).append(error);
+			} else if (container.is('li')) {
+			   var errorDiv = jquery("div.mpErrorRow", container);
+			   if (errorDiv.length == 0) {
+					errorDiv = jquery('<div class="mpErrorRow"></div>');
+					container.append(errorDiv);
+			   } else {
+					errorDiv.empty();
+			   }
+			   jquery(errorDiv).append(error);
+			} else if (container.is('tr')) {
+		       var errorRow = container.next(".mpErrorRow");
+			   if (errorRow.length == 0) {
+			   	  var colCount = jquery("td", container).length;
+		      	  errorRow = jquery('<tr class="mpErrorRow"><td colspan="'+colCount+'"></td></tr>');
+			      container.after(errorRow);
+			   }else {
+			   	jquery("td", errorRow).empty();	
+			   }			   
+			   jquery("td", errorRow).append(error);
+			}
+		},
+		highlight: function(element, errorClass, validClass) {
+		    var container = getContainer(element);
+		    if (container.is('tr')) {
+		    	container = container.parents('.mpQuestionTable');
+		    }
+		    container.removeClass(errorClass).addClass(errorClass);
+		},
+		unhighlight: function(element, errorClass, validClass) {
+			var hasError = false;
+		    var container = getContainer(element);
+		    var questionId = getQuestionId(element);
+		    var errorBlock;
+		    if (container.is('table') || container.is('div')) {
+		    	var errorBlock = jquery(".mpErrorRow", container);
+				if (errorBlock.length > 0) {
+					var errorFor = getQuestionIdFromString( jquery("label", errorBlock).attr("for") );
+					if (errorFor == questionId) {
+						errorBlock.remove();
+					} else {
+						hasError = true;
+					}
+				}
+			} else if (container.is('tr')) {
+				errorBlock = container.next(".mpErrorRow");
+				if (errorBlock.length > 0) {
+					errorBlock.remove();
+				}			
+		    	container = container.parents('.mpQuestionTable');
+		    	hasError = jquery('.mpErrorRow', container).length > 0;
+		    };
+		    if (!hasError) {		    
+		    	container.removeClass(errorClass);
+		    };
+  		},		
+		debug: false,
+		onkeyup: false,
+		onfocusout: false,
+		onclick: false,			
+		ignore: ":hidden",
+		errorElement: "label",
+			
+		
+			
+ 		rules: {
+		field1681: {
+			customRequired:false
+			},
+		field1678: {
+			customRequired:true
+			},
+		field1679: {
+			customRequired:false
+			},
+		field1680: {
+			customRequired:true,
+			email:true
+			},
+		field1686: {
+			customRequired:false
+			}
+		},
+		messages: {
+		field1681: {
+			customRequired: "Vul a.u.b. een voornaam in."
+			},
+		field1678: {
+			customRequired: ""
+			},
+		field1679: {
+			customRequired: ""
+			},
+		field1680: {
+			customRequired: "Vul a.u.b. een e-mailadres in.",
+			email: "U heeft een ongeldig e-mailadres ingevuld."
+			},
+		field1686: {
+			customRequired: ""
+			}
+		}
+		
+			
+		});
+		jquery.validator.addMethod("customDate",  function(value, element) { 
+		    var parent = jquery(element).parent();
+		    var date = '';
+		    jquery('.mpDateField', parent).each(function() {
+		    	date = date + jquery(this).val() + '-';
+		    });
+		    if (date == '---') { // empty date is ok
+		      date = '';
+		      return true;
+		    }
+		    date = date.substring(0, date.length-1);
+		    var pattern = jquery('.dateFieldPattern', parent).val();
+		    
+		    return isValidDate(date, pattern);
+		});
+		
+		jquery.validator.addMethod("maxAnswers",  function(value, element, parms) {
+			if (previousClicked) { // No required validations when previous is clicked
+		       return true;
+		    };		 
+		    var ul = jquery(element).parents('ul')[0];
+		    var checked = jquery('input:checked', ul).length;
+		    return checked <= parms;
+		});
+		
+		jquery.validator.addMethod("minAnswers",  function(value, element, parms) {
+			if (previousClicked) { // No required validations when previous is clicked
+		       return true;
+		    };
+		    var ul = jquery(element).parents('ul')[0];
+		    var checked = jquery('input:checked', ul).length;
+		    return checked >= parms;
+		});
+		
+		jquery.validator.addMethod("money", function(value, element, parms) {
+		    var matches = /^\d+([\.,]\d{0,2})*$/.exec(value);
+		    return (value == '' || matches != null);
+		});
+		
+		jquery.validator.addMethod("customRequired", function(value, element) {
+		    if (previousClicked) { // No required validations when previous is clicked
+		       return true;
+		    };
+		    return jquery.validator.methods.required.call(this, value, element);
+		});
+		
+		jquery.validator.addMethod("customMin", function(value, element, parms) {
+		    valueToCheck = Number(value.replace(",", "."));
+		    minValue = Number(parms.replace(",", "."));
+		    return (value == '' || valueToCheck >= minValue);
+		});
+		
+		jquery.validator.addMethod("customMax", function(value, element, parms) {
+		    valueToCheck = Number(value.replace(",", "."));
+		    maxValue = Number(parms.replace(",", "."));
+		    return (value == '' || valueToCheck <= maxValue);
+		});
+		
+		jquery.validator.addMethod("customNumber", function(value, element, parms) {
+		    var matches = /^-?\d+$/.exec(value);
+		    return (value == '' || matches != null);
+		});
+		
+		jquery.validator.addMethod("zipCode",  function(value, element) {
+		    var matches = /^[ ]*[0-9]{4}[ ]*[A-Za-z]{2}[ ]*$/.exec(value);
+		    return (value == '' || matches != null);
+		});
+		
+		jquery.validator.addMethod("telephone",  function(value, element) {
+		     if (value == '') {
+		        return true;
+		     }
+		     var number = value; 
+			 var re = new RegExp('[^0-9]', 'g'); 			 
+			 number = number.replace(re, '');
+			 if (number.length < 10 || number.length > 12) { 	
+			    return false;
+			 } else if ((number.length == 10) && (number.indexOf('0') != 0)) {
+			 	return false;
+			 } else if ((number.length == 11) && (number.indexOf('31') != 0)) {
+			     return false;
+			 } else if ((number.length == 12) && (number.indexOf('310') != 0)) {
+			     return false
+			 }
+			 return true;		 
+		});
+		
+		jquery.validator.addMethod("telNr",  function(value, element) {
+		     if (value == '') {
+		        return true;
+		     }
+		     var number = value; 
+			 var re = new RegExp('[^0-9]', 'g'); 			 
+			 number = number.replace(re, ''); 			 
+			 if (number.length < 10 || number.length > 14) {
+			 	return false;
+			 } else if ((number.length == 10) && (number.indexOf('06') != 0)) { 
+			    return false;
+			 } else if ((number.length == 11) && (number.indexOf('316') != 0)) { 
+			 	return false;
+			 } else if ((number.length == 12) && (number.indexOf('3106') != 0)) { 
+			    return false;
+			 } else if ((number.length == 13) && (number.indexOf('00316') != 0)) {
+			    return false;
+			 } else if ((number.length == 14) && (number.indexOf('003106') != 0)) { 
+			    return false;
+			 }
+	         return true;
+		});
+
+		jQuery.validator.addMethod("regexp", function(value, element, param) {
+			var re;
+			try {
+				var caseSensitive = '';
+				if ( param[1] == 'N' ) {
+					caseSensitive = 'i';
+				}
+				re = new RegExp(param[0], caseSensitive);
+    			return this.optional(element) || re.test(value);
+    		} catch(e) {
+    			return true;
+    		}
+		});
+
+		    
+	   function isValidDate(date, pattern) {
+	   		var matches = /^(\d{2})[-](\d{2})[-](\d{4})$/.exec(date);
+    		if (matches == null) return false;
+	        if (pattern == 'dd-MM-yyyy') {
+    			var d = matches[1];
+    			var m = matches[2] - 1;
+    			var y = matches[3];
+	        } else if (pattern == 'MM-dd-yyyy') {
+    			var d = matches[2];
+    			var m = matches[1] - 1;
+    			var y = matches[3];
+	        }
+	        
+	        var composedDate = new Date(y, m, d);
+    		return composedDate.getDate() == d && composedDate.getMonth() == m && composedDate.getFullYear() == y;
+    		
+		}
+		
+		function getContainer(element) {
+			var jqElement = jquery(element);
+			if (jqElement.hasClass("mpOtherCustomInput")) {
+				jqElement = jqElement.parent().children(".mpMultipleInput");
+			}
+		    var id = jqElement.attr("id");
+		    var pos = id.indexOf("-");
+		    if (pos < 0) {
+		       pos = id.length;
+		    }
+		    var cntId;
+		    if (id.substring(0,3) == "fld") {
+		    	cntId = "#CNTT" + id.substring(3, pos);
+		    } else {		    
+		    	cntId = "#CNT" + id.substring(5, pos);
+		    }
+		    return jquery(cntId);
+		}
+		
+		function getQuestionId(element) {
+			var jqElement = jquery(element);
+		    var id = jqElement.attr("id");
+		    return getQuestionIdFromString(id);
+		}
+
+		function getQuestionIdFromString(idString) {
+		    var pos = idString.indexOf("-");
+		    if (pos < 0) {
+		       pos = idString.length;
+		    }	
+		    return idString.substring(0, pos);		
+		}
+				
+		function getLabel(element) {
+		    var container = getContainer(element);
+		    var label = jquery(".mpFormLabel label", container);
+		    
+		    return label;
+		}
+		
+		function getTopContainer(element) {
+			var container = getContainer(element);
+		    if (container.is('tr')) {
+		    	container = container.parents('.mpQuestionTable');
+		    }
+		    return container;		
+		}
+		
+		function doFocusin(element) {
+			if (!lastActiveElement) {
+				lastActiveElement = element;
+				return;
+			}
+			var containerId = null;
+			var containerLastActiveId = null;
+			if (element.id) {			
+				var container = getTopContainer(element);
+				containerId = container.attr("id");
+			}
+			if (lastActiveElement.id) {
+				var containerLastActive = getTopContainer(lastActiveElement);	
+				containerLastActiveId = containerLastActive.attr("id");		
+			}
+			if (containerId != containerLastActiveId && containerLastActiveId) {
+				jquery("input, textarea, select", containerLastActive).filter(":visible").each(function(index, element) {
+					doFocusout(element);
+				});
+			}
+			lastActiveElement = element;			
+		}
+
+		function doFocusout(element) {
+			if (getValidateInline()) {
+				var check = validator.check(element);
+				var empty = validator.getLength(element.value, element) == 0;
+				var container = getTopContainer(element);
+				var hasError = jquery(container).hasClass('error');				
+				if (hasError || check == false || empty == false) {
+					validator.element(element);
+					var containerId = container.attr("id");
+					hasError = jquery(container).hasClass('error');						
+					if ( !hasError) {
+						jquery("#errorfield-" + containerId).remove();
+						if (jquery(".mpErrorSummary ul li", "#"+formId).length == 0) {
+							jquery(".mpErrorSummary", "#"+formId).hide();						
+						}
+		    			if (getValidateElementInline(element)) {
+							container.removeClass(validateInlineClass).addClass(validateInlineClass);		    
+		    			} else {
+							container.removeClass(validateInlineClass)		    
+		    			}										
+					} else {
+						container.removeClass(validateInlineClass).addClass(validateInlineClass);		    
+					}
+				}							
+			}
+		}		
+		
+
+		
+		jquery("input, textarea, select", "#"+formId).focusin(focusIn);
+				
+
+		function focusIn() {
+			var element = this;
+			if (element.type && element.type == 'submit') {
+				setTimeout(function(){doFocusin(element);}, 1000);
+			} else {
+				doFocusin(element);
+			}
+			return true;
+		};
+		
+		function getValidateInline() {
+			return true;
+		}
+		
+		var validateInlineSettings = new Object();
+		validateInlineSettings["field1681"] = "N"
+		validateInlineSettings["field1678"] = ""
+		validateInlineSettings["field1679"] = ""
+		validateInlineSettings["field1680"] = "N"
+		validateInlineSettings["field1686"] = "N"
+			
+		
+		function getValidateElementInline(element) {
+		return validateInlineSettings[getQuestionId(element)] == "Y";
+				
+
+		}		
+	};
+
+   
+		function FormABform1553() {
+			var abQuestions = new Array();
+			var jquery = jQuery.noConflict();
+			var myself = this;	
+			this.init = function(){	
+				var abQuestion;
+		
+			abQuestion = new Object();
+		abQuestion.questionId="field1678";
+		abQuestion.containerId="CNT1678";
+		
+			abQuestions.push(abQuestion);
+		
+		
+				for(var i=0; i<abQuestions.length; i++) {
+					abQuestion = abQuestions[i];
+					var abElem = jquery("#form1553 #"+abQuestion.questionId);
+					var description = jquery("#form1553 #"+abQuestion.containerId + " label[for='" + abQuestion.questionId + "']");
+					var result = myself.calcSum(description.text());
+					abElem.attr("value", result);
+					var abContainer = jquery("#form1553 #"+abQuestion.containerId);
+					abContainer.hide();
+				}					
+			}
+			
+					
+			this.calcSum = function(s) {
+	    		var regex = /(\d+)\s[+]\s(\d+)\s[=]/g;
+	    		var match = regex.exec(s);
+	    		if (match) {
+	    		   return parseInt(match[1]) + parseInt(match[2]);
+	    		}
+	    		return "";
+	    	}
+		}
+		
+		function initFormABform1553() {
+			var fab = new FormABform1553();
+			fab.init();	
+		}
+
+
+	
+		
+		function ShowHideform1553() {
+			var concealedQuestions = new Array();
+			var jquery = jQuery.noConflict();
+			var myself = this;	
+			var form = jquery('#form1553');			
+			this.init = function(){	
+				var concealedQuestion;
+		
+		
+				for(var i=0; i<concealedQuestions.length; i++) {
+					concealedQuestion = concealedQuestions[i];
+					var triggerElem;				
+					if (myself.isMultipleAnswer(concealedQuestion.questionType)) {
+						triggerElem = jquery("#"+concealedQuestion.answerId);
+						triggerElem.unbind('click');
+						triggerElem.click(myself.updateShowHide);
+					} else {
+						triggerElem = jquery("#"+concealedQuestion.questionId);
+						triggerElem.unbind('change');
+						triggerElem.change(myself.updateShowHide);
+					}					
+					myself.doShowHide(triggerElem);						
+				}
+				jquery('input:not("input[type=submit]"),select,textarea',form).focus(myself.highlightContainer);				
+				jquery('input.mpMultipleInputOther', form).each(function() {
+					var checked = jquery(this).prop("checked")
+					jquery(this).parent().children(".mpOtherCustomInput").attr("disabled", !checked);				
+				});				
+				jquery('input[type=checkbox].mpMultipleInputOther', form).click(function() {
+					var checked = jquery(this).prop("checked");
+					jquery(this).parent().children(".mpOtherCustomInput").attr("disabled", !checked);
+				});		
+				jquery('input[type=radio].mpMultipleInputOther', form).each(function() {
+					var container = jquery(this).parents(".mpQuestionTable");
+					var radioId = jquery(this).attr("id");
+					var inputId = jquery(this).parent().children(".mpOtherCustomInput").attr("id");
+					jquery('input[type=radio]', container).click(function() {					
+						if (radioId == jquery(this).attr("id")) {
+							jquery("#"+inputId).attr("disabled", false);
+						} else {
+							jquery("#"+inputId).attr("disabled", true);					
+						}
+					});
+				});
+			
+			
+			
+	
+			}
+			
+			this.highlightContainer = function() {	
+				jquery('.mpHighlight',form).removeClass('mpHighlight');			
+				jquery(this).parents('.mpQuestionTable').addClass('mpHighlight');
+			}
+			
+			this.isMultipleAnswer = function(questionType) {
+				return myself.isRadioType(questionType) || myself.isCheckboxType(questionType);
+			}
+			
+			this.isRadioType = function(questionType) {
+				var pattern = /radioButton|radioButtonOther|rating4|rating5|rating10|gender|monitor/;
+				return pattern.test(questionType);
+			}
+			
+			this.isCheckboxType = function(questionType) {
+				var pattern = /yesNo|checkBox|checkBoxOther/;
+				return pattern.test(questionType);
+			}			
+
+			this.isSelectType = function(questionType) {
+				var pattern = /dropDown/;
+				return pattern.test(questionType);
+			}
+
+			this.doShowHide = function(elem) {
+				var elemId = elem.attr("id");
+				var elemQuestionId = elem.attr("name");
+				var containersToHide=new Object();
+				var containersToShow=new Object();						 													
+				for(var i=0; i<concealedQuestions.length; i++) {
+					var concealedQuestion = concealedQuestions[i];
+					var concealedId;
+					var questionId = concealedQuestion.questionId;
+					if (myself.isMultipleAnswer(concealedQuestion.questionType)) {
+						concealedId = concealedQuestion.answerId;
+					} else {
+						concealedId = questionId;					
+					}		
+					if (elemQuestionId == questionId) {
+						if (concealedQuestion.showContainerId.length > 0) {
+							var concealedElement=jquery("#" + concealedId);
+							if (myself.isMultipleAnswer(concealedQuestion.questionType)) {
+								if (concealedElement.prop("checked")) {
+									containersToShow[concealedQuestion.showContainerId]=concealedQuestion.showContainerId;
+									jquery("#"+concealedQuestion.showContainerId).show();
+								} else {
+									containersToHide[concealedQuestion.showContainerId]=concealedQuestion.showContainerId;
+								}														
+							} else  {
+								if ( concealedElement.val() == concealedQuestion.answerValue ) {
+									containersToShow[concealedQuestion.showContainerId]=concealedQuestion.showContainerId;
+									jquery("#"+concealedQuestion.showContainerId).show();
+								} else {
+									containersToHide[concealedQuestion.showContainerId]=concealedQuestion.showContainerId;
+								}
+							}
+						}
+					}
+				}
+				for (containerHideId in containersToHide) {
+					var shouldBeShown=false;
+					if ( containersToShow[containerHideId] == null ) {
+						jquery("#"+containerHideId).hide();
+					}
+				};						
+			}
+			
+			this.updateShowHide = function() {
+				var elem = jquery(this);
+				myself.doShowHide(elem);
+			}
+			
+		}
+		
+		function initShowHideform1553() {
+			function loadjq(head) {
+				script = document.createElement('script');
+				script.type = 'text/javascript';
+				script.src = 'https://static.mailplus.nl/jq/jquery-1.6.1.min.js';
+				head.appendChild(script);
+			}
+			
+			function loadjqValidate(head) {
+				script = document.createElement('script');
+				script.type = 'text/javascript';
+				script.src = 'https://static.mailplus.nl/jq/jquery.validate.min.js';
+				head.appendChild(script);
+			}
+			
+			function loadjqUI(head) {
+			 	script = document.createElement('script');
+				script.type = 'text/javascript';
+				script.src = 'https://static.mailplus.nl/jq/jquery-ui-1.8.18.custom.min.js';
+				head.appendChild(script);
+				  
+				script = document.createElement('link');
+				script.rel="stylesheet";
+				script.href="https://static.mailplus.nl/jq/css/ui-lightness/jquery-ui-1.8.18.custom.css";
+				script.type="text/css";
+				head.appendChild(script);
+			}
+			
+			var head = document.getElementsByTagName("head")[0];
+			if (typeof jQuery == 'undefined') {
+				loadjq(head);
+				loadjqValidate(head);
+				loadjqUI(head);
+				setTimeout("initShowHideform1553()", 50)
+				return;
+			}
+
+			if (!jQuery().validate) {
+				loadjqValidate(head);
+				setTimeout("initShowHideform1553()", 50)
+			}
+						
+			
+			
+					jQuery.getJSON('https://m5.mailplus.nl/genericservice/code/servlet/React?callback=?', {
+						command: 'getFormHtml',
+						uid: '80389',
+						feid: 'qzcBmExBDf8Bx77njes5',
+						p: 'https',
+						om: 'd',
+						of: 'h'
+						
+												
+						
+						 		 
+					},
+					function(data) {
+						jQuery.each(data.html, function(i, item) {
+							jQuery('#mpform1553').replaceWith(item);
+							formValidateform1553();
+							initFormABform1553();
+							var sh = new ShowHideform1553();
+							sh.init();
+						});
+					});
+				
+				
+		}
+		
+		if (window.addEventListener) {
+					window.addEventListener("load",initShowHideform1553,false);
+				} else if (window.attachEvent) {
+					window.attachEvent("onload",initShowHideform1553);
+				}		
+	
+		

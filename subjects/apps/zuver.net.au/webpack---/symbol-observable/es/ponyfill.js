@@ -1,0 +1,25 @@
+export default function symbolObservablePonyfill(root) {
+	var result;
+	var Symbol = root.Symbol;
+
+	if (typeof Symbol === 'function') {
+		if (Symbol.observable) {
+			result = Symbol.observable;
+		} else {
+			result = Symbol('observable');
+			Symbol.observable = result;
+		}
+	} else {
+		result = '@@observable';
+	}
+
+	return result;
+};
+
+
+
+//////////////////
+// WEBPACK FOOTER
+// ./~/symbol-observable/es/ponyfill.js
+// module id = 389
+// module chunks = 0 1

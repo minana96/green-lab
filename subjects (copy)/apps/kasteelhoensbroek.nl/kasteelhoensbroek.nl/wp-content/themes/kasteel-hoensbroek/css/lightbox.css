@@ -1,0 +1,201 @@
+/* CSS Document */
+
+/* LIGHTBOX */
+
+/* Preload images */
+
+
+
+.lightboxOverlay {
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	z-index: 9999; 
+	background-color: #272a55;
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90); 
+	opacity: 0.9; 
+	display: none;}
+	
+.lightbox {
+	position: absolute; 
+	left: 0; 
+	width: 100%; 
+	z-index: 10000; 
+	text-align: center; 
+	font-weight: normal;}
+	
+.lightbox .lb-image {
+	display: block; 
+	height: auto; 
+	max-width: inherit;}
+	
+.lightbox a img {
+	border: none;}
+	
+.lb-outerContainer {
+	position: relative; 
+	background-color: #d99816; 
+	*zoom: 1; 
+	width: 250px; 
+	height: 250px; 
+	margin: 0 auto;}
+	
+.lb-outerContainer:after {
+	content: ""; 
+	display: table; 
+	clear: both;}
+	
+.lb-loader {
+	position: absolute; 
+	top: 43%; 
+	left: 0; 
+	height: 25%; 
+	width: 100%; 
+	text-align: center; 
+	line-height: 0;}
+	
+.lb-cancel {
+	display: block; 
+	width: 32px; 
+	height: 32px; 
+	margin: 0 auto; 
+}
+	
+.lb-nav {
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	height: calc(100% - 60px); 
+	width: 100%; 
+	z-index: 10;}
+	
+.lb-container > .nav {
+	left: 0;}
+	
+.lb-nav a {
+	outline: none; 
+	background-image: url('data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');}
+	
+.lb-prev, .lb-next {
+	height: 100%; 
+	cursor: pointer;
+	display: block;}
+	
+.lb-nav a.lb-prev {
+	width: 49%; 
+	left: 0; 
+	float: left; 
+	background: url(../images/lightbox-prev.svg) left center no-repeat; 
+	}
+	
+.lb-nav a.lb-prev:hover {
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); 
+	opacity: 1;}
+	
+.lb-nav a.lb-next {
+	width: 49%; 
+	right: 0; 
+	float: right; 
+	background: url(../images/lightbox-next.svg) right center no-repeat; 
+}
+	
+.lb-nav a.lb-next:hover {
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); 
+	opacity: 1;}
+	
+.lb-dataContainer {
+	margin: 0 auto; 
+	*zoom: 1; 
+	width: 100%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;}
+	
+.lb-dataContainer:after {
+	content: ""; 
+	display: table; 
+	clear: both;}
+	
+.lb-data {
+	padding: 10px; 
+	color: #000; 
+	text-align: center;}
+	
+.lb-data .lb-details {
+	}
+	
+.lb-data .lb-caption {
+	text-align: center;}
+	
+.lb-data .lb-number {
+	display: none !important;}
+	
+.lb-data .lb-close {
+	display: block; 
+	float: right; 
+	width: 26px; 
+	height: 26px; 
+	margin: 0 5px 15px 0;
+	background-image: url(../images/lightbox-close.svg);
+	background-repeat: no-repeat; 
+	background-position: center;
+	background-size: 26px 26px;
+	text-align: right; 
+	outline: none; 
+	}
+	
+.lb-data .lb-close:hover {
+	cursor: pointer; 
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); 
+	opacity: 1;}
+
+
+@media (max-width: 979px) {
+	
+	.lb-container {padding: 10px;}
+	
+	.lb-data .lb-caption {
+		margin: 0 50px 0 0 0;}
+  	
+ }
+ 
+ @media (min-width: 980px) {
+	 
+	 .lb-container {padding: 10px;}
+	
+}
+
+@media (min-width: 481px) and (max-width: 979px) {
+	
+	.lb-data .lb-close {
+		width: 30px; 
+		height: 30px; 
+		background-size: 30px 30px;}
+		
+	.lb-data .lb-caption {
+		margin: 0 40px 0 0 0;}	
+		
+	.lb-nav a.lb-prev, .lb-nav a.lb-next {
+		background-size: 40px 50px;}	
+		
+		
+		
+	
+	
+}
+
+@media (max-width: 480px) {
+	
+	.lb-data .lb-close {
+		width: 25px; 
+		height: 25px; 
+		background-size: 25px 25px;}
+		
+	.lb-data .lb-caption {
+		margin: 0 30px 0 0 0;}		
+		
+	.lb-nav a.lb-prev, .lb-nav a.lb-next {
+		background-size: 32px 40px;}	
+	
+}
