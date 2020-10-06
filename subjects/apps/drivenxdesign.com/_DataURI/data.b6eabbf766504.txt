@@ -1,1 +1,0 @@
-chrome-search://most-visited/edit.html?addTitle=Snelle%20link%20toevoegen&editTitle=Snelkoppeling%20bewerken&nameField=Naam&urlField=URL&linkRemove=Verwijderen&linkCancel=Annuleren&linkDone=Gereed&invalidUrl=Voer%20een%20geldige%20URL%20in

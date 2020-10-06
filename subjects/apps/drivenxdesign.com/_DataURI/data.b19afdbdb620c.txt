@@ -1,1 +1,0 @@
-chrome-search://most-visited/local-ntp-common.css
