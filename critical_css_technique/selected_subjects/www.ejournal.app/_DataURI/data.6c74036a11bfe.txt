@@ -1,1 +1,0 @@
-chrome-extension://cgdjpilhipecahhcilnafpblkieebhea/content/send-to-kindle-action.js
