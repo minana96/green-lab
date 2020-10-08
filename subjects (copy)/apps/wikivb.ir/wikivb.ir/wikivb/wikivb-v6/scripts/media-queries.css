@@ -1,0 +1,171 @@
+@charset "UTF-8";
+/* Publich */
+@media screen and (max-width: 1000px) {
+.footer_select {
+	float:none;
+	margin: -5px auto 3px auto;
+	display: table;
+}	
+.footer_links {float: none;}
+.footer {text-align: center;}
+}
+@media screen and (max-width: 794px) {
+.right-mainbox {width: 98% !important;}
+.left-mainbox {width: 98% !important;}
+}
+@media screen and (max-width: 759px) {
+.footer_links {line-height: 34px;}
+}
+@media screen and (max-width: 737px) {
+.forumthreadpost ,.forumlastpost {display: none !important;}
+}
+@media screen and (max-width: 730px) {
+.forumbit_post .forumactionlinks li , .forumbit_post .forumstats, .forumbit_post .forumstats_2 {display:none;}
+.wikivb-forum-foot {display: none;}
+.forumbit_post .foruminfo .forumicon {margin-top: -14px;}
+.subforumlist div div div {width: 100% !important;margin: 3px 0;}
+}
+@media screen and (max-width: 616px) {
+.forumbit_post .forumrow .forumlastpost {width: 100%;text-align: center;}
+.forumbit_post .foruminfo .forumdata .datacontainer {width: auto;}
+}
+@media screen and (max-width: 550px) {
+.postbitlegacy .userinfo {width: 100%;padding: 0 0px 0 0;border-bottom: 1px solid rgba(0,0,0,0.05);padding-bottom: 10px;}
+.the-avatar,.postbitlegacy .user-status ,.postbitlegacy .thisusertag {display: none !important;}
+.postbitavatar ,.wikiusercontrols {float: left;margin-left: 5px;}
+.postbitlegacy .userinfo .thisusertag {margin: -6px 5px 8px 5px;}
+.postbitlegacy .userinfo .userinfo_extra {display: none;}
+.postbitlegacy .postbody, .eventbit .eventdetails .eventbody {margin-right: 0px;}
+.avatar_field {float: right;clear: right;margin-bottom: -20px !important;}
+.wikiv6-postbit {position: relative;z-index: 99;margin: 0px;border-radius: 0;background: none !important;}
+.postbit-columns ,.wikiv6-postbit .user-forum,.postbitlegacy .signature {display: none;}
+.wikiv6-postbit .username_container .username-postbit a {color: #8090a6 !important;float: right;margin: 0 20px 0 0;}
+.wikiv6-postbit .username_container .username-postbit a:after {content: '����� ���:';font-size: 14px;margin: 0 5px 0 0;}
+.postfoot a {font-size: 0px !important;line-height: 0 !important;}
+.postbit .posthead, .postbitlegacy .posthead, .eventbit .eventhead {padding: 8px 1px;}
+.postbit .posthead .nodecontrols, .postbitlegacy .posthead .nodecontrols, .eventbit .eventhead .nodecontrols {padding-top: 10px;}
+}
+@media screen and (max-width: 542px) {
+.pagination_top {width: 100%;float: none;}
+.above_postlist, #above_postlist {float: none;}
+}
+@media screen and (max-width: 495px) {
+.postbitlegacy .userinfo .userinfo_extra {float: right;width: 100%;margin: 0px;}
+.post_field {margin: 0;}
+.usercenter {width: 100%;text-align: center;height: 215px;}
+.postbitlegacy .userinfo {border-bottom: 0px solid rgba(0,0,0,0.05);padding-bottom: 0px;}
+.avatar_hover:before , .avatar_hover:after {display: none;}
+.avatar_field {display: table !important;margin: 0 auto !important;float: none !important;}
+.avatar_hover {padding: 10px !important;}
+}
+@media screen and (max-width: 722px) {.forumbit_post .foruminfo {width: auto !important;}}
+@media screen and (max-width: 1510px) {
+.fixbox , .body_wrapper {width: auto;}
+.body_wrapper {margin-right: 5px;margin-left: 5px;}
+.wv6-footer>.fixbox {margin-right: 10px;margin-left: 10px;}
+}
+@media screen and (max-width: 1215px) {
+.development ul {display: table;width: 100% !important;padding-top: 10px !important;text-align: left;}
+.development {text-align: right;}
+}
+@media screen and (max-width: 885px) {
+.header-ads {margin-top: 30px;}
+.logo {display: table;margin: 0 20px 0 0;text-align: center;}
+.logo:before {display: table;float: none;margin: 15px auto 0 auto;color: #24bea2;font-size: 40px;}
+.logo span {float: none;display: table;margin: 5px auto 10px auto;}
+.wikivb-header {height: 250px;}
+.wv6-footer .middles {width: 100%;}
+.copy-right {display: table;width: 100%;text-align: center;padding:0 0 15px 0;line-height: 22px;}
+.wv6-footer .bottom {text-align: center;}
+.wv6-footer .bottom .foot-link {float: none;display: inline-block;}
+}
+@media screen and (max-width: 680px) {
+.header-ads {display: none;}
+.logo {float: none;margin: 0 auto;}
+.show-navbar {display: block;}
+.navbar {margin-bottom: 14px;}
+.wikiv6-respnav {
+	display: none;
+	position: absolute;
+	top: 45px !important;
+	background: #475364;
+	z-index: 999;
+	border-radius: 0 0 0 0 !important;
+	padding: 8px 0 7px 0;
+}
+.wikiv6-respnav li {
+	float: none;
+	margin: 0px 0 0 0 !important;
+	display: table;
+	float: right;
+	clear: right;
+}
+.wikiv6-respnav li a {
+	padding: 0px 15px !important;
+	margin: 0px 0 0 0 !important;
+	line-height: 30px !important;
+	background: none !important;
+	float: right;
+}
+.navtabs li a.navtab:hover {box-shadow: 0 0 0 !important;}
+.wikiv6-respnav li a:before {margin-top: -5px !important;}
+.wikiv6-respnav ul,.wikiv6-respnav ul {display: none !important;}
+.breadcrumb {padding-top: 5px;}
+.footer-notic {font-size: 0px !important;}
+.footer-notic:before {
+	width: 50px;
+	background: #59aed7;
+	text-align: center;
+	margin-right: 0px !important;
+	color: #354151 !important;
+	font-size: 20px !important;
+}
+}
+@media screen and (max-width: 570px) {
+.wikivb-chatbox {display: none;}
+.open-search {display: block}
+.search-box {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 50px;
+	right: 0;
+	background: #1e2835;
+	padding: 10px 0 10px 30px;
+}
+.search-box #multix_search {
+	margin: 0 auto !important;
+	width: 91%;
+}
+.topx-bit em {display: none;}
+}
+@media screen and (max-width: 400px) {
+#multix #livenotifications_friend,#multix #livenotifications_moderation {display: none !important;}
+.forumbit_post .forumdescription,.forumbit_nopost .subforumdescription ,.navlinks,.subforumlist div .shade , .moderators{display: none;}
+.wikiside {margin: 0 0 0 -15px;}
+}
+@media screen and (max-width: 980px) {
+.minifile {display: none;}
+.wikiside {width: 100% !important;}
+#content_container #content {
+    background: none;
+    padding-right: 0;
+    margin-right: 0;
+}
+.recomended-styles ul li {display: inline-block;}
+.recomended-styles ul {text-align: center;}
+.important-links ul li {display: inline-block;}
+.postpagestats {display: none;}
+}
+@media screen and (max-width: 705px) {
+.mainbox .tabs {display: table;width: 100%;padding: 0 0 10px 0;text-align: center;}
+.mainbox .tabs li {float: none;display: inline-block;}
+#vietvbb-title {display: none;}
+}
+@media screen and (max-width: 520px) {
+.forumads img {display: table;width: 98%;margin: 0 auto 3px auto;height: auto;}
+}
+@media screen and (max-width: 320px) {
+.above_postlist, #above_postlist {height: 65px;}
+.pagination_top .pagination {top: 7px;}
+}

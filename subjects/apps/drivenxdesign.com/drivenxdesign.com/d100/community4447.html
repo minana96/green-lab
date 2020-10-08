@@ -1,0 +1,983 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html data-ng-app="d100" 
+    xmlns="http://www.w3.org/1999/xhtml" 
+    class="" >
+    
+<!-- Mirrored from drivenxdesign.com/d100/community.asp?comm_id=360559 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 06 Oct 2020 17:32:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <title>DRIVENxDESIGN</title>
+        <link rel="SHORTCUT ICON" href="favicon.ico" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Language" content="en-au" />
+        <meta http-equiv="Content-Language" content="en-au" />
+        <meta name="keywords" content="DRIVENxDESIGN, THE DESIGN 100, design100.com, melbourne design awards, design awards, city design awards, design industry, awards event, design100, emerging design" />
+        <meta name="description" content="Design from the Demand side - celebrate courage, excellence & diversity" />
+        <meta name="Author" content="DRIVENxDESIGN" />
+        <meta name="Publisher" content="DRIVENxDESIGN" />
+        <meta name="Copyright" content="DRIVENxDESIGN" />
+        <meta name="language" content="en" />
+        <meta name="robots" content="index,follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="protocol_testing" content="community4447.html?comm_id=360559" />
+        
+        <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700,900&amp;subset=latin-ext" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="https://drivenxdesign.com/awards/bootstrap/css/bootstrap.min.css?cache=20200428_192217" />
+        <style type="text/css">
+            @media print {
+                #header, #mobile-header, #mob-nav {
+                    display: none!important;
+                }
+                .announce-messages {
+                    display: none!important;
+                }
+                #navigation {
+                    display: none!important;
+                }
+
+                #masthead {
+                    display: block;
+                }
+
+                .rating {
+                    display: none!important;
+                }
+
+                #footer {
+                    display: none!important;
+                }
+                /* fix bootstrap 3 issue */
+                a[href]:after {
+                    content: none !important;
+                }
+            }
+        </style>
+        <script type="text/javascript" src="https://drivenxdesign.com/static/assets/dxd-components.js?cache=20200814_170320"></script><script type="text/javascript" src="https://drivenxdesign.com/static/assets/drivenxdesign-2.0.0.js?cache=20200927_162930"></script><link rel="stylesheet" type="text/css" href="https://drivenxdesign.com/static/assets/drivenxdesign-2.0.0.css?cache=20190328_001602" /><script type="text/javascript">var oHosts = {"d100": {"domain": "drivenxdesign.com"},"eo": {"domain": "www.eventoffice.com"}};</script><script src="https://npmcdn.com/angular-toastr/dist/angular-toastr.tpls.js"></script>
+        <script id="fr-fek">try{(function (k){localStorage.FEK=k;t=document.getElementById('fr-fek');t.parentNode.removeChild(t);})('shJ-7gyuE-13jwqfJ-7pvA2ytq==')}catch(e){}</script>
+        <link rel="stylesheet" href="https://npmcdn.com/angular-toastr/dist/angular-toastr.css" />
+        <script type="text/javascript" src="https://drivenxdesign.com/config/toastr/toastr.min.js?cache=20190328_010525"></script><script type="text/javascript" src="https://drivenxdesign.com/config/jquery-dropdown/jquery.dropdown.js?cache=20190328_010043"></script><link rel="stylesheet" type="text/css" href="https://drivenxdesign.com/config/jquery-dropdown/jquery.dropdown.min.css?cache=20190328_010032" /><script type="text/javascript" src="https://drivenxdesign.com/config/jqueryvalidation/jquery.validate.min.js?cache=20190328_005826"></script>
+            <script type="text/javascript">
+                $(function() {
+                    $(".clear-console-message").click(function(event) {
+                        var consoleMessageId = $(this).data('console-message-id');
+                        var eNotification = $(this).parents('.notification_panel');
+
+                        event.preventDefault();
+                        if (consoleMessageId) {
+                            $.post('https://drivenxdesign.com/portal/ajax_clear_console_message.asp',
+                            {
+                                consoleMessageId: consoleMessageId,
+                                rnd: encodeURI(Date())
+                            },
+                            function (data) {
+                                if (!data.error) {
+                                    eNotification.slideUp();
+                                } else {
+                                    if (data.message) {
+                                        alert(data.message);
+                                    }
+                                }
+                            }, "json");
+                        }
+                    });
+                });
+                //# sourceURL=clearConsoleMessages.js
+            </script>
+        <style type="text/css">
+            .notification_panel strong a {
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+        </style>
+        <link rel="stylesheet" type="text/css" href="https://drivenxdesign.com/config/anytime/anytimec.css?cache=20190328_010536" /><script type="text/javascript" src="https://drivenxdesign.com/config/anytime/anytimec.js?cache=20190328_010539"></script>
+            <script type="text/javascript">
+                $(function() {
+                    // NOTE!  You must set the Id attribute on every .timepicker INPUT to activate this widget
+                    $('.timepicker').AnyTime_picker({
+                        format: "%H:%i"
+                        //, placement: "inline"
+                    });
+                    // NOTE!  You must set the Id attribute on every .datepicker INPUT to activate this widget
+                    $('.datepicker').AnyTime_picker({format: "%e/%m/%Y"});;
+                });
+            </script>
+            <script type="text/javascript">var isDev = false;</script>
+<!-- se:popup:popupDialog_inc -->
+<script type="text/javascript">
+    // Modal Functions
+    // ---------------------
+    $.modalPopups = {
+        stack: Array({
+            zIndex: 1000,
+            id: 'body'
+        }),
+        types: Array(),
+        cancel: function(){
+            frmModal = $.modalPopups.stack.last();
+            if (frmModal.onCancel){
+                frmModal.onCancel();
+            }
+            frmModal.dialogResult = 'cancel';
+            
+            // close and handle response
+            this.processResponse();
+        },
+        submit: function(){
+            frmModal = this.stack.last();
+            if (!frmModal.onSubmit || frmModal.onSubmit()){// call popup's submit routines here.  eg. save something to database and set a return value
+                // the submit must return true to close the frmModal
+                frmModal.dialogResult = 'submit';
+                
+                // close and handle response
+                this.processResponse();
+            }
+        },
+        processResponse: function (){
+            frmModal = this.stack.pop();
+            $(frmModal.dialog).jqmHide();
+            $(frmModal.dialog).remove();
+            // todo: reinstate previous overlay here (if required)
+            
+            frmModal.processResponse && frmModal.processResponse(frmModal, frmModal.parent);
+            
+        }
+    };
+    $.modalPopups.stack = Array({
+        zIndex:1000,
+        id:'body'
+    });
+    
+    // implement a Array.last() function
+    Array.prototype.last = function(){
+        if (this.length == 0){
+            return undefined;
+        } else {
+            return this[this.length-1];
+        }
+    };
+
+    function showPopup(popupType, processResponse, requestData) {
+        if (popupType = $.modalPopups.types[popupType])
+        {
+            var lastModal, zIndex;
+            var frmModal = $.extend({}, popupType); // clone this object
+            if (lastModal = $.modalPopups.stack.last()) {
+                zIndex = 1000 + lastModal.zIndex;
+            } else {
+                zIndex = 1000;
+            }
+            var modalId = $.modalPopups.stack.length;
+            var dialog = $('<div class="jqmWindow"></div>');
+            
+            // todo: implement frmModal.width
+            // $(dialog).css('width',frmModal.width);
+            
+            // initalise options
+            frmModal.processResponse = processResponse;
+            frmModal.dialog = dialog;
+            $(frmModal.dialog).css('z-index',zIndex);
+            frmModal.zIndex = zIndex;
+            frmModal.modalId = modalId;
+            frmModal.dialogResult =  '';
+            frmModal.responseData = {};
+            if (requestData){
+                frmModal.requestData = requestData;
+            } else{
+                frmModal.requestData = {};
+            }
+            
+            frmModal.parent = lastModal;
+            $.modalPopups.stack.push(frmModal);
+            $('body').append(dialog);
+            
+            var urlAjax = '';
+            if (frmModal.ajax.length)
+            {
+                if (frmModal.ajax.indexOf('?')>=0) {
+                    urlAjax += frmModal.ajax + '&' + 'modalId=' + modalId;
+                } else {
+                    urlAjax += frmModal.ajax + '?' + 'modalId=' + modalId;
+                }
+                urlAjax += '&rand=' + String(Math.floor(Math.random()*10000000));
+            }
+            
+            // 'modalId=' + modalId
+            $(dialog).jqm({
+                overlay: 70,
+                modal: true,
+                ajax: urlAjax,
+                onLoad: function() {
+                    var frmModal = $.modalPopups.stack.last();
+                    $('#cancelModal' + frmModal.modalId).unbind('click');
+                    $('#cancelModal' + frmModal.modalId).click(function() {
+                        $.modalPopups.cancel();
+                        return false;
+                    });
+                    $('#submitModal' + frmModal.modalId).unbind('click');
+                    $('#submitModal' + frmModal.modalId).click(function() {
+                        $.modalPopups.submit();
+                        return false;
+                    });
+                    frmModal.onLoad();
+                },
+                zIndex: zIndex
+            });
+            $(dialog).jqmShow();
+        }
+    }
+    
+    
+</script>
+<script type="text/javascript" src="https://drivenxdesign.com/config/imagesLoaded/imagesloaded.pkgd.min.js?cache=20190328_010554"></script><script type="text/javascript" src="https://drivenxdesign.com/config/plupload-2.1.8/js/plupload.full.min.js?cache=20190328_005922"></script><script type="text/javascript" src="https://drivenxdesign.com/config/plupload-2.1.8/js/jquery.ui.plupload/jquery.ui.plupload.js?cache=20190328_005918"></script><link rel="stylesheet" type="text/css" href="https://drivenxdesign.com/config/plupload-2.1.8/js/jquery.ui.plupload/css/jquery.ui.plupload.css?cache=20190328_005917" /><script type="text/javascript" src="https://drivenxdesign.com/awards/js/uploader.js?cache=20190328_000810"></script><script type="text/javascript" src="https://drivenxdesign.com/config/autoGrowInput/autoGrowInput.js?cache=20190328_010553"></script><script type="text/javascript" src="https://drivenxdesign.com/awards/config/animatedcollapse.js?cache=20190328_001011"></script>
+            <script type="text/javascript">
+                /***********************************************
+                * Animated Collapsible DIV v2.0- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+                * This notice MUST stay intact for legal use
+                * Visit Dynamic Drive at http://www.dynamicdrive.com/ for this script and 100s more
+                **********************************************/
+                animatedcollapse.addDiv('newsletter', 'fade=0,speed=400,group=signup,hide=1');
+                animatedcollapse.addDiv('applications', 'fade=0,speed=400,group=signup,hide=1');
+                animatedcollapse.addDiv('login', 'fade=0,speed=400,group=signup,hide=1');
+                animatedcollapse.addDiv('login_console', 'fade=0,speed=400,group=signup4,hide=1');
+                animatedcollapse.addDiv('forgot_login', 'fade=0,speed=400,group=signup3,hide=1');
+                animatedcollapse.addDiv('forgotlogin', 'fade=0,speed=400,group=signup2,hide=1');
+                animatedcollapse.addDiv('facebook', 'fade=0,speed=400,group=signup,hide=1');
+                animatedcollapse.addDiv('voteregister', 'fade=0,speed=400,group=vote,hide=1');
+                animatedcollapse.addDiv('votesignup', 'fade=0,speed=400,group=vote,hide=1');
+                animatedcollapse.addDiv('nomination_more', 'fade=0,speed=400,group=nomination,hide=1');
+                animatedcollapse.init();
+            </script>
+            <script type="text/javascript" src="https://drivenxdesign.com/awards/config/jquery.hoverIntent.minified.js?cache=20190328_000837"></script><script type="text/javascript" src="https://drivenxdesign.com/awards/config/nivo/jquery.nivo.slider.pack.js?cache=20190328_000938"></script><link rel="stylesheet" type="text/css" href="https://drivenxdesign.com/awards/config/nivo/nivo-slider.css?cache=20190328_000936" /><link rel="stylesheet" type="text/css" href="https://drivenxdesign.com/awards/config/nivo.css?cache=20190328_001002" /><link rel="stylesheet" type="text/css" href="config/global_header_footer_201342ec.css?cache=20190328_022053" /><script type="text/javascript" src="config/global_top_togglecb11.js?cache=20190328_022042"></script><script type="text/javascript">var jslang = 'EN';</script><script type="text/javascript" src="https://drivenxdesign.com/awards/js/program.js?cache=20190328_000804"></script><script type="text/javascript" src="https://drivenxdesign.com/awards/plugins/menu/js/menu.js?cache=20190328_000626"></script><link rel="stylesheet" type="text/css" href="https://drivenxdesign.com/awards/config/d100_aws3.min.css?cache=20200616_163020" /><link rel="stylesheet" type="text/css" href="https://drivenxdesign.com/awards/config/community.css?cache=20190328_000934" />
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.3.7/slick.css"/>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.3.7/slick.min.js"></script>
+
+        
+            <script src='http://www.google.com/recaptcha/api.js'></script>
+        
+        <!-- Start Alexa Certify Javascript -->
+        <script type="text/javascript">
+        _atrk_opts = { atrk_acct:"Ipttn1QolK10mh", domain:"drivenxdesign.com",dynamic: true};
+        (function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
+        </script>
+        <noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=Ipttn1QolK10mh" style="display:none" height="1" width="1" alt="" /></noscript>
+        <!-- End Alexa Certify Javascript -->
+        
+        
+        <script>
+          window.fbAsyncInit = function() {
+            FB.init({
+              appId      : '1011099868985651',
+              xfbml      : true,
+              version    : 'v2.6'
+            });
+          };
+
+          (function(d, s, id){
+             var js, fjs = d.getElementsByTagName(s)[0];
+             if (d.getElementById(id)) {return;}
+             js = d.createElement(s); js.id = id;
+             js.src = "http://connect.facebook.net/en_US/sdk.js";
+             fjs.parentNode.insertBefore(js, fjs);
+           }(document, 'script', 'facebook-jssdk'));
+        </script>
+
+
+    </head>
+
+<body class="louie d100">
+    
+<div id="header">
+    <div id="header_content">
+        <div id="header_content_padding">
+            <div id="header_content_left">
+                <a href="http://drivenxdesign.com/">
+                    <img src="images/logo_global_top_lhs-18.png")" height="20" width="199" /></a>
+            </div>
+            <div id="header_content_right" ng-controller="GlobalHeaderController as vmHeader">
+                
+                    <span class="show-to-guest-user"><a href="https://drivenxdesign.com/portal/signin.asp">Sign in</a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <span class="show-to-active-user active-user-name "></span>
+                    <span class="show-to-active-user">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    
+                    <span class="show-to-active-user"><a href="https://drivenxdesign.com/portal/console.asp">Console</a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <span class="show-to-active-user"><a href="https://drivenxdesign.com/portal/entry.asp">Update Details</a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <span class="show-to-active-user"><a href="https://drivenxdesign.com/awards/logout_handler.asp">Sign Out</a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <span class=""><a href="faq.html" target="_blank">Support</a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <span class="show-to-guest-user"><a href="pageae3f.html?assetid=17734">Contact</a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                    <a href="programs.html" id="toggle1">Programs <i class="fa fa-angle-down"></i></a>
+                
+                <script type="text/javascript">
+                    var oCanonical = {};
+                    function setActiveUser(oGuest) {
+                        if (oGuest && oGuest.guest_id) {
+                            $('#header').addClass('active-user');
+                            $('.active-user-name').text(oGuest.firstname + ' ' + oGuest.surname);
+                            oCanonical = oGuest;
+                        } else {
+                            $('#header').removeClass('active-user');
+                        }
+                    }
+                    $(function() {
+                        setActiveUser(oCanonical);
+                    });
+                </script>
+                <style type="text/css">
+                </style>
+                <div id="programs_menu" class="toggle1" style="display: none; z-index: 1000000;">
+                    
+                       <p><a href="programs.html"><b>View all program dates and details</b></a></p>                       
+                        <p>
+                            
+                                <a href="https://drivenxdesign.com/MEL20/">MELBOURNE Design Awards 2020</a><br />
+                            
+                                <a href="https://drivenxdesign.com/HKG20/">HONG KONG Design Awards 2020</a><br />
+                            
+                                <a href="https://drivenxdesign.com/SHA20/">SHANGHAI Design Awards 2020</a><br />
+                            
+                                <a href="https://drivenxdesign.com/SYD20/">SYDNEY Design Awards 2020</a><br />
+                            
+                                <a href="https://drivenxdesign.com/NYC20/">NEW YORK Design Awards 2020</a><br />
+                            
+                                <a href="https://drivenxdesign.com/LON20/">LONDON Design Awards 2020</a><br />
+                            
+                                <a href="https://drivenxdesign.com/PAR21/">PARIS Design Awards 2021</a><br />
+                            
+                                <a href="https://drivenxdesign.com/BER21/">BERLIN Design Awards 2021</a><br />
+                            
+                                <a href="https://drivenxdesign.com/GOV21/">GOV Design Awards 2021</a><br />
+                            
+                                <a href="https://drivenxdesign.com/BNE21/">BRISBANE Design Awards 2021</a><br />
+                            
+                        </p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<header id="mobile-header">
+    <div class="header-content">
+    
+            <div class="d100-mob-logo">
+                <a href="https://drivenxdesign.com/d100"><img src="images/logo_global_top_lhs-18.png" /></a>
+            </div>
+        
+        <span id="mob-toggle" class="mob-toggle fa fa-bars"></span>
+            
+    </div>
+</header>
+
+        <nav id="mob-nav" class="mob-nav">
+            <ul>
+                <li>
+                    <div class="search-container">
+                        <form method="get" action="https://drivenxdesign.com/d100/search.asp" id="mob-search">
+                            <input type="text" name="S" />
+                            <i class="fa fa-search clickable" onclick="document.getElementById('mob-search').submit();"></i>
+                        </form>
+                    </div>
+                </li>
+                <li><h3>d100</h3></li>
+                <li><a href="programs.html">awards</a>
+                        <div class="dropdown-menu active">
+                            <ul>
+                                <li><a href="https://drivenxdesign.com/MEL20/">Melbourne Design Awards</a></li><li><a href="https://drivenxdesign.com/NYC20/">New York Design Awards</a></li><li><a href="https://drivenxdesign.com/SYD20/">Sydney Design Awards</a></li><li><a href="https://drivenxdesign.com/HKG20/">Hong Kong Design Awards</a></li><li><a href="https://drivenxdesign.com/ber21/">Berlin Design Awards</a></li><li><a href="https://drivenxdesign.com/LON20/">London Design Awards</a></li><li><a href="https://drivenxdesign.com/par21">Paris Design Awards</a></li><li><a href="https://drivenxdesign.com/gov20/">GOV Design Awards</a></li><li><a href="https://drivenxdesign.com/BNE20/">Brisbane Design Awards</a></li><li><a href="https://drivenxdesign.com/SHA20/">Shanghai Design Awards</a></li><li><a href="pagec1a0.html?assetid=28123">Award Partners - Nomination Packs</a></li>
+                            </ul>
+                        </div>                
+                    </li><li><a href="page9da3.html?assetid=17388">nominate</a>
+                        <div class="dropdown-menu active">
+                            <ul>
+                                <li><a href="news_details915c.html?assetid=50529">The Award Programs</a></li><li><a href="FAQ-2.html">Award FAQs</a></li><li><a href="pagea923.html?assetid=17113#!#design100">Terms and Conditions</a></li><li><a href="pagec1a0.html?assetid=28123">Nomination Packs</a></li>
+                            </ul>
+                        </div>                
+                    </li><li><a href="news.html">news</a>
+                        <div class="dropdown-menu active">
+                            <ul>
+                                <li><a href="https://drivenxdesign.com/NOW/Default.asp">NOW Design Spotlight</a></li><li><a href="newsbdcb.html?tag=BeyondCOVID">#BeyondCOVID</a></li><li><a href="news465a.html?tag=BetterFuture">Better Future Podcast</a></li><li><a href="news660e.html?tag=MFP">Made for People Podcast Series</a></li><li><a href="newsefe9.html?tag=Champion">Champions for a Better Future</a></li><li><a href="news_detailsb915.html?AssetId=56227">Use your win like a pro</a></li>
+                            </ul>
+                        </div>                
+                    </li><li><a href="projects.html">projects</a>
+                        <div class="dropdown-menu active">
+                            <ul>
+                                <li><a href="interviews.html">Project Stories / Films</a></li><li><a href="projects6041.html?d=digital">App / Digital / Tech</a></li><li><a href="projects8930.html?d=Architecture">Architecture</a></li><li><a href="projects5fd4.html?d=product%20design">Product Design</a></li><li><a href="projects855c.html?d=interior%20design">Interior Design</a></li><li><a href="projects5c59.html?d=graphic%20design">Graphic Design</a></li><li><a href="projects4764.html?d=service%20design">Service Design</a></li><li><a href="projects2ba4.html?d=Urban%20Design">Urban Planning</a></li><li><a href="projectsf125.html?d=Landscape%20Design">Landscape Design</a></li><li><a href="projects7ca3.html?d=Lighting%20Design">Lighting Design</a></li><li><a href="projects6bba.html?d=wayfinding">Wayfinding</a></li><li><a href="projects57c9.html?d=Event%20Experience">Event Experience</a></li><li><a href="projects5ddb.html?d=advertising">Advertising</a></li><li><a href="projectsb6c2.html?d=Film,%20Video,%20Viral">Film, Video & Viral</a></li><li><a href="projects3df3.html?d=textile">Textile & Surface Design</a></li>
+                            </ul>
+                        </div>                
+                    </li><li><a href="https://drivenxdesign.com/shop">shop now</a></li><li><a href="pagea7b8.html?assetid=17567">about</a>
+                        <div class="dropdown-menu active">
+                            <ul>
+                                <li><a href="pagea7b8.html?assetid=17567">About DRIVEN x DESIGN</a></li><li><a href="advisorypanel.html">Panel Members</a></li><li><a href="page0212.html?assetid=27846">Join the  Panel</a></li><li><a href="pagec818.html?assetid=17387">Media Page</a></li>
+                            </ul>
+                        </div>                
+                    </li>
+                <li><h3>User</h3></li>
+                
+                    <li>
+                        <a href="https://drivenxdesign.com/portal/signin.asp">Sign in/Join</a>
+                        <div class="dropdown-menu active">
+                            <ul>
+                                <li><a href="pageae3f.html?assetid=17734">Contact Us</a></li>
+                                <li><a href="faq.html" target="_blank">Support</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                
+
+                <li><h3>Change Program</h3></li>
+                <li>
+                    <div class="dropdown-menu active">
+                        <ul>
+                            
+                                <li><a href="https://drivenxdesign.com/MEL20/">MEL20</a></li>
+                            
+                                <li><a href="https://drivenxdesign.com/HKG20/">HKG20</a></li>
+                            
+                                <li><a href="https://drivenxdesign.com/SHA20/">SHA20</a></li>
+                            
+                                <li><a href="https://drivenxdesign.com/SYD20/">SYD20</a></li>
+                            
+                                <li><a href="https://drivenxdesign.com/NYC20/">NYC20</a></li>
+                            
+                                <li><a href="https://drivenxdesign.com/LON20/">LON20</a></li>
+                            
+                                <li><a href="https://drivenxdesign.com/PAR21/">PAR21</a></li>
+                            
+                                <li><a href="https://drivenxdesign.com/BER21/">BER21</a></li>
+                            
+                                <li><a href="https://drivenxdesign.com/GOV21/">GOV21</a></li>
+                            
+                                <li><a href="https://drivenxdesign.com/BNE21/">BNE21</a></li>
+                            
+                        </ul>
+                    </div>
+                </li>
+
+            </ul>
+        </nav>
+        
+    <div id="outer">
+        <div id="container">
+            
+             <div id="masthead" class="clearfix">
+                    <div style="float: left;">
+                        <a href="default-2.html"><br /><img src="images/DrivenxDesign-identity.png" border="0" / height="150"><br /><br /></a>
+                    </div>                    
+                    <div class="end"></div>
+                </div>
+                <div id="navigation">
+    <div id="navigation_left">
+        <div id="main_menu">
+            <ul id="topnav">
+                <li><a href="programs.html">awards</a>
+                    <div class="sub">
+                        <div class="row">
+                            <ul>
+                                <li><a href="https://drivenxdesign.com/MEL20/">Melbourne Design Awards</a></li><li><a href="https://drivenxdesign.com/NYC20/">New York Design Awards</a></li><li><a href="https://drivenxdesign.com/SYD20/">Sydney Design Awards</a></li><li><a href="https://drivenxdesign.com/HKG20/">Hong Kong Design Awards</a></li><li><a href="https://drivenxdesign.com/ber21/">Berlin Design Awards</a></li><li><a href="https://drivenxdesign.com/LON20/">London Design Awards</a></li><li><a href="https://drivenxdesign.com/par21">Paris Design Awards</a></li><li><a href="https://drivenxdesign.com/gov20/">GOV Design Awards</a></li><li><a href="https://drivenxdesign.com/BNE20/">Brisbane Design Awards</a></li><li><a href="https://drivenxdesign.com/SHA20/">Shanghai Design Awards</a></li><li><a href="pagec1a0.html?assetid=28123">Award Partners - Nomination Packs</a></li>
+                            </ul>
+                        </div>
+                    </div>                
+                    </li><li><a href="page9da3.html?assetid=17388">nominate</a>
+                    <div class="sub">
+                        <div class="row">
+                            <ul>
+                                <li><a href="news_details915c.html?assetid=50529">The Award Programs</a></li><li><a href="FAQ-2.html">Award FAQs</a></li><li><a href="pagea923.html?assetid=17113#!#design100">Terms and Conditions</a></li><li><a href="pagec1a0.html?assetid=28123">Nomination Packs</a></li>
+                            </ul>
+                        </div>
+                    </div>                
+                    </li><li><a href="news.html">news</a>
+                    <div class="sub">
+                        <div class="row">
+                            <ul>
+                                <li><a href="https://drivenxdesign.com/NOW/Default.asp">NOW Design Spotlight</a></li><li><a href="newsbdcb.html?tag=BeyondCOVID">#BeyondCOVID</a></li><li><a href="news465a.html?tag=BetterFuture">Better Future Podcast</a></li><li><a href="news660e.html?tag=MFP">Made for People Podcast Series</a></li><li><a href="newsefe9.html?tag=Champion">Champions for a Better Future</a></li><li><a href="news_detailsb915.html?AssetId=56227">Use your win like a pro</a></li>
+                            </ul>
+                        </div>
+                    </div>                
+                    </li><li><a href="projects.html">projects</a>
+                    <div class="sub">
+                        <div class="row">
+                            <ul>
+                                <li><a href="interviews.html">Project Stories / Films</a></li><li><a href="projects6041.html?d=digital">App / Digital / Tech</a></li><li><a href="projects8930.html?d=Architecture">Architecture</a></li><li><a href="projects5fd4.html?d=product%20design">Product Design</a></li><li><a href="projects855c.html?d=interior%20design">Interior Design</a></li><li><a href="projects5c59.html?d=graphic%20design">Graphic Design</a></li><li><a href="projects4764.html?d=service%20design">Service Design</a></li><li><a href="projects2ba4.html?d=Urban%20Design">Urban Planning</a></li><li><a href="projectsf125.html?d=Landscape%20Design">Landscape Design</a></li><li><a href="projects7ca3.html?d=Lighting%20Design">Lighting Design</a></li><li><a href="projects6bba.html?d=wayfinding">Wayfinding</a></li><li><a href="projects57c9.html?d=Event%20Experience">Event Experience</a></li><li><a href="projects5ddb.html?d=advertising">Advertising</a></li><li><a href="projectsb6c2.html?d=Film,%20Video,%20Viral">Film, Video & Viral</a></li><li><a href="projects3df3.html?d=textile">Textile & Surface Design</a></li>
+                            </ul>
+                        </div>
+                    </div>                
+                    </li><li><a href="https://drivenxdesign.com/shop">shop now</a></li><li><a href="pagea7b8.html?assetid=17567">about</a>
+                    <div class="sub">
+                        <div class="row">
+                            <ul>
+                                <li><a href="pagea7b8.html?assetid=17567">About DRIVEN x DESIGN</a></li><li><a href="advisorypanel.html">Panel Members</a></li><li><a href="page0212.html?assetid=27846">Join the  Panel</a></li><li><a href="pagec818.html?assetid=17387">Media Page</a></li>
+                            </ul>
+                        </div>
+                    </div>                
+                    </li>
+            </ul>
+        </div>
+        <div id="navigation_shadow">
+            <div id="navigation_shadow_rhs">
+            </div>
+        </div>
+    </div>
+    <div id="navigation_right">
+        <form method="get" action="https://drivenxdesign.com/d100/search.asp"><input type="text" name="S" /></form><a href="#" class="toggle-search"><i class="fa fa-search" style="font-size: 1.5em;"></i></a><a class="social-anchor" href="https://instagram.com/drivenxdesign" target="_blank"><i class="fa fa-instagram fa-2x"></i></a><a class="social-anchor" href="https://fb.me/drivenxdesign" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a><a class="social-anchor" href="https://www.linkedin.com/groups/5141166" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a><a class="social-anchor" href="https://twitter.com/drivenxdesign" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
+    </div>
+    <div class="end"></div>
+</div>
+<script type="text/javascript">var oContributor = {"fullname": "Nick Esser","bio": "","bio_url": null,"guest_id": 360559,"event_id": 3543,"entrydate": "20\u002F07\u002F2016 11:29:00 AM","title": null,"firstname": "Nick","surname": "Esser","gender": null,"age": null,"dob": null,"role": "Admin","position": "","facility": null,"organisation": "Design100","address1": null,"address2": null,"city": null,"state": null,"pcode": null,"country": null,"phone": null,"fax": null,"mobile": null,"email": "nick@design100.com","access": null,"diet": null,"note": "","guests": 1,"custom1": "","custom2": null,"custom3": null,"custom4": null,"custom5": null,"custom6": null,"custom7": null,"custom8": null,"custom9": null,"custom10": "","custom11": "","custom12": "","custom13": "","custom14": "","custom15": "","custom16": "","custom17": null,"custom18": "Yes","custom19": "signup","custom20": null,"custom21": null,"custom22": null,"custom23": null,"custom24": null,"custom25": null,"custom26": null,"custom27": null,"custom28": null,"custom29": null,"custom30": null,"custom31": null,"custom32": null,"custom33": null,"custom34": null,"custom35": null,"custom36": null,"custom37": null,"custom38": null,"custom39": null,"custom40": null,"custom41": null,"custom42": null,"custom43": null,"custom44": null,"custom45": null,"custom46": null,"custom47": null,"custom48": null,"custom49": null,"custom50": null,"custom51": null,"custom52": null,"custom53": null,"custom54": null,"custom55": null,"custom56": null,"custom57": null,"custom58": null,"custom59": null,"custom60": null,"custom61": null,"custom62": null,"custom63": null,"custom64": null,"custom65": null,"custom66": null,"custom67": null,"custom68": null,"custom69": null,"custom70": null,"custom71": null,"custom72": null,"custom73": null,"custom74": null,"custom75": null,"custom76": null,"custom77": null,"custom78": null,"custom79": null,"custom80": null,"custom81": null,"custom82": null,"custom83": null,"custom84": null,"custom85": null,"custom86": null,"custom87": null,"custom88": null,"custom89": null,"custom90": null,"custom91": null,"custom92": null,"custom93": null,"custom94": null,"custom95": null,"custom96": null,"custom97": null,"custom98": null,"custom99": null,"custom100": null,"guestgroup": "360559","gueststhisgroup": null,"formtype": null,"status": null,"payment": null,"amount": null,"gst": null,"receipt": null,"paymethod": null,"cardnumref": null,"editdate": null,"cardstring": null,"deleteref": null,"tickets": null,"ipaddress": null,"reconciled": null,"custref": null,"utm_source": null,"utm_medium": null,"utm_campaign": null,"utm_term": null,"utm_content": null,"checkin": null,"pdpoints": null,"account_id": null,"pdtext": null,"pdexpiry": null,"external_ref": null,"account_confirm_date": null,"replacement_guest_id": null,"import_guest_id": null,"future_guest_id": null,"blob1": null,"agent_principal_id": null};</script><script type="text/javascript">var oPanelPrograms = {};</script>
+<div id="contentleft" class="clearfix community" ng-cloak ng-controller="CommunityOptionsController as vm"> 
+    <script type="text/javascript">var searchOptions = {"comm_id": 360559,"showFeatures": 1,"showNews": 1,"showProjects": 1,"iFeaturesCount": 23,"iNewsCount": 568,"iProjectsCount": 23};</script>
+    <div class="community-bio">
+        
+        <h1>
+        <span>Nick Esser </span><br>
+        <span>Design100 </span>
+    </h1>
+        <br /><br />
+
+        <ul class="social-links"></ul>
+
+    </div>
+    <div class="community-groups">
+        
+    </div>
+        <div class="search-options h2">
+        
+        <span class="clickable text-nowrap" ng-click="vm.toggleFeatures()">
+            <i class="fa" ng-class="{'fa-check-square-o': vm.searchOptions.showFeatures, 'fa-square-o': !vm.searchOptions.showFeatures}"></i>
+            Features [{{vm.searchOptions.iFeaturesCount}}]
+            &nbsp;
+        </span>
+            
+        <span class="clickable text-nowrap" ng-click="vm.toggleNews()">
+            <i class="fa" ng-class="{'fa-check-square-o': vm.searchOptions.showNews, 'fa-square-o': !vm.searchOptions.showNews}"></i>
+            News [{{vm.searchOptions.iNewsCount}}]
+            &nbsp;
+        </span>
+       
+        <span class="clickable text-nowrap" ng-click="vm.toggleProjects()">
+            <i class="fa" ng-class="{'fa-check-square-o': vm.searchOptions.showProjects, 'fa-square-o': !vm.searchOptions.showProjects}"></i>
+            Projects
+                [{{vm.searchOptions.iProjectsCount}}]
+        </span>
+    </div>
+    <script type="text/javascript">var account_ref = "d100";</script><script type="text/javascript">var oStackItems = [{"guid": "7117BBEF-C7E4-43C1-B1A0-3DE1FEA37B62","type": "project-list-item","sort1": "12\u002F07\u002F2018 3:26:00 AM"},{"guid": "6AF5BC6A-C3F6-4320-9876-E077ABD66D7D","type": "news-list-item","sort1": "22\u002F03\u002F2018"},{"type": "content-block-four-unit","guid": "C230D8AE-FB30-4B16-A71B-07D3BEF4B402","isMdOnly": true,"data": {"ads": [{"console_message_id": 221,"guid": "390992D5-51FA-4D4E-B520-7DAF98C46824","units": 2,"app_code": "BNE,BRL,GOV,HKG,LON,MEL,NOW,NYC,PAR,SHA,SYD,d100","type": "adunit","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1e3o7bmhb1lcj1i6o8rfd19pq87.png","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fnews_details.asp?AssetId=73493","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "990","sort3": 95151},{"console_message_id": 207,"guid": "A37C272A-9A2D-435F-ACD4-DC2C7D7C8612","units": 1,"app_code": "DxD,GOV,MEL,SYD,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1ci3tafe5t9q1tmqmp01ikfj7r7.jpg","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=transpire","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "960","sort3": 23163},{"console_message_id": 208,"guid": "64B96242-1249-4441-A375-51F70D359A9D","units": 1,"app_code": "DxD,GOV,MEL,SYD,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1daqri5g6h58p0q1t1ffnn1r607.png","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=luminary","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "960","sort3": 173992}]}},{"type": "content-block-two-unit","guid": "2F2B8FC8-21F7-4B62-9597-68149D9E767D","isSmOnly": true,"data": {"ads": [{"console_message_id": 221,"guid": "390992D5-51FA-4D4E-B520-7DAF98C46824","units": 2,"app_code": "BNE,BRL,GOV,HKG,LON,MEL,NOW,NYC,PAR,SHA,SYD,d100","type": "adunit","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1e3o7bmhb1lcj1i6o8rfd19pq87.png","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fnews_details.asp?AssetId=73493","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "990","sort3": 95151}]}},{"guid": "9C527AC2-1C96-4551-8005-DA83F1F1A635","type": "project-list-item","sort1": "9\u002F03\u002F2018 3:56:00 AM"},{"guid": "4AE418A7-2B2D-4DC4-98D8-7494FA4E33CA","type": "project-list-item","sort1": "9\u002F03\u002F2018 3:27:00 AM"},{"type": "content-block-four-unit","guid": "EFA28046-FC8F-4870-BE97-F4B23EF4BEE5","isMdOnly": true,"data": {"ads": [{"console_message_id": 184,"guid": "D0AEC833-9333-4BBE-9118-5BA20B6A9F88","units": 1,"app_code": "DxD,HKG,LON,MEL,NYC,NOW,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1ddhqo32i1hrg7mn8nlfa5nk87.jpg","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=a%2B%20design%20group&showFeatures=0&showNews=0","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "960","sort3": 287765},{"console_message_id": 188,"guid": "1CA9C2B4-5508-41B2-96BE-D322F9321074","units": 1,"app_code": "DxD,GOV,HKG,MEL,NOW,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1c8jdoifa1pgo1ej2hidne10c7.jpg","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=k20%20Architecture&showFeatures=0&showNews=0","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "950","sort3": 28198},{"console_message_id": 190,"guid": "F1AAF46F-234F-42B0-AD7A-0D2FA97B17C2","units": 1,"app_code": "DxD,BRL,GOV,HKG,LON,MEL,NYC,NOW,CHI,SFO,TECH,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1c8jepu8p1hplec11fpb1krgf387.jpg","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=adidas&showFeatures=0&showNews=0","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "950","sort3": 154791},{"console_message_id": 196,"guid": "68D7CEF1-D259-45A4-9FB3-34153FA334A7","units": 1,"app_code": "DxD,BRL,GOV,HKG,LON,MEL,NOW,NYC,CHI,SFO,TECH,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1c8jguh0716rp1ghts8hfti3h7.gif","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=charlwood&showFeatures=0&showNews=0","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "950","sort3": 155870}]}},{"type": "content-block-two-unit","guid": "71CFE845-E49A-451D-A5F8-C2B0CCC05973","isSmOnly": true,"data": {"ads": [{"console_message_id": 207,"guid": "A37C272A-9A2D-435F-ACD4-DC2C7D7C8612","units": 1,"app_code": "DxD,GOV,MEL,SYD,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1ci3tafe5t9q1tmqmp01ikfj7r7.jpg","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=transpire","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "960","sort3": 23163},{"console_message_id": 208,"guid": "64B96242-1249-4441-A375-51F70D359A9D","units": 1,"app_code": "DxD,GOV,MEL,SYD,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1daqri5g6h58p0q1t1ffnn1r607.png","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=luminary","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "960","sort3": 173992}]}},{"guid": "E28710D5-4185-4E15-B2D6-46B08A449225","type": "news-list-item","sort1": "1\u002F03\u002F2018"},{"guid": "9965FF2B-4A7C-4272-AC14-12EDDE48D200","type": "news-list-item","sort1": "28\u002F02\u002F2018 6:01:00 AM"},{"guid": "99657642-6A3E-4D79-BE7F-962E287A5210","type": "news-list-item","sort1": "28\u002F02\u002F2018 12:33:00 AM"},{"guid": "60C5F92F-8DA9-48CD-86ED-7F1630DCBD03","type": "news-list-item","sort1": "26\u002F02\u002F2018"},{"type": "content-block-four-unit","guid": "DBAB8973-1937-43C0-89CC-561DD402E611","isMdOnly": true,"data": {"ads": [{"console_message_id": 204,"guid": "A730BAE6-E20B-410A-8D1B-20D67194E201","units": 1,"app_code": "DxD,BRL,GOV,HKG,LON,MEL,NOW,NYC,CHI,SFO,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1cf6oles6fd51uv21bgg1n1j112j7.jpeg","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=payce","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "950","sort3": 175831},{"console_message_id": 197,"guid": "56202B69-FC0A-4C30-A663-FA074306085B","units": 1,"app_code": "DxD,BRL,GOV,HKG,LON,MEL,NYC,NOW,CHI,SFO,TECH,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1c8jh3058e221qm41u7t1v4g1leo7.jpeg","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=azbcreative&showFeatures=0&showNews=0","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "950","sort3": 187967},{"console_message_id": 198,"guid": "B70EFFBE-05DF-4BFF-BEAF-5B0C283035CE","units": 1,"app_code": "DxD,BRL,GOV,HKG,LON,MEL,NYC,PAR,SHA,NOW,CHI,SFO,TECH,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1c8jh5mbfbnbd8p1f7b1vlj1k257.jpg","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=biasol&showFeatures=0&showNews=0","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "950","sort3": 188008},{"console_message_id": 195,"guid": "C0D5884F-7913-4F13-BE57-7E429A76C78D","units": 1,"app_code": "DxD,BRL,GOV,HKG,LON,MEL,NYC,NOW,CHI,SFO,TECH,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1c8jgn7gfjq63891nls18f31tqa7.jpg","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=microsoft&showFeatures=0&showNews=0","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "950","sort3": 201645}]}},{"type": "content-block-two-unit","guid": "F6E9286B-B4D0-4EC3-A287-3114FA7E438D","isSmOnly": true,"data": {"ads": [{"console_message_id": 184,"guid": "D0AEC833-9333-4BBE-9118-5BA20B6A9F88","units": 1,"app_code": "DxD,HKG,LON,MEL,NYC,NOW,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1ddhqo32i1hrg7mn8nlfa5nk87.jpg","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=a%2B%20design%20group&showFeatures=0&showNews=0","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "960","sort3": 287765},{"console_message_id": 188,"guid": "1CA9C2B4-5508-41B2-96BE-D322F9321074","units": 1,"app_code": "DxD,GOV,HKG,MEL,NOW,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1c8jdoifa1pgo1ej2hidne10c7.jpg","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=k20%20Architecture&showFeatures=0&showNews=0","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "950","sort3": 28198}]}},{"guid": "D725A049-0D5B-467E-ABA1-25F22F279A34","type": "news-list-item","sort1": "20\u002F12\u002F2017"},{"guid": "5975F294-4585-4732-9264-484EE93F9BFB","type": "news-list-item","sort1": "20\u002F12\u002F2017"},{"guid": "7E3B4A32-A496-46BB-83E4-BA36FDC92328","type": "news-list-item","sort1": "19\u002F12\u002F2017"},{"guid": "80A1CE2B-76CD-4F43-9804-1D276A60B317","type": "news-list-item","sort1": "19\u002F12\u002F2017"},{"type": "content-block-four-unit","guid": "05E87AAC-BB2F-4E05-85DB-5D19DE71C5F6","isMdOnly": true,"data": {"ads": [{"console_message_id": 181,"guid": "5DEA3FD6-4133-442B-A7FF-38152DD3730B","units": 1,"app_code": "DxD,BRL,GOV,HKG,LON,MEL,NYC,NOW,CHI,SFO,TECH,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1c8jbcevhickj87e39c2efji7.png","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=Foster%20%2B%20Partners&showFeatures=0&showNews=0","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "950","sort3": 201645},{"console_message_id": 182,"guid": "75F71ADF-0395-41DB-A392-7FB25F6843EC","units": 1,"app_code": "DxD,BRL,GOV,HKG,LON,MEL,NYC,NOW,CHI,SFO,TECH,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1c8jbkb5as7r60816set7a1qes7.png","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=Skidmore%2C%20Owings%20%26%20Merrill%20LLP&showFeatures=0&showNews=0","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "950","sort3": 201646},{"console_message_id": 191,"guid": "E4D07C6D-95C2-46AC-8DAC-7CB89DCABB28","units": 1,"app_code": "DxD,BRL,GOV,HKG,LON,MEL,NYC,NOW,CHI,SFO,TECH,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1c8jettajnjf1lmbh651g6pndk7.jpg","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=Transport%20for%20London&showFeatures=0&showNews=0","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "950","sort3": 201646},{"console_message_id": 192,"guid": "AB8EF059-CBEF-4E3B-B9A7-DE4640956977","units": 1,"app_code": "DxD,BRL,GOV,HKG,LON,MEL,NYC,NOW,CHI,SFO,TECH,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1c8jf1it5arf1goo9p31hfr1ik57.jpg","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=Gensler&showFeatures=0&showNews=0","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "950","sort3": 201646}]}},{"type": "content-block-two-unit","guid": "0F36680D-2631-4CF5-A18C-890CDA82679F","isSmOnly": true,"data": {"ads": [{"console_message_id": 190,"guid": "F1AAF46F-234F-42B0-AD7A-0D2FA97B17C2","units": 1,"app_code": "DxD,BRL,GOV,HKG,LON,MEL,NYC,NOW,CHI,SFO,TECH,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1c8jepu8p1hplec11fpb1krgf387.jpg","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=adidas&showFeatures=0&showNews=0","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "950","sort3": 154791},{"console_message_id": 196,"guid": "68D7CEF1-D259-45A4-9FB3-34153FA334A7","units": 1,"app_code": "DxD,BRL,GOV,HKG,LON,MEL,NOW,NYC,CHI,SFO,TECH,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1c8jguh0716rp1ghts8hfti3h7.gif","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=charlwood&showFeatures=0&showNews=0","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "950","sort3": 155870}]}},{"guid": "41D75817-039A-4A70-ACDD-C221B238A2D7","type": "news-list-item","sort1": "19\u002F12\u002F2017"},{"guid": "F0F851D6-486C-4770-9F3D-D05342E9880F","type": "news-list-item","sort1": "18\u002F12\u002F2017"},{"guid": "FE2BCB6C-7E5A-48EE-847E-9AF6A2EA3B60","type": "news-list-item","sort1": "18\u002F12\u002F2017"},{"guid": "32A3C294-6D2E-4A32-84B4-EEF098A22959","type": "news-list-item","sort1": "18\u002F12\u002F2017"},{"type": "content-block-two-unit","guid": "B3AA9747-7DDF-4EE7-97C7-E85C74838B0A","isSmOnly": true,"data": {"ads": [{"console_message_id": 204,"guid": "A730BAE6-E20B-410A-8D1B-20D67194E201","units": 1,"app_code": "DxD,BRL,GOV,HKG,LON,MEL,NOW,NYC,CHI,SFO,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1cf6oles6fd51uv21bgg1n1j112j7.jpeg","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=payce","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "950","sort3": 175831},{"console_message_id": 197,"guid": "56202B69-FC0A-4C30-A663-FA074306085B","units": 1,"app_code": "DxD,BRL,GOV,HKG,LON,MEL,NYC,NOW,CHI,SFO,TECH,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1c8jh3058e221qm41u7t1v4g1leo7.jpeg","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=azbcreative&showFeatures=0&showNews=0","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "950","sort3": 187967}]}},{"guid": "6A79BEFF-82AA-44CA-A80F-990BBD1DB269","type": "news-list-item","sort1": "15\u002F12\u002F2017"},{"guid": "949B5F22-7E51-49B8-BCC3-7DBCB443F526","type": "news-list-item","sort1": "14\u002F12\u002F2017"},{"guid": "C23B6F90-5CAB-4873-B16B-096B7A58764B","type": "news-list-item","sort1": "14\u002F12\u002F2017"},{"guid": "D3509065-6829-4471-A55F-A9C63BBE1FD5","type": "news-list-item","sort1": "13\u002F12\u002F2017"},{"type": "content-block-two-unit","guid": "D0551A34-B242-499D-824D-9625F6886060","isSmOnly": true,"data": {"ads": [{"console_message_id": 198,"guid": "B70EFFBE-05DF-4BFF-BEAF-5B0C283035CE","units": 1,"app_code": "DxD,BRL,GOV,HKG,LON,MEL,NYC,PAR,SHA,NOW,CHI,SFO,TECH,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1c8jh5mbfbnbd8p1f7b1vlj1k257.jpg","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=biasol&showFeatures=0&showNews=0","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "950","sort3": 188008},{"console_message_id": 195,"guid": "C0D5884F-7913-4F13-BE57-7E429A76C78D","units": 1,"app_code": "DxD,BRL,GOV,HKG,LON,MEL,NYC,NOW,CHI,SFO,TECH,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1c8jgn7gfjq63891nls18f31tqa7.jpg","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=microsoft&showFeatures=0&showNews=0","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "950","sort3": 201645}]}},{"guid": "50B1F1B1-DA80-45C0-BC54-81418FD049E8","type": "news-list-item","sort1": "13\u002F12\u002F2017"},{"guid": "088B2DED-A436-427D-94A2-2EE307F273F5","type": "news-list-item","sort1": "12\u002F12\u002F2017"},{"guid": "78CE877F-B352-4D42-85DD-2F69A238322B","type": "news-list-item","sort1": "11\u002F12\u002F2017"},{"guid": "A021B02E-61CF-48D6-A1DC-C4318FEB421B","type": "news-list-item","sort1": "11\u002F12\u002F2017"},{"type": "content-block-two-unit","guid": "E23CBFEF-E0DF-44A9-8EFA-D0E4FD5416EF","isSmOnly": true,"data": {"ads": [{"console_message_id": 181,"guid": "5DEA3FD6-4133-442B-A7FF-38152DD3730B","units": 1,"app_code": "DxD,BRL,GOV,HKG,LON,MEL,NYC,NOW,CHI,SFO,TECH,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1c8jbcevhickj87e39c2efji7.png","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=Foster%20%2B%20Partners&showFeatures=0&showNews=0","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "950","sort3": 201645},{"console_message_id": 182,"guid": "75F71ADF-0395-41DB-A392-7FB25F6843EC","units": 1,"app_code": "DxD,BRL,GOV,HKG,LON,MEL,NYC,NOW,CHI,SFO,TECH,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1c8jbkb5as7r60816set7a1qes7.png","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=Skidmore%2C%20Owings%20%26%20Merrill%20LLP&showFeatures=0&showNews=0","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "950","sort3": 201646}]}},{"guid": "B051120D-FF92-409D-BB75-54EAC33D888D","type": "news-list-item","sort1": "11\u002F12\u002F2017"},{"guid": "3EC138D6-CCCA-4D30-B541-74BB1DB4C2E8","type": "news-list-item","sort1": "8\u002F12\u002F2017"},{"guid": "370E9F0B-A29A-4F66-B95A-CFC1373A62AC","type": "news-list-item","sort1": "8\u002F12\u002F2017"},{"guid": "3E562F90-0A2A-463F-8375-D19000CCDAB9","type": "news-list-item","sort1": "8\u002F12\u002F2017"},{"type": "content-block-two-unit","guid": "A1D2C789-6FA6-4ACE-AC1E-FF9F44CCCE39","isSmOnly": true,"data": {"ads": [{"console_message_id": 191,"guid": "E4D07C6D-95C2-46AC-8DAC-7CB89DCABB28","units": 1,"app_code": "DxD,BRL,GOV,HKG,LON,MEL,NYC,NOW,CHI,SFO,TECH,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1c8jettajnjf1lmbh651g6pndk7.jpg","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=Transport%20for%20London&showFeatures=0&showNews=0","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "950","sort3": 201646},{"console_message_id": 192,"guid": "AB8EF059-CBEF-4E3B-B9A7-DE4640956977","units": 1,"app_code": "DxD,BRL,GOV,HKG,LON,MEL,NYC,NOW,CHI,SFO,TECH,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1c8jf1it5arf1goo9p31hfr1ik57.jpg","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=Gensler&showFeatures=0&showNews=0","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "950","sort3": 201646}]}},{"guid": "F3166311-EE48-43ED-8391-7D874A7DF0D1","type": "news-list-item","sort1": "7\u002F12\u002F2017"},{"guid": "1444F897-900D-4A34-A3D7-CEDBAB2AA153","type": "news-list-item","sort1": "7\u002F12\u002F2017"},{"guid": "7B5CEA2C-CCC8-467F-B503-DF04AC4652A4","type": "news-list-item","sort1": "6\u002F12\u002F2017"},{"guid": "EA10114C-1095-442F-9AFC-3802BDC892CE","type": "news-list-item","sort1": "6\u002F12\u002F2017"},{"guid": "3F547F7F-77F8-432A-99E4-EB128D3086B6","type": "news-list-item","sort1": "6\u002F12\u002F2017"},{"guid": "EDC03245-1AC1-4D90-B8FD-8B1141B13208","type": "news-list-item","sort1": "5\u002F12\u002F2017"},{"guid": "7109609B-E266-4432-B281-B98F1AAABB55","type": "news-list-item","sort1": "5\u002F12\u002F2017"},{"guid": "D6E96685-C6A6-499A-9A2B-D0397EBEA66B","type": "news-list-item","sort1": "4\u002F12\u002F2017"},{"guid": "FBCAC951-E1E1-47D9-943F-D25D47A19DD7","type": "news-list-item","sort1": "4\u002F12\u002F2017"},{"guid": "75D5C46D-7E79-4D8A-9266-7243BC4AAB7A","type": "news-list-item","sort1": "4\u002F12\u002F2017"},{"guid": "D3E9454F-D716-4BBC-97C2-B4434780DEFD","type": "news-list-item","sort1": "1\u002F12\u002F2017"},{"guid": "DC300B77-5958-4BDD-9133-15114386EC5E","type": "news-list-item","sort1": "1\u002F12\u002F2017"},{"guid": "C9357D15-7153-4DC3-9F25-386E72CD7997","type": "news-list-item","sort1": "1\u002F12\u002F2017"},{"guid": "18F3C6B3-E3B7-4ADD-BDFF-90CABD88331B","type": "news-list-item","sort1": "30\u002F11\u002F2017"},{"guid": "20748FFB-944F-4826-836F-9B6EC94C9F45","type": "news-list-item","sort1": "30\u002F11\u002F2017"},{"guid": "AEADA2E0-89C5-464F-8E74-0C2DF8DAEB72","type": "news-list-item","sort1": "29\u002F11\u002F2017"},{"guid": "3B97B30A-3D30-447A-B7F3-8A331D93F70C","type": "news-list-item","sort1": "29\u002F11\u002F2017"},{"guid": "0203CF44-0002-4048-97AF-04CFB7DD02F6","type": "news-list-item","sort1": "29\u002F11\u002F2017"},{"guid": "9C3454C0-24B1-4F6C-B2D2-6B3B3CA792BD","type": "news-list-item","sort1": "28\u002F11\u002F2017"},{"guid": "E9979091-8C4E-40A3-A5E7-BCD0935E8AF2","type": "news-list-item","sort1": "27\u002F11\u002F2017"},{"guid": "455547C9-B7D1-4731-91C5-D7E7F1474D3D","type": "news-list-item","sort1": "27\u002F11\u002F2017"},{"guid": "2F5E7C87-93D3-420F-8E07-6E78450C2B92","type": "news-list-item","sort1": "27\u002F11\u002F2017"},{"guid": "87C295F7-63B1-4074-B8EA-F469CF67C135","type": "news-list-item","sort1": "24\u002F11\u002F2017"},{"guid": "EF679EFF-8951-4AD8-B4F8-239F14C02A68","type": "news-list-item","sort1": "24\u002F11\u002F2017"},{"guid": "082890FB-B31D-4A15-8DE7-3EFEE1BCBE66","type": "news-list-item","sort1": "23\u002F11\u002F2017"},{"guid": "0AE24238-8BD6-440B-82DA-EE6E5384A186","type": "news-list-item","sort1": "23\u002F11\u002F2017"},{"guid": "770E5A7A-F291-4753-A411-504E1735B353","type": "news-list-item","sort1": "23\u002F11\u002F2017"},{"guid": "F630480C-09F5-4936-8ABE-CE8CF9A66402","type": "news-list-item","sort1": "22\u002F11\u002F2017"},{"guid": "3F75156E-9C39-40B0-B9F8-5DC7B67B4C89","type": "news-list-item","sort1": "22\u002F11\u002F2017"},{"guid": "93D7C9C3-C74F-4453-A6A4-28B83AA1290D","type": "news-list-item","sort1": "21\u002F11\u002F2017"},{"guid": "78CB1B88-AE01-4F42-8773-93533BEE1925","type": "news-list-item","sort1": "21\u002F11\u002F2017"},{"guid": "3F3B021A-6D31-4D92-BB24-2E05A6498FF9","type": "news-list-item","sort1": "20\u002F11\u002F2017"},{"guid": "51636F96-9D42-41CF-AD3F-6597CBB0A602","type": "news-list-item","sort1": "20\u002F11\u002F2017"},{"guid": "75FC61FE-93AF-4F72-9D9E-0A27841ACC14","type": "news-list-item","sort1": "20\u002F11\u002F2017"},{"guid": "66BED537-3840-4F94-ADF6-12A6997D3895","type": "news-list-item","sort1": "17\u002F11\u002F2017"},{"guid": "7ED648C4-1252-4E2B-BF49-FB0BFAD79DA3","type": "news-list-item","sort1": "16\u002F11\u002F2017"},{"guid": "EED0CCA7-F8B3-4022-8A22-243A6CE11A05","type": "news-list-item","sort1": "16\u002F11\u002F2017"},{"guid": "5C13EB4E-8D07-4E07-B392-4E4462866F8F","type": "news-list-item","sort1": "15\u002F11\u002F2017"},{"guid": "50D38B04-1CA2-491F-BFA9-56B415826657","type": "news-list-item","sort1": "15\u002F11\u002F2017"},{"guid": "D1B7EFE7-86FE-4053-B4FB-83CECB4F3FE6","type": "news-list-item","sort1": "15\u002F11\u002F2017"},{"guid": "3FA63669-A339-40D6-87BF-BF5B65E7C883","type": "news-list-item","sort1": "14\u002F11\u002F2017"},{"guid": "914F1002-322A-4A84-8798-71F0CA368CD8","type": "news-list-item","sort1": "14\u002F11\u002F2017"},{"guid": "021639EB-861A-4B1C-B10E-815F2480C560","type": "news-list-item","sort1": "14\u002F11\u002F2017"},{"guid": "64266B44-F099-4EED-91D7-9871EEF16FC9","type": "news-list-item","sort1": "13\u002F11\u002F2017"},{"guid": "8198D0D2-496B-4358-8024-ECB89F1B5D7A","type": "news-list-item","sort1": "13\u002F11\u002F2017"},{"guid": "3C8736EA-9CD3-40CE-A128-B713B3541E0C","type": "news-list-item","sort1": "10\u002F11\u002F2017"},{"guid": "A87AE03F-3388-41DC-9881-EA58C8590BE1","type": "news-list-item","sort1": "10\u002F11\u002F2017"},{"guid": "14ACA773-FE40-4DCD-8207-8E19207EBEC8","type": "news-list-item","sort1": "10\u002F11\u002F2017"},{"guid": "5831D9B0-6973-4D33-9FF0-25A6B54D8A6F","type": "news-list-item","sort1": "9\u002F11\u002F2017"},{"guid": "BA9EABC4-D11A-4225-AA4D-1AC4B660AFC1","type": "news-list-item","sort1": "9\u002F11\u002F2017"},{"guid": "9922CB3A-CD9E-4B6A-A0CA-24BA816AF45D","type": "news-list-item","sort1": "9\u002F11\u002F2017"},{"guid": "9A9A9F59-2790-4757-89C3-26A6092DAF82","type": "feature-list-item","sort1": "9\u002F11\u002F2017"},{"guid": "4990F3F9-C8DA-4EBD-A340-B707EB10C6C7","type": "news-list-item","sort1": "8\u002F11\u002F2017"},{"guid": "B75147AA-173D-47B7-91E9-04FA8C938525","type": "news-list-item","sort1": "8\u002F11\u002F2017"},{"guid": "C01061C6-C10C-4876-9764-CD6F347108AE","type": "news-list-item","sort1": "8\u002F11\u002F2017"},{"guid": "4FD93857-E05B-481C-9D4D-E23DF5B87067","type": "news-list-item","sort1": "7\u002F11\u002F2017"},{"guid": "05C0E1A8-0B6D-46A1-9750-590E82A5B3AB","type": "news-list-item","sort1": "6\u002F11\u002F2017"},{"guid": "2F02F693-05D3-45C5-A098-0309124DF67D","type": "project-list-item","sort1": "3\u002F11\u002F2017 3:50:00 AM"},{"guid": "B17A1944-0C6C-4409-A6D7-EA90B2370C4B","type": "project-list-item","sort1": "3\u002F11\u002F2017 2:36:00 AM"},{"guid": "8FC01CEA-2195-467B-AD39-B2B3733C3BC1","type": "news-list-item","sort1": "3\u002F11\u002F2017"},{"guid": "51A4C4BC-ADF9-4EE3-8DAC-13112927090D","type": "news-list-item","sort1": "3\u002F11\u002F2017"},{"guid": "486293E8-7B6A-4712-9EBB-8F456CA18CFF","type": "news-list-item","sort1": "2\u002F11\u002F2017"},{"guid": "2AF47D6C-E675-4236-8EF3-C2337CB8CB29","type": "news-list-item","sort1": "2\u002F11\u002F2017"},{"guid": "CDAE06BA-1FE1-4ED7-B5FE-7AE14F26420E","type": "news-list-item","sort1": "2\u002F11\u002F2017"},{"guid": "14C6BEE2-B6BF-490D-8EE8-3D05D9204051","type": "news-list-item","sort1": "1\u002F11\u002F2017"},{"guid": "BFD8CBA8-95BE-4B08-84F0-D16706AE40C0","type": "news-list-item","sort1": "1\u002F11\u002F2017"},{"guid": "08CA7C60-02AE-4582-9B3B-5E7D77B642A7","type": "news-list-item","sort1": "1\u002F11\u002F2017"},{"guid": "C7D575EA-FFB5-4C72-8711-83F153549C85","type": "news-list-item","sort1": "1\u002F11\u002F2017"},{"guid": "B2A3C7B3-7D79-40D4-A4C7-87FE6990D419","type": "feature-list-item","sort1": "1\u002F11\u002F2017"},{"guid": "8221A469-1538-43DD-99AA-05549150F060","type": "news-list-item","sort1": "31\u002F10\u002F2017"},{"guid": "9A7287BC-DBEF-4A21-BC6D-E514D2E13446","type": "news-list-item","sort1": "31\u002F10\u002F2017"},{"guid": "7DB036E2-80C2-457F-B215-6D2A0B43C638","type": "news-list-item","sort1": "31\u002F10\u002F2017"},{"guid": "9C101D9F-FC33-4B23-AAF1-3528EF88CC6D","type": "news-list-item","sort1": "30\u002F10\u002F2017"},{"guid": "E102FC9E-4DB9-4F0C-992B-D69579AF9184","type": "news-list-item","sort1": "30\u002F10\u002F2017"},{"guid": "B527D4AF-9971-430F-B258-5150C9EAC43B","type": "news-list-item","sort1": "30\u002F10\u002F2017"},{"guid": "7EE58111-1850-447F-8C6F-47732AE993ED","type": "news-list-item","sort1": "20\u002F10\u002F2017"},{"guid": "776EB057-5006-4108-9577-8AE24A373D5F","type": "news-list-item","sort1": "20\u002F10\u002F2017"},{"guid": "B839A33A-E29B-4C5B-B45A-DB5EA9E9DDDC","type": "news-list-item","sort1": "20\u002F10\u002F2017"},{"guid": "56BF6BC9-C966-4294-9EFD-BC9CF121D498","type": "news-list-item","sort1": "19\u002F10\u002F2017"},{"guid": "B501274E-ED0F-4271-926E-9092FBB705A4","type": "news-list-item","sort1": "19\u002F10\u002F2017"},{"guid": "0F12F76C-6527-4DDA-8751-5FAB31CCE3B9","type": "news-list-item","sort1": "19\u002F10\u002F2017"},{"guid": "42D03624-717A-43BC-8468-E648448B2914","type": "news-list-item","sort1": "17\u002F10\u002F2017"},{"guid": "442A7A3C-5985-4519-8923-D1677148D362","type": "news-list-item","sort1": "17\u002F10\u002F2017"},{"guid": "CFC24743-A84A-4C78-B10F-75B92FDCA5D9","type": "news-list-item","sort1": "17\u002F10\u002F2017"},{"guid": "812CD3C3-B7EB-46A6-8042-A5B3A6774B8F","type": "news-list-item","sort1": "17\u002F10\u002F2017"},{"guid": "77DF76E8-E7B7-44FE-AE48-F72A59621BB8","type": "news-list-item","sort1": "16\u002F10\u002F2017"},{"guid": "84399F3C-0D05-4244-90FE-7BF466E39FE9","type": "news-list-item","sort1": "16\u002F10\u002F2017"},{"guid": "94E9328B-C422-447C-BDF6-C0D5F2402536","type": "news-list-item","sort1": "16\u002F10\u002F2017"},{"guid": "C81CCECB-0987-4889-89D7-7C4C198B851A","type": "news-list-item","sort1": "13\u002F10\u002F2017"},{"guid": "43AB5064-0A6A-4A81-9CED-C4C2F9E0FE88","type": "news-list-item","sort1": "13\u002F10\u002F2017"},{"guid": "EE3EF111-BA4D-444F-AB31-A303D00E8F53","type": "news-list-item","sort1": "12\u002F10\u002F2017"},{"guid": "E31EAC96-1B1F-4CD0-BAF5-B009ECDBD0EE","type": "news-list-item","sort1": "12\u002F10\u002F2017"},{"guid": "99BB84DB-D2B3-40DE-99AC-C6C5E37195E2","type": "feature-list-item","sort1": "12\u002F10\u002F2017"},{"guid": "0AD3D34A-2828-4E7C-B189-6EA905FA0A98","type": "news-list-item","sort1": "10\u002F10\u002F2017"},{"guid": "CB026C9A-8818-42E7-9C38-5AAE9862370D","type": "news-list-item","sort1": "10\u002F10\u002F2017"},{"guid": "E68479B3-AE1B-4222-9864-57BB6E4C2946","type": "news-list-item","sort1": "10\u002F10\u002F2017"},{"guid": "079312E4-11BE-46B6-BC77-FCC71049BB84","type": "news-list-item","sort1": "9\u002F10\u002F2017"},{"guid": "9D0346CA-F3A6-4A58-8008-687D2C091D03","type": "news-list-item","sort1": "9\u002F10\u002F2017"},{"guid": "CDC9CC42-8948-4269-B147-AB1CFAC91BAE","type": "news-list-item","sort1": "6\u002F10\u002F2017"},{"guid": "16411F79-87E2-4D45-8636-FA778DC09169","type": "news-list-item","sort1": "6\u002F10\u002F2017"},{"guid": "60AE48BD-466A-40F4-877D-F56D300F9FB1","type": "news-list-item","sort1": "6\u002F10\u002F2017"},{"guid": "A7047A53-BA79-4BAF-A29C-4179EAB7FBC4","type": "news-list-item","sort1": "5\u002F10\u002F2017"},{"guid": "48696DF5-96F5-4E80-9657-30B9DBB6486F","type": "news-list-item","sort1": "5\u002F10\u002F2017"},{"guid": "AE359B67-F4E8-4C12-8F7A-41340FFD04CD","type": "feature-list-item","sort1": "5\u002F10\u002F2017"},{"guid": "3023853A-FFDE-4B37-A24E-386877BF1641","type": "news-list-item","sort1": "4\u002F10\u002F2017"},{"guid": "D547EDC5-E9D4-4230-BB4C-F0F843245447","type": "news-list-item","sort1": "4\u002F10\u002F2017"},{"guid": "79E28D79-84D1-4FD4-AD25-5519F89D79C6","type": "news-list-item","sort1": "4\u002F10\u002F2017"},{"guid": "066F8A6B-8247-4FAB-B408-D71824FA9526","type": "news-list-item","sort1": "3\u002F10\u002F2017"},{"guid": "AF73B63F-8C65-4D7E-9DE1-22B6D5515268","type": "news-list-item","sort1": "3\u002F10\u002F2017"},{"guid": "3B7C4A2E-132E-40FC-8362-209A6F3270D2","type": "news-list-item","sort1": "3\u002F10\u002F2017"},{"guid": "22DD4105-3FC1-4DCB-A543-1B9740A81AF4","type": "news-list-item","sort1": "2\u002F10\u002F2017"},{"guid": "FEC15E96-25D6-40DA-8A10-DD6ED038C9EE","type": "news-list-item","sort1": "2\u002F10\u002F2017"},{"guid": "1B74CA2B-8909-43B9-B621-F1F72DF2BFF9","type": "news-list-item","sort1": "2\u002F10\u002F2017"},{"guid": "E44DC620-3322-41F0-8FA5-1C39014F24E7","type": "news-list-item","sort1": "28\u002F09\u002F2017"},{"guid": "7E075CB2-654B-40A7-A548-B5E36893E1EC","type": "news-list-item","sort1": "28\u002F09\u002F2017"},{"guid": "43D4FAF0-C196-47E3-B5A8-E30C0615B18C","type": "news-list-item","sort1": "27\u002F09\u002F2017"},{"guid": "857E51B4-7A09-4533-8125-ECF644459DB7","type": "news-list-item","sort1": "27\u002F09\u002F2017"},{"guid": "A7D39149-2B66-482C-93AC-B57C557E685C","type": "news-list-item","sort1": "27\u002F09\u002F2017"},{"guid": "F629B0D8-A739-423B-B7A8-7E3E494B72D9","type": "news-list-item","sort1": "26\u002F09\u002F2017"},{"guid": "9D47B5EC-D070-4E04-B852-00103E718F4A","type": "news-list-item","sort1": "26\u002F09\u002F2017"},{"guid": "38605D9A-18A2-4EAE-AC0F-B300E874E196","type": "news-list-item","sort1": "26\u002F09\u002F2017"},{"guid": "9E3BFB5F-081C-4924-88A4-6C68FEDF96FB","type": "feature-list-item","sort1": "26\u002F09\u002F2017"},{"guid": "99BF69C6-9E89-4355-B9BD-531ABBBA93AA","type": "news-list-item","sort1": "25\u002F09\u002F2017"},{"guid": "8D21BC86-2A1D-4473-AE4E-313EE54430FD","type": "news-list-item","sort1": "25\u002F09\u002F2017"},{"guid": "66EFD0C9-1434-49FF-8B26-60F7565BA813","type": "news-list-item","sort1": "25\u002F09\u002F2017"},{"guid": "4178727E-5956-45A4-85C9-D97A40F315F5","type": "news-list-item","sort1": "25\u002F09\u002F2017"},{"guid": "DCDCF704-0771-432D-9E13-B044E5192E81","type": "news-list-item","sort1": "22\u002F09\u002F2017"},{"guid": "66A49BF2-F382-4331-B03F-EBEEFFBCA304","type": "news-list-item","sort1": "22\u002F09\u002F2017"},{"guid": "688C0E36-1F41-4F70-B690-C0F849F8CCAB","type": "news-list-item","sort1": "21\u002F09\u002F2017"},{"guid": "90313FCF-866E-4F9D-90E2-9EBA37257181","type": "news-list-item","sort1": "21\u002F09\u002F2017"},{"guid": "97BF395A-97EC-4AAC-B9A4-44FA54C339B6","type": "news-list-item","sort1": "21\u002F09\u002F2017"},{"guid": "9E47F720-B827-4613-BC92-EE185D481363","type": "news-list-item","sort1": "20\u002F09\u002F2017"},{"guid": "B3598C6B-1A53-4FEA-BB44-AF9ECE055378","type": "news-list-item","sort1": "20\u002F09\u002F2017"},{"guid": "137F2C83-6A0F-40B0-87C4-3A1E7A82EEAE","type": "news-list-item","sort1": "20\u002F09\u002F2017"},{"guid": "2BAD6245-5BBA-4FE3-A951-114BEFE42529","type": "feature-list-item","sort1": "20\u002F09\u002F2017"},{"guid": "D0721138-898B-4830-818F-4C538F19BA16","type": "news-list-item","sort1": "19\u002F09\u002F2017"},{"guid": "6629661D-2476-40B3-8608-CB2912EE3E70","type": "news-list-item","sort1": "19\u002F09\u002F2017"},{"guid": "108FD3A1-1C3E-472A-8DF3-5F7FE39D17C0","type": "news-list-item","sort1": "19\u002F09\u002F2017"},{"guid": "1C9C8A73-4BB7-4BE9-A1BC-BBA6C64E8085","type": "news-list-item","sort1": "19\u002F09\u002F2017"},{"guid": "50693A28-CF94-442D-A475-5E31E0C975B3","type": "news-list-item","sort1": "18\u002F09\u002F2017"},{"guid": "55F44D6F-E57D-45C9-951B-EBF952CB74EF","type": "news-list-item","sort1": "18\u002F09\u002F2017"},{"guid": "2B00B19C-2EE4-49B3-9831-CFBE7890A5A9","type": "news-list-item","sort1": "18\u002F09\u002F2017"},{"guid": "A98A0C53-4023-4FD9-9839-27E02C4A5E6D","type": "news-list-item","sort1": "15\u002F09\u002F2017"},{"guid": "68FC1C29-2D91-46C8-89E8-E81830BB8764","type": "news-list-item","sort1": "15\u002F09\u002F2017"},{"guid": "D280AF4B-9E83-4906-AA05-9B4922431677","type": "news-list-item","sort1": "14\u002F09\u002F2017"},{"guid": "98B9A6E2-217E-4024-A13D-17A0397831DD","type": "news-list-item","sort1": "14\u002F09\u002F2017"},{"guid": "9144F535-A8F1-4C5A-9459-554945C2EC0B","type": "news-list-item","sort1": "14\u002F09\u002F2017"},{"guid": "1C453ABD-46B4-4BC5-93A5-4A0A00C73388","type": "news-list-item","sort1": "13\u002F09\u002F2017"},{"guid": "278E4ED4-2335-4617-B891-F4C0F2C866CA","type": "news-list-item","sort1": "13\u002F09\u002F2017"},{"guid": "4FB04289-E360-40F2-8856-1750238CF284","type": "news-list-item","sort1": "13\u002F09\u002F2017"},{"guid": "57DAF63D-6161-4328-B7DC-C78DF4763C40","type": "news-list-item","sort1": "13\u002F09\u002F2017"},{"guid": "FDD387F9-702E-4138-B57B-09CEF1A332CA","type": "news-list-item","sort1": "12\u002F09\u002F2017"},{"guid": "8DCA6BA4-F207-4EB4-8DCF-65EE9FA6ACA1","type": "news-list-item","sort1": "12\u002F09\u002F2017"},{"guid": "DA9FD929-6384-4331-897A-9A75AEAEBE2D","type": "news-list-item","sort1": "12\u002F09\u002F2017"},{"guid": "0A7E49A7-E9B1-46E4-BEFF-CF7B28751225","type": "news-list-item","sort1": "11\u002F09\u002F2017"},{"guid": "FD127D75-4B59-4814-935D-8A5FB689A1C9","type": "news-list-item","sort1": "11\u002F09\u002F2017"},{"guid": "8924127D-5280-471C-8477-DD9385B9E00C","type": "news-list-item","sort1": "11\u002F09\u002F2017"},{"guid": "9D48B01C-3347-4BDE-8A81-A2EEDEE16565","type": "news-list-item","sort1": "8\u002F09\u002F2017"},{"guid": "61C6F75B-C473-4A30-A6E4-98AABD81DDD4","type": "news-list-item","sort1": "8\u002F09\u002F2017"},{"guid": "38808602-C8EF-4F0B-A7B3-E59DFCBC129A","type": "news-list-item","sort1": "8\u002F09\u002F2017"},{"guid": "E8BA0B4F-C5A6-4A52-A456-E8A4AA024C9F","type": "news-list-item","sort1": "7\u002F09\u002F2017"},{"guid": "1853BE49-76FD-4719-AB84-D56D430244F6","type": "news-list-item","sort1": "7\u002F09\u002F2017"},{"guid": "CD0A81EE-B9AE-4C7C-8659-0B63D92A8614","type": "news-list-item","sort1": "7\u002F09\u002F2017"},{"guid": "6C5B3BA9-BB96-4A6E-9648-9799257D64D4","type": "news-list-item","sort1": "6\u002F09\u002F2017"},{"guid": "F01EFAB4-D46B-4E52-B318-913A2780FB4D","type": "news-list-item","sort1": "6\u002F09\u002F2017"},{"guid": "B3695886-849C-4241-AA3B-4B2637AC2D34","type": "news-list-item","sort1": "6\u002F09\u002F2017"},{"guid": "CC91B9CD-D248-4A70-8BD3-B43BA57785D0","type": "news-list-item","sort1": "5\u002F09\u002F2017"},{"guid": "038093F9-E1D1-406B-83AD-AECD3048F884","type": "news-list-item","sort1": "5\u002F09\u002F2017"},{"guid": "E6767CBB-2CBD-49EF-B804-9F660A46E4EE","type": "news-list-item","sort1": "4\u002F09\u002F2017"},{"guid": "47C5CBC0-4414-4A58-AD4E-97E1DDB3B485","type": "news-list-item","sort1": "4\u002F09\u002F2017"},{"guid": "B4C0309F-FFD0-4239-8662-67C7190E5DF2","type": "news-list-item","sort1": "1\u002F09\u002F2017"},{"guid": "7F39008A-0E0F-4182-A5F0-03A43E066FDB","type": "feature-list-item","sort1": "1\u002F09\u002F2017"}];</script><script type="text/javascript">var oStackItems2 = [{"guid": "7117BBEF-C7E4-43C1-B1A0-3DE1FEA37B62","type": "project-list-item","sort1": "12\u002F07\u002F2018 3:26:00 AM"},{"guid": "6AF5BC6A-C3F6-4320-9876-E077ABD66D7D","type": "news-list-item","sort1": "22\u002F03\u002F2018"},{"type": "content-block-four-unit","guid": "C230D8AE-FB30-4B16-A71B-07D3BEF4B402","isMdOnly": true,"data": {"ads": [{"console_message_id": 221,"guid": "390992D5-51FA-4D4E-B520-7DAF98C46824","units": 2,"app_code": "BNE,BRL,GOV,HKG,LON,MEL,NOW,NYC,PAR,SHA,SYD,d100","type": "adunit","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1e3o7bmhb1lcj1i6o8rfd19pq87.png","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fnews_details.asp?AssetId=73493","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "990","sort3": 95151},{"console_message_id": 207,"guid": "A37C272A-9A2D-435F-ACD4-DC2C7D7C8612","units": 1,"app_code": "DxD,GOV,MEL,SYD,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1ci3tafe5t9q1tmqmp01ikfj7r7.jpg","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=transpire","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "960","sort3": 23163},{"console_message_id": 208,"guid": "64B96242-1249-4441-A375-51F70D359A9D","units": 1,"app_code": "DxD,GOV,MEL,SYD,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1daqri5g6h58p0q1t1ffnn1r607.png","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=luminary","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "960","sort3": 173992}]}},{"type": "content-block-two-unit","guid": "2F2B8FC8-21F7-4B62-9597-68149D9E767D","isSmOnly": true,"data": {"ads": [{"console_message_id": 221,"guid": "390992D5-51FA-4D4E-B520-7DAF98C46824","units": 2,"app_code": "BNE,BRL,GOV,HKG,LON,MEL,NOW,NYC,PAR,SHA,SYD,d100","type": "adunit","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1e3o7bmhb1lcj1i6o8rfd19pq87.png","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fnews_details.asp?AssetId=73493","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "990","sort3": 95151}]}},{"guid": "9C527AC2-1C96-4551-8005-DA83F1F1A635","type": "project-list-item","sort1": "9\u002F03\u002F2018 3:56:00 AM"},{"guid": "4AE418A7-2B2D-4DC4-98D8-7494FA4E33CA","type": "project-list-item","sort1": "9\u002F03\u002F2018 3:27:00 AM"},{"type": "content-block-four-unit","guid": "EFA28046-FC8F-4870-BE97-F4B23EF4BEE5","isMdOnly": true,"data": {"ads": [{"console_message_id": 184,"guid": "D0AEC833-9333-4BBE-9118-5BA20B6A9F88","units": 1,"app_code": "DxD,HKG,LON,MEL,NYC,NOW,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1ddhqo32i1hrg7mn8nlfa5nk87.jpg","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=a%2B%20design%20group&showFeatures=0&showNews=0","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "960","sort3": 287765},{"console_message_id": 188,"guid": "1CA9C2B4-5508-41B2-96BE-D322F9321074","units": 1,"app_code": "DxD,GOV,HKG,MEL,NOW,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1c8jdoifa1pgo1ej2hidne10c7.jpg","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=k20%20Architecture&showFeatures=0&showNews=0","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "950","sort3": 28198},{"console_message_id": 190,"guid": "F1AAF46F-234F-42B0-AD7A-0D2FA97B17C2","units": 1,"app_code": "DxD,BRL,GOV,HKG,LON,MEL,NYC,NOW,CHI,SFO,TECH,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1c8jepu8p1hplec11fpb1krgf387.jpg","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=adidas&showFeatures=0&showNews=0","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "950","sort3": 154791},{"console_message_id": 196,"guid": "68D7CEF1-D259-45A4-9FB3-34153FA334A7","units": 1,"app_code": "DxD,BRL,GOV,HKG,LON,MEL,NOW,NYC,CHI,SFO,TECH,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1c8jguh0716rp1ghts8hfti3h7.gif","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=charlwood&showFeatures=0&showNews=0","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "950","sort3": 155870}]}},{"type": "content-block-two-unit","guid": "71CFE845-E49A-451D-A5F8-C2B0CCC05973","isSmOnly": true,"data": {"ads": [{"console_message_id": 207,"guid": "A37C272A-9A2D-435F-ACD4-DC2C7D7C8612","units": 1,"app_code": "DxD,GOV,MEL,SYD,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1ci3tafe5t9q1tmqmp01ikfj7r7.jpg","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=transpire","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "960","sort3": 23163},{"console_message_id": 208,"guid": "64B96242-1249-4441-A375-51F70D359A9D","units": 1,"app_code": "DxD,GOV,MEL,SYD,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1daqri5g6h58p0q1t1ffnn1r607.png","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=luminary","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "960","sort3": 173992}]}},{"guid": "E28710D5-4185-4E15-B2D6-46B08A449225","type": "news-list-item","sort1": "1\u002F03\u002F2018"},{"guid": "9965FF2B-4A7C-4272-AC14-12EDDE48D200","type": "news-list-item","sort1": "28\u002F02\u002F2018 6:01:00 AM"},{"guid": "99657642-6A3E-4D79-BE7F-962E287A5210","type": "news-list-item","sort1": "28\u002F02\u002F2018 12:33:00 AM"},{"guid": "60C5F92F-8DA9-48CD-86ED-7F1630DCBD03","type": "news-list-item","sort1": "26\u002F02\u002F2018"},{"type": "content-block-four-unit","guid": "DBAB8973-1937-43C0-89CC-561DD402E611","isMdOnly": true,"data": {"ads": [{"console_message_id": 204,"guid": "A730BAE6-E20B-410A-8D1B-20D67194E201","units": 1,"app_code": "DxD,BRL,GOV,HKG,LON,MEL,NOW,NYC,CHI,SFO,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1cf6oles6fd51uv21bgg1n1j112j7.jpeg","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=payce","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "950","sort3": 175831},{"console_message_id": 197,"guid": "56202B69-FC0A-4C30-A663-FA074306085B","units": 1,"app_code": "DxD,BRL,GOV,HKG,LON,MEL,NYC,NOW,CHI,SFO,TECH,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1c8jh3058e221qm41u7t1v4g1leo7.jpeg","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=azbcreative&showFeatures=0&showNews=0","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "950","sort3": 187967},{"console_message_id": 198,"guid": "B70EFFBE-05DF-4BFF-BEAF-5B0C283035CE","units": 1,"app_code": "DxD,BRL,GOV,HKG,LON,MEL,NYC,PAR,SHA,NOW,CHI,SFO,TECH,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1c8jh5mbfbnbd8p1f7b1vlj1k257.jpg","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=biasol&showFeatures=0&showNews=0","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "950","sort3": 188008},{"console_message_id": 195,"guid": "C0D5884F-7913-4F13-BE57-7E429A76C78D","units": 1,"app_code": "DxD,BRL,GOV,HKG,LON,MEL,NYC,NOW,CHI,SFO,TECH,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1c8jgn7gfjq63891nls18f31tqa7.jpg","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=microsoft&showFeatures=0&showNews=0","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "950","sort3": 201645}]}},{"type": "content-block-two-unit","guid": "F6E9286B-B4D0-4EC3-A287-3114FA7E438D","isSmOnly": true,"data": {"ads": [{"console_message_id": 184,"guid": "D0AEC833-9333-4BBE-9118-5BA20B6A9F88","units": 1,"app_code": "DxD,HKG,LON,MEL,NYC,NOW,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1ddhqo32i1hrg7mn8nlfa5nk87.jpg","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=a%2B%20design%20group&showFeatures=0&showNews=0","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "960","sort3": 287765},{"console_message_id": 188,"guid": "1CA9C2B4-5508-41B2-96BE-D322F9321074","units": 1,"app_code": "DxD,GOV,HKG,MEL,NOW,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1c8jdoifa1pgo1ej2hidne10c7.jpg","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=k20%20Architecture&showFeatures=0&showNews=0","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "950","sort3": 28198}]}},{"guid": "D725A049-0D5B-467E-ABA1-25F22F279A34","type": "news-list-item","sort1": "20\u002F12\u002F2017"},{"guid": "5975F294-4585-4732-9264-484EE93F9BFB","type": "news-list-item","sort1": "20\u002F12\u002F2017"},{"guid": "7E3B4A32-A496-46BB-83E4-BA36FDC92328","type": "news-list-item","sort1": "19\u002F12\u002F2017"},{"guid": "80A1CE2B-76CD-4F43-9804-1D276A60B317","type": "news-list-item","sort1": "19\u002F12\u002F2017"},{"type": "content-block-four-unit","guid": "05E87AAC-BB2F-4E05-85DB-5D19DE71C5F6","isMdOnly": true,"data": {"ads": [{"console_message_id": 181,"guid": "5DEA3FD6-4133-442B-A7FF-38152DD3730B","units": 1,"app_code": "DxD,BRL,GOV,HKG,LON,MEL,NYC,NOW,CHI,SFO,TECH,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1c8jbcevhickj87e39c2efji7.png","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=Foster%20%2B%20Partners&showFeatures=0&showNews=0","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "950","sort3": 201645},{"console_message_id": 182,"guid": "75F71ADF-0395-41DB-A392-7FB25F6843EC","units": 1,"app_code": "DxD,BRL,GOV,HKG,LON,MEL,NYC,NOW,CHI,SFO,TECH,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1c8jbkb5as7r60816set7a1qes7.png","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=Skidmore%2C%20Owings%20%26%20Merrill%20LLP&showFeatures=0&showNews=0","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "950","sort3": 201646},{"console_message_id": 191,"guid": "E4D07C6D-95C2-46AC-8DAC-7CB89DCABB28","units": 1,"app_code": "DxD,BRL,GOV,HKG,LON,MEL,NYC,NOW,CHI,SFO,TECH,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1c8jettajnjf1lmbh651g6pndk7.jpg","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=Transport%20for%20London&showFeatures=0&showNews=0","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "950","sort3": 201646},{"console_message_id": 192,"guid": "AB8EF059-CBEF-4E3B-B9A7-DE4640956977","units": 1,"app_code": "DxD,BRL,GOV,HKG,LON,MEL,NYC,NOW,CHI,SFO,TECH,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1c8jf1it5arf1goo9p31hfr1ik57.jpg","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=Gensler&showFeatures=0&showNews=0","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "950","sort3": 201646}]}},{"type": "content-block-two-unit","guid": "0F36680D-2631-4CF5-A18C-890CDA82679F","isSmOnly": true,"data": {"ads": [{"console_message_id": 190,"guid": "F1AAF46F-234F-42B0-AD7A-0D2FA97B17C2","units": 1,"app_code": "DxD,BRL,GOV,HKG,LON,MEL,NYC,NOW,CHI,SFO,TECH,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1c8jepu8p1hplec11fpb1krgf387.jpg","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=adidas&showFeatures=0&showNews=0","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "950","sort3": 154791},{"console_message_id": 196,"guid": "68D7CEF1-D259-45A4-9FB3-34153FA334A7","units": 1,"app_code": "DxD,BRL,GOV,HKG,LON,MEL,NOW,NYC,CHI,SFO,TECH,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1c8jguh0716rp1ghts8hfti3h7.gif","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=charlwood&showFeatures=0&showNews=0","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "950","sort3": 155870}]}},{"guid": "41D75817-039A-4A70-ACDD-C221B238A2D7","type": "news-list-item","sort1": "19\u002F12\u002F2017"},{"guid": "F0F851D6-486C-4770-9F3D-D05342E9880F","type": "news-list-item","sort1": "18\u002F12\u002F2017"},{"guid": "FE2BCB6C-7E5A-48EE-847E-9AF6A2EA3B60","type": "news-list-item","sort1": "18\u002F12\u002F2017"},{"guid": "32A3C294-6D2E-4A32-84B4-EEF098A22959","type": "news-list-item","sort1": "18\u002F12\u002F2017"},{"type": "content-block-two-unit","guid": "B3AA9747-7DDF-4EE7-97C7-E85C74838B0A","isSmOnly": true,"data": {"ads": [{"console_message_id": 204,"guid": "A730BAE6-E20B-410A-8D1B-20D67194E201","units": 1,"app_code": "DxD,BRL,GOV,HKG,LON,MEL,NOW,NYC,CHI,SFO,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1cf6oles6fd51uv21bgg1n1j112j7.jpeg","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=payce","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "950","sort3": 175831},{"console_message_id": 197,"guid": "56202B69-FC0A-4C30-A663-FA074306085B","units": 1,"app_code": "DxD,BRL,GOV,HKG,LON,MEL,NYC,NOW,CHI,SFO,TECH,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1c8jh3058e221qm41u7t1v4g1leo7.jpeg","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=azbcreative&showFeatures=0&showNews=0","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "950","sort3": 187967}]}},{"guid": "6A79BEFF-82AA-44CA-A80F-990BBD1DB269","type": "news-list-item","sort1": "15\u002F12\u002F2017"},{"guid": "949B5F22-7E51-49B8-BCC3-7DBCB443F526","type": "news-list-item","sort1": "14\u002F12\u002F2017"},{"guid": "C23B6F90-5CAB-4873-B16B-096B7A58764B","type": "news-list-item","sort1": "14\u002F12\u002F2017"},{"guid": "D3509065-6829-4471-A55F-A9C63BBE1FD5","type": "news-list-item","sort1": "13\u002F12\u002F2017"},{"type": "content-block-two-unit","guid": "D0551A34-B242-499D-824D-9625F6886060","isSmOnly": true,"data": {"ads": [{"console_message_id": 198,"guid": "B70EFFBE-05DF-4BFF-BEAF-5B0C283035CE","units": 1,"app_code": "DxD,BRL,GOV,HKG,LON,MEL,NYC,PAR,SHA,NOW,CHI,SFO,TECH,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1c8jh5mbfbnbd8p1f7b1vlj1k257.jpg","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=biasol&showFeatures=0&showNews=0","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "950","sort3": 188008},{"console_message_id": 195,"guid": "C0D5884F-7913-4F13-BE57-7E429A76C78D","units": 1,"app_code": "DxD,BRL,GOV,HKG,LON,MEL,NYC,NOW,CHI,SFO,TECH,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1c8jgn7gfjq63891nls18f31tqa7.jpg","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=microsoft&showFeatures=0&showNews=0","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "950","sort3": 201645}]}},{"guid": "50B1F1B1-DA80-45C0-BC54-81418FD049E8","type": "news-list-item","sort1": "13\u002F12\u002F2017"},{"guid": "088B2DED-A436-427D-94A2-2EE307F273F5","type": "news-list-item","sort1": "12\u002F12\u002F2017"},{"guid": "78CE877F-B352-4D42-85DD-2F69A238322B","type": "news-list-item","sort1": "11\u002F12\u002F2017"},{"guid": "A021B02E-61CF-48D6-A1DC-C4318FEB421B","type": "news-list-item","sort1": "11\u002F12\u002F2017"},{"type": "content-block-two-unit","guid": "E23CBFEF-E0DF-44A9-8EFA-D0E4FD5416EF","isSmOnly": true,"data": {"ads": [{"console_message_id": 181,"guid": "5DEA3FD6-4133-442B-A7FF-38152DD3730B","units": 1,"app_code": "DxD,BRL,GOV,HKG,LON,MEL,NYC,NOW,CHI,SFO,TECH,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1c8jbcevhickj87e39c2efji7.png","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=Foster%20%2B%20Partners&showFeatures=0&showNews=0","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "950","sort3": 201645},{"console_message_id": 182,"guid": "75F71ADF-0395-41DB-A392-7FB25F6843EC","units": 1,"app_code": "DxD,BRL,GOV,HKG,LON,MEL,NYC,NOW,CHI,SFO,TECH,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1c8jbkb5as7r60816set7a1qes7.png","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=Skidmore%2C%20Owings%20%26%20Merrill%20LLP&showFeatures=0&showNews=0","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "950","sort3": 201646}]}},{"guid": "B051120D-FF92-409D-BB75-54EAC33D888D","type": "news-list-item","sort1": "11\u002F12\u002F2017"},{"guid": "3EC138D6-CCCA-4D30-B541-74BB1DB4C2E8","type": "news-list-item","sort1": "8\u002F12\u002F2017"},{"guid": "370E9F0B-A29A-4F66-B95A-CFC1373A62AC","type": "news-list-item","sort1": "8\u002F12\u002F2017"},{"guid": "3E562F90-0A2A-463F-8375-D19000CCDAB9","type": "news-list-item","sort1": "8\u002F12\u002F2017"},{"type": "content-block-two-unit","guid": "A1D2C789-6FA6-4ACE-AC1E-FF9F44CCCE39","isSmOnly": true,"data": {"ads": [{"console_message_id": 191,"guid": "E4D07C6D-95C2-46AC-8DAC-7CB89DCABB28","units": 1,"app_code": "DxD,BRL,GOV,HKG,LON,MEL,NYC,NOW,CHI,SFO,TECH,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1c8jettajnjf1lmbh651g6pndk7.jpg","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=Transport%20for%20London&showFeatures=0&showNews=0","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "950","sort3": 201646},{"console_message_id": 192,"guid": "AB8EF059-CBEF-4E3B-B9A7-DE4640956977","units": 1,"app_code": "DxD,BRL,GOV,HKG,LON,MEL,NYC,NOW,CHI,SFO,TECH,d100","type": "adunit-sm","msg_image": "https:\u002F\u002Fd39lxsrz40jt15.cloudfront.net\u002Fdownloads\u002FEDG2012\u002Fo_1c8jf1it5arf1goo9p31hfr1ik57.jpg","message_url": "https:\u002F\u002Fdrivenxdesign.com\u002Fd100\u002Fsearch.asp?studio=Gensler&showFeatures=0&showNews=0","s3_image": null,"saved_image": null,"msg_width": "300","sort1": 1,"sort2": "950","sort3": 201646}]}},{"guid": "F3166311-EE48-43ED-8391-7D874A7DF0D1","type": "news-list-item","sort1": "7\u002F12\u002F2017"},{"guid": "1444F897-900D-4A34-A3D7-CEDBAB2AA153","type": "news-list-item","sort1": "7\u002F12\u002F2017"},{"guid": "7B5CEA2C-CCC8-467F-B503-DF04AC4652A4","type": "news-list-item","sort1": "6\u002F12\u002F2017"},{"guid": "EA10114C-1095-442F-9AFC-3802BDC892CE","type": "news-list-item","sort1": "6\u002F12\u002F2017"},{"guid": "3F547F7F-77F8-432A-99E4-EB128D3086B6","type": "news-list-item","sort1": "6\u002F12\u002F2017"},{"guid": "EDC03245-1AC1-4D90-B8FD-8B1141B13208","type": "news-list-item","sort1": "5\u002F12\u002F2017"},{"guid": "7109609B-E266-4432-B281-B98F1AAABB55","type": "news-list-item","sort1": "5\u002F12\u002F2017"},{"guid": "D6E96685-C6A6-499A-9A2B-D0397EBEA66B","type": "news-list-item","sort1": "4\u002F12\u002F2017"},{"guid": "FBCAC951-E1E1-47D9-943F-D25D47A19DD7","type": "news-list-item","sort1": "4\u002F12\u002F2017"},{"guid": "75D5C46D-7E79-4D8A-9266-7243BC4AAB7A","type": "news-list-item","sort1": "4\u002F12\u002F2017"},{"guid": "D3E9454F-D716-4BBC-97C2-B4434780DEFD","type": "news-list-item","sort1": "1\u002F12\u002F2017"},{"guid": "DC300B77-5958-4BDD-9133-15114386EC5E","type": "news-list-item","sort1": "1\u002F12\u002F2017"},{"guid": "C9357D15-7153-4DC3-9F25-386E72CD7997","type": "news-list-item","sort1": "1\u002F12\u002F2017"},{"guid": "18F3C6B3-E3B7-4ADD-BDFF-90CABD88331B","type": "news-list-item","sort1": "30\u002F11\u002F2017"},{"guid": "20748FFB-944F-4826-836F-9B6EC94C9F45","type": "news-list-item","sort1": "30\u002F11\u002F2017"},{"guid": "AEADA2E0-89C5-464F-8E74-0C2DF8DAEB72","type": "news-list-item","sort1": "29\u002F11\u002F2017"},{"guid": "3B97B30A-3D30-447A-B7F3-8A331D93F70C","type": "news-list-item","sort1": "29\u002F11\u002F2017"},{"guid": "0203CF44-0002-4048-97AF-04CFB7DD02F6","type": "news-list-item","sort1": "29\u002F11\u002F2017"},{"guid": "9C3454C0-24B1-4F6C-B2D2-6B3B3CA792BD","type": "news-list-item","sort1": "28\u002F11\u002F2017"},{"guid": "E9979091-8C4E-40A3-A5E7-BCD0935E8AF2","type": "news-list-item","sort1": "27\u002F11\u002F2017"},{"guid": "455547C9-B7D1-4731-91C5-D7E7F1474D3D","type": "news-list-item","sort1": "27\u002F11\u002F2017"},{"guid": "2F5E7C87-93D3-420F-8E07-6E78450C2B92","type": "news-list-item","sort1": "27\u002F11\u002F2017"},{"guid": "87C295F7-63B1-4074-B8EA-F469CF67C135","type": "news-list-item","sort1": "24\u002F11\u002F2017"},{"guid": "EF679EFF-8951-4AD8-B4F8-239F14C02A68","type": "news-list-item","sort1": "24\u002F11\u002F2017"},{"guid": "082890FB-B31D-4A15-8DE7-3EFEE1BCBE66","type": "news-list-item","sort1": "23\u002F11\u002F2017"},{"guid": "0AE24238-8BD6-440B-82DA-EE6E5384A186","type": "news-list-item","sort1": "23\u002F11\u002F2017"},{"guid": "770E5A7A-F291-4753-A411-504E1735B353","type": "news-list-item","sort1": "23\u002F11\u002F2017"},{"guid": "F630480C-09F5-4936-8ABE-CE8CF9A66402","type": "news-list-item","sort1": "22\u002F11\u002F2017"},{"guid": "3F75156E-9C39-40B0-B9F8-5DC7B67B4C89","type": "news-list-item","sort1": "22\u002F11\u002F2017"},{"guid": "93D7C9C3-C74F-4453-A6A4-28B83AA1290D","type": "news-list-item","sort1": "21\u002F11\u002F2017"},{"guid": "78CB1B88-AE01-4F42-8773-93533BEE1925","type": "news-list-item","sort1": "21\u002F11\u002F2017"},{"guid": "3F3B021A-6D31-4D92-BB24-2E05A6498FF9","type": "news-list-item","sort1": "20\u002F11\u002F2017"},{"guid": "51636F96-9D42-41CF-AD3F-6597CBB0A602","type": "news-list-item","sort1": "20\u002F11\u002F2017"},{"guid": "75FC61FE-93AF-4F72-9D9E-0A27841ACC14","type": "news-list-item","sort1": "20\u002F11\u002F2017"},{"guid": "66BED537-3840-4F94-ADF6-12A6997D3895","type": "news-list-item","sort1": "17\u002F11\u002F2017"},{"guid": "7ED648C4-1252-4E2B-BF49-FB0BFAD79DA3","type": "news-list-item","sort1": "16\u002F11\u002F2017"},{"guid": "EED0CCA7-F8B3-4022-8A22-243A6CE11A05","type": "news-list-item","sort1": "16\u002F11\u002F2017"},{"guid": "5C13EB4E-8D07-4E07-B392-4E4462866F8F","type": "news-list-item","sort1": "15\u002F11\u002F2017"},{"guid": "50D38B04-1CA2-491F-BFA9-56B415826657","type": "news-list-item","sort1": "15\u002F11\u002F2017"},{"guid": "D1B7EFE7-86FE-4053-B4FB-83CECB4F3FE6","type": "news-list-item","sort1": "15\u002F11\u002F2017"},{"guid": "3FA63669-A339-40D6-87BF-BF5B65E7C883","type": "news-list-item","sort1": "14\u002F11\u002F2017"},{"guid": "914F1002-322A-4A84-8798-71F0CA368CD8","type": "news-list-item","sort1": "14\u002F11\u002F2017"},{"guid": "021639EB-861A-4B1C-B10E-815F2480C560","type": "news-list-item","sort1": "14\u002F11\u002F2017"},{"guid": "64266B44-F099-4EED-91D7-9871EEF16FC9","type": "news-list-item","sort1": "13\u002F11\u002F2017"},{"guid": "8198D0D2-496B-4358-8024-ECB89F1B5D7A","type": "news-list-item","sort1": "13\u002F11\u002F2017"},{"guid": "3C8736EA-9CD3-40CE-A128-B713B3541E0C","type": "news-list-item","sort1": "10\u002F11\u002F2017"},{"guid": "A87AE03F-3388-41DC-9881-EA58C8590BE1","type": "news-list-item","sort1": "10\u002F11\u002F2017"},{"guid": "14ACA773-FE40-4DCD-8207-8E19207EBEC8","type": "news-list-item","sort1": "10\u002F11\u002F2017"},{"guid": "5831D9B0-6973-4D33-9FF0-25A6B54D8A6F","type": "news-list-item","sort1": "9\u002F11\u002F2017"},{"guid": "BA9EABC4-D11A-4225-AA4D-1AC4B660AFC1","type": "news-list-item","sort1": "9\u002F11\u002F2017"},{"guid": "9922CB3A-CD9E-4B6A-A0CA-24BA816AF45D","type": "news-list-item","sort1": "9\u002F11\u002F2017"},{"guid": "9A9A9F59-2790-4757-89C3-26A6092DAF82","type": "feature-list-item","sort1": "9\u002F11\u002F2017"},{"guid": "4990F3F9-C8DA-4EBD-A340-B707EB10C6C7","type": "news-list-item","sort1": "8\u002F11\u002F2017"},{"guid": "B75147AA-173D-47B7-91E9-04FA8C938525","type": "news-list-item","sort1": "8\u002F11\u002F2017"},{"guid": "C01061C6-C10C-4876-9764-CD6F347108AE","type": "news-list-item","sort1": "8\u002F11\u002F2017"},{"guid": "4FD93857-E05B-481C-9D4D-E23DF5B87067","type": "news-list-item","sort1": "7\u002F11\u002F2017"},{"guid": "05C0E1A8-0B6D-46A1-9750-590E82A5B3AB","type": "news-list-item","sort1": "6\u002F11\u002F2017"},{"guid": "2F02F693-05D3-45C5-A098-0309124DF67D","type": "project-list-item","sort1": "3\u002F11\u002F2017 3:50:00 AM"},{"guid": "B17A1944-0C6C-4409-A6D7-EA90B2370C4B","type": "project-list-item","sort1": "3\u002F11\u002F2017 2:36:00 AM"},{"guid": "8FC01CEA-2195-467B-AD39-B2B3733C3BC1","type": "news-list-item","sort1": "3\u002F11\u002F2017"},{"guid": "51A4C4BC-ADF9-4EE3-8DAC-13112927090D","type": "news-list-item","sort1": "3\u002F11\u002F2017"},{"guid": "486293E8-7B6A-4712-9EBB-8F456CA18CFF","type": "news-list-item","sort1": "2\u002F11\u002F2017"},{"guid": "2AF47D6C-E675-4236-8EF3-C2337CB8CB29","type": "news-list-item","sort1": "2\u002F11\u002F2017"},{"guid": "CDAE06BA-1FE1-4ED7-B5FE-7AE14F26420E","type": "news-list-item","sort1": "2\u002F11\u002F2017"},{"guid": "14C6BEE2-B6BF-490D-8EE8-3D05D9204051","type": "news-list-item","sort1": "1\u002F11\u002F2017"},{"guid": "BFD8CBA8-95BE-4B08-84F0-D16706AE40C0","type": "news-list-item","sort1": "1\u002F11\u002F2017"},{"guid": "08CA7C60-02AE-4582-9B3B-5E7D77B642A7","type": "news-list-item","sort1": "1\u002F11\u002F2017"},{"guid": "C7D575EA-FFB5-4C72-8711-83F153549C85","type": "news-list-item","sort1": "1\u002F11\u002F2017"},{"guid": "B2A3C7B3-7D79-40D4-A4C7-87FE6990D419","type": "feature-list-item","sort1": "1\u002F11\u002F2017"},{"guid": "8221A469-1538-43DD-99AA-05549150F060","type": "news-list-item","sort1": "31\u002F10\u002F2017"},{"guid": "9A7287BC-DBEF-4A21-BC6D-E514D2E13446","type": "news-list-item","sort1": "31\u002F10\u002F2017"},{"guid": "7DB036E2-80C2-457F-B215-6D2A0B43C638","type": "news-list-item","sort1": "31\u002F10\u002F2017"},{"guid": "9C101D9F-FC33-4B23-AAF1-3528EF88CC6D","type": "news-list-item","sort1": "30\u002F10\u002F2017"},{"guid": "E102FC9E-4DB9-4F0C-992B-D69579AF9184","type": "news-list-item","sort1": "30\u002F10\u002F2017"},{"guid": "B527D4AF-9971-430F-B258-5150C9EAC43B","type": "news-list-item","sort1": "30\u002F10\u002F2017"},{"guid": "7EE58111-1850-447F-8C6F-47732AE993ED","type": "news-list-item","sort1": "20\u002F10\u002F2017"},{"guid": "776EB057-5006-4108-9577-8AE24A373D5F","type": "news-list-item","sort1": "20\u002F10\u002F2017"},{"guid": "B839A33A-E29B-4C5B-B45A-DB5EA9E9DDDC","type": "news-list-item","sort1": "20\u002F10\u002F2017"},{"guid": "56BF6BC9-C966-4294-9EFD-BC9CF121D498","type": "news-list-item","sort1": "19\u002F10\u002F2017"},{"guid": "B501274E-ED0F-4271-926E-9092FBB705A4","type": "news-list-item","sort1": "19\u002F10\u002F2017"},{"guid": "0F12F76C-6527-4DDA-8751-5FAB31CCE3B9","type": "news-list-item","sort1": "19\u002F10\u002F2017"},{"guid": "42D03624-717A-43BC-8468-E648448B2914","type": "news-list-item","sort1": "17\u002F10\u002F2017"},{"guid": "442A7A3C-5985-4519-8923-D1677148D362","type": "news-list-item","sort1": "17\u002F10\u002F2017"},{"guid": "CFC24743-A84A-4C78-B10F-75B92FDCA5D9","type": "news-list-item","sort1": "17\u002F10\u002F2017"},{"guid": "812CD3C3-B7EB-46A6-8042-A5B3A6774B8F","type": "news-list-item","sort1": "17\u002F10\u002F2017"},{"guid": "77DF76E8-E7B7-44FE-AE48-F72A59621BB8","type": "news-list-item","sort1": "16\u002F10\u002F2017"},{"guid": "84399F3C-0D05-4244-90FE-7BF466E39FE9","type": "news-list-item","sort1": "16\u002F10\u002F2017"},{"guid": "94E9328B-C422-447C-BDF6-C0D5F2402536","type": "news-list-item","sort1": "16\u002F10\u002F2017"},{"guid": "C81CCECB-0987-4889-89D7-7C4C198B851A","type": "news-list-item","sort1": "13\u002F10\u002F2017"},{"guid": "43AB5064-0A6A-4A81-9CED-C4C2F9E0FE88","type": "news-list-item","sort1": "13\u002F10\u002F2017"},{"guid": "EE3EF111-BA4D-444F-AB31-A303D00E8F53","type": "news-list-item","sort1": "12\u002F10\u002F2017"},{"guid": "E31EAC96-1B1F-4CD0-BAF5-B009ECDBD0EE","type": "news-list-item","sort1": "12\u002F10\u002F2017"},{"guid": "99BB84DB-D2B3-40DE-99AC-C6C5E37195E2","type": "feature-list-item","sort1": "12\u002F10\u002F2017"},{"guid": "0AD3D34A-2828-4E7C-B189-6EA905FA0A98","type": "news-list-item","sort1": "10\u002F10\u002F2017"},{"guid": "CB026C9A-8818-42E7-9C38-5AAE9862370D","type": "news-list-item","sort1": "10\u002F10\u002F2017"},{"guid": "E68479B3-AE1B-4222-9864-57BB6E4C2946","type": "news-list-item","sort1": "10\u002F10\u002F2017"},{"guid": "079312E4-11BE-46B6-BC77-FCC71049BB84","type": "news-list-item","sort1": "9\u002F10\u002F2017"},{"guid": "9D0346CA-F3A6-4A58-8008-687D2C091D03","type": "news-list-item","sort1": "9\u002F10\u002F2017"},{"guid": "CDC9CC42-8948-4269-B147-AB1CFAC91BAE","type": "news-list-item","sort1": "6\u002F10\u002F2017"},{"guid": "16411F79-87E2-4D45-8636-FA778DC09169","type": "news-list-item","sort1": "6\u002F10\u002F2017"},{"guid": "60AE48BD-466A-40F4-877D-F56D300F9FB1","type": "news-list-item","sort1": "6\u002F10\u002F2017"},{"guid": "A7047A53-BA79-4BAF-A29C-4179EAB7FBC4","type": "news-list-item","sort1": "5\u002F10\u002F2017"},{"guid": "48696DF5-96F5-4E80-9657-30B9DBB6486F","type": "news-list-item","sort1": "5\u002F10\u002F2017"},{"guid": "AE359B67-F4E8-4C12-8F7A-41340FFD04CD","type": "feature-list-item","sort1": "5\u002F10\u002F2017"},{"guid": "3023853A-FFDE-4B37-A24E-386877BF1641","type": "news-list-item","sort1": "4\u002F10\u002F2017"},{"guid": "D547EDC5-E9D4-4230-BB4C-F0F843245447","type": "news-list-item","sort1": "4\u002F10\u002F2017"},{"guid": "79E28D79-84D1-4FD4-AD25-5519F89D79C6","type": "news-list-item","sort1": "4\u002F10\u002F2017"},{"guid": "066F8A6B-8247-4FAB-B408-D71824FA9526","type": "news-list-item","sort1": "3\u002F10\u002F2017"},{"guid": "AF73B63F-8C65-4D7E-9DE1-22B6D5515268","type": "news-list-item","sort1": "3\u002F10\u002F2017"},{"guid": "3B7C4A2E-132E-40FC-8362-209A6F3270D2","type": "news-list-item","sort1": "3\u002F10\u002F2017"},{"guid": "22DD4105-3FC1-4DCB-A543-1B9740A81AF4","type": "news-list-item","sort1": "2\u002F10\u002F2017"},{"guid": "FEC15E96-25D6-40DA-8A10-DD6ED038C9EE","type": "news-list-item","sort1": "2\u002F10\u002F2017"},{"guid": "1B74CA2B-8909-43B9-B621-F1F72DF2BFF9","type": "news-list-item","sort1": "2\u002F10\u002F2017"},{"guid": "E44DC620-3322-41F0-8FA5-1C39014F24E7","type": "news-list-item","sort1": "28\u002F09\u002F2017"},{"guid": "7E075CB2-654B-40A7-A548-B5E36893E1EC","type": "news-list-item","sort1": "28\u002F09\u002F2017"},{"guid": "43D4FAF0-C196-47E3-B5A8-E30C0615B18C","type": "news-list-item","sort1": "27\u002F09\u002F2017"},{"guid": "857E51B4-7A09-4533-8125-ECF644459DB7","type": "news-list-item","sort1": "27\u002F09\u002F2017"},{"guid": "A7D39149-2B66-482C-93AC-B57C557E685C","type": "news-list-item","sort1": "27\u002F09\u002F2017"},{"guid": "F629B0D8-A739-423B-B7A8-7E3E494B72D9","type": "news-list-item","sort1": "26\u002F09\u002F2017"},{"guid": "9D47B5EC-D070-4E04-B852-00103E718F4A","type": "news-list-item","sort1": "26\u002F09\u002F2017"},{"guid": "38605D9A-18A2-4EAE-AC0F-B300E874E196","type": "news-list-item","sort1": "26\u002F09\u002F2017"},{"guid": "9E3BFB5F-081C-4924-88A4-6C68FEDF96FB","type": "feature-list-item","sort1": "26\u002F09\u002F2017"},{"guid": "99BF69C6-9E89-4355-B9BD-531ABBBA93AA","type": "news-list-item","sort1": "25\u002F09\u002F2017"},{"guid": "8D21BC86-2A1D-4473-AE4E-313EE54430FD","type": "news-list-item","sort1": "25\u002F09\u002F2017"},{"guid": "66EFD0C9-1434-49FF-8B26-60F7565BA813","type": "news-list-item","sort1": "25\u002F09\u002F2017"},{"guid": "4178727E-5956-45A4-85C9-D97A40F315F5","type": "news-list-item","sort1": "25\u002F09\u002F2017"},{"guid": "DCDCF704-0771-432D-9E13-B044E5192E81","type": "news-list-item","sort1": "22\u002F09\u002F2017"},{"guid": "66A49BF2-F382-4331-B03F-EBEEFFBCA304","type": "news-list-item","sort1": "22\u002F09\u002F2017"},{"guid": "688C0E36-1F41-4F70-B690-C0F849F8CCAB","type": "news-list-item","sort1": "21\u002F09\u002F2017"},{"guid": "90313FCF-866E-4F9D-90E2-9EBA37257181","type": "news-list-item","sort1": "21\u002F09\u002F2017"},{"guid": "97BF395A-97EC-4AAC-B9A4-44FA54C339B6","type": "news-list-item","sort1": "21\u002F09\u002F2017"},{"guid": "9E47F720-B827-4613-BC92-EE185D481363","type": "news-list-item","sort1": "20\u002F09\u002F2017"},{"guid": "B3598C6B-1A53-4FEA-BB44-AF9ECE055378","type": "news-list-item","sort1": "20\u002F09\u002F2017"},{"guid": "137F2C83-6A0F-40B0-87C4-3A1E7A82EEAE","type": "news-list-item","sort1": "20\u002F09\u002F2017"},{"guid": "2BAD6245-5BBA-4FE3-A951-114BEFE42529","type": "feature-list-item","sort1": "20\u002F09\u002F2017"},{"guid": "D0721138-898B-4830-818F-4C538F19BA16","type": "news-list-item","sort1": "19\u002F09\u002F2017"},{"guid": "6629661D-2476-40B3-8608-CB2912EE3E70","type": "news-list-item","sort1": "19\u002F09\u002F2017"},{"guid": "108FD3A1-1C3E-472A-8DF3-5F7FE39D17C0","type": "news-list-item","sort1": "19\u002F09\u002F2017"},{"guid": "1C9C8A73-4BB7-4BE9-A1BC-BBA6C64E8085","type": "news-list-item","sort1": "19\u002F09\u002F2017"},{"guid": "50693A28-CF94-442D-A475-5E31E0C975B3","type": "news-list-item","sort1": "18\u002F09\u002F2017"},{"guid": "55F44D6F-E57D-45C9-951B-EBF952CB74EF","type": "news-list-item","sort1": "18\u002F09\u002F2017"},{"guid": "2B00B19C-2EE4-49B3-9831-CFBE7890A5A9","type": "news-list-item","sort1": "18\u002F09\u002F2017"},{"guid": "A98A0C53-4023-4FD9-9839-27E02C4A5E6D","type": "news-list-item","sort1": "15\u002F09\u002F2017"},{"guid": "68FC1C29-2D91-46C8-89E8-E81830BB8764","type": "news-list-item","sort1": "15\u002F09\u002F2017"},{"guid": "D280AF4B-9E83-4906-AA05-9B4922431677","type": "news-list-item","sort1": "14\u002F09\u002F2017"},{"guid": "98B9A6E2-217E-4024-A13D-17A0397831DD","type": "news-list-item","sort1": "14\u002F09\u002F2017"},{"guid": "9144F535-A8F1-4C5A-9459-554945C2EC0B","type": "news-list-item","sort1": "14\u002F09\u002F2017"},{"guid": "1C453ABD-46B4-4BC5-93A5-4A0A00C73388","type": "news-list-item","sort1": "13\u002F09\u002F2017"},{"guid": "278E4ED4-2335-4617-B891-F4C0F2C866CA","type": "news-list-item","sort1": "13\u002F09\u002F2017"},{"guid": "4FB04289-E360-40F2-8856-1750238CF284","type": "news-list-item","sort1": "13\u002F09\u002F2017"},{"guid": "57DAF63D-6161-4328-B7DC-C78DF4763C40","type": "news-list-item","sort1": "13\u002F09\u002F2017"},{"guid": "FDD387F9-702E-4138-B57B-09CEF1A332CA","type": "news-list-item","sort1": "12\u002F09\u002F2017"},{"guid": "8DCA6BA4-F207-4EB4-8DCF-65EE9FA6ACA1","type": "news-list-item","sort1": "12\u002F09\u002F2017"},{"guid": "DA9FD929-6384-4331-897A-9A75AEAEBE2D","type": "news-list-item","sort1": "12\u002F09\u002F2017"},{"guid": "0A7E49A7-E9B1-46E4-BEFF-CF7B28751225","type": "news-list-item","sort1": "11\u002F09\u002F2017"},{"guid": "FD127D75-4B59-4814-935D-8A5FB689A1C9","type": "news-list-item","sort1": "11\u002F09\u002F2017"},{"guid": "8924127D-5280-471C-8477-DD9385B9E00C","type": "news-list-item","sort1": "11\u002F09\u002F2017"},{"guid": "9D48B01C-3347-4BDE-8A81-A2EEDEE16565","type": "news-list-item","sort1": "8\u002F09\u002F2017"},{"guid": "61C6F75B-C473-4A30-A6E4-98AABD81DDD4","type": "news-list-item","sort1": "8\u002F09\u002F2017"},{"guid": "38808602-C8EF-4F0B-A7B3-E59DFCBC129A","type": "news-list-item","sort1": "8\u002F09\u002F2017"},{"guid": "E8BA0B4F-C5A6-4A52-A456-E8A4AA024C9F","type": "news-list-item","sort1": "7\u002F09\u002F2017"},{"guid": "1853BE49-76FD-4719-AB84-D56D430244F6","type": "news-list-item","sort1": "7\u002F09\u002F2017"},{"guid": "CD0A81EE-B9AE-4C7C-8659-0B63D92A8614","type": "news-list-item","sort1": "7\u002F09\u002F2017"},{"guid": "6C5B3BA9-BB96-4A6E-9648-9799257D64D4","type": "news-list-item","sort1": "6\u002F09\u002F2017"},{"guid": "F01EFAB4-D46B-4E52-B318-913A2780FB4D","type": "news-list-item","sort1": "6\u002F09\u002F2017"},{"guid": "B3695886-849C-4241-AA3B-4B2637AC2D34","type": "news-list-item","sort1": "6\u002F09\u002F2017"},{"guid": "CC91B9CD-D248-4A70-8BD3-B43BA57785D0","type": "news-list-item","sort1": "5\u002F09\u002F2017"},{"guid": "038093F9-E1D1-406B-83AD-AECD3048F884","type": "news-list-item","sort1": "5\u002F09\u002F2017"},{"guid": "E6767CBB-2CBD-49EF-B804-9F660A46E4EE","type": "news-list-item","sort1": "4\u002F09\u002F2017"},{"guid": "47C5CBC0-4414-4A58-AD4E-97E1DDB3B485","type": "news-list-item","sort1": "4\u002F09\u002F2017"},{"guid": "B4C0309F-FFD0-4239-8662-67C7190E5DF2","type": "news-list-item","sort1": "1\u002F09\u002F2017"},{"guid": "7F39008A-0E0F-4182-A5F0-03A43E066FDB","type": "feature-list-item","sort1": "1\u002F09\u002F2017"}];</script>
+        <ng-include src="%27/src/pages/portal/stacked_content.tpl.html"></ng-include>
+    
+
+</div>
+<div id="contentright" class="clearfix lg-only">
+
+        <div class="top-stories box-sizing-legacy">
+            
+            <ul class="d100-tabs" role="tablist"><li role="presentation" class="active">
+                    <a class="text-nowrap" href="#home" aria-controls="home" role="tab" data-tab-pane="tab-stories">news</a>
+                </li><li role="presentation" style="">
+                    <a class="text-nowrap" href="#profile" aria-controls="profile" role="tab" data-tab-pane="tab-new-projects">projects</a>
+                </li></ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content clearfix">
+                
+                <div role="tabpanel" class="tab-pane no-padding" id="tab-features">
+                    
+                </div>
+
+                
+                <div role="tabpanel" class="tab-pane active no-padding" id="tab-stories">
+                       
+                      <div class="tile" style="background-image: url('https://d39lxsrz40jt15.cloudfront.net/downloads/EDG2012/o_1ejjkkkjcn2l12n0rscuea1pu57_w450_h450.png');">
+                                <div class="text-overlay">
+                                    <a class="title" href="news_detailsd218.html?AssetId=83940">Hong Kong Design Awards 2020 Presentation </a>
+                                    <br />
+                                    <a class="title" href="news_detailsd218.html?AssetId=83940">[News]</a>
+                                </div>
+                            </div>  
+
+                       
+                      <div class="tile" style="background-image: url('https://d39lxsrz40jt15.cloudfront.net/downloads/EDG2012/o_1ej1oq5pc1ca11atm1a9cr2rsv2c_w450_h450.png');">
+                                <div class="text-overlay">
+                                    <a class="title" href="news_details8971.html?AssetId=83569">#BeyondCOVID Town Hall - ASIA 06 </a>
+                                    <br />
+                                    <a class="title" href="news_details8971.html?AssetId=83569">[News]</a>
+                                </div>
+                            </div>  
+
+                       
+                      <div class="tile" style="background-image: url('https://d39lxsrz40jt15.cloudfront.net/downloads/EDG2012/o_1eifqljva1t1u1ha1h9go6cuq77_w450_h450.png');">
+                                <div class="text-overlay">
+                                    <a class="title" href="news_detailsc2dc.html?AssetId=83180">#BeyondCOVID Town Hall - USA 06 </a>
+                                    <br />
+                                    <a class="title" href="news_detailsc2dc.html?AssetId=83180">[News]</a>
+                                </div>
+                            </div>  
+
+                       
+                      <div class="tile" style="background-image: url('https://d39lxsrz40jt15.cloudfront.net/downloads/EDG2012/o_1eifqcrit1gdt8e261a1s1v1dne7_w450_h450.png');">
+                                <div class="text-overlay">
+                                    <a class="title" href="news_details5d76.html?AssetId=83176">#BeyondCOVID Town Hall - EUK 06 </a>
+                                    <br />
+                                    <a class="title" href="news_details5d76.html?AssetId=83176">[News]</a>
+                                </div>
+                            </div>  
+
+                       
+                      <div class="tile" style="background-image: url('https://d39lxsrz40jt15.cloudfront.net/downloads/EDG2012/o_1ehc193if1f4a1kdr8oglkd1fbr7_w450_h450.png');">
+                                <div class="text-overlay">
+                                    <a class="title" href="news_details32a0.html?AssetId=82641">#BeyondCOVID Town Hall - AUS 06 </a>
+                                    <br />
+                                    <a class="title" href="news_details32a0.html?AssetId=82641">[News]</a>
+                                </div>
+                            </div>  
+
+                       
+                      <div class="tile" style="background-image: url('https://d39lxsrz40jt15.cloudfront.net/downloads/EDG2012/o_1egpqorc025sct5coaomr1j9pc_w450_h450.png');">
+                                <div class="text-overlay">
+                                    <a class="title" href="news_details6eb8.html?AssetId=82468">Melbourne Design Awards 2020 - Presentation and Annual </a>
+                                    <br />
+                                    <a class="title" href="news_details6eb8.html?AssetId=82468">[News]</a>
+                                </div>
+                            </div>  
+
+                    
+                </div>
+
+                
+                <div role="tabpanel" class="tab-pane no-padding" id="tab-new-projects">
+                    
+                            <div class="tile" style="background-image: url('https://d39lxsrz40jt15.cloudfront.net/downloads/EDG2012/o_1ei5h4i6l1tri21a1etr1gb21k8gf_w144_h144.png');">
+                                <div class="text-overlay">
+                                    <a class="title" href="https://drivenxdesign.com/PAR21/project.asp?ID=20464">Whispering Peninsula </a>
+                                    <br />
+                                    <a class="title" href="https://drivenxdesign.com/PAR21/project.asp?ID=20464">[PAR21]</a>
+                                </div>
+                            </div>
+                            
+                            <div class="tile" style="background-image: url('https://d39lxsrz40jt15.cloudfront.net/downloads/EDG2012/o_1ejchlb5g1otk1a1h1flf1k02143r7_w144_h144.png');">
+                                <div class="text-overlay">
+                                    <a class="title" href="https://drivenxdesign.com/PAR21/project.asp?ID=20422">HONEY </a>
+                                    <br />
+                                    <a class="title" href="https://drivenxdesign.com/PAR21/project.asp?ID=20422">[PAR21]</a>
+                                </div>
+                            </div>
+                            
+                            <div class="tile" style="background-image: url('https://d39lxsrz40jt15.cloudfront.net/downloads/EDG2012/o_1ej9av6jh1as676u3lu9881ir8c_w144_h144.png');">
+                                <div class="text-overlay">
+                                    <a class="title" href="https://drivenxdesign.com/PAR21/project.asp?ID=20553">Taicang ORIENT BAY </a>
+                                    <br />
+                                    <a class="title" href="https://drivenxdesign.com/PAR21/project.asp?ID=20553">[PAR21]</a>
+                                </div>
+                            </div>
+                            
+                            <div class="tile" style="background-image: url('https://d39lxsrz40jt15.cloudfront.net/downloads/EDG2012/o_1ehc0o7u41pc4s2lskg12k1uac7_w144_h144.png');">
+                                <div class="text-overlay">
+                                    <a class="title" href="https://drivenxdesign.com/BER21/project.asp?ID=20439">Xitang Regency, Diping Real Estate </a>
+                                    <br />
+                                    <a class="title" href="https://drivenxdesign.com/BER21/project.asp?ID=20439">[BER21]</a>
+                                </div>
+                            </div>
+                            
+                            <div class="tile" style="background-image: url('https://d39lxsrz40jt15.cloudfront.net/downloads/EDG2012/o_1ej2195h5131o6j19g4odr1m1qg_w144_h144.png');">
+                                <div class="text-overlay">
+                                    <a class="title" href="https://drivenxdesign.com/PAR21/project.asp?ID=20541">JiangShanYue  Sales Center </a>
+                                    <br />
+                                    <a class="title" href="https://drivenxdesign.com/PAR21/project.asp?ID=20541">[PAR21]</a>
+                                </div>
+                            </div>
+                            
+                            <div class="tile" style="background-image: url('https://d39lxsrz40jt15.cloudfront.net/downloads/EDG2012/o_1eidq4pc2n8dq5tqs1rtnbpc_w144_h144.png');">
+                                <div class="text-overlay">
+                                    <a class="title" href="https://drivenxdesign.com/BER21/project.asp?ID=20491">A Well-Made Home </a>
+                                    <br />
+                                    <a class="title" href="https://drivenxdesign.com/BER21/project.asp?ID=20491">[BER21]</a>
+                                </div>
+                            </div>
+                            
+                </div>
+            </div>
+            <script type="text/javascript">
+                $(function () {
+                    $('.top-stories .d100-tabs li a').click(function (event) {
+                        event.preventDefault();
+
+                        $('.d100-tabs > li').removeClass('active');
+                        $(this).parent().addClass('active');
+                        var tabPaneId = $(this).data('tab-pane');
+
+                        $('.top-stories .tab-content .tab-pane').removeClass('active');
+                        $('#' + tabPaneId).addClass('active');
+
+                    });
+                });
+            </script>
+        </div>
+
+        <div class="promos">
+                        <div class="content-block-two-unit">
+                            <div class="block-row"><a href="news_details75c0.html?AssetId=73493"
+                                        class="block-unit-2"
+                                        style="box-sizing: border-box;margin-bottom: 4px;">
+                                        <img src="https://d39lxsrz40jt15.cloudfront.net/downloads/EDG2012/o_1e3o7bmhb1lcj1i6o8rfd19pq87.png" 
+                                            alt="" 
+                                            align="top"
+                                            watch-block="'390992D5-51FA-4D4E-B520-7DAF98C46824'" />
+                                    </a>
+                        </div>
+                    </div>
+                        <div class="content-block-two-unit">
+                            <div class="block-row"><a href="searchadc3.html?studio=transpire"
+                                        class="block-unit-1"
+                                        style="box-sizing: border-box;margin-bottom: 4px;">
+                                        <img src="https://d39lxsrz40jt15.cloudfront.net/downloads/EDG2012/o_1ci3tafe5t9q1tmqmp01ikfj7r7.jpg" 
+                                            alt="" 
+                                            align="top"
+                                            watch-block="'A37C272A-9A2D-435F-ACD4-DC2C7D7C8612'" />
+                                    </a><a href="searche72f.html?studio=luminary"
+                                        class="block-unit-1"
+                                        style="box-sizing: border-box;margin-bottom: 4px;">
+                                        <img src="https://d39lxsrz40jt15.cloudfront.net/downloads/EDG2012/o_1daqri5g6h58p0q1t1ffnn1r607.png" 
+                                            alt="" 
+                                            align="top"
+                                            watch-block="'64B96242-1249-4441-A375-51F70D359A9D'" />
+                                    </a>
+                        </div>
+                    </div>
+                        <div class="content-block-two-unit">
+                            <div class="block-row"><a href="searche46a.html?studio=a%2B%20design%20group&amp;showFeatures=0&amp;showNews=0"
+                                        class="block-unit-1"
+                                        style="box-sizing: border-box;margin-bottom: 4px;">
+                                        <img src="https://d39lxsrz40jt15.cloudfront.net/downloads/EDG2012/o_1ddhqo32i1hrg7mn8nlfa5nk87.jpg" 
+                                            alt="" 
+                                            align="top"
+                                            watch-block="'D0AEC833-9333-4BBE-9118-5BA20B6A9F88'" />
+                                    </a><a href="search81b8.html?studio=k20%20Architecture&amp;showFeatures=0&amp;showNews=0"
+                                        class="block-unit-1"
+                                        style="box-sizing: border-box;margin-bottom: 4px;">
+                                        <img src="https://d39lxsrz40jt15.cloudfront.net/downloads/EDG2012/o_1c8jdoifa1pgo1ej2hidne10c7.jpg" 
+                                            alt="" 
+                                            align="top"
+                                            watch-block="'1CA9C2B4-5508-41B2-96BE-D322F9321074'" />
+                                    </a>
+                        </div>
+                    </div>
+                        <div class="content-block-two-unit">
+                            <div class="block-row"><a href="searchaa52.html?studio=adidas&amp;showFeatures=0&amp;showNews=0"
+                                        class="block-unit-1"
+                                        style="box-sizing: border-box;margin-bottom: 4px;">
+                                        <img src="https://d39lxsrz40jt15.cloudfront.net/downloads/EDG2012/o_1c8jepu8p1hplec11fpb1krgf387.jpg" 
+                                            alt="" 
+                                            align="top"
+                                            watch-block="'F1AAF46F-234F-42B0-AD7A-0D2FA97B17C2'" />
+                                    </a><a href="search6acc.html?studio=charlwood&amp;showFeatures=0&amp;showNews=0"
+                                        class="block-unit-1"
+                                        style="box-sizing: border-box;margin-bottom: 4px;">
+                                        <img src="https://d39lxsrz40jt15.cloudfront.net/downloads/EDG2012/o_1c8jguh0716rp1ghts8hfti3h7.gif" 
+                                            alt="" 
+                                            align="top"
+                                            watch-block="'68D7CEF1-D259-45A4-9FB3-34153FA334A7'" />
+                                    </a>
+                        </div>
+                    </div>
+                        <div class="content-block-two-unit">
+                            <div class="block-row"><a href="search89ae.html?studio=payce"
+                                        class="block-unit-1"
+                                        style="box-sizing: border-box;margin-bottom: 4px;">
+                                        <img src="https://d39lxsrz40jt15.cloudfront.net/downloads/EDG2012/o_1cf6oles6fd51uv21bgg1n1j112j7.jpeg" 
+                                            alt="" 
+                                            align="top"
+                                            watch-block="'A730BAE6-E20B-410A-8D1B-20D67194E201'" />
+                                    </a><a href="searchd6d1.html?studio=azbcreative&amp;showFeatures=0&amp;showNews=0"
+                                        class="block-unit-1"
+                                        style="box-sizing: border-box;margin-bottom: 4px;">
+                                        <img src="https://d39lxsrz40jt15.cloudfront.net/downloads/EDG2012/o_1c8jh3058e221qm41u7t1v4g1leo7.jpeg" 
+                                            alt="" 
+                                            align="top"
+                                            watch-block="'56202B69-FC0A-4C30-A663-FA074306085B'" />
+                                    </a>
+                        </div>
+                    </div>
+                        <div class="content-block-two-unit">
+                            <div class="block-row"><a href="search6790.html?studio=biasol&amp;showFeatures=0&amp;showNews=0"
+                                        class="block-unit-1"
+                                        style="box-sizing: border-box;margin-bottom: 4px;">
+                                        <img src="https://d39lxsrz40jt15.cloudfront.net/downloads/EDG2012/o_1c8jh5mbfbnbd8p1f7b1vlj1k257.jpg" 
+                                            alt="" 
+                                            align="top"
+                                            watch-block="'B70EFFBE-05DF-4BFF-BEAF-5B0C283035CE'" />
+                                    </a><a href="searchb0d8.html?studio=microsoft&amp;showFeatures=0&amp;showNews=0"
+                                        class="block-unit-1"
+                                        style="box-sizing: border-box;margin-bottom: 4px;">
+                                        <img src="https://d39lxsrz40jt15.cloudfront.net/downloads/EDG2012/o_1c8jgn7gfjq63891nls18f31tqa7.jpg" 
+                                            alt="" 
+                                            align="top"
+                                            watch-block="'C0D5884F-7913-4F13-BE57-7E429A76C78D'" />
+                                    </a>
+                        </div>
+                    </div>
+                        <div class="content-block-two-unit">
+                            <div class="block-row"><a href="search1ea2.html?studio=Foster%20%2B%20Partners&amp;showFeatures=0&amp;showNews=0"
+                                        class="block-unit-1"
+                                        style="box-sizing: border-box;margin-bottom: 4px;">
+                                        <img src="https://d39lxsrz40jt15.cloudfront.net/downloads/EDG2012/o_1c8jbcevhickj87e39c2efji7.png" 
+                                            alt="" 
+                                            align="top"
+                                            watch-block="'5DEA3FD6-4133-442B-A7FF-38152DD3730B'" />
+                                    </a><a href="searchff5d.html?studio=Skidmore%2C%20Owings%20%26%20Merrill%20LLP&amp;showFeatures=0&amp;showNews=0"
+                                        class="block-unit-1"
+                                        style="box-sizing: border-box;margin-bottom: 4px;">
+                                        <img src="https://d39lxsrz40jt15.cloudfront.net/downloads/EDG2012/o_1c8jbkb5as7r60816set7a1qes7.png" 
+                                            alt="" 
+                                            align="top"
+                                            watch-block="'75F71ADF-0395-41DB-A392-7FB25F6843EC'" />
+                                    </a>
+                        </div>
+                    </div>
+                        <div class="content-block-two-unit">
+                            <div class="block-row"><a href="search253c.html?studio=Transport%20for%20London&amp;showFeatures=0&amp;showNews=0"
+                                        class="block-unit-1"
+                                        style="box-sizing: border-box;margin-bottom: 4px;">
+                                        <img src="https://d39lxsrz40jt15.cloudfront.net/downloads/EDG2012/o_1c8jettajnjf1lmbh651g6pndk7.jpg" 
+                                            alt="" 
+                                            align="top"
+                                            watch-block="'E4D07C6D-95C2-46AC-8DAC-7CB89DCABB28'" />
+                                    </a><a href="search24ed.html?studio=Gensler&amp;showFeatures=0&amp;showNews=0"
+                                        class="block-unit-1"
+                                        style="box-sizing: border-box;margin-bottom: 4px;">
+                                        <img src="https://d39lxsrz40jt15.cloudfront.net/downloads/EDG2012/o_1c8jf1it5arf1goo9p31hfr1ik57.jpg" 
+                                            alt="" 
+                                            align="top"
+                                            watch-block="'AB8EF059-CBEF-4E3B-B9A7-DE4640956977'" />
+                                    </a>
+                        </div>
+                    </div></div>
+</div>
+
+            </div>
+        </div>
+        
+        <div id="project_footer">
+    
+                <div class="asset">
+                    
+                        <a href="pagec1a0.html?assetid=28123">
+                            <img src="https://drivenxdesign.com/aws/safeImgS3.php?g=4E90DA0E-E7C6-4D57-858D-B3C70E76EE47" class="img-responsive ng-isolate-scope">
+                        </a>
+                    
+                </div>
+                <br />
+                <br />
+               
+    <div id="project_footer_left">
+        <strong>E-Mail:</strong>
+        <script language="javascript">
+<!--
+    var part1 = "editor";
+    var part2 = "drivenxdesign.com?subject=DRIVEN x DESIGN - General Enquiry";
+    var part3 = "Click here to send us an Email";
+    document.write('<a href="mai' + 'lto:' + part1 + '@' + part2 + '">');
+    document.write(part3 + '</a>');
+    // -->
+        </script>
+        
+         |  <a href="drivenxdesign.html"><strong>Facebook</strong></a>
+         |  <a href="https://twitter.com/drivenxdesign"><strong>Twitter</strong></a>
+         |  <a href="pagec818.html?assetid=17387" target="_blank">Media</a>
+    </div>
+    <div id="project_footer_right">
+        &copy; All Rights Reserved | 2020 DRIVENxDESIGN<br />
+        
+    </div>
+    <div class="end"></div>
+</div>
+
+<div id="footer">
+    <div id="sitemap">
+        <div id="sitemap_left">
+            <h2>DRIVENxDESIGN</h2>
+            <strong>USA:</strong> +1 347 416 6355 
+                <br />
+            <strong>UK:</strong> +44 20 0333 1511
+                <br />
+            <strong>AUS:</strong> +61 3 90204453 
+                <br />
+            <strong>E:</strong>  <a href="mailto:info@drivenxdesign.com">info@drivenxdesign.com</a><br />
+            <strong>W:</strong>  <a href="http://drivenxdesign.com/">drivenxdesign.com</a><br />
+            <br />
+
+            <h2>Social</h2>
+            <a href="https://fb.me/drivenxdesign">Facebook</a> - <a href="https://www.instagram.com/drivenxdesign/">Instagram</a> - <a href="https://twitter.com/drivenxdesign" target="_self">Twitter</a> - <a href="http://www.linkedin.com/groups/design100-5141166?trk=my_groups-b-grp-v">Linkedin</a><br />
+            <br />
+            <br />
+            <a href="pagea923.html?assetid=17113">Terms and Conditions</a><br />
+            <a href="pageb04f.html?assetid=17070">Privacy Policy</a>  | <a href="page7337.html?assetid=18343">Policy on cookies</a><br />
+            &nbsp;
+ 
+        </div>
+
+        <div id="sitemap_middle">
+            <h2>
+                DRIVENxDESIGN - Site
+                
+            </h2>
+            <a href="https://drivenxdesign.com/d100">Home</a><br />
+<a href="pagea7b8.html?assetid=17567">About</a><br />
+<a href="pageae3f.html?assetid=17734">Contact Us</a><br />
+<a href="news.html">Design News</a><br />
+<a href="programs.html">Programs</a><br />
+<a href="page6ec4.html?assetid=17570">Partners</a><br />
+<a href="pagec818.html?assetid=17387">Media</a><br />
+
+            <br />
+
+        </div>
+        <div id="sitemap_middle_B">
+
+            <h2>
+                DRIVENxDESIGN -  Tours
+                
+
+            </h2>
+            <span>AWARDS KICKOFF TOUR - 1 Feb - 30 Mar - CANCELLED</span><br />
+<span>DESIGN WEEK TOUR - 26 April - 10 July - CANCELLED</span><br />
+<span>SUMMER TOUR - 9 Aug - 29 Oct - TBC</span><br />
+<span>FALL TOUR - 7 Nov - 3 Dec - TBC</span><br />
+<span>ASIA TOUR - 3 Dec - 18 Dec - TBC</span><br />
+
+            <br />
+        </div>
+        <div id="sitemap_right">
+            <h2>
+                DRIVENxDESIGN - Awards
+                
+            </h2>
+            <a href="https://drivenxdesign.com/MEL20/">MELBOURNE DESIGN AWARDS</a><br />
+<a href="https://drivenxdesign.com/SYD20/">SYDNEY DESIGN AWARDS</a><br />
+<a href="https://drivenxdesign.com/BNE20/">BRISBANE DESIGN AWARDS</a><br />
+<a href="https://drivenxdesign.com/GOV20/">GOV DESIGN AWARDS</a><br />
+<a href="https://drivenxdesign.com/HKG20/">HONG KONG DESIGN AWARDS</a><br />
+<a href="https://drivenxdesign.com/BER21/">BERLIN DESIGN AWARDS</a><br />
+<a href="https://drivenxdesign.com/PAR21/">PARIS DESIGN AWARDS</a><br />
+<a href="https://drivenxdesign.com/LON20/">LONDON DESIGN AWARDS</a><br />
+<a href="https://drivenxdesign.com/NYC20/">NEW YORK  DESIGN AWARDS</a><br />
+
+            <br />
+
+        </div>
+    </div>
+    <div class="end"></div>
+</div>
+<script type="text/javascript">var oAdminNotes = [];</script><script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1728230-10']);
+    _gaq.push(['_trackPageview']);
+    (function () {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+    </body>
+
+<!-- Mirrored from drivenxdesign.com/d100/community.asp?comm_id=360559 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 06 Oct 2020 17:32:20 GMT -->
+</html>

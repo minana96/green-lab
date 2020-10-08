@@ -1,0 +1,26 @@
+html body.context-conseils #region-content .node-brick.bg-oblique {
+    position: relative;
+    overflow: visible;
+    padding: 100px 0;
+    margin: 70px 0;
+    background-color: transparent !important;
+}
+html .context-conseils div.node-brick.bg-oblique .span-oblique {
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-transform: skew(0,-7deg);
+            transform: skew(0,-7deg);
+}
+
+.page-node-150113 #region-content .node-brick p,
+.page-node-150113 #region-content .node-brick .field-item {
+    line-height: 1.5em;
+}
+
+.classStyle {
+    background-color: #ccc;
+}

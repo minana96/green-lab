@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="915px" viewBox="0 0 1440 915" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Wave Background</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="81.7505263%" cy="36.5832463%" fx="81.7505263%" fy="36.5832463%" r="188.396953%" gradientTransform="translate(0.817505,0.365832),scale(0.610266,1.000000),rotate(90.000000),translate(-0.817505,-0.365832)" id="radialGradient-1">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#ECEFF1" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="12.0597028%" fx="50%" fy="12.0597028%" r="188.396953%" gradientTransform="translate(0.500000,0.120597),scale(0.610266,1.000000),rotate(90.000000),translate(-0.500000,-0.120597)" id="radialGradient-2">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#ECEFF1" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Wave-Background" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M1577,410.132213 L1577,671.086288 C1578.24088,677.964355 1578.42269,684.655595 1577,692.578998 L1577,1124 L5,1124 L5,417.111941 C1.53769462,326.156498 -19.4104929,210.152534 61.1020669,179.032112 C285.839681,92.1695745 333.377851,347.342894 574.299957,347.342894 C815.218035,347.342894 815.218035,173.182417 1056.13611,173.182417 C1297.04613,173.182417 1281.85277,265.031911 1509.91431,342.698614 C1579.20142,366.293522 1578.35193,373.684021 1577,410.132213 Z" id="Combined-Shape" fill="url(#radialGradient-1)" opacity="0.85" transform="translate(789.000000, 642.500000) scale(-1, 1) translate(-789.000000, -642.500000) "></path>
+        <path d="M1541,532.132213 L1541,793.086288 C1542.24088,799.964355 1542.42269,806.655595 1541,814.578998 L1541,1246 L-31,1246 L-31,539.111941 C-34.4623054,448.156498 -55.4104929,332.152534 25.1020669,301.032112 C249.839681,214.169574 297.377851,469.342894 538.299957,469.342894 C779.218035,469.342894 779.218035,295.182417 1020.13611,295.182417 C1261.04613,295.182417 1245.85277,387.031911 1473.91431,464.698614 C1543.20142,488.293522 1542.35193,495.684021 1541,532.132213 Z" id="Combined-Shape" fill="url(#radialGradient-2)" opacity="0.7"></path>
+    </g>
+</svg>
