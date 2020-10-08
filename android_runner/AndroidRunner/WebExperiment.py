@@ -52,7 +52,7 @@ class WebExperiment(Experiment):
 
     def interaction(self, device, path, run, *args, **kwargs):
         browser = args[0]
-        browser.load_url(device, "http://192.168.1.172:8000/")          #hardcoded, you can extract only this part of URL from path, but it's always the same
+        browser.load_url(device, 'http://192.168.2.55:8000')
         #time.sleep(5)
         super(WebExperiment, self).interaction(device, path, run, *args, **kwargs)
 
