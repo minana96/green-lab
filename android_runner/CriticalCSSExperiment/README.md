@@ -1,5 +1,7 @@
 # Steps to configure experiment
 
+**Step 0**: Create a virtual environment called `venv` in the root folder of the repository. Make sure this is active from now on for any further interaction (`source venv/bin/activate`) and install all required python packages using `pip install -r requirements.txt`.
+
 **Step 1**: Follow the instructions from [here](https://github.com/S2-group/android-runner/blob/master/CONTRIBUTING.md) to install everything needed for 
 android-runner.
 
@@ -8,7 +10,7 @@ android-runner.
 **Step 3**: Plug in the phone via USB and run `adb devices` command to start up a deamon. You should see the device's identifier. Add this to `devices.json` file 
 and give it any name you want.
 
-**Step 4**: Navigate to `android-runner/AndroidRunner/Plugins/Trepn` and install Trepn profiler on the phone with `adb install com.quicinc.trepn.apk`. You can 
+**Step 4**: Navigate to `android-runner/AndroidRunner/Plugins/trepn` and install Trepn profiler on the phone with `adb install com.quicinc.trepn.apk`. You can 
 verify that it's installed by running `adb shell pm list packages`, it will list apks of all apps installed on the phone.
 
 **Step 5**: Go to Trepn app on the phone, navigate to `Settings>>Data Points` and verify that you can collect Baterry Power and Memory Usage.
@@ -20,7 +22,7 @@ paths to 50 apps in each, 25 subjects with and without critical css technique ap
 **Step 7**: Clear the app data for Firefox and Chrome (this will be done after each run in the experiment, but not before the first run). You can also do it with 
 commands `adb shell pm clear com.android.chrome` and `adb shell pm clear org.mozilla.firefox`.
 
-**Step 8**: Run `pip install beautifulsoup4` in the virtual environment. You need to call `android-runner/CriticalCSSExperiment/Scripts/AddJS.py` script with two 
+**Step 8**: You need to call `android-runner/CriticalCSSExperiment/Scripts/AddJS.py` script with two 
 arguments: the path to folder with all subjects and `http://<IP>:8001/` where `<IP>` is IP adress of your laptop. This will add small JavaScript onload event 
 handler inside `<head>` of each `index.html` file that will send empty GET request when the page is loaded. In the `android-runner/CriticalCSSExperiment/Scripts/
 interaction.py` script, this GET request is handled and profiling stops (you can delete the print statement inside the handler and just put `pass`).
