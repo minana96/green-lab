@@ -55,6 +55,6 @@ def add_js(directory, ip):
                 file.write(str(soup))
 
 if __name__ == '__main__':
-   #USAGE: (python3 AddJS.py path/To/Directory/With/All/WebApplication/ IPADRRESS)
-   #NOTE: IPADDRESS should be in the form of http://IP:8001/ and IP is the ip address
-   add_js(sys.argv[1], sys.argv[2])
+    #USAGE: (python3 AddJS.py path/To/Directory/With/All/WebApplication/ IPADRRESS)
+    #NOTE: IPADDRESS should be in the form of http://IP:8001/ and IP is the ip address
+    add_js(sys.argv[1], sys.argv[2])
