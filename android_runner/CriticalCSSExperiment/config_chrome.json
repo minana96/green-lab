@@ -1,7 +1,7 @@
 {
     "type": "web",
     "devices": {
-      "samsungj3": {}
+      "nexus6p": {}
     },
     "repetitions": 10,
     "clear_cache": true,
