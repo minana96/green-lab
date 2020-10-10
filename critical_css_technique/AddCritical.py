@@ -19,7 +19,8 @@ def make_critical(directory):
                 # print(mv_cmd)
                 # sys.stdout = mystdout = StringIO()
 
-                # os.system(critical_cmd)
+                if not os.path.exists(valid_path + "/index_temp.html"):
+                    os.system(critical_cmd)
                 if os.stat(path_to_index).st_size <= os.stat(valid_path + "/index_temp.html").st_size:
                     print(path_to_index, "is smaller than temp", os.stat(valid_path + "/index_temp.html").st_size)
                 else:
