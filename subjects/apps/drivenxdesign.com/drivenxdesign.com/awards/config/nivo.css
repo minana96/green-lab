@@ -1,0 +1,12 @@
+.nivo-controlNav {
+    z-index:10;
+}
+.nivo-caption {
+    padding: 5px;
+}
+#slider a.nivo-prevNav {
+    display:none;
+}
+#slider a.nivo-nextNav {
+    display:none;
+}

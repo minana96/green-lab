@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<style>html{overflow-y:scroll}body{margin:0;background-color:#f6f6f6}body,input,select{font-family:"Open Sans",sans-serif,"Segoe UI Emoji"}:not(:lang(he)):not(:lang(ar)){direction:ltr}a{color:#670000}a:visited{color:#a42121}#main-header{background-color:#670000;background-image:linear-gradient(#670000,#900);box-shadow:0 0 15px 2px rgba(0,0,0,.5);padding:.25em 0}.width-constraint{margin:auto;max-width:960px}@media screen and (max-width:970px){.width-constraint{margin:auto 1.2vw}}#main-header .width-constraint{padding:0 0 .25em 0;position:relative}#site-name img{vertical-align:bottom}#site-name-text{display:inline-block;vertical-align:top}#site-name-text h1{line-height:1.1em}#main-header,#main-header a,#main-header a:visited{color:#fff}#main-header h1{font-size:72px;margin:0;margin-top:0;letter-spacing:-2px}#nav-user-info,#site-nav>nav{text-align:right;position:absolute;right:0}#site-nav>nav{bottom:0}#nav-user-info{top:0}#site-nav>nav{padding:0}#site-nav>nav>li{list-style-type:none;display:inline-block}#site-nav>nav>li+li{margin-left:.5em}#language-selector{display:inline}#nav-user-info{font-size:small}#nav-user-info input,#nav-user-info select{font-size:11px}nav nav{position:absolute;right:0;background-color:#900;min-width:100%;display:none;padding:5px 0;z-index:10}nav nav li{white-space:nowrap;margin:0}nav nav li a{display:block;padding:5px 15px}.with-submenu{position:relative;padding-right:15px}nav .with-submenu>a::after{content:' ▾'}@media screen and (max-width:920px){#site-name img{max-width:96px;max-height:96px;width:12%;height:12%}#site-name-text{margin-top:2.3vw}#main-header h1{font-size:8.3vw}#site-nav{margin-top:-1vw}#nav-user-info,#site-nav>nav{display:block;position:unset;right:unset;padding-top:.3em}#site-nav>nav{bottom:unset}#nav-user-info{top:unset;font-size:unset;width:100%}#nav-user-info .sign-in-link{padding-right:.7em}#language-selector{display:unset}}.text-content{padding:0 1em 1em}.text-content{list-style-type:none;box-shadow:0 0 5px #ddd;background-color:#fff;border:1px solid #bbb;border-radius:5px;box-sizing:border-box;margin:14px 0}@media screen and (max-width:960px){.text-content{padding:0 1.2vw 1.2vw}}body .width-constraint>.text-content>h2{text-align:center}.home-search{position:relative;vertical-align:middle}.home-search input[type=search]{padding-inline-end:20px}.home-search input[type=submit]{position:absolute;-moz-appearance:none;-webkit-appearance:none;right:0;top:0;border-color:transparent;padding-inline-start:0;padding-inline-end:6px;margin-left:0;margin-right:0;background:0 0;opacity:.5}@media screen and (max-width:680px){.home-search input[type=search]{font-size:unset}}#home-script-nav{max-width:700px;margin:0 auto;padding-bottom:20px;border-bottom:1px solid #bbb;margin-bottom:15px}.home-search input{font-size:large}.home-search input[type=search]{width:100%}#home-top-sites{overflow:hidden;margin-top:5px}#home-top-sites a{margin:0 5px}#home-step-1{overflow:auto}</style>
+  <script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"2a000a1c4d","applicationID":"3221391","transactionName":"ewpeFRRWXVQDFxcJCVUAHwgIXVRA","queueTime":0,"applicationTime":31,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={licenseKey:"2a000a1c4d",applicationID:"3221391"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
+  <title>Greasy Fork - veilige en nuttige gebruikersscripts</title>
+  <meta name="description" value="Greasy Fork is a free site providing user scripts to improve your web browsing experience.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" media="print" href="/assets/application-05523d5f0149cee4ed2d15b64c75561af51931a355ed212a152746b1365ffde8.css" onload="this.media='all'">
+  <script src="/assets/application-4071f06873f26f42b7064ce61d098d7bc6aed726a8cfbfa14130eacf7828c6a1.js"></script>
+  <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="b3vX6+P7c2aA7oHsaIu0MnQh/k5/gKNbyCPQz5HalkPDZBjaCcoal0X1iqwHRu2ZYXVpZpZZLvQ3vlrhLzoYvQ==">
+  <link rel="canonical" href="https://greasyfork.org/nl">
+  <link rel="icon" href="/assets/blacklogo16-f649ec98e464d95b075234438da0fa13233b467b3cd1ad020f0ea07dea91d08c.png">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" media="print" onload="this.media='all'">
+    <link rel="alternate" hreflang="x-default" href="/">
+      <link rel="alternate" hreflang="ar" href="/ar">
+      <link rel="alternate" hreflang="bg" href="/bg">
+      <link rel="alternate" hreflang="cs" href="/cs">
+      <link rel="alternate" hreflang="da" href="/da">
+      <link rel="alternate" hreflang="de" href="/de">
+      <link rel="alternate" hreflang="el" href="/el">
+      <link rel="alternate" hreflang="en" href="/en">
+      <link rel="alternate" hreflang="eo" href="/eo">
+      <link rel="alternate" hreflang="es" href="/es">
+      <link rel="alternate" hreflang="fi" href="/fi">
+      <link rel="alternate" hreflang="fr" href="/fr">
+      <link rel="alternate" hreflang="fr-CA" href="/fr-CA">
+      <link rel="alternate" hreflang="he" href="/he">
+      <link rel="alternate" hreflang="hu" href="/hu">
+      <link rel="alternate" hreflang="id" href="/id">
+      <link rel="alternate" hreflang="it" href="/it">
+      <link rel="alternate" hreflang="ja" href="/ja">
+      <link rel="alternate" hreflang="ko" href="/ko">
+      <link rel="alternate" hreflang="nb" href="/nb">
+      <link rel="alternate" hreflang="nl" href="/nl">
+      <link rel="alternate" hreflang="pl" href="/pl">
+      <link rel="alternate" hreflang="pt-BR" href="/pt-BR">
+      <link rel="alternate" hreflang="ro" href="/ro">
+      <link rel="alternate" hreflang="ru" href="/ru">
+      <link rel="alternate" hreflang="sk" href="/sk">
+      <link rel="alternate" hreflang="sr" href="/sr">
+      <link rel="alternate" hreflang="sv" href="/sv">
+      <link rel="alternate" hreflang="th" href="/th">
+      <link rel="alternate" hreflang="tr" href="/tr">
+      <link rel="alternate" hreflang="uk" href="/uk">
+      <link rel="alternate" hreflang="vi" href="/vi">
+      <link rel="alternate" hreflang="zh-CN" href="/zh-CN">
+      <link rel="alternate" hreflang="zh-TW" href="/zh-TW">
+
+
+  <link rel="search" href="/nl/opensearch.xml" type="application/opensearchdescription+xml" title="Zoeken op Greasy Fork" hreflang="nl">
+
+
+  
+</head>
+<body>
+
+  <header id="main-header">
+    <div class="width-constraint">
+      <div id="site-name">
+        <img src="/assets/blacklogo96-1221dbbb8f0d47a728f968c35c2e2e03c64276a585b8dceb7a79a17a3f350e8a.png" alt="">
+        <div id="site-name-text">
+          <h1>Greasy Fork</h1>
+        </div>
+      </div>
+      <div id="site-nav">
+        <div id="nav-user-info">
+            <span class="sign-in-link"><a rel="nofollow" href="/nl/users/sign_in?return_to=%2Fnl">Inloggen</a></span>
+
+          <form id="language-selector" action="/">
+            <select id="language-selector-locale" name="locale">
+                  <option data-language-url="/ar" value="ar">
+                    العَرَبِيةُ (ar)
+                  </option>
+                  <option data-language-url="/bg" value="bg">
+                    Български (bg)
+                  </option>
+                  <option data-language-url="/cs" value="cs">
+                    Čeština (cs)
+                  </option>
+                  <option data-language-url="/da" value="da">
+                    Dansk (da)
+                  </option>
+                  <option data-language-url="/de" value="de">
+                    Deutsch (de)
+                  </option>
+                  <option data-language-url="/el" value="el">
+                    Ελληνικά (el)
+                  </option>
+                  <option data-language-url="/en" value="en">
+                    English (en)
+                  </option>
+                  <option data-language-url="/eo" value="eo">
+                    Esperanto (eo)
+                  </option>
+                  <option data-language-url="/es" value="es">
+                    Español (es)
+                  </option>
+                  <option data-language-url="/fi" value="fi">
+                    Suomi (fi)
+                  </option>
+                  <option data-language-url="/fr" value="fr">
+                    Français (fr)
+                  </option>
+                  <option data-language-url="/fr-CA" value="fr-CA">
+                    Français canadien (fr-CA)
+                  </option>
+                  <option data-language-url="/he" value="he">
+                    עברית (he)
+                  </option>
+                  <option data-language-url="/hu" value="hu">
+                    Magyar (hu)
+                  </option>
+                  <option data-language-url="/id" value="id">
+                    Bahasa Indonesia (id)
+                  </option>
+                  <option data-language-url="/it" value="it">
+                    Italiano (it)
+                  </option>
+                  <option data-language-url="/ja" value="ja">
+                    日本語 (ja)
+                  </option>
+                  <option data-language-url="/ko" value="ko">
+                    한국어 (ko)
+                  </option>
+                  <option data-language-url="/nb" value="nb">
+                    Bokmål (nb)
+                  </option>
+                  <option data-language-url="/nl" value="nl" selected>
+                    Nederlands (nl)
+                  </option>
+                  <option data-language-url="/pl" value="pl">
+                    Polski (pl)
+                  </option>
+                  <option data-language-url="/pt-BR" value="pt-BR">
+                    Português do Brasil (pt-BR)
+                  </option>
+                  <option data-language-url="/ro" value="ro">
+                    Română (ro)
+                  </option>
+                  <option data-language-url="/ru" value="ru">
+                    Русский (ru)
+                  </option>
+                  <option data-language-url="/sk" value="sk">
+                    Slovenčina (sk)
+                  </option>
+                  <option data-language-url="/sr" value="sr">
+                    srpski (sr)
+                  </option>
+                  <option data-language-url="/sv" value="sv">
+                    Svenska (sv)
+                  </option>
+                  <option data-language-url="/th" value="th">
+                    ภาษาไทย (th)
+                  </option>
+                  <option data-language-url="/tr" value="tr">
+                    Türkçe (tr)
+                  </option>
+                  <option data-language-url="/uk" value="uk">
+                    Українська (uk)
+                  </option>
+                  <option data-language-url="/vi" value="vi">
+                    Tiếng Việt (vi)
+                  </option>
+                  <option data-language-url="/zh-CN" value="zh-CN">
+                    简体中文 (zh-CN)
+                  </option>
+                  <option data-language-url="/zh-TW" value="zh-TW">
+                    繁體中文 (zh-TW)
+                  </option>
+              <option value="help">Help us translate!</option>
+            </select><input id="language-selector-submit" type="submit" value="→">
+            <script>
+              /* submit is handled by js if enabled */
+              document.getElementById("language-selector-submit").style.display = "none"
+            </script>
+          </form>
+        </div>
+        <nav>
+          <li class="scripts-index-link"><a href="/nl/scripts">Scripts</a></li>
+          <li class="forum-link"><a href="/nl/discussions">Forum</a></li>
+          <li class="help-link"><a href="/nl/help">Hulp</a></li>
+          <li class="with-submenu">
+            <a href="#" onclick="return false">Meer</a>
+            <nav>
+              <li><a href="/nl/search">Geavanceerd zoeken</a></li>
+              <li><a href="/nl/users">Gebruikerslijst</a></li>
+              <li><a href="/nl/scripts/libraries">Bibliotheken</a></li>
+              <li><a href="/nl/moderator_actions">Moderator log</a></li>
+            </nav>
+          </li>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <div class="width-constraint">
+
+    	<section class="text-content">
+		
+<h2>Welkom bij Greasy Fork, een site voor gebruikersscripts.</h2>
+
+<div id="home-script-nav">
+	<form class="home-search" action="/nl/scripts" accept-charset="UTF-8" method="get">
+		<input type="search" name="q" placeholder="Zoek naar gebruikersscripts">
+		<input type="submit" value="🔎" class="search-submit" >
+</form>	<div id="home-top-sites">
+		Scripts voor:
+			<a href="/nl/scripts/by-site/youtube.com">youtube.com</a>
+			<a href="/nl/scripts/by-site/the-west.com">the-west.com</a>
+			<a href="/nl/scripts/by-site/the-west.tld">the-west.tld</a>
+			<a href="/nl/scripts/by-site/google.com">google.com</a>
+			<a href="/nl/scripts/by-site/spotify.com">spotify.com</a>
+		<a href="/nl/scripts/by-site">Meer...</a>
+	</div>
+</div>
+
+<section>
+  <h3>Wat zijn gebruikersscripts?</h3>
+
+  <p>Gebruikersscripts stellen je in staat je browser naar je eigen wensen aan te passen. Wanneer je ze hebt geïnstalleerd, maken ze sites die je bezoekt automatisch beter, door aanvullende mogelijkheden, makkelijker gebruik of vervelende eigenschappen kunnen worden verwijderd. De gebruikersscripts op Greasy Fork zijn geschreven door andere gebruikers, en geplaatst om te delen met de rest van de wereld. Ze zijn gratis om te installeren, en makkelijk in gebruik.</p>
+</section>
+
+<section id="home-step-1">
+  <h3>Stap 1: Installeer een gebruikersscriptmanager</h3>
+
+  <figure>
+    <img src="/assets/tampermonkey-manage-63199bcd0d67d5d7d0a8e044190e31a24124fac915f21af7d4ccc2da105603c6.png" />
+    <figcaption>Tampermonkey voor Chrome</figcaption>
+  </figure>
+
+  <p>To use user scripts you need to first install a user script manager. Which user script manager you can use depends on which browser you use.</p>
+<ul>
+  <li>Chrome: <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo">Tampermonkey</a></a> or <a href="https://chrome.google.com/webstore/detail/violent-monkey/jinjaccalgkegednnccohejagnlnfdag">Violentmonkey</a></li>
+  <li>Firefox: <a href="https://addons.mozilla.org/firefox/addon/greasemonkey/">Greasemonkey</a>, <a href="https://addons.mozilla.org/firefox/addon/tampermonkey/">Tampermonkey</a>, or <a href="https://addons.mozilla.org/firefox/addon/violentmonkey/">Violentmonkey</a></li>
+  <li>Safari: <a href="http://tampermonkey.net/?browser=safari">Tampermonkey</a> or <a href="https://apps.apple.com/app/userscripts/id1463298887">Userscripts</a></li>
+  <li>Microsoft Edge: <a href="https://www.microsoft.com/store/p/tampermonkey/9nblggh5162s">Tampermonkey</a></li>
+  <li>Opera: <a href="https://addons.opera.com/extensions/details/tampermonkey-beta/">Tampermonkey</a> or <a href="https://violentmonkey.github.io/get-it/">Violentmonkey</a></li>
+  <li>Maxthon: <a href="http://extension.maxthon.com/detail/index.php?view_id=1680">Violentmonkey</a></li>
+  <li>Dolphin: <a href="https://play.google.com/store/apps/details?id=net.tampermonkey.dolphin">Tampermonkey</a></li>
+  <li>UC: <a href="https://www.tampermonkey.net/?browser=ucweb&amp;ext=dhdg">Tampermonkey</a></li>
+  <li>AdGuard: (no additional software required)</li>
+</ul>
+
+
+</section>
+
+<section id="home-step-2">
+  <h3>Stap 2: Installeer een gebruikersscript</h3>
+
+  <figure>
+    <img src="/assets/install-button-example-94810f8b17f1505ee57ebf253916228990321e91ed30df97d28f40e75a85c0b8.png" />
+    <figcaption>Een gebruikersscript-installeer knop</figcaption>
+  </figure>
+
+  <p><a href="/nl/scripts">Bezoek deze site</a> om een script te vinden die je wilt proberen. Hier is een voorbeeld van de meest populaire scripts:</p>
+    <ul>
+        <li><a href="/nl/scripts/407024-%E7%BD%91%E8%AF%BE%E9%A2%98%E6%90%9C%E7%AD%94%E6%A1%88">网课题搜答案</a> - 智慧树、超星、学习通、知到、慕课、上学吧答案大全</li>
+        <li><a href="/nl/scripts/401494-%E6%99%BA%E6%85%A7%E6%A0%91%E7%BD%91%E8%AF%BE%E5%8A%A9%E6%89%8B-%E6%94%B9">智慧树网课助手(改)</a> - 自动挂机看知到MOOC，支持屏蔽弹窗题目、自动切换下一节，章测试和考试支持自动答题，视频自动倍速播放、线路选择、默认静音等，解除各类功能限制，开放自定义参数</li>
+        <li><a href="/nl/scripts/28497-remove-web-limits-modified">网页限制解除(改)</a> - 通杀大部分网站,可以解除禁止复制、剪切、选择文本、右键菜单的限制。原作者cat73,因为和搜索跳转脚本冲突,遂进行了改动。</li>
+        <li><a href="/nl/scripts/373294-tw-inventory-reloaded">TW Inventory Reloaded</a> - Betere inventaris en tools voor The West!</li>
+        <li><a href="/nl/scripts/27530-%E7%A0%B4%E8%A7%A3vip%E4%BC%9A%E5%91%98%E8%A7%86%E9%A2%91%E9%9B%86%E5%90%88">破解VIP会员视频集合</a> - 2020-7-16 整合代码更新。一键破解[优酷|腾讯|乐视|爱奇艺|芒果|AB站|音悦台]等VIP或会员视频，解析接口贵精不贵多，绝对够用。详细方法看说明和图片。包含了[懒人专用***放心使用。▶懒蛤蛤][【玩的嗨】VIP工具箱***Max zhang]的部分接口。[Tampermonkey | Violentmonkey | Greasymonkey 4.0+]</li>
+    </ul>
+
+<p>Wanneer je een script hebt gevonden, klik je op de groene 'Installeer'-knop op de gebruikersscript pagina en de scriptmanager zal je vragen om de installatie te bevestigen.</p>
+
+
+</section>
+
+<section id="home-step-3">
+  <h3>Stap 3: gebruik het script</h3>
+
+  <p>Ga naar de site die het script beïnvloed. Het script zou vanzelf z'n ding moeten doen. Na het uitproberen van het script ga je terug naar waar je het script hebt geïnstalleerd en kun je wat feedback achterlaten voor de auteur van het script.</p>
+
+</section>
+
+  <div class="ad ad-ga" id="home-ad">
+    <div class="ad-content">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <ins class="adsbygoogle"
+             style="display:block; text-align:center;"
+             data-ad-layout="in-article"
+             data-ad-format="fluid"
+             data-ad-client="ca-pub-2247465624637408"
+             data-ad-slot="2593917175"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+  </div>
+
+
+	</section>
+
+  </div>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-48197018-1', 'greasyfork.org');
+      ga('send', 'pageview');
+
+    </script>
+
+
+<noscript><link rel="stylesheet" media="all" href="/assets/application-05523d5f0149cee4ed2d15b64c75561af51931a355ed212a152746b1365ffde8.css"></noscript>
+
+
+<noscript><link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css"></noscript>
+
+</body>
+</html>
+
+

@@ -1,0 +1,1 @@
+ftSetGeo21839({"as":"AS6830 Liberty Global B.V.","city":"Zaandam","country":"Netherlands","countryCode":"NL","isp":"A2000 / Kabeltelevisie Amsterdam B.V","lat":52.443,"lon":4.8056,"org":"","query":"62.195.126.98","region":"NH","regionName":"North Holland","status":"success","timezone":"Europe/Amsterdam","zip":"1507"})
