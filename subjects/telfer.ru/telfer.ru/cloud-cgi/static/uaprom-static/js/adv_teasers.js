@@ -1,1 +1,1 @@
-No Content: https://telfer.ru/cloud-cgi/static/uaprom-static/js/adv_teasers.js?rev=76c1ed2b915516bf3d5fbd97a4d1ad5eeab15c5a
+No Content: https://telfer.ru/cloud-cgi/static/uaprom-static/js/adv_teasers.js?rev=d528605f91d58f712f0a75ff4c6ead78349e7284
