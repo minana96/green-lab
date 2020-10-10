@@ -191,7 +191,7 @@
 /* dropdown button */
 .cke_skin_kama_container {
 	visibility:visible; 
-	background: #FFFFFF; // no stylevar
+	background: #FFFFFF;
 }
 
 .cke_skin_kama_container body {

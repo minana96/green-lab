@@ -1,8 +1,0 @@
-exports = module.exports = require("../../node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.id, ".ub-emb-bar{transition:visibility .2s step-end;visibility:hidden}.ub-emb-bar.ub-emb-visible{transition:none;visibility:visible}.ub-emb-bar .ub-emb-bar-frame{left:0;position:fixed;right:0;text-align:center;transition:bottom .2s ease-in-out,top .2s ease-in-out,z-index .2s step-end;z-index:-1}.ub-emb-bar.ub-emb-ios .ub-emb-bar-frame{right:auto;width:100%}.ub-emb-bar.ub-emb-visible .ub-emb-bar-frame{transition:bottom .3s ease-in-out,top .3s ease-in-out;z-index:2147483646}.ub-emb-bar .ub-emb-close{bottom:0;margin:auto 0;top:0}.ub-emb-bar:not(.ub-emb-mobile) .ub-emb-close{right:20px}", ""]);
-
-// exports

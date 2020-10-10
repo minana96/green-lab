@@ -590,7 +590,7 @@ $(document).ready(function(){
             $scale_target.css({"margin": "0 auto"});
         });
 
-		console.log( 'test : ' + window.innerWidth +','+ window.innerHeight) ;
+		// console.log( 'test : ' + window.innerWidth +','+ window.innerHeight) ;
         if ( ( window.innerWidth <= 420 ) && ( window.innerHeight >= 600 )) {
             $("#wrapper").css("padding-bottom", "40px");
         } else {

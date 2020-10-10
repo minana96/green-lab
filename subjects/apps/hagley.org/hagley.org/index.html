@@ -1,1 +1,1030 @@
-No Content: https://www.hagley.org/
+<!DOCTYPE html>
+  <!--[if IEMobile 7]><html class="no-js ie iem7" lang="en" dir="ltr"><![endif]-->
+  <!--[if lte IE 6]><html class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en" dir="ltr"><![endif]-->
+  <!--[if (IE 7)&(!IEMobile)]><html class="no-js ie lt-ie9 lt-ie8" lang="en" dir="ltr"><![endif]-->
+  <!--[if IE 8]><html class="no-js ie lt-ie9" lang="en" dir="ltr"><![endif]-->
+  <!--[if (gte IE 9)|(gt IEMobile 7)]><html class="no-js ie" lang="en" dir="ltr" prefix="og: http://ogp.me/ns# content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#"><![endif]-->
+  <!--[if !IE]><!--><html class="no-js" lang="en" dir="ltr" prefix="og: http://ogp.me/ns# content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#"><!--<![endif]-->
+      
+<head>
+  <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"b46f46165a",applicationID:"130704960"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
+<link rel="apple-touch-icon-precomposed" href="https://www.hagley.org/sites/all/themes/omega/omega/apple-touch-icon-precomposed-114x114.png" sizes="114x114" />
+<link rel="apple-touch-icon-precomposed" href="https://www.hagley.org/sites/all/themes/omega/omega/apple-touch-icon-precomposed-72x72.png" sizes="72x72" />
+<link rel="apple-touch-icon-precomposed" href="https://www.hagley.org/sites/all/themes/omega/omega/apple-touch-icon-precomposed-144x144.png" sizes="144x144" />
+<link rel="apple-touch-icon-precomposed" href="https://www.hagley.org/sites/all/themes/omega/omega/apple-touch-icon-precomposed.png" />
+<meta http-equiv="cleartype" content="on" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<link rel="profile" href="http://www.w3.org/1999/xhtml/vocab" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://www.hagley.org/sites/default/files/hagley_fav_0.png" type="image/png" />
+<script>{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "WebSite",
+            "@id": "https://www.hagley.org/",
+            "name": "Home | Hagley",
+            "url": "https://www.hagley.org/"
+        }
+    ]
+}</script>
+<meta name="description" content="The Hagley Museum and Library is a nonprofit educational institution in Wilmington, Delaware." />
+<meta name="abstract" content="The Hagley Museum and Library is a nonprofit educational institution in Wilmington, Delaware." />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+<meta name="generator" content="Drupal 7 (https://www.drupal.org)" />
+<link rel="canonical" href="https://www.hagley.org/" />
+<link rel="shortlink" href="https://www.hagley.org/" />
+<meta property="og:site_name" content="Welcome to Hagley Museum &amp; Library" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.hagley.org/" />
+<meta property="og:title" content="Welcome to Hagley Museum &amp; Library" />
+<meta property="og:description" content="The Hagley Museum and Library is a nonprofit educational institution in Wilmington, Delaware." />
+<meta property="og:image" content="http://www.hagley.org/sites/default/files/styles/flexslider_full/public/hagley-birkenhead-mills-and-millrace-print.jpg?itok=EpCD7LM3" />
+<meta property="og:image:url" content="http://www.hagley.org/sites/default/files/styles/flexslider_full/public/hagley-birkenhead-mills-and-millrace-print.jpg?itok=EpCD7LM3" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:url" content="https://www.hagley.org/" />
+<meta name="twitter:title" content="Hagley" />
+<meta itemprop="name" content="Hagley" />
+  <title>Welcome to Hagley Museum & Library</title>
+  <link type="text/css" rel="stylesheet" href="https://www.hagley.org/sites/default/files/css/css_oqHIgj7H7hhjczDpzDFISApY8vv-DGxKyPGSbLvQt3w.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.hagley.org/sites/default/files/css/css_iXOSnn2A69ztfISR8gfyjnvwqD-OsRHc8_YE9rFTlVY.css" media="all" />
+<style>#backtotop{left:10px;}
+</style>
+<link type="text/css" rel="stylesheet" href="https://www.hagley.org/sites/default/files/css/css_u0XRHmXSV-YJQibMSq8SjS2WmnhQkOaPBaXtBZJOTus.css" media="all" />
+
+<!--[if lte IE 8]>
+<link type="text/css" rel="stylesheet" href="https://www.hagley.org/sites/default/files/css/css_rO4090UNCFpqO40NBbsvlBFTLUCLd7W-WLC4AAinxdY.css" media="all" />
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="https://www.hagley.org/sites/default/files/css/css_prBk6vxHjTUP921ZE-NzP349M032_jXg6fxbIqSncZY.css" media="all" />
+  <link href='//fonts.googleapis.com/css?family=Lato:400,100,300,700,900,400italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/sites/all/libraries/coverflow/style/carousel.css">
+  <link rel="stylesheet" href="/sites/all/themes/hagley/css/jquery.mmenu.css">
+  <link href="//cdn.rawgit.com/noelboss/featherlight/1.4.1/release/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+  <script src="https://www.hagley.org/sites/default/files/js/js_uRCjUH1nf-b0kvBB1NZD5NFhEC1sf4b1IZSqjeXedX4.js"></script>
+<script src="https://www.hagley.org/sites/default/files/js/js_qE4KfYgJty9x7gyqzjMp9mcDiG6PQCqqJbfsBu7bK8w.js"></script>
+<script src="https://www.hagley.org/sites/default/files/js/js_kMg7W1sZANW-JVt-y1p4g6o0k68QXbUoYrBuKkRfQvo.js"></script>
+<script src="https://www.hagley.org/sites/default/files/js/js_p6x6u81ij9BLFsvc4FNyBa_3WM_StIjpnBl1utU3s0g.js"></script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-1463680-1", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<script src="https://www.hagley.org/sites/default/files/js/js_Ja5KUCwK3Y-l37GNoheYr5cAPfmhndfMP2X_ag0i_1U.js"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","colorbox":{"opacity":"0.85","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","maxWidth":"98%","maxHeight":"98%","fixed":true,"mobiledetect":true,"mobiledevicewidth":"480px","specificPagesDefaultValue":"admin*\nimagebrowser*\nimg_assist*\nimce*\nnode\/add\/*\nnode\/*\/edit\nprint\/*\nprintpdf\/*\nsystem\/ajax\nsystem\/ajax\/*"},"back_to_top":{"back_to_top_button_trigger":"1300","back_to_top_button_text":"Back to top","#attached":{"library":[["system","ui"]]}},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackColorbox":1},"urlIsAjaxTrusted":{"\/":true}});</script>
+  
+  <!-- ReCaptcha script -->
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+ 
+</head>
+<body class="html front not-logged-in page-node page-node- page-node-6 node-type-page i18n-en">
+  <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+    <div class="l-page">
+  <div class="navarrow bounce"></div>
+  <div id="topbar">
+      <div id="topbar-inner">
+          <a href="/"><div id="logoMobile"></div></a>
+            <div class="l-region l-region--topbar">
+    <nav id="block-menu-menu-top-menu" role="navigation" class="block block--menu block--menu-menu-top-menu">
+      
+  <ul class="menu"><li class="first leaf"><a href="https://www.signup82north.com/beventLive.aspx?EventID=NBI14265880" title="">Donate</a></li>
+<li class="leaf"><a href="/visitor-information#faq" title="">FAQ</a></li>
+<li class="last leaf"><a href="/contact-us" title="">Contact</a></li>
+</ul></nav>
+<div id="block-block-1" class="block block--block block--block-1">
+        <div class="block__content">
+    <div><a class="icons twitter" href="https://twitter.com/hagleymuseum" target="_blank" title="Twitter">Twitter</a> <a class="icons facebook" href="https://www.facebook.com/HagleyMuseumandLibrary/" target="_blank" title="Facebook">Facebook</a> <a class="icons youtube" href="https://www.youtube.com/user/HagleyMuseum" target="_blank" title="YouTube">YouTube</a> <a class="icons instagram" href="http://instagram.com/hagleymuseum/" target="_blank" title="Instagram">Instagram</a> <a class="icons tumblr" href="http://hagleyvault.org/ " target="_blank" title="Tumblr">Tumblr</a></div>
+  </div>
+</div>
+<div id="block-search-form" role="search" class="block block--search block--search-form">
+        <div class="block__content">
+    <form class="search-block-form" action="/" method="post" id="search-block-form" accept-charset="UTF-8"><div><div class="container-inline">
+      <h2 class="element-invisible">Search form</h2>
+    <div class="form-item form-type-textfield form-item-search-block-form">
+  <label class="element-invisible" for="edit-search-block-form--2">Search </label>
+ <input title="Enter the terms you wish to search for." type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" class="form-text" />
+</div>
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" /></div><input type="hidden" name="form_build_id" value="form-5Xr50Gt5JaNl0yc7fs7ctBXTc9rwKG1AoDqnf-vXnsI" />
+<input type="hidden" name="form_id" value="search_block_form" />
+</div>
+</div></form>  </div>
+</div>
+  </div>
+          <a id="mobileMenu" href="#block-menu-block-2">
+            <div></div>
+            <div></div>
+            <div></div>
+          </a>
+      </div>
+  </div>
+  <div id="hoursOp">
+      <div id="hoursOp-inner">
+          <div class='hoursOpBox'>Today's Hours: Museum 10:00 - 5:00 <span>|</span> </div>      </div>
+  </div>
+    <div id="gear-head-wrap">
+      <header class="l-header" role="banner">
+        <div id="header-inner">
+          <div id="logo">
+              <a href="/"><img src="/sites/all/themes/hagley/images/hagley-logo-white-on-trans.png" alt="Home" title="Home"/></a>
+          </div>
+                      <div class="l-region l-region--navigation">
+    <div id="block-nice-menus-2" class="block block--nice-menus block--nice-menus-2">
+        <div class="block__content">
+    <ul class="nice-menu nice-menu-down nice-menu-main-menu" id="nice-menu-2"><li class="menu-517 menuparent  menu-path-node-1 first odd "><a href="/plan-your-visit">Plan Your Visit</a><ul><li class="menu-521  menu-path-node-3 first odd "><a href="/plan-your-visit/calendar">Calendar</a></li>
+<li class="menu-4769 menu-path-node-1737  even "><a href="/plan-your-visit/hours-admission">Hours &amp; Tickets</a></li>
+<li class="menu-522  menu-path-node-4  odd "><a href="/plan-your-visit/what-to-see">What To See</a></li>
+<li class="menu-528  menu-path-node-10  even "><a href="/plan-your-visit/group-tours">Group Tours</a></li>
+<li class="menu-529  menu-path-node-11  odd "><a href="/plan-your-visit/tours-field-trips">School Field Trips</a></li>
+<li class="menu-6375 menu-path-node-2459  even "><a href="/family-field-trips" title="Family-oriented programs in a safe and educational environment.">Family Field Trips</a></li>
+<li class="menu-531 menu-path-node-13  odd last"><a href="/plan-your-visit/museum-store">Museum Store</a></li>
+</ul></li>
+<li class="menu-536 menuparent  menu-path-node-18  even "><a href="/research">Research</a><ul><li class="menu-1227  menu-path-node-689 first odd "><a href="/research/search-hagley-collections">Search Collections</a></li>
+<li class="menu-539  menu-path-node-21  even "><a href="/research/collections/researcher-services">Services</a></li>
+<li class="menu-3415  menu-path-node-1620  odd "><a href="/library-programs-events">Events</a></li>
+<li class="menu-546  menu-path-node-28  even "><a href="/research/center">Center</a></li>
+<li class="menu-540  menu-path-node-22  odd "><a href="/research/grants-fellowships">Funding</a></li>
+<li class="menu-1229 menu-path-node-733  even "><a href="/research/oral-history-office">Oral History</a></li>
+<li class="menu-2406  menu-path-node-1270  odd "><a href="/research/news" title="">News &amp; Programs</a></li>
+<li class="menu-966 menu-path-node-414  even "><a href="/HHC">Hagley Heritage Curators</a></li>
+<li class="menu-3408 menu-path-node-23  odd last"><a href="/research/digital-exhibits" title="">Digital Exhibits</a></li>
+</ul></li>
+<li class="menu-549 menuparent  menu-path-node-31  odd "><a href="/support-hagley">Support Hagley</a><ul><li class="menu-550 menu-path-node-32 first odd "><a href="/support-hagley/membership">Membership</a></li>
+<li class="menu-551  menu-path-node-33  even "><a href="/support-hagley/volunteer">Volunteer</a></li>
+<li class="menu-552 menu-path-ssignup82northcom-beventliveaspxeventidnbi14265880  odd "><a href="https://www.signup82north.com/beventLive.aspx?EventID=NBI14265880" title="" target="_blank">Donate</a></li>
+<li class="menu-553  menu-path-node-35  even "><a href="/support-hagley/giving-opportunities">Giving Opportunities</a></li>
+<li class="menu-4767 menu-path-node-1735  odd last"><a href="/corporate-partners">Corporate Partners</a></li>
+</ul></li>
+<li class="menu-564 menuparent  menu-path-node-46  even last"><a href="/about-us">About Us</a><ul><li class="menu-565  menu-path-node-47 first odd "><a href="/about-us/what-is-hagley">What is Hagley</a></li>
+<li class="menu-568 menu-path-node-50  even "><a href="/about-us/publications">Publications</a></li>
+<li class="menu-569  menu-path-node-51  odd "><a href="/about-us/rentals">Rentals</a></li>
+<li class="menu-4766 menu-path-node-1731  even "><a href="/about-us/staff">Staff</a></li>
+<li class="menu-571 menu-path-node-53  odd last"><a href="/about-us/employment">Employment</a></li>
+</ul></li>
+</ul>
+  </div>
+</div>
+  </div>
+          <!--Mobile Menu-->
+        </div>
+        
+      </header>
+    </div>
+  
+  <div id="homeslider">
+        <div class="l-region l-region--homeslider">
+    <div id="block-views-home-page-alert-block" class="block block--views block--views-home-page-alert-block">
+        <div class="block__content">
+    <div class="view view-home-page-alert view-id-home_page_alert view-display-id-block view-dom-id-d7a5e167710aaab4ea7f92502db86347">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+  <div class="views-field views-field-field-alert-short-description">        <div class="field-content"><h2>Hagley’s Upper Property Closed This Week</h2>
+The upper property will be closed to visitation through October 9 due to tree work. Guests are welcome to visit the lower property as part of the Powder Yard Trail Experience.
+<p></p>
+</div>  </div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+</div>
+<div id="block-block-21" class="block block--block block--block-21">
+        <div class="block__content">
+    <div class="vid-wrapper"><img alt="" src="/sites/default/files/pictures/noLogo-name-vertical-2.png" /><video id="vid" autoplay muted loop preload="true"><source type="video/mp4" data-src="/sites/default/files/home-page-video-2019-10-28.mp4"></video>
+<script> 
+setTimeout(function(){
+document.getElementById('vid').play(); 
+ },1000);
+window.addEventListener("load", function() {
+  var bgv = document.getElementById("vid");
+  // what jQuery checks under the hood
+  var visible = !!(bgv.offsetWidth ||
+    bgv.offsetHeight ||
+    bgv.getClientRects().length);
+  if (visible) {
+    var children = bgv.getElementsByTagName("source");
+    for (var i = 0; i < children.length; ++i) {
+      children[i].src = children[i].getAttribute("data-src");
+    }
+  }
+  bgv.load();
+});
+</script>
+</div>  </div>
+</div>
+  </div>
+  </div>
+    
+   <div class="l-main no-top-hi">
+     <div class="content-container">
+        <div class="l-content" role="main">
+                              <a id="main-content"></a>
+                                <h1>Home</h1>
+                                                                      <div id="block-nodeblock-1847" class="block block--nodeblock block--nodeblock-1847">
+        <h2 class="block__title">Home Page Event Highlights</h2>
+      <div class="block__content">
+    
+<div class="clear"></div>
+<div class="subPageContainer" style="background: #d9d9d9">
+    <div class="subPad" id="sub-home" name="sub-home"></div>
+    <div class="subPage-inner">
+            <article class="twocol">
+    
+      <header>
+                    <h2 class="node__title">Home Page Event Highlights</h2>
+            <span property="dc:title" content="Home Page Event Highlights" class="rdf-meta element-hidden"></span><span property="sioc:num_replies" content="0" datatype="xsd:integer" class="rdf-meta element-hidden"></span>    </header>
+  
+  
+  <div class="node__content">
+    <div class="field field--name-body field--type-text-with-summary field--label-hidden"><div class="field__items"><div class="field__item even" property="content:encoded"><p> </p>
+<h1> </h1>
+</div></div></div><div class="view view-highlight-box view-id-highlight_box view-display-id-block view-dom-id-d0021fec349d923a60f0dfd23cc6b4d9">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <div class="views-field views-field-php">        <span class="field-content"><div class='hibox num'><a href='https://www.hagley.org/craft' target='_blank'><div class='hibox-bckgrd'><img src='https://www.hagley.org/sites/default/files/styles/press_release_callout/public/2019-10-19%2013.41.28-web860.jpg?itok=3ADOCDyC'/><div class='hibox-title'>Hagley Craft Fair</div><div class='hibox-copy'>This marketplace brings talented artisans from the Mid-Atlantic area to display and sell fine arts, crafts, and gourmet items.</div></div></a></div></span>  </div>  </div>
+  <div class="views-row views-row-2 views-row-even">
+      
+  <div class="views-field views-field-php">        <span class="field-content"><div class='hibox num'><a href='https://www.hagley.org/plan-your-visit/hours-admission' target='_blank'><div class='hibox-bckgrd'><img src='https://www.hagley.org/sites/default/files/styles/press_release_callout/public/hagley-fall-property-2015-11-02-034_0.jpg?itok=Xew4FrY2'/><div class='hibox-title'>Enjoy Fall at Hagley!</div><div class='hibox-copy'>Enjoy the cooler months with discounted admission at Hagley!</div></div></a></div></span>  </div>  </div>
+  <div class="views-row views-row-3 views-row-odd views-row-last">
+      
+  <div class="views-field views-field-php">        <span class="field-content"><div class='hibox num'><a href='https://www.hagley.org/hagley-from-home' target='_blank'><div class='hibox-bckgrd'><img src='https://www.hagley.org/sites/default/files/styles/press_release_callout/public/hagley-2017-05-27-chain-reaction-%28credit-Jackie-Kane%29-055_0.jpg?itok=c1AQMPsb'/><div class='hibox-title'>Hagley From Home</div><div class='hibox-copy'>Enjoy virtual tours, talks with the Hagley Historian, games, puzzles, and more from the comfort of home.</div></div></a></div></span>  </div>  </div>
+    </div>
+  
+  
+  
+  
+      <div class="view-footer">
+      <div class='clear'></div>
+    </div>
+  
+  
+</div>            
+  </div>
+
+    </article>
+<div class="sidebar">
+    </div>
+</div>
+</div>
+  </div>
+</div>
+<div id="block-block-8" class="block block--block block--block-8">
+        <div class="block__content">
+    <h2><font color="black">Hagley Happenings</h2>
+<h3>Upcoming Events & Programs</h3>
+<div class='carousel'><div class='slides'><div class='slideItem'><div class='slideContent'><a href='/calendar/hayrides-hagley'><img src='https://www.hagley.org/sites/default/files/styles/event_slider/public/hagley-hayrides-2014-022-web860_0.jpg?itok=staUh6vQ' alt=''/><div class='slideContentBox'><h2>Hayrides at Hagley</h2><div class='cf-date'>October 10, 2020 | 11:30 a.m. to 4 p.m. | Saturday</div><div class='cf-body'><p>Families can take a hayride along the Brandywine to experience the beautiful fall foliage in the Powder Yard. Guests can create fall-themed crafts, and see a gunpowder explosion, roll mill in action, and working nineteenth-century machines.</p>
+<p>MORE INFO >></p></div></div></a></div></div><div class='slideItem'><div class='slideContent'><a href='/calendar/science-saturday-presented-young-conaway-stargatt-taylor-llp-–-colorful-chromatography'><img src='https://www.hagley.org/sites/default/files/styles/event_slider/public/hagley-science-saturday-circuits-023-web720.jpg.jpg?itok=LdxD2qqz' alt=''/><div class='slideContentBox'><h2>Science Saturday – Spooky Circuits</h2><div class='cf-date'>October 10, 2020 | 12 to 4 p.m. | Saturday</div><div class='cf-body'><p>Learn how batteries and circuits power our world and make a buzzing Monster Bot! Visitors of all ages are invited to discover solutions to science and engineering challenges at Science Saturday.&nbsp;</p>
+<p>MORE INFO >></p></div></div></a></div></div><div class='slideItem'><div class='slideContent'><a href='/calendar/history-hangout-conversation-bernardo-batiz-lazo'><img src='https://www.hagley.org/sites/default/files/styles/event_slider/public/Bernardo%20Batiz-Lazo.jpeg?itok=P9Z6-Ggi' alt=''/><div class='slideContentBox'><h2>HISTORY HANGOUT: CONVERSATION WITH BERNARDO BATIZ-LAZO</h2><div class='cf-date'>October 12, 2020 | Monday</div><div class='cf-body'><p>Gregory Hargreaves interviews Bernardo Batiz-Lazo about his book, <em>Cash &amp; Dash: How ATMs &amp;Computers Changed Banking </em>(Oxford, 2018).</p>
+<p>MORE INFO >></p></div></div></a></div></div><div class='slideItem'><div class='slideContent'><a href='/calendar/yoga-hagley-soda-house'><img src='https://www.hagley.org/sites/default/files/styles/event_slider/public/yoga-01-web.jpg?itok=SZXw_GXf' alt=''/><div class='slideContentBox'><h2>Mary Currie Yoga at Hagley</h2><div class='cf-date'>October 13, 2020 | 9:30 a.m. | Tuesday</div><div class='cf-body'><p>Hagley&nbsp;is delighted to offer exclusive yoga classes with teacher Mary Currie&nbsp;for our members at the Household and above levels.&nbsp;Classes are held Tuesday&nbsp;and Thursday mornings.</p>
+<p>MORE INFO >></p></div></div></a></div></div><div class='slideItem'><div class='slideContent'><a href='/calendar/hagley-craft-fair'><img src='https://www.hagley.org/sites/default/files/styles/event_slider/public/2019-10-19%2013.41.28-web860.jpg?itok=qr6EwJV-' alt='hagley craft fair'/><div class='slideContentBox'><h2>Hagley Craft Fair</h2><div class='cf-date'>October 17, 2020 | 9:30 a.m. to 5 p.m.   | Saturday</div><div class='cf-body'><p>This marketplace brings talented artisans from the Mid-Atlantic area to display and sell fine arts, crafts, and gourmet items. Advance time tickets required.</p>
+<p>MORE INFO >></p></div></div></a></div></div><div class='slideItem'><div class='slideContent'><a href='/calendar/cannon-firings'><img src='https://www.hagley.org/sites/default/files/styles/event_slider/public/hagley-civil-war-cannon-web720.jpg.jpg?itok=895p03A2' alt=''/><div class='slideContentBox'><h2>Cannon Firings</h2><div class='cf-date'>October 25, 2020 | 1, 2 & 3 p.m. | Sunday</div><div class='cf-body'><p>Have a blast during your visit to Hagley with cannon firings in the Hagley Powder Yard!</p>
+<p>MORE INFO >></p></div></div></a></div></div><div class='slideItem'><div class='slideContent'><a href='/calendar/picture-hagley-photography-walk-hagley-museum-–-fall-color'><img src='https://www.hagley.org/sites/default/files/styles/event_slider/public/hagley-fall-property-2015-11-02-012-web720_0.jpg?itok=rRCaFnHl' alt=''/><div class='slideContentBox'><h2>Picture Hagley: Photography Walk at Hagley Museum – Fall Color</h2><div class='cf-date'>October 25, 2020 | 10 a.m. – 12 p.m. (Rain date October TBD)  | Sunday</div><div class='cf-body'><p>Visitors can take advantage of this unique opportunity to see the grounds of Hagley in a different light and meet one of our guides for a stroll through the property. Photography beginners or experts will enjoy this experience. Ability to walk some distance and carry your own equipment is necessary.&nbsp;</p>
+<p>MORE INFO >></p></div></div></a></div></div><div class='slideItem'><div class='slideContent'><a href='/calendar/history-hangout-conversation-rachel-lance'><img src='https://www.hagley.org/sites/default/files/styles/event_slider/public/rachel-lance.jpg?itok=cqjAZ77A' alt=''/><div class='slideContentBox'><h2>HISTORY HANGOUT: CONVERSATION WITH RACHEL LANCE</h2><div class='cf-date'>October 26, 2020 | Monday</div><div class='cf-body'><p>In<em>&nbsp;In the Waves: My Quest to Solve the Mystery of a Civil War Submarine&nbsp;</em>(Dutton, 2020) Lance documents how she developed and tested her own theory on the sinking of the&nbsp;<em>HL Hunley</em>, a Confederate submarine lost after sinking just&nbsp; one Union ship, the U.S.S.&nbsp;<em>Housatonic</em>.&nbsp;</p>
+<p>MORE INFO >></p></div></div></a></div></div><div class='slideItem'><div class='slideContent'><a href='/calendar/science-saturday-presented-young-conaway-stargatt-taylor-llp-–-mind-tricks-and-treats'><img src='https://www.hagley.org/sites/default/files/styles/event_slider/public/hagley-science-saturday-maker-day-2017%20%28credit%20Kerry%20Harrison%29-118-web860.jpg?itok=_V7QYprD' alt=''/><div class='slideContentBox'><h2>Science Saturday – Mind Tricks and Treats</h2><div class='cf-date'>October 31, 2020 | 12 to 4 p.m. | Saturday</div><div class='cf-body'><p>Optical illusions and tricks of the mind will have you guessing what's real! Test out your perception and make a spinning disc picture.</p>
+<p>MORE INFO >></p></div></div></a></div></div><div class='slideItem'><div class='slideContent'><a href='/calendar/halloween-hagley'><img src='https://www.hagley.org/sites/default/files/styles/event_slider/public/halloween-gavin-pic-with-frame.jpg?itok=VZv19YTD' alt=''/><div class='slideContentBox'><h2>Halloween at Hagley</h2><div class='cf-date'>October 31, 2020 | 12 to 4 p.m. | Saturday</div><div class='cf-body'><p>Looking for a safe place to trick or treat this Halloween? Head to Hagley for a triple treat with three spooktacular activities in one</p>
+<p>MORE INFO >></p></div></div></a></div></div></div></div>  </div>
+</div>
+<div id="block-block-15" class="block block--block block--block-15">
+        <div class="block__content">
+    <div class='eventHomeMobile'><div class='slideContent'><a href='/calendar/hayrides-hagley'><img class='slideContentImg' src='https://www.hagley.org/sites/default/files/styles/highlight_box_297x191/public/hagley-hayrides-2014-022-web860_0.jpg?itok=qGjOjyTc' alt=''/><div class='slideContentTitle'>Hayrides at Hagley</div><div class='slideContentBox'><div class='slideContentDate'>11:30 a.m. to 4 p.m. | Sat Oct 10, 2020</div></div></a></div><div class='slideContent'><a href='/calendar/science-saturday-presented-young-conaway-stargatt-taylor-llp-–-colorful-chromatography'><img class='slideContentImg' src='https://www.hagley.org/sites/default/files/styles/highlight_box_297x191/public/hagley-science-saturday-circuits-023-web720.jpg.jpg?itok=Z1swcT_0' alt=''/><div class='slideContentTitle'>Science Saturday – Spooky Circuits</div><div class='slideContentBox'><div class='slideContentDate'>12 to 4 p.m. | Sat Oct 10, 2020</div></div></a></div><div class='slideContent'><a href='/calendar/history-hangout-conversation-bernardo-batiz-lazo'><img class='slideContentImg' src='https://www.hagley.org/sites/default/files/styles/highlight_box_297x191/public/Bernardo%20Batiz-Lazo.jpeg?itok=XCrpXoHZ' alt=''/><div class='slideContentTitle'>HISTORY HANGOUT: CONVERSATION WITH BERNARDO BATIZ-LAZO</div><div class='slideContentBox'><div class='slideContentDate'>Mon Oct 12, 2020</div></div></a></div><div class='slideContent'><a href='/calendar/yoga-hagley-soda-house'><img class='slideContentImg' src='https://www.hagley.org/sites/default/files/styles/highlight_box_297x191/public/yoga-01-web.jpg?itok=3UFZgkRw' alt=''/><div class='slideContentTitle'>Mary Currie Yoga at Hagley</div><div class='slideContentBox'><div class='slideContentDate'>9:30 a.m. | Tue Oct 13, 2020</div></div></a></div><div class='slideContent'><a href='/calendar/hagley-craft-fair'><img class='slideContentImg' src='https://www.hagley.org/sites/default/files/styles/highlight_box_297x191/public/2019-10-19%2013.41.28-web860.jpg?itok=h7gQHCXA' alt='hagley craft fair'/><div class='slideContentTitle'>Hagley Craft Fair</div><div class='slideContentBox'><div class='slideContentDate'>9:30 a.m. to 5 p.m.   | Sat Oct 17, 2020</div></div></a></div></div>  </div>
+</div>
+<article>
+      <header>
+                  <span property="dc:title" content="Home" class="rdf-meta element-hidden"></span><span property="sioc:num_replies" content="0" datatype="xsd:integer" class="rdf-meta element-hidden"></span>    </header>
+  
+  
+  <div class="node__content">
+    <div class="field field--name-body field--type-text-with-summary field--label-hidden"><div class="field__items"><div class="field__item even" property="content:encoded"><h4 class="rtecenter">MUSEUM MAIN ENTRANCE - GPS: 200 Hagley Creek Road, Wilmington, DE 19807<br />
+LIBRARY AND SODA HOUSE ENTRANCE - GPS: 298 Buck Road, Wilmington, DE 19807</h4>
+</div></div></div>  </div>
+
+    </article>
+<div id="block-views-highlight-box-block" class="block block--views block--views-highlight-box-block">
+        <div class="block__content">
+    <div class="view view-highlight-box view-id-highlight_box view-display-id-block view-dom-id-26a459d9ecd0268277fedb8fe0828793">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <div class="views-field views-field-php">        <span class="field-content"><div class='hibox num'><a href='https://www.hagley.org/safety-updates' target='_blank'><div class='hibox-bckgrd'><img src='https://www.hagley.org/sites/default/files/styles/press_release_callout/public/FPO_15_0.jpg?itok=Qw7Uz8As'/><div class='hibox-title'>Plan Your Visit Today!</div><div class='hibox-copy'></div></div></a></div></span>  </div>  </div>
+  <div class="views-row views-row-2 views-row-even">
+      
+  <div class="views-field views-field-php">        <span class="field-content"><div class='hibox num'><a href='/plan-your-visit/calendar'><div class='hibox-bckgrd'><img src='https://www.hagley.org/sites/default/files/styles/press_release_callout/public/hagley-naturefest-2013-003-web720.jpg?itok=CxevPOhM'/><div class='hibox-title'>Events Calendar</div><div class='hibox-copy'></div></div></a></div></span>  </div>  </div>
+  <div class="views-row views-row-3 views-row-odd">
+      
+  <div class="views-field views-field-php">        <span class="field-content"><div class='hibox num'><a href='/patentmodels'><div class='hibox-bckgrd'><img src='https://www.hagley.org/sites/default/files/styles/press_release_callout/public/button-shearer-860x720.jpg?itok=kzpWcl1Y'/><div class='hibox-title'>The Hagley U.S. Patent Model Collection</div><div class='hibox-copy'></div></div></a></div></span>  </div>  </div>
+  <div class="views-row views-row-4 views-row-even">
+      
+  <div class="views-field views-field-php">        <span class="field-content"><div class='hibox num'><a href='/research'><div class='hibox-bckgrd'><img src='https://www.hagley.org/sites/default/files/styles/press_release_callout/public/DSC_7939.jpg?itok=hh_3TdmA'/><div class='hibox-title'>Library, Research & Digital Archive</div><div class='hibox-copy'></div></div></a></div></span>  </div>  </div>
+  <div class="views-row views-row-5 views-row-odd">
+      
+  <div class="views-field views-field-php">        <span class="field-content"><div class='hibox num'><a href='/about-us/rentals'><div class='hibox-bckgrd'><img src='https://www.hagley.org/sites/default/files/styles/press_release_callout/public/S%26D_209-web860.jpg?itok=bwdZpT5J'/><div class='hibox-title'>Weddings & Rentals</div><div class='hibox-copy'></div></div></a></div></span>  </div>  </div>
+  <div class="views-row views-row-6 views-row-even views-row-last">
+      
+  <div class="views-field views-field-php">        <span class="field-content"><div class='hibox num'><a href='https://www.hagleyheritage.com' target='_blank'><div class='hibox-bckgrd'><img src='https://www.hagley.org/sites/default/files/styles/press_release_callout/public/DSC_8162.jpg?itok=h7X-YcVs'/><div class='hibox-title'>Hagley Heritage Curators</div><div class='hibox-copy'></div></div></a></div></span>  </div>  </div>
+    </div>
+  
+  
+  
+  
+      <div class="view-footer">
+      <div class='clear'></div>
+    </div>
+  
+  
+</div>  </div>
+</div>
+                  </div>
+        <div class="sidebar">
+                        <div class="rightArrowBox">
+                <div class="rightArrow arrowdown"></div>
+            </div>
+                    </div>
+    </div>
+  </div>
+  <footer class="l-footer" role="contentinfo">
+      <div class="footer-inner">
+            <div id="hoursOpMobile">
+                <div id="hoursOpMobile-inner">
+                    <div class='hoursOpBox'>Today's Hours: Museum 10:00 - 5:00 <span>|</span> </div>                </div>
+            </div>
+            <div class="l-region l-region--footer">
+    <div id="block-block-3" class="block block--block block--block-3">
+        <div class="block__content">
+    <div class="footerAddressBox">
+<p><strong>Hagley Museum</strong><br />
+200 Hagley Creek Road<br />
+Wilmington, DE 19807</p>
+<p><strong>Hagley Library</strong><br />
+298 Buck Road<br />
+Wilmington, DE 19807</p>
+<p><strong>Contact</strong><br />
+(302) 658-2400<br />
+<a href="mailto:askhagley@hagley.org">AskHagley@hagley.org</a></p>
+<div class="socialIcons"><a class="icons twitter" href="https://twitter.com/hagleymuseum" target="_blank" title="Twitter">Twitter</a> <a class="icons facebook" href="https://www.facebook.com/HagleyMuseumandLibrary/" target="_blank" title="Facebook">Facebook</a> <a class="icons youtube" href="https://www.youtube.com/user/HagleyMuseum" target="_blank" title="YouTube">YouTube</a> <a class="icons instagram" href="http://www.instagram.com/hagleymuseum" target="_blank" title="Instagram">Instagram</a> <a class="icons tumblr" href="http://hagleyvault.org/" target="_blank" title="Tumblr">Tumblr</a></div>
+<p id="smith"><a href="https://affiliations.si.edu" target="_blank"><img alt="Smithsonian" src="/sites/all/themes/hagley/images/smith_affil_wht.png" /></a></p>
+<p><a class="btn btnMap" href="https://www.google.com/maps/place/200+Hagley+Creek+Rd,+Wilmington,+DE+19807/@39.772003,-75.5809429,16.32z/data=!4m2!3m1!1s0x89c6fc5466e8039d:0x60f41a5cfb50f463" target="_blank">Map</a></p>
+</div>
+  </div>
+</div>
+<div id="block-block-4" class="block block--block block--block-4">
+        <div class="block__content">
+    <div class="footerMapQuicklinks">
+<div class="map"><a href="https://goo.gl/maps/xVpuRDd7CMM2" target="_blank"><img alt="" height="242" src="/sites/default/files/pictures/openstreetmap03.PNG" width="242" /></a></div>
+<div class="footerLinks">
+<h3>Quick Links</h3>
+<ul>
+<li><a href="/plan-your-visit">Plan Your Visit</a></li>
+<li><a href="/plan-your-visit/hours-admission">Hours &amp; Admission</a></li>
+<li><a href="/support-hagley/membership">Membership</a></li>
+<li><a href="/about-us/employment">Employment</a></li>
+<li><a href="/support-hagley/volunteer">Volunteer</a></li>
+<li><a href="https://www.signup82north.com/beventLive.aspx?EventID=NBI14265880">Donate</a></li>
+<li><a href="/about-us/rentals">Rental Options</a></li>
+<li><a href="https://www.tripadvisor.com/Attraction_Review-g34059-d107854-Reviews-Hagley_Museum_and_Library-Wilmington_Delaware.html">Review Us On TripAdvisor</a></li>
+<li><a href="/privacy">Privacy</a></li>
+</ul>
+</div>
+</div>
+  </div>
+</div>
+<div id="block-block-28" class="block block--block block--block-28">
+        <div class="block__content">
+    <!-- Privacy policy at http://tag.brandcdn.com/privacy --> <script type="text/javascript" src="//tag.brandcdn.com/autoscript/hagleymuseum_vg5wrk5foujqvda9/hagleymuseum.js"></script>
+<!-- Activity name for this tag: TA_Hagley_Museum_and_Library_PageView_8.21.20 -->
+<script type='text/javascript'>
+var axel = Math.random()+"";
+var a = axel * 10000000000000;
+document.write('<img src="https://pubads.g.doubleclick.net/activity;xsp=4698596;ord='+ a +'?" width=1 height=1 border=0>');
+</script>
+<noscript>
+<img src="https://pubads.g.doubleclick.net/activity;xsp=4698596;ord=1?" width=1 height=1 border=0>
+</noscript>  </div>
+</div>
+<div id="block-mailchimp-signup-newsletter-mc" class="block block--mailchimp-signup block--mailchimp-signup-newsletter-mc">
+        <h2 class="block__title">Hagley E-News</h2>
+      <div class="block__content">
+    <form class="mailchimp-signup-subscribe-form mailchimp-signup-subscribe-block-newsletter-mc-form" action="/" method="post" id="mailchimp-signup-subscribe-block-newsletter-mc-form" accept-charset="UTF-8"><div><div class="mailchimp-signup-subscribe-form-description">Stay informed! Sign up for our e-newsletter and receive info on upcoming events, exhibitions and special offers just for you!</div><div id="mailchimp-newsletter-90fdc1c4aa-mergefields" class="mailchimp-newsletter-mergefields"><div class="form-item form-type-textfield form-item-mergevars-EMAIL">
+  <label for="edit-mergevars-email">Email Address <span class="form-required" title="This field is required.">*</span></label>
+ <input type="text" id="edit-mergevars-email" name="mergevars[EMAIL]" value="" size="25" maxlength="128" class="form-text required" />
+</div>
+<div class="form-item form-type-textfield form-item-mergevars-FNAME">
+  <label for="edit-mergevars-fname">First Name </label>
+ <input type="text" id="edit-mergevars-fname" name="mergevars[FNAME]" value="" size="25" maxlength="128" class="form-text" />
+</div>
+<div class="form-item form-type-textfield form-item-mergevars-LNAME">
+  <label for="edit-mergevars-lname">Last Name </label>
+ <input type="text" id="edit-mergevars-lname" name="mergevars[LNAME]" value="" size="25" maxlength="128" class="form-text" />
+</div>
+</div><input type="hidden" name="form_build_id" value="form-OpfOG-Ww5PwzWtRoMzcxwFiCDHuKmXvJKoI4Fbb8leE" />
+<input type="hidden" name="form_id" value="mailchimp_signup_subscribe_block_newsletter_mc_form" />
+<div class="form-actions form-wrapper" id="edit-actions--2"><input type="submit" id="edit-submit--2" name="op" value="Sign-up" class="form-submit" /></div></div></form>  </div>
+</div>
+<nav id="block-menu-block-2" role="navigation" class="block block--menu-block block--menu-block-2">
+      
+  <div class="menu-block-wrapper menu-block-2 menu-name-main-menu parent-mlid-0 menu-level-1">
+  <ul class="menu"><li class="first expanded menu-mlid-517"><a href="/plan-your-visit">Plan Your Visit</a><ul class="menu"><li class="first expanded menu-mlid-521"><a href="/plan-your-visit/calendar">Calendar</a><ul class="menu"><li class="first leaf menu-mlid-808"><a href="/plan-your-visit/calendar#featured-events" title="">Featured Events</a></li>
+<li class="leaf menu-mlid-809"><a href="/plan-your-visit/calendar#family-events" title="">Family Programs</a></li>
+<li class="leaf menu-mlid-810"><a href="/plan-your-visit/calendar#adult-events" title="">Adult Programs</a></li>
+<li class="leaf menu-mlid-815"><a href="/plan-your-visit/calendar#walking-tours" title="">Walking Tours</a></li>
+<li class="leaf menu-mlid-1367"><a href="/plan-your-visit/calendar#science-saturdays" title="">Science Saturdays</a></li>
+<li class="leaf menu-mlid-5224"><a href="/plan-your-visit/calendar#member-events" title="">Member Events</a></li>
+<li class="last leaf menu-mlid-1483"><a href="/plan-your-visit/calendar/all-events">All Events</a></li>
+</ul></li>
+<li class="leaf menu-mlid-4769"><a href="/plan-your-visit/hours-admission">Hours &amp; Tickets</a></li>
+<li class="expanded menu-mlid-522"><a href="/plan-your-visit/what-to-see">What To See</a><ul class="menu"><li class="first expanded menu-mlid-934"><a href="/sub/exhibitions-and-demonstrations">Exhibitions and Demonstrations</a><ul class="menu"><li class="first leaf menu-mlid-736"><a href="/plan-your-visit/what-to-see/exhibits/powder-yard">Powder Yard</a></li>
+<li class="last leaf menu-mlid-738"><a href="/plan-your-visit/what-to-see/exhibits/workers-hill-community">Workers&#039; Hill Community</a></li>
+</ul></li>
+<li class="leaf menu-mlid-525"><a href="/plan-your-visit/what-to-see/map">Map</a></li>
+<li class="last leaf menu-mlid-1482"><a href="/plan-your-visit/what-to-see/weather" title="Your local Wilmington, DE weather taking place at Hagley now and for the five-day forecast.">Weather</a></li>
+</ul></li>
+<li class="expanded menu-mlid-528"><a href="/plan-your-visit/group-tours">Group Tours</a><ul class="menu"><li class="first leaf menu-mlid-718"><a href="/sub/faq">FAQ</a></li>
+<li class="leaf menu-mlid-716"><a href="/sub/group-tour-meals">Group Tour Meals</a></li>
+<li class="last leaf menu-mlid-717"><a href="/sub/access-persons-disabilities">ADA Accessibility</a></li>
+</ul></li>
+<li class="expanded menu-mlid-529"><a href="/plan-your-visit/tours-field-trips">School Field Trips</a><ul class="menu"><li class="first expanded menu-mlid-719"><a href="/sub/student-programs-tours">Student Programs &amp; Tours</a><ul class="menu"><li class="first leaf menu-mlid-982"><a href="/plan-your-visit/tours-field-trips/hands-history">Hands-on History</a></li>
+<li class="last leaf menu-mlid-981"><a href="/plan-your-visit/tours-field-trips/stem-tation">STEM-tation!</a></li>
+</ul></li>
+<li class="leaf menu-mlid-731"><a href="/sub/schedule-visit">Schedule A Visit</a></li>
+<li class="leaf menu-mlid-732"><a href="/sub/preparing-your-students">Preparing Your Students</a></li>
+<li class="leaf menu-mlid-733"><a href="/sub/faq-0">FAQ</a></li>
+<li class="leaf menu-mlid-735"><a href="/sub/financial-assistance">Financial Assistance</a></li>
+<li class="last leaf menu-mlid-730"><a href="/sub/lessons-resources">Lessons &amp; Resources</a></li>
+</ul></li>
+<li class="leaf menu-mlid-6375"><a href="/family-field-trips" title="Family-oriented programs in a safe and educational environment.">Family Field Trips</a></li>
+<li class="last leaf menu-mlid-531"><a href="/plan-your-visit/museum-store">Museum Store</a></li>
+</ul></li>
+<li class="expanded menu-mlid-536"><a href="/research">Research</a><ul class="menu"><li class="first expanded menu-mlid-1227"><a href="/research/search-hagley-collections">Search Collections</a><ul class="menu"><li class="first last expanded menu-mlid-537"><a href="/research/collections">Collections Overview</a><ul class="menu"><li class="first leaf menu-mlid-2816"><a href="/contribute-collection">Collection Contributions</a></li>
+<li class="leaf menu-mlid-4954"><a href="/research/collections/audiovisual-collection">Audiovisual Collection</a></li>
+<li class="leaf menu-mlid-1262"><a href="/research/library-conservation">Library Conservation</a></li>
+<li class="leaf menu-mlid-4955"><a href="/research/collections/manuscripts-and-archives-collection">Manuscripts and Archives Collection</a></li>
+<li class="leaf menu-mlid-1263"><a href="/research/museum-collection">Museum Collection</a></li>
+<li class="leaf menu-mlid-4956"><a href="/research/collections/museum-collection">Museum Collection</a></li>
+<li class="leaf menu-mlid-2517"><a href="/research/online-journals">Online Journals</a></li>
+<li class="leaf menu-mlid-4957"><a href="/research/collections/published-collection">Published Collection</a></li>
+<li class="leaf menu-mlid-1253"><a href="/research/sub-databases">Subscription databases</a></li>
+<li class="last leaf menu-mlid-4959"><a href="/research/collections/subject-guides">subject guides</a></li>
+</ul></li>
+</ul></li>
+<li class="expanded menu-mlid-539"><a href="/research/collections/researcher-services">Services</a><ul class="menu"><li class="first leaf menu-mlid-1228"><a href="/research/reproductions">Reproductions/Licensing</a><ul class="menu"><li class="first leaf menu-mlid-4953"><a href="/research/reproductions/citation-and-credit-requirements">Citation and credit requirements</a></li>
+<li class="leaf menu-mlid-4951"><a href="/research/reproductions/film-video-digitization-and-licensing">Film &amp; Video Digitization and Licensing</a></li>
+<li class="leaf menu-mlid-4952"><a href="/research/reproductions/guidelines-reproduction-publicationsbroadcasting">Guidelines for Reproduction &amp; Publications/Broadcasting</a></li>
+<li class="leaf menu-mlid-4950"><a href="/research/reproductions/high-resolution-digital-copies-publication">High Resolution Digital Copies &amp; Publication</a></li>
+<li class="last leaf menu-mlid-4949"><a href="/research/reproductions/photocopies-reference-copies-library-material">Photocopies &amp; Reference Copies of Library Material</a></li>
+</ul></li>
+<li class="last expanded menu-mlid-988"><a href="/research/collections/researcher-services/library-policies">On-site Researcher Policies</a><ul class="menu"><li class="first last leaf menu-mlid-6370"><a href="/library-covid-re-opening-and-procedures">Library COVID Re-opening and Procedures</a></li>
+</ul></li>
+</ul></li>
+<li class="expanded menu-mlid-3415"><a href="/library-programs-events">Events</a><ul class="menu"><li class="first expanded menu-mlid-6358"><a href="/hagley-history-hangout">History Hangouts</a><ul class="menu"><li class="first leaf menu-mlid-6369"><a href="/research/history-hangout-sharon-fickeissen">History Hangout: A study in Book Binding</a></li>
+<li class="leaf menu-mlid-6374"><a href="/research/history-hangout-ai-hisano">History Hangout: Conversation with Ai Hisano</a></li>
+<li class="leaf menu-mlid-6359"><a href="/research/history-hangout">History Hangout: Conversation with Daniel Wortel-London</a></li>
+<li class="leaf menu-mlid-6372"><a href="/research/history-hangout-isabelle-held">History Hangout: Conversation with Isabelle Held</a></li>
+<li class="leaf menu-mlid-6361"><a href="/research/history-hangout-0">History Hangout: Conversation with JoAnn Yates and Craig N. Murphy</a></li>
+<li class="leaf menu-mlid-6373"><a href="/research/history-hangout-kevin-tennent">History Hangout: Conversation with Kevin Tennent</a></li>
+<li class="leaf menu-mlid-6360"><a href="/research/history-hangout-1">History Hangout: Conversation with Laura Phillips Sawyer</a></li>
+<li class="leaf menu-mlid-6368"><a href="/research/history-hangout-roger-horowitz">History Hangout: Irving Shapiro and the Arab Boycott</a></li>
+<li class="leaf menu-mlid-6364"><a href="/research/history-hangout-linda-gross">History Hangout: Philadelphia&#039;s 1876 Centennial Exhibition</a></li>
+<li class="leaf menu-mlid-6366"><a href="/research/history-hangout-laura-wahl">History Hangout: Photographic processes and Preservation of Family Collections</a></li>
+<li class="leaf menu-mlid-6362"><a href="/research/history-hangout-max-moeller">History Hangout: Promotional Comic Books</a></li>
+<li class="leaf menu-mlid-6367"><a href="/research/history-hangout-michael-dicamillo">History Hangout: Virgil B. Day and Labor History</a></li>
+<li class="leaf menu-mlid-6365"><a href="/research/history-hangout-skylar-harris">History Hangout: William H. Rau, James Zellner, and the Mauch Chunk Railway Lantern Slides</a></li>
+<li class="last leaf menu-mlid-6363"><a href="/research/history-hangout-diane-bockrath">History Hangouts: Chromolithography, Advertising Ephemera, and the Visual Landscape</a></li>
+</ul></li>
+<li class="expanded menu-mlid-1230"><a href="/research/author-talks">Author Talks</a><ul class="menu"><li class="first leaf menu-mlid-5564"><a href="/research/author-talk-bess-williamson">Author Talk: Bess Williamson, &quot;Accessible America: A History of Disability &amp; Design&quot;</a></li>
+<li class="last leaf menu-mlid-5466"><a href="/research/author-talk-susan-murray">Author Talk: Susan Murray</a></li>
+</ul></li>
+<li class="expanded menu-mlid-1232"><a href="/research/conferences">Conferences</a><ul class="menu"><li class="first leaf menu-mlid-5010"><a href="/2018-fall-conference">2018 Fall Conference</a></li>
+<li class="leaf menu-mlid-5218"><a href="/research/conferences/2019-fall-conference">2019 FALL CONFERENCE</a></li>
+<li class="leaf menu-mlid-6156"><a href="/research/conference/2020-fall-conference">2020 Fall Conference</a></li>
+<li class="last expanded menu-mlid-1235"><a href="/research/past-conferences">Past conferences</a><ul class="menu"><li class="first last leaf menu-mlid-4750"><a href="/hidden-capitalism-beyond-below-and-outside-visible-market">Hidden Capitalism: Beyond, Below, and Outside the Visible Market</a></li>
+</ul></li>
+</ul></li>
+<li class="last expanded menu-mlid-1231"><a href="/research/research-seminars">Research Seminars</a><ul class="menu"><li class="first leaf menu-mlid-5461"><a href="/research/research-seminar-daniel-wortel-london">Research Seminar: Daniel Wortel-London</a></li>
+<li class="leaf menu-mlid-5464"><a href="/research/research-seminar-danya-pilgrim">Research Seminar: Danya Pilgrim</a></li>
+<li class="leaf menu-mlid-5465"><a href="/research/research-seminar-david-suisman">Research Seminar: David Suisman</a></li>
+<li class="leaf menu-mlid-5452"><a href="/research/research-seminar-denise-sutton">Research Seminar: Denise Sutton</a></li>
+<li class="leaf menu-mlid-5463"><a href="/research/research-seminar-geoffrey-jones">Research Seminar: Geoffrey Jones</a></li>
+<li class="last leaf menu-mlid-5462"><a href="/research/research-seminar-karen-mahar">Research Seminar: Karen Mahar</a></li>
+</ul></li>
+</ul></li>
+<li class="expanded menu-mlid-546"><a href="/research/center">Center</a><ul class="menu"><li class="first leaf menu-mlid-937"><a href="/research/programs/hagley-prize">Hagley Prize</a></li>
+<li class="leaf menu-mlid-936"><a href="/research/programs/book-series" title="">Book Series</a></li>
+<li class="leaf menu-mlid-1996"><a href="/business-history-conference" title="">Business History Conference</a></li>
+<li class="last leaf menu-mlid-1994"><a href="/african-american-film-series" title="">African American Film Series</a></li>
+</ul></li>
+<li class="expanded menu-mlid-540"><a href="/research/grants-fellowships">Funding</a><ul class="menu"><li class="first expanded menu-mlid-3410"><a href="/research-fellowships-long-term">Long Term</a><ul class="menu"><li class="first leaf menu-mlid-3411"><a href="/henry-belin-du-pont-dissertation-fellowships">Henry Belin du Pont Dissertation Fellowships</a></li>
+<li class="leaf menu-mlid-3412"><a href="/research/grants-fellowships/louis-galambos">Louis Galambos National Fellowship in Business and Politics</a></li>
+<li class="last leaf menu-mlid-3413"><a href="/neh-hagley-postdoctoral-fellowship-business-culture-and-society">NEH-Hagley Postdoctoral Fellowship on Business, Culture, and Society</a></li>
+</ul></li>
+<li class="expanded menu-mlid-3409"><a href="/research-grants-short-term">Short Term</a><ul class="menu"><li class="first leaf menu-mlid-740"><a href="/exploratory-research-grants">Exploratory Research Grants</a></li>
+<li class="last leaf menu-mlid-741"><a href="/henry-belin-du-pont-research-grants">Henry Belin du Pont Research Grants</a></li>
+</ul></li>
+<li class="last expanded menu-mlid-6158"><a href="/research/grants-fellowships/oral-history-project-grant">Oral History</a><ul class="menu"><li class="first last leaf menu-mlid-6159"><a href="/research/grants-fellowships/oral-history-project-grant-application">Oral History Project Grant Application</a></li>
+</ul></li>
+</ul></li>
+<li class="leaf menu-mlid-1229"><a href="/research/oral-history-office">Oral History</a></li>
+<li class="expanded menu-mlid-2406"><a href="/research/news" title="">News &amp; Programs</a><ul class="menu"><li class="first leaf menu-mlid-702"><a href="/research/research-news-events/news/all-news" title="">Research  News</a></li>
+<li class="expanded menu-mlid-1988"><a href="/research/programs/nam-project-news">NAM Project News</a><ul class="menu"><li class="first last leaf menu-mlid-1992"><a href="/research/programs/nam-project-news/welcome-national-association-manufacturers-project">Welcome! National Association of Manufacturers project</a></li>
+</ul></li>
+<li class="leaf menu-mlid-4800"><a href="/research/news/scholar-projects">Scholars&#039; Projects</a></li>
+<li class="expanded menu-mlid-4752"><a href="/research/programs/stories-stacks">Stories from the Stacks</a><ul class="menu"><li class="first last leaf menu-mlid-4804"><a href="/early-american-obsession-french-culture">The Early American Obsession with French Culture</a></li>
+</ul></li>
+<li class="leaf menu-mlid-6160"><a href="/research/news/hagley-film-showcase">Hagley Video Showcase</a></li>
+<li class="leaf menu-mlid-5011"><a href="/millrace">The Millrace Podcast</a></li>
+<li class="last leaf menu-mlid-5420"><a href="http://eepurl.com/c7WHDX" title="" target="_blank">Sign up for the newsletter</a></li>
+</ul></li>
+<li class="leaf menu-mlid-966"><a href="/HHC">Hagley Heritage Curators</a></li>
+<li class="last leaf menu-mlid-3408"><a href="/research/digital-exhibits" title="">Digital Exhibits</a></li>
+</ul></li>
+<li class="expanded menu-mlid-549"><a href="/support-hagley">Support Hagley</a><ul class="menu"><li class="first leaf menu-mlid-550"><a href="/support-hagley/membership">Membership</a></li>
+<li class="expanded menu-mlid-551"><a href="/support-hagley/volunteer">Volunteer</a><ul class="menu"><li class="first leaf menu-mlid-943"><a href="/sub/volunteer-faq">Volunteer FAQ</a></li>
+<li class="last collapsed menu-mlid-4773"><a href="/support-hagley/volunteer-opportunities">Volunteer Opportunities</a></li>
+</ul></li>
+<li class="leaf menu-mlid-552"><a href="https://www.signup82north.com/beventLive.aspx?EventID=NBI14265880" title="" target="_blank">Donate</a></li>
+<li class="expanded menu-mlid-553"><a href="/support-hagley/giving-opportunities">Giving Opportunities</a><ul class="menu"><li class="first leaf menu-mlid-4746"><a href="/sub/hagley-annual-fund">Hagley Annual Fund</a></li>
+<li class="leaf menu-mlid-744"><a href="/sub/adopt-book">Adopt-a-Book</a></li>
+<li class="leaf menu-mlid-760"><a href="/sub/collection-contributions">Collection Contributions</a></li>
+<li class="leaf menu-mlid-761"><a href="/sub/corporate-partnerships">Corporate Partnerships</a></li>
+<li class="leaf menu-mlid-4747"><a href="/sub/friends-innovation">Friends of Innovation</a></li>
+<li class="leaf menu-mlid-4742"><a href="/sub/memorial-and-commemorative-donations">Memorial and Commemorative Donations</a></li>
+<li class="leaf menu-mlid-4744"><a href="/sub/planned-giving">Planned Giving</a></li>
+<li class="leaf menu-mlid-745"><a href="/sub/scholarships-0">Scholarships</a></li>
+<li class="last leaf menu-mlid-793"><a href="/sub/ways-give">Ways To Give</a></li>
+</ul></li>
+<li class="last leaf menu-mlid-4767"><a href="/corporate-partners">Corporate Partners</a></li>
+</ul></li>
+<li class="last expanded menu-mlid-564"><a href="/about-us">About Us</a><ul class="menu"><li class="first expanded menu-mlid-565"><a href="/about-us/what-is-hagley">What is Hagley</a><ul class="menu"><li class="first last leaf menu-mlid-1494"><a href="/sub/origins-our-name">Origins of Our Name</a></li>
+</ul></li>
+<li class="leaf menu-mlid-568"><a href="/about-us/publications">Publications</a></li>
+<li class="expanded menu-mlid-569"><a href="/about-us/rentals">Rentals</a><ul class="menu"><li class="first leaf menu-mlid-818"><a href="/sub/faqs">FAQ&#039;s</a></li>
+<li class="leaf menu-mlid-811"><a href="/sub/rental-types">Rental Types</a></li>
+<li class="leaf menu-mlid-812"><a href="/sub/spaces-and-fees">Spaces and Fees</a></li>
+<li class="expanded menu-mlid-813"><a href="/about-us/rentals/weddings-hagley">Weddings at Hagley</a><ul class="menu"><li class="first leaf menu-mlid-817"><a href="/sub/testimonials">Testimonials</a></li>
+<li class="last leaf menu-mlid-814"><a href="/sub/wedding-planning-information">Wedding Planning Information</a></li>
+</ul></li>
+<li class="last leaf menu-mlid-990"><a href="/about-us/rentals/rental-contact-form">Rental Contact Form</a></li>
+</ul></li>
+<li class="leaf menu-mlid-4766"><a href="/about-us/staff">Staff</a></li>
+<li class="last leaf menu-mlid-571"><a href="/about-us/employment">Employment</a></li>
+</ul></li>
+</ul></div>
+</nav>
+<div id="block-block-27" class="block block--block block--block-27">
+        <div class="block__content">
+    <ul>
+<li>Visitor Information:</li>
+<li><a href="/visitor-information" title="Visitor Information">English</a></li>
+<li><a href="/zh-hans/visitor-information" title="访客信息">简体中文</a></li>
+<li><a href="/es/visitor-information" title="Información del visitante">Español</a></li>
+<li><a href="/ko/visitor-information" title="방문자 정보">한국어</a></li>
+<li><a href="/fr/visitor-information" title="Informations visiteurs">Français</a></li>
+<li><a href="/it/visitor-information" title="Informazioni per i visitatori">Italiano</a></li>
+<li><a href="/de/visitor-information" title="Besucherinformationen">Deutsch</a></li>
+<li><a href="/ja/visitor-information" title="訪問者の情報">日本語</a></li>
+<li><a href="/he/visitor-information" title="מידע על מבקרים">עברית</a></li>
+<li><a href="/ru/visitor-information" title="Информация для посетителей">Русский</a></li>
+</ul>
+  </div>
+</div>
+  </div>
+      </div>
+  </footer>
+</div>
+</div>
+
+    
+    <div id="mapbox"></div>
+  
+   
+  <script type="text/javascript" src="/sites/all/themes/hagley/js/gears.js?v=2"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.11/jquery.mousewheel.min.js"></script>
+  <script type="text/javascript" src="/sites/all/libraries/coverflow/scripts/jquery.carousel-1.1.min.js"></script>
+  <script type="text/javascript" src="/sites/all/themes/hagley/js/breakpoints/breakpoints.js"></script>
+  <script type="text/javascript" src="/sites/all/themes/hagley/js/jquery.mmenu.js"></script>
+  <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyAEpH2ZruJJ7mB_pPd2qh2-0VsXNb4YwLs"></script>
+  <script type="text/javascript" src="/sites/all/libraries/featherlight/release/featherlight.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
+
+  
+  <script type="text/javascript">
+      
+    $(document).ready(function() {
+        
+        //Sidebar Nav...
+        jQuery('.rightArrow').on('click', function() {
+            var effect = 'slide';
+            var options = { direction: 'right' };
+            var duration = 300;
+            $('.l-region--sidebar-first').toggle(effect, options, duration);
+            if($(this).hasClass('arrowdown')) {
+                jQuery('.rightArrow').removeClass('arrowdown').animate({marginLeft: '+=270px'}, 300);
+            } else {
+                jQuery('.rightArrow').addClass('arrowdown').animate({marginLeft: '-=270px'}, 300);
+            }
+        });
+        //Mobile Menu...
+        $("#block-menu-block-2").mmenu({
+            slidingSubmenus: false
+        });
+        
+        //Process events datepicker...
+        if($('body').hasClass('page-node-3') || $('body').hasClass('page-node-403') || $('body').hasClass('page-node-28') || $('body').hasClass('page-node-1620')) {
+        
+            $(".datepickershow").datepicker({
+                dateFormat: 'yy-mm-dd', 
+                defaultDate: '',
+                onSelect: function(dateText, inst) { 
+                    var dateValue = dateText;
+                    window.location.href = "/plan-your-visit/calendar/todays-events?action=doEvents&eventVar="+dateValue+"&t=calendar";
+                }
+            });
+        
+            var day = '';
+        
+        
+            if(day !== '') {
+                $("a.ui-state-default").each(function(index) {
+                
+                    var loopDay = (index+1);
+                
+                    $(this).removeClass("ui-state-active");
+                
+                    if(loopDay === day) {
+                        $(this).addClass('ui-state-active');
+                    }
+                
+                });
+            }
+        }       
+    });
+    
+    //Add class to carousel for Digital Exhibits...
+    if($('body').hasClass('page-node-23')) {
+        $('.carousel > .view-content').addClass('slides');
+    }
+      
+      //Breakpoints...
+      $(window).setBreakpoints({
+	// use only largest available vs use all available
+        distinct: false, 
+	// array of widths in pixels where breakpoints
+	// should be triggered
+	breakpoints: [320,768,1250] 
+	});
+        
+      //Home Coverflow Slider...
+      if($('body').hasClass('front')) {
+          
+          $(document).ready(function() {
+              $(window).bind('enterBreakpoint768',function() {
+                  $('.carousel').carousel({
+                      backOpacity: .9,
+                      carouselWidth:1000,
+                      carouselHeight:400,
+                      directionNav:true,
+                      reflection: false,
+                      shadow:false,
+                      slidesPerScroll:5,
+                      frontWidth: 730,
+                      frontHeight: 365,
+                      hMargin: .05,
+                      vMargin: .2,
+                      speed: 500,
+                      autoplayInterval: 30000,
+                      mouse: false
+                  });
+              });
+          });
+          
+              var sCount = 1;
+              $('.slideContent').each(function() {
+                  $(this).addClass('sl'+sCount);
+                  sCount++;
+              });
+      } 
+      
+      //Tier Coverflow Slider...
+      if($('body').hasClass('not-front')) {
+          
+        $(window).bind('enterBreakpoint1250',function() {
+            $(document).ready(function(){
+              $('.carousel').carousel({
+                  backOpacity: 1,
+                  carouselWidth:900,
+                  carouselHeight:500,
+                  directionNav:true,
+                  reflection: false,
+                  shadow:false,
+                  slidesPerScroll:5,
+                  frontWidth: 1000,
+                  frontHeight: 460,
+                  hMargin: .05,
+                  vMargin: .1,
+		  speed: 500,
+                  autoplayInterval: 30000,
+                  mouse: false
+              });
+              
+              var sCount = 1;
+              $('.slideContent').each(function() {
+                  $(this).addClass('sl'+sCount);
+                  sCount++;
+              });
+          });
+	});
+        $(window).bind('enterBreakpoint768',function() {
+            $(document).ready(function(){
+              $('.carousel').carousel({
+                  backOpacity: .6,
+                  carouselWidth:900,
+                  carouselHeight:500,
+                  directionNav:true,
+                  reflection: false,
+                  shadow:false,
+                  slidesPerScroll:5,
+                  frontWidth: 730,
+                  frontHeight: 365,
+                  hMargin: .05,
+                  vMargin: .1,
+		  speed: 500,
+                  autoplayInterval: 30000,
+                  mouse: false
+              });
+              
+              var sCount = 1;
+              $('.slideContent').each(function() {
+                  $(this).addClass('sl'+sCount);
+                  sCount++;
+              });
+          });
+	});
+      }
+      
+      //Accordion
+      (function($) {
+        $('.accordion > .accfield:eq(0) .accFieldHdr').addClass('active').next().slideDown();
+        $('.accordion .accFieldHdr').click(function(j) {
+            var dropDown = $(this).closest('.accfield').find('.accFieldCopy');
+
+            //$(this).closest('.accordion').find('.accFieldCopy').not(dropDown).slideUp();
+
+            if ($(this).hasClass('active')) {
+                $(this).removeClass('active');
+            } else {
+                $(this).closest('.accordion').find('.accFieldHdr.active').removeClass('active');
+                $(this).addClass('active');
+            }
+
+            dropDown.stop(false, true).slideToggle();
+
+            j.preventDefault();
+        });
+    })(jQuery);
+    
+    //Subnav anchor conversion...
+    var parentLink = '';
+    $('.sidebar ul.menu li a').each(function(index) {
+        var masterLink = '';
+        var secLink = '';
+        
+        //Set variable of first link...
+        if(index === 0) {
+            masterLink = $(this).attr('href');
+        } else {
+            secLink = $(this).attr('href');
+            
+            if(secLink === '/plan-your-visit/what-to-see/map') {
+                $(this).attr('href', '');
+                $(this).addClass('mapLink');
+                $(this).attr('data-featherlight','iframe');
+            }
+        }
+        
+        if(secLink === '/plan-your-visit/calendar#science-saturdays') {
+            $(this).removeClass('active-trail');
+        }
+        
+        if($(this).parent('li').hasClass('expanded')) {
+            parentLink = secLink;
+        }
+        
+        var n = secLink.indexOf('/sub/');
+        
+        if(n >= 0) {
+            var o = secLink.lastIndexOf('/');
+            
+            var subLink = secLink.substring((o+1));
+            
+            $(this).attr('href', parentLink + "#" + subLink);
+        } 
+    });
+    
+    //Mobile Nav...
+    $('#block-menu-block-2 ul.menu li a').each(function(index) {
+        var masterLink = '';
+        var secLink = '';
+        
+        //Set variable of first link...
+        if(index === 0) {
+            masterLink = $(this).attr('href');
+        } else {
+            secLink = $(this).attr('href');
+            
+            if(secLink === '/plan-your-visit/what-to-see/map') {
+                $(this).css('display', 'none');
+            }
+        }
+        
+        if(secLink === '/plan-your-visit/calendar#science-saturdays') {
+            $(this).removeClass('active-trail');
+        }
+        
+        var n = secLink.indexOf('/sub/');
+        
+        if(n >= 0) {
+            var o = secLink.lastIndexOf('/');
+            
+            var subLink = secLink.substring((o+1));
+            
+            $(this).attr('href', "#" + subLink);
+        } 
+    });
+    
+    $('.subPageContainer').next('div').css('margin-top','30px');
+    
+    //Map Pop up link...
+    $('a.mapLink').on('click', function(e) {
+        e.preventDefault();
+        $.featherlight({iframe: '/map/index.html', iframeWidth: 1080, iframeHeight: 726, allowtransparency:"true"});
+    });
+    
+    
+    //Anchor scroll easing...
+    $(function() {
+      $('a[href*="#"]:not([href="#"])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html, body').animate({
+              scrollTop: target.offset().top
+            }, 2000);
+            return false;
+          }
+        }
+      });
+    });
+    
+    //Floating Subnav...
+    $(function() {
+        if (!!$('.sidebar .l-region--sidebar-first').offset()) {
+            var $sidebar   = $(".sidebar .l-region--sidebar-first"), 
+                $window    = $(window),
+                offset     = $sidebar.offset(),
+                topPadding = 15;
+
+            $window.scroll(function() {
+                if ($window.scrollTop() > offset.top) {
+                    $sidebar.stop().animate({
+                        //marginTop: $window.scrollTop() - offset.top + topPadding
+                    });
+                } else {
+                    $sidebar.stop().animate({
+                       // marginTop: 0
+                    });
+                }
+            });
+        }
+    });
+
+    var subName = '';
+    var zone = 0;
+    
+    $(function(){ // document ready
+        
+        var subArray = new Array();
+        var subNameArray = new Array();
+        
+        $('.subPad').each(function(index) {
+            subArray[index] = (Math.round($(this).offset().top) - 3);
+            subNameArray[index] = $(this).attr('id');
+        });
+        
+      if (!!$('.sidebar .l-region--sidebar-first').offset()) { // make sure ".sticky" element exists
+        var stickyTop = $('.sidebar .l-region--sidebar-first').offset().top; // returns number
+        $(window).scroll(function() { // scroll event
+            
+            var windowTop = $(window).scrollTop(); // returns number
+            var zCount = 0;
+                
+            if(subArray.length > 0) {
+                for(i=0;i < subArray.length; i++) {
+                    if(windowTop >= subArray[i]) {
+                        zCount++;
+                    }
+                }
+            }
+            
+            if(zone !== zCount) {
+                $('a').removeClass('subHigh');
+                
+                $('.sidebar ul.menu li a').each(function(index) {
+                    secLink = $(this).attr('href');
+                    var n = secLink.indexOf('#'+subNameArray[(zCount-1)]);
+                    
+                    if(n >= 0) {
+                        $(this).addClass('subHigh');
+                    }
+                });
+                zone = zCount;
+            }
+            
+            if(zone === 0) {
+                $('a').removeClass('subHigh');
+            }   
+          
+          console.log(stickyTop + ' -- ' + (windowTop+100));
+          
+          if (stickyTop < (windowTop+180)) {
+            if (!$('.sidebar .l-region--sidebar-first').hasClass('floater')) {
+                $('.sidebar .l-region--sidebar-first').addClass('floater');
+                $('.rightArrow').css('display', 'block');
+                
+                if($('.rightArrow').hasClass('arrowdown')) {
+                    $('.sidebar .l-region--sidebar-first').css('display','block');
+                } else {
+                    $('.sidebar .l-region--sidebar-first').css('display','none');
+                }
+                $('.view-sidebar-callouts').addClass('coAdjust');
+            }
+          }
+          else {
+              if ($('.sidebar .l-region--sidebar-first').hasClass('floater')) {
+                $('.sidebar .l-region--sidebar-first').removeClass('floater');
+                $('.sidebar .l-region--sidebar-first').css('display','block');
+                $('.rightArrow').css('display', 'none');
+                $('.view-sidebar-callouts').removeClass('coAdjust');
+            }
+          }
+        });
+      }
+    });
+    
+  </script>
+<script>
+//new leaflet embed
+var map = L.map('map').setView([39.774900, -75.578350], 16);
+var gearIcon = L.icon({
+    iconUrl: '/sites/all/themes/hagley/images/sm_gear.png',
+    iconSize: [35, 35],
+    popupAnchor: [9, -20],
+    shadowUrl: '/sites/all/themes/hagley/images/sm_gear_shadow.png',
+    shadowSize: [30, 30],
+    shadowAnchor: [12, 8],
+
+});
+var marker = L.marker([39.774900, -75.578350], {icon:gearIcon}).addTo(map);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+marker.bindPopup('<b><a href="https://goo.gl/maps/xVpuRDd7CMM2" target="_blank">Get Directions</a></b>').openPopup();
+
+</script>
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#252e39"
+    },
+    "button": {
+      "background": "#14a7d0"
+    }
+  },
+  "theme": "classic",
+  "content": {
+    "href": "https://www.hagley.org/privacy"
+  },
+  "law": {
+      "regionalLaw": "false",
+    },
+  "location": "true",
+})});
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b46f46165a","applicationID":"130704960","transactionName":"YgEHN0tXWkMAU0JQV1tLJABNX1teTl5ZXV1qFAQEXGlCWQRH","queueTime":0,"applicationTime":1126,"atts":"TkYEQQNNSU0=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
