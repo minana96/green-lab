@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="72px" height="72px" viewBox="0 0 72 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Exchange</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#65C1E8" offset="0%"></stop>
+            <stop stop-color="#358DCC" offset="100%"></stop>
+        </linearGradient>
+        <radialGradient cx="50%" cy="12.0597028%" fx="50%" fy="12.0597028%" r="188.396953%" id="radialGradient-2">
+            <stop stop-color="#358DCC" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#5BBBFF" stop-opacity="0.6" offset="100%"></stop>
+        </radialGradient>
+        <rect id="path-3" x="8" y="8" width="32" height="32" rx="16"></rect>
+        <filter x="-56.2%" y="-56.2%" width="212.5%" height="212.5%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="6" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.149019608   0 0 0 0 0.196078431   0 0 0 0 0.219607843  0 0 0 0.28 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Exchange" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-7" transform="translate(4.000000, 4.000000)">
+            <rect id="Rectangle" fill="url(#linearGradient-1)" x="0" y="0" width="64" height="64" rx="20"></rect>
+            <path d="M43.60005,19.8638496 L46.9600448,12.0238616 C47.1776004,11.5162318 47.7654794,11.2810802 48.2731091,11.4986359 C48.509124,11.5997851 48.6971856,11.7878467 48.7983349,12.0238616 L52.1583297,19.8638496 C52.3758854,20.3714794 52.1407338,20.9593583 51.633104,21.1769139 C51.4116751,21.271812 51.1634306,21.2835845 50.9340149,21.2100668 L49.0998693,20.6223034 C48.3059669,20.3678923 47.4524128,20.3678923 46.6585104,20.6223034 L44.8243648,21.2100668 C44.2984252,21.3786075 43.7354377,21.0888784 43.5668971,20.5629387 C43.4933793,20.333523 43.5051518,20.0852785 43.60005,19.8638496 Z" id="Path-2-Copy-2" fill="#FFFFFF" transform="translate(47.879190, 15.879190) rotate(-45.000000) translate(-47.879190, -15.879190) "></path>
+            <rect id="Rectangle-Copy-28" stroke="#FFFFFF" stroke-width="2" opacity="0.8" x="25" y="25" width="30" height="30" rx="15"></rect>
+            <g id="Rectangle">
+                <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-3"></use>
+                <use fill="url(#radialGradient-2)" fill-rule="evenodd" xlink:href="#path-3"></use>
+            </g>
+            <path d="M11.60005,51.8638496 L14.9600448,44.0238616 C15.1776004,43.5162318 15.7654794,43.2810802 16.2731091,43.4986359 C16.509124,43.5997851 16.6971856,43.7878467 16.7983349,44.0238616 L20.1583297,51.8638496 C20.3758854,52.3714794 20.1407338,52.9593583 19.633104,53.1769139 C19.4116751,53.271812 19.1634306,53.2835845 18.9340149,53.2100668 L17.0998693,52.6223034 C16.3059669,52.3678923 15.4524128,52.3678923 14.6585104,52.6223034 L12.8243648,53.2100668 C12.2984252,53.3786075 11.7354377,53.0888784 11.5668971,52.5629387 C11.4933793,52.333523 11.5051518,52.0852785 11.60005,51.8638496 Z" id="Path-2-Copy-2" fill="#ECEFF1" transform="translate(15.879190, 47.879190) rotate(135.000000) translate(-15.879190, -47.879190) "></path>
+        </g>
+    </g>
+</svg>
