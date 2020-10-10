@@ -7,71 +7,75 @@ Use the following classes to style your popular posts list as you like.
 */
 
 /* Styles the "Sorry, no data so far" message */
-.wpp-no-data {
-}
+
+.wpp-no-data {}
 
 /* UL - Popular Posts container styles */
-.wpp-list {
+
+.wpp-list {}
+
+/* LI - Post container styles */
+
+.wpp-list li {
+    overflow: hidden;
+    float: none;
+    clear: both;
+    margin-bottom: 1rem;
 }
 
-    /* LI - Post container styles */
-    .wpp-list li {
-        overflow: hidden;
-        float: none;
-        clear: both;
-        margin-bottom: 1rem;
-    }
+.wpp-list li:last-of-type {
+    margin-bottom: 0;
+}
 
-    .wpp-list li:last-of-type {
-        margin-bottom: 0;
-    }
+/* Styles for the popular post in view */
 
-    /* Styles for the popular post in view */
-    .wpp-list li.current {
-    }
+.wpp-list li.current {}
 
-        /* Thumbnail styles */
-        .wpp-thumbnail {
-            display: inline;
-            float: left;
-            margin: 0 1rem 0 0;
-            border: none;
-        }
+/* Thumbnail styles */
 
-        /* Title styles */
-        .wpp-post-title {
-        }
+.wpp-thumbnail {
+    display: inline;
+    float: left;
+    margin: 0 1rem 0 0;
+    border: none;
+}
 
-        /* Excerpt styles */
-        .wpp-excerpt {
-        }
+/* Title styles */
 
-        /* Stats tag styles */
-        .wpp-meta, .post-stats {
-            display: block;
-            font-size: 0.8em;
-        }
+.wpp-post-title {}
 
-            /* Comments count styles */
-            .wpp-comments {
-            }
+/* Excerpt styles */
 
-            /* Views count styles */
-            .wpp-views {
-            }
+.wpp-excerpt {}
 
-            /* Author styles */
-            .wpp-author {
-            }
+/* Stats tag styles */
 
-            /* Post date styles */
-            .wpp-date {
-            }
+.wpp-meta,
+.post-stats {
+    display: block;
+    font-size: 0.8em;
+}
 
-            /* Post category styles */
-            .wpp-category {
-            }
+/* Comments count styles */
 
-        /* WP-PostRatings styles */
-        .wpp-rating {
-        }
+.wpp-comments {}
+
+/* Views count styles */
+
+.wpp-views {}
+
+/* Author styles */
+
+.wpp-author {}
+
+/* Post date styles */
+
+.wpp-date {}
+
+/* Post category styles */
+
+.wpp-category {}
+
+/* WP-PostRatings styles */
+
+.wpp-rating {}

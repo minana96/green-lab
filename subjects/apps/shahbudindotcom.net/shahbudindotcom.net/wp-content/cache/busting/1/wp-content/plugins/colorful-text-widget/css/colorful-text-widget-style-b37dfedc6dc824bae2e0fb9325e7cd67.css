@@ -1,15 +1,15 @@
 /* stylesheet for Colorful text widget */
 
 //** Colors **//
-
 .widget_colorful_text_widget {
-	width: 100%;
-	color: black;
+    width: 100%;
+    color: black;
 }
 
 .ctw-blue {
     background-color: #d8ecf7;
-    border: 1px solid #afcde3;}
+    border: 1px solid #afcde3;
+}
 
 .ctw-gray {
     background-color: #e2e2e2;
@@ -36,18 +36,18 @@
     border: 1px solid #fadf98;
 }
 
-.ctw-blue, 
-.ctw-gray, 
-.ctw-green, 
-.ctw-purple, 
-.ctw-red, 
-.ctw-yellow{
-	border-radius:10px;
-	-moz-border-radius:10px;
-	-webkit-border-radius:10px;
-	-o-border-radius:10px;
-	margin: 0 0 25px;
+.ctw-blue,
+.ctw-gray,
+.ctw-green,
+.ctw-purple,
+.ctw-red,
+.ctw-yellow {
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -o-border-radius: 10px;
+    margin: 0 0 25px;
     overflow: hidden;
     padding: 20px;
-    color: #000;	
-	}
+    color: #000;
+}
