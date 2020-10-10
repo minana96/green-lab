@@ -1,1 +1,0 @@
-$(function(){$(".footable").footable(),$(window).resize()});

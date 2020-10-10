@@ -115,3 +115,7 @@ output/
 
 # ignore node_modules folder used by npm
 node_modules/
+
+# ignore versions of web apps with critical applied
+# to obtain these: run apply_critical script
+subjects_critical/

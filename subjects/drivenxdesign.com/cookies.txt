@@ -1,7 +1,0 @@
-# HTTrack Website Copier Cookie File
-# This file format is compatible with Netscape cookies
-drivenxdesign.com	TRUE	/	FALSE	1999999999	ASPSESSIONIDAASACTDA	CHCALCLBPNGJGOHABOLBACCH
-drivenxdesign.com	TRUE	/	FALSE	1999999999	AWSALB	ylpRILu6vPzQvZDUYyfXMdR8bk82K5tw/4GElAj9kl06ieOnQ+tVkiEGcqDfV8o4rfzzoT1yXLO2WBIBmbk7jWP6XOQL24Z7phNZltcEMkaIUoAdPyZ2Bn5E7+Lk
-drivenxdesign.com	TRUE	/	FALSE	1999999999	AWSALBCORS	ylpRILu6vPzQvZDUYyfXMdR8bk82K5tw/4GElAj9kl06ieOnQ+tVkiEGcqDfV8o4rfzzoT1yXLO2WBIBmbk7jWP6XOQL24Z7phNZltcEMkaIUoAdPyZ2Bn5E7+Lk
-drivenxdesign.com	TRUE	/	FALSE	1999999999	SameSite	None
-
