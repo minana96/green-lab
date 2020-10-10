@@ -115,3 +115,5 @@ output/
 
 # ignore node_modules folder used by npm
 critical_css_technique/node_modules/
+
+node_modules/puppeteer/.local-chromium/linux-722234/chrome-linux/chrome
