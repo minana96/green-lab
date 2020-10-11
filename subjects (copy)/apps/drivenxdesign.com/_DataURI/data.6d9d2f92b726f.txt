@@ -1,1 +1,0 @@
-chrome-search://most-visited/single.html?title=Meest%20bezocht&removeTooltip=Niet%20op%20deze%20pagina%20weergeven&enableCustomLinks=1&addLink=Snelle%20link%20toevoegen&addLinkTooltip=Snelle%20link%20toevoegen&editLinkTooltip=Snelkoppeling%20bewerken

@@ -1,0 +1,28 @@
+{
+    "BALANCER": "//balancer-04.livetex.ru",
+    "ACCOUNT": {
+        "ID": 0
+    },
+    "SITE": {
+        "ID": "window['liveTexID']"
+    },
+    "LOG": {
+        "LOG_LEVEL": 0,
+        "SEND": false,
+        "MAX_COUNT": 999999
+    },
+    "WAPI_USAGE": {
+        "KEY": "event-service-app.widgets-api-usage-thrift-http"
+    },
+    "VIEW" : {
+        "UI3": "//widgets-04.livetex.me/widget-ui-3.js",
+        "UI4": "//widgets-04.livetex.me/widget-ui-4.js"
+    },
+    "WIDGETS_API": {
+        "KEY": "widgets-api-service-server.thrift-http"
+    },
+    "CONTENT_SERVER": "//static.livetex.ru/",
+    "FILE_SERVER": "https://file-service-04.livetex.ru",
+    "BILLING_URL": "https://my-04.livetex.ru/",
+    "LTX_URL": "//widgets-04.livetex.me/"
+}
