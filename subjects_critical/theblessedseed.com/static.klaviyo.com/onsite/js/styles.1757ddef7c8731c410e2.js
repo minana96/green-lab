@@ -1,1 +1,0 @@
-(window.klaviyoOnsiteJSONP=window.klaviyoOnsiteJSONP||[]).push([[0],{"../forms/src/Client/Components/FormComponents/RichText/editorCSS.scss":function(s,n,o){},"../forms/src/Client/Components/ResetElements/reset.scss":function(s,n,o){}}]);

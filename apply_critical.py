@@ -21,7 +21,7 @@ def apply_critical(directory):
                 print(index_path[:-11], "TEMP IS ZERO BYTES")
 
             os.system(f"mv {index_path[:-11]}/index_temp.html {index_path}")
-        elif os.path.isdir(web_app):
+        else:
             print("Couldn't find index of ", web_app)
 
 if __name__ == '__main__':
