@@ -1,20 +1,32 @@
-from http.server import HTTPServer, SimpleHTTPRequestHandler
+import time
 import os
-import multiprocessing
+import pickle
+import subprocess
+import signal
+
 
 def start(path):
     old_dir = os.getcwd()
     os.chdir(path)
     retval = os.getcwd()
-    print("Directory changed to %s" % retval)
+    print("Directory changed successfully %s" % retval)
 
-    server_address = ('', 8000)
-    server = HTTPServer(server_address, SimpleHTTPRequestHandler)
-    proc = multiprocessing.Process(target = server.handle_request)
-    proc.start()
+    cmd = 'python3 -m http.server'
+    proc = subprocess.Popen(cmd, shell=True, preexec_fn=os.setsid)
     print("Web server started")
 
     os.chdir(old_dir)
     retval = os.getcwd()
-    print("Directory changed back to %s" % retval)
+    print("Directory restored successfully %s" % retval)
+
+    with open('proc_pid.pickle', 'wb') as f:
+        pickle.dump(proc.pid, f)
+
+
+def stop():
+    with open('proc_pid.pickle', 'rb') as f:
+        pid = pickle.load(f)
+    
+    os.killpg(pid, signal.SIGTERM)
+    print("Web server stopped")
 
