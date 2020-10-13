@@ -18,6 +18,7 @@ def start(path):
     os.chdir(old_dir)
     retval = os.getcwd()
     print("Directory restored successfully %s" % retval)
+    print(f"Writing pid {proc.pid}")
 
     with open('proc_pid.pickle', 'wb') as f:
         pickle.dump(proc.pid, f)
@@ -27,6 +28,10 @@ def stop():
     with open('proc_pid.pickle', 'rb') as f:
         pid = pickle.load(f)
     
-    os.killpg(pid, signal.SIGTERM)
-    print("Web server stopped")
+        try:
+            print(f"Trying to kill {pid}")
+            os.killpg(pid, signal.SIGTERM)
+            print("Web server stopped")
+        except ProcessLookupError:
+            print("No process with this pid could be found")
 
