@@ -9,13 +9,14 @@ def add_get_on_load(directory, ip):
             soup = BeautifulSoup(open(index_path, 'rb'), "lxml")
             if(soup.find('head')):
                 script = soup.new_tag('script')
-                script.string = "window.addEventListener('load', (event) => {\n\
+                script.string = "window.addEventListener('DOMContentLoaded', (event) => {\n\
 		                        const Http = new XMLHttpRequest();\n\
 		                        const url='" + f"http://{ip}:8001/" + "';\n\
 		                        Http.open(\"GET\", url);\n\
 		                        Http.send();\n\
 	                            });"
-                soup.head.insert(0,script)
+                # Insert the tag at the end of the head, to ensure blocking stylesheets delay the DOMContentLoaded event.
+                soup.head.insert(len(soup.head.contents),script)
 
                 with open(index_path, "w") as file:
                     file.write(str(soup))
