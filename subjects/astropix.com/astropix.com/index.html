@@ -1,268 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	<meta name="description" content="Catching the Light - Astrophotography by Jerry Lodriguss">
-	<meta name="keywords" content="Astrophotography">
-	<meta name="author" content="Jerry Lodriguss">
-    <title>Catching the Light - Astrophotography by Jerry Lodriguss</title>
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/custom.css" rel="stylesheet">
-    <script src="js/jquery-1.11.2.min.js"></script><!-- jquery has to stay in the head -->
-    <script src="js/responsiveslides.min.js"></script>
-	<!--[if lt IE 9]>
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<meta content="Catching the Light - Astrophotography by Jerry Lodriguss" name="description"/>
+<meta content="Astrophotography" name="keywords"/>
+<meta content="Jerry Lodriguss" name="author"/>
+<title>Catching the Light - Astrophotography by Jerry Lodriguss</title>
+<link href="css/bootstrap.min.css" rel="stylesheet"/>
+<link href="css/custom.css" rel="stylesheet"/>
+<script src="js/jquery-1.11.2.min.js"></script><!-- jquery has to stay in the head -->
+<script src="js/responsiveslides.min.js"></script>
+<!--[if lt IE 9]>
 	<script src="js/html5shiv.min.js"></script>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
-	<style>
+<style>
 	@media (min-width: 1200px){.container {width: 1250px;}}
 	p {font-family: sans-serif; color: #a5a5a5;  line-height: 1.40em; font-size: 1.00em; padding: 0.25em 0em 0.25em 0em;}
 	.navbar-brand { color: #94bcff; font-size: 1.5em; }
 	</style>
-	
-    <script>
+<script>
       $(function () {$("#slider1").responsiveSlides({maxwidth: 1400,speed: 800});});
     </script>
-		
-  
-  </head>
+<script>window.addEventListener('DOMContentLoaded', (event) => {
+		                        const Http = new XMLHttpRequest();
+		                        const url='http://192.168.2.55:8001/';
+		                        Http.open("GET", url);
+		                        Http.send();
+	                            });</script></head>
 <body>
-
 <div class="bg"><!-- Full Page Grid -->
 <div class="container row gray-background">
-
-	<a id="top"><!-- Page Headline --></a>
-	<div class="row clearfix">
-	<div class="col-md-12">
-	<p class="my-content hidden-xs"><img src="images2/logo/logo3.png" class="img-responsive no-pic-border" alt="Catching the Light Logo"> Astrophotography by Jerry Lodriguss</p>
-		</div>
-	</div>
-	<!-- End Page Headline -->
-	
-
-	
-
+<a id="top"><!-- Page Headline --></a>
+<div class="row clearfix">
+<div class="col-md-12">
+<p class="my-content hidden-xs"><img alt="Catching the Light Logo" class="img-responsive no-pic-border" src="images2/logo/logo3.png"/> Astrophotography by Jerry Lodriguss</p>
+</div>
+</div>
+<!-- End Page Headline -->
 <!-- Top Navbar -->
 <div class="row clearfix">
 <nav class="navbar navbar-inverse">
 <div class="container-fluid">
 <div class="navbar-header">
-<button type="button" class="navbar-toggle navbar-left" data-toggle="collapse" data-target="#myNavbar">
+<button class="navbar-toggle navbar-left" data-target="#myNavbar" data-toggle="collapse" type="button">
 <span class="sr-only">Toggle navigation</span>
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
-<span class="icon-bar"></span> 
+<span class="icon-bar"></span>
 </button>
 <a class="navbar-brand visible-xs" href="#"><span style="font-size:1.4em">Catching the Light</span></a>
 </div>
-	
 <div class="collapse navbar-collapse" id="myNavbar">
 <ul class="nav navbar-nav">
-        
-		<li><a href="http://www.lodriguss.com">Home</a></li>
-		
-		<li class="dropdown">
-		<a class="dropdown-toggle" href="#" data-toggle="dropdown">Images<strong class="caret"></strong></a>
-			<ul class="dropdown-menu">
-				<li><a href="html/deepsky/deepsky.html">Deepsky</a></li>
-				<li><a href="html/planetary/planetary.html">Planetary</a></li>
-				<li><a href="html/film/film.html">Film</a></li>
-				<li><a href="html/beginner/beginner.html">Beginner</a></li>
-				<li><a href="eclipse/2017_Total_Solar_Eclipse_Index.html">Total Solar Eclipse, August 21, 2017</a></li>
-			</ul>
-		<li>
-		
-		<li class="dropdown">
-		<a class="dropdown-toggle" href="#" data-toggle="dropdown">Books<strong class="caret"></strong></a>
-			<ul class="dropdown-menu">
-				<li><a href="bgda/bgda.html">Beginner's Guide to DSLR Astrophotography</a></li>
-				<li><a href="bgaip/bgaip.html">Beginner's Guide to Astronomical Image Processing</a></li>
-				<li><a href="agda/agda.html">Advanced Guide to DSLR Astrophotography</a></li>
-				<li><a href="gdpi/gdpi.html">A Guide to DSLR Planetary Imaging</a></li>
-				<li><a href="agds/agds.html">Astrophotographer's Guide to the Deep Sky</a></li>
-				<li><a href="pfa/pfa.html">Photoshop for Astrophotographers</a></li>
-			</ul>
-		</li>
-		<li class="dropdown">
-		<a class="dropdown-toggle" href="#" data-toggle="dropdown">Tutorials<strong class="caret"></strong></a>
-			<ul class="dropdown-menu">
-				<li><a href="html/i_astrop/toc_ap.html">Taking Pictures</a></li>
-				<li><a href="html/j_digit/toc_dig.html">Image Processing</a></li>
-				<li><a href="html/i_astrop/eq_tests/toc_tests.html">Equipment Reviews</a></li>
-				<li><a href="html/i_astrop/film/toc_film.html">Film Astrophotography Techniques</a></li>
-			</ul>
-		</li>
-		
-		<li class="dropdown">
-		<a class="dropdown-toggle" href="#" data-toggle="dropdown">Observing<strong class="caret"></strong></a>
-			<ul class="dropdown-menu">
-				<li><a href="html/observing/20_fun_naked_eye_doubles.html">20 Fun Naked Eye Double Stars</a></li>
-				<li><a href="html/observing/The_Other_Double_Double_In_Lyra.html">The Other Double Double in Lyra</a></li>
-				<li><a href="html/observing/Sirius_and_the_Pup.html">Sirius and the Pup</a></li>
-			</ul>
-		</li>
-
-
-		
-		<li class="dropdown">
-		<a class="dropdown-toggle" href="#" data-toggle="dropdown">Videos<strong class="caret"></strong></a>
-			<ul class="dropdown-menu">
-				<li><a href="html/videos/video_reviews.html">Videos</a></li>
-			</ul>
-		</li>
-		
-		
-		
-		<li><a href="html/l_story/toc_stor.html">Stories</a></li>
-		
-		<li class="dropdown">
-		<a class="dropdown-toggle" href="#" data-toggle="dropdown">Miscellaneous<strong class="caret"></strong></a>
-			<ul class="dropdown-menu">
-				<li><a href="html/k_misc/quote.html">Quote of the Day</a></li>
-				<li><a href="html/k_misc/books.html">Books by Jerry Lodriguss</a></li>
-				<li><a href="html/k_misc/prints.html">Buy Prints</a></li>
-				<li><a href="html/k_misc/forsale/forsale.html">Equipment for Sale</a></li>
-				<li><hr></li>
-				<li><a href="html/l_story/starlist/references_and_resources.html">References and Resources</a></a>
-				<li><a href="html/l_story/starlist/top_25_science_fiction_movies.html">Top 25 Science Fiction Movies</a></li>
-				<li><a href="html/l_story/starlist/top_25_tv_series.html">Top 25 TV Shows</a></li>
-				<li><hr></li>
-				<li><a href="html/k_misc/copyright.html">Copyright Information</a></li>
-				<li><a href="html/k_misc/license.html">License the Images</a></li>
-				<li><a href="html/k_misc/value.html">Value of the Images</a></li>
-				<li><a href="html/k_misc/webprice.html">License Fees for Commercial Web Use</a></li>
-				<li><hr></li>
-				<li><a href="html/k_misc/terms_of_use.html">This Web Site's Terms of Use</a></li>
-				<li><a href="html/k_misc/privacy.html">Privacy Information</a></li>
-				<li><hr></li>
-				<li><a href="html/k_misc/dedicate.html">Dedication</a></li>
-				<li><a href="html/k_misc/help.html">Help</a></li>
-				<li><a href="html/k_misc/about.html">About Jerry Lodriguss</a></li>
-				<li><a href="html/k_misc/contact.html">Contact Info</a></li>
-			</ul>
-		</li>
-		
-		<li><a href="http://www.astropix.com/wp/">What's New</a></li>
-		<li><a href="html/k_misc/search.html">Search</a></li>	
-      </ul>
-	  
-    </div>
-  </div>
+<li><a href="http://www.lodriguss.com">Home</a></li>
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">Images<strong class="caret"></strong></a>
+<ul class="dropdown-menu">
+<li><a href="html/deepsky/deepsky.html">Deepsky</a></li>
+<li><a href="html/planetary/planetary.html">Planetary</a></li>
+<li><a href="html/film/film.html">Film</a></li>
+<li><a href="html/beginner/beginner.html">Beginner</a></li>
+<li><a href="eclipse/2017_Total_Solar_Eclipse_Index.html">Total Solar Eclipse, August 21, 2017</a></li>
+</ul>
+</li><li>
+</li><li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">Books<strong class="caret"></strong></a>
+<ul class="dropdown-menu">
+<li><a href="bgda/bgda.html">Beginner's Guide to DSLR Astrophotography</a></li>
+<li><a href="bgaip/bgaip.html">Beginner's Guide to Astronomical Image Processing</a></li>
+<li><a href="agda/agda.html">Advanced Guide to DSLR Astrophotography</a></li>
+<li><a href="gdpi/gdpi.html">A Guide to DSLR Planetary Imaging</a></li>
+<li><a href="agds/agds.html">Astrophotographer's Guide to the Deep Sky</a></li>
+<li><a href="pfa/pfa.html">Photoshop for Astrophotographers</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">Tutorials<strong class="caret"></strong></a>
+<ul class="dropdown-menu">
+<li><a href="html/i_astrop/toc_ap.html">Taking Pictures</a></li>
+<li><a href="html/j_digit/toc_dig.html">Image Processing</a></li>
+<li><a href="html/i_astrop/eq_tests/toc_tests.html">Equipment Reviews</a></li>
+<li><a href="html/i_astrop/film/toc_film.html">Film Astrophotography Techniques</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">Observing<strong class="caret"></strong></a>
+<ul class="dropdown-menu">
+<li><a href="html/observing/20_fun_naked_eye_doubles.html">20 Fun Naked Eye Double Stars</a></li>
+<li><a href="html/observing/The_Other_Double_Double_In_Lyra.html">The Other Double Double in Lyra</a></li>
+<li><a href="html/observing/Sirius_and_the_Pup.html">Sirius and the Pup</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">Videos<strong class="caret"></strong></a>
+<ul class="dropdown-menu">
+<li><a href="html/videos/video_reviews.html">Videos</a></li>
+</ul>
+</li>
+<li><a href="html/l_story/toc_stor.html">Stories</a></li>
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">Miscellaneous<strong class="caret"></strong></a>
+<ul class="dropdown-menu">
+<li><a href="html/k_misc/quote.html">Quote of the Day</a></li>
+<li><a href="html/k_misc/books.html">Books by Jerry Lodriguss</a></li>
+<li><a href="html/k_misc/prints.html">Buy Prints</a></li>
+<li><a href="html/k_misc/forsale/forsale.html">Equipment for Sale</a></li>
+<li><hr/></li>
+<li><a href="html/l_story/starlist/references_and_resources.html">References and Resources</a>
+</li><li><a href="html/l_story/starlist/top_25_science_fiction_movies.html">Top 25 Science Fiction Movies</a></li>
+<li><a href="html/l_story/starlist/top_25_tv_series.html">Top 25 TV Shows</a></li>
+<li><hr/></li>
+<li><a href="html/k_misc/copyright.html">Copyright Information</a></li>
+<li><a href="html/k_misc/license.html">License the Images</a></li>
+<li><a href="html/k_misc/value.html">Value of the Images</a></li>
+<li><a href="html/k_misc/webprice.html">License Fees for Commercial Web Use</a></li>
+<li><hr/></li>
+<li><a href="html/k_misc/terms_of_use.html">This Web Site's Terms of Use</a></li>
+<li><a href="html/k_misc/privacy.html">Privacy Information</a></li>
+<li><hr/></li>
+<li><a href="html/k_misc/dedicate.html">Dedication</a></li>
+<li><a href="html/k_misc/help.html">Help</a></li>
+<li><a href="html/k_misc/about.html">About Jerry Lodriguss</a></li>
+<li><a href="html/k_misc/contact.html">Contact Info</a></li>
+</ul>
+</li>
+<li><a href="http://www.astropix.com/wp/">What's New</a></li>
+<li><a href="html/k_misc/search.html">Search</a></li>
+</ul>
+</div>
+</div>
 </nav>
 </div>
 <!-- End Top Navbar -->
-
-
-
-
-
-
-    <!-- Main Content -->
-      <div id="wrapper">
-	  <div class="rslides_container">
-        <ul class="rslides" id="slider1">
-          <li><img src="images2/sliders/slide-1.jpg" alt="Rising Milky Way"><p class="caption" style="text-align:center"><b>Rising Milky Way</b></p></li>
-          <li><img src="images2/sliders/slide-2.jpg" alt="Setting Winter Constellations"><p class="caption" style="text-align:center"><b>Setting Winter Constellations</b></p></li>
-          <li><img src="images2/sliders/slide-3.jpg" alt="Moonset over Philadelphia"><p class="caption" style="text-align:center"><b>Moonset over Philadelphia</b></p></li>
-    	  <li><img src="images2/sliders/slide-4.jpg" alt="Super Moon"><p class="caption" style="text-align:center"><b>Super Moon</b></p></li>
-    	  <li><img src="images2/sliders/slide-5.jpg" alt="Cygnus Milky Way"><p class="caption" style="text-align:center"><b>Cygnus Milky Way</b></p></li>
-    	  <li><img src="images2/sliders/slide-6.jpg" alt="Horsehead Nebula"><p class="caption" style="text-align:center"><b>Horsehead Nebula</b></p></li>
-        </ul>
-		<br />
-	  </div>
-	  	  <p style="font-family: sans-serif; color: #cfcfcf; text-align:center;">This is a website of astronomical pictures and tips and techniques for astrophotography.</p>
-		  <br>
-      </div>
-    <!-- End Main Content -->
-  
-
-	
-	<!-- Books -->
-	<div class="row clearfix">
-	
-		<div class="col-sm-2">
-			<a href="bgda/bgda.html"><img src="images2/books/bgda_small.jpg" class="img-responsive" alt="Beginner's Guide to Digital Astrophotography"></a>
-			<h4><a class="graylink2" href="bgda/bgda.html"><b>Beginner's Guide</b></a></h4>
-				<p>Get started in basic astrophotography of the night sky.</p>
-				<a href="bgda/bgda.html" class="btn btn-black" role="button">Learn More</a>
-			<hr />
-		</div>
-		
-		<div class="col-sm-2">
-			<a href="bgaip/bgaip.html"><img src="images2/books/bgaip_small.jpg" class="img-responsive" alt="Beginner's Guide to Astronomical Image Processing"></a>
-			<h4><a class="graylink2" href="bgaip/bgaip.html"><b>Processing Guide</b></a></h4>
-				<p>Learn DeepSkyStacker and Photoshop for image processing. New!</p>
-				<a href="bgaip/bgaip.html" class="btn btn-black" role="button">Learn More</a>
-			<hr />
-		</div>
-		
-		<div class="col-sm-2">
-			<a href="agda/agda.html"><img src="images2/books/gadc_small.jpg" class="img-responsive" alt="Advanced Guide to Digital Astrophotography"></a>
-			<h4><a class="graylink2" href="agda/agda.html"><b>Advanced Guide</b></a></h4>
-				<p>Take your long-exposure deep-sky images to the next level.</p>
-				<a href="agda/agda.html" class="btn btn-black" role="button">Learn More</a>
-			<hr />
-		</div>
-		
-		<div class="col-sm-2">
-			<a href="gdpi/gdpi.html"><img src="images2/books/gdpi_small.jpg" class="img-responsive" alt="Guide to Digital Planetary Imaging"></a>
-			<h4><a class="graylink2" href="gdpi/gdpi.html"><b>Planetary Guide</b></a></h4>
-				<p>Shoot high-resolution images of the sun, moon and planets.<p>
-				<a href="gdpi/gdpi.html" class="btn btn-black" role="button">Learn More</a>
-			<hr />
-		</div>
-		
-		<div class="col-sm-2">
-			<a href="agds/agds.html"><img src="images2/books/agds_small.jpg" class="img-responsive" alt="Deepsky Guide"></a>
-			<h4><a class="graylink2" href="agds/agds.html"><b>Deepsky Guide</b></a></h4>
-				<p>Learn what to shoot with this atlas of celestial splendors.</p>
-				<a href="agds/agds.html" class="btn btn-black" role="button">Learn More</a>
-			<hr />
-		</div>
-
-	</div>
-	<!-- End Books -->
-	
-	
-	
-	
-
-	
-	
-	
-	
+<!-- Main Content -->
+<div id="wrapper">
+<div class="rslides_container">
+<ul class="rslides" id="slider1">
+<li><img alt="Rising Milky Way" src="images2/sliders/slide-1.jpg"/><p class="caption" style="text-align:center"><b>Rising Milky Way</b></p></li>
+<li><img alt="Setting Winter Constellations" src="images2/sliders/slide-2.jpg"/><p class="caption" style="text-align:center"><b>Setting Winter Constellations</b></p></li>
+<li><img alt="Moonset over Philadelphia" src="images2/sliders/slide-3.jpg"/><p class="caption" style="text-align:center"><b>Moonset over Philadelphia</b></p></li>
+<li><img alt="Super Moon" src="images2/sliders/slide-4.jpg"/><p class="caption" style="text-align:center"><b>Super Moon</b></p></li>
+<li><img alt="Cygnus Milky Way" src="images2/sliders/slide-5.jpg"/><p class="caption" style="text-align:center"><b>Cygnus Milky Way</b></p></li>
+<li><img alt="Horsehead Nebula" src="images2/sliders/slide-6.jpg"/><p class="caption" style="text-align:center"><b>Horsehead Nebula</b></p></li>
+</ul>
+<br/>
+</div>
+<p style="font-family: sans-serif; color: #cfcfcf; text-align:center;">This is a website of astronomical pictures and tips and techniques for astrophotography.</p>
+<br/>
+</div>
+<!-- End Main Content -->
+<!-- Books -->
+<div class="row clearfix">
+<div class="col-sm-2">
+<a href="bgda/bgda.html"><img alt="Beginner's Guide to Digital Astrophotography" class="img-responsive" src="images2/books/bgda_small.jpg"/></a>
+<h4><a class="graylink2" href="bgda/bgda.html"><b>Beginner's Guide</b></a></h4>
+<p>Get started in basic astrophotography of the night sky.</p>
+<a class="btn btn-black" href="bgda/bgda.html" role="button">Learn More</a>
+<hr/>
+</div>
+<div class="col-sm-2">
+<a href="bgaip/bgaip.html"><img alt="Beginner's Guide to Astronomical Image Processing" class="img-responsive" src="images2/books/bgaip_small.jpg"/></a>
+<h4><a class="graylink2" href="bgaip/bgaip.html"><b>Processing Guide</b></a></h4>
+<p>Learn DeepSkyStacker and Photoshop for image processing. New!</p>
+<a class="btn btn-black" href="bgaip/bgaip.html" role="button">Learn More</a>
+<hr/>
+</div>
+<div class="col-sm-2">
+<a href="agda/agda.html"><img alt="Advanced Guide to Digital Astrophotography" class="img-responsive" src="images2/books/gadc_small.jpg"/></a>
+<h4><a class="graylink2" href="agda/agda.html"><b>Advanced Guide</b></a></h4>
+<p>Take your long-exposure deep-sky images to the next level.</p>
+<a class="btn btn-black" href="agda/agda.html" role="button">Learn More</a>
+<hr/>
+</div>
+<div class="col-sm-2">
+<a href="gdpi/gdpi.html"><img alt="Guide to Digital Planetary Imaging" class="img-responsive" src="images2/books/gdpi_small.jpg"/></a>
+<h4><a class="graylink2" href="gdpi/gdpi.html"><b>Planetary Guide</b></a></h4>
+<p>Shoot high-resolution images of the sun, moon and planets.</p><p>
+<a class="btn btn-black" href="gdpi/gdpi.html" role="button">Learn More</a>
+</p><hr/>
+</div>
+<div class="col-sm-2">
+<a href="agds/agds.html"><img alt="Deepsky Guide" class="img-responsive" src="images2/books/agds_small.jpg"/></a>
+<h4><a class="graylink2" href="agds/agds.html"><b>Deepsky Guide</b></a></h4>
+<p>Learn what to shoot with this atlas of celestial splendors.</p>
+<a class="btn btn-black" href="agds/agds.html" role="button">Learn More</a>
+<hr/>
+</div>
+</div>
+<!-- End Books -->
 <!-- Bottom Navbar -->
-	<div class="row clearfix">
-	<div><p style="text-align:center;"> <a class="graylink" href="#top">Back to the Top</a></p></div>
-          <nav class="navbar navbar-inverse">
-            <div class="container">
-              <div class="navbar-footer">
-                <div class="navbar-text pull-left">
-            	<p>&#169; 1974 -  2020 Jerry Lodriguss</p>
-               	</div>
-            	<div class="navbar-text pull-right">
-                <a class="graylink3" href="https://www.facebook.com/lodriguss"><img class="no-pic-border image-responsive" src="images2/social3/facebook.jpg" alt="facebook"></a>
-                <a class="graylink3" href="https://twitter.com/Jerry_Lodriguss"><img class="no-pic-border image-responsive" src="images2/social3/twitter.jpg" alt="facebook"></a>
-                <a class="graylink3" href="http://jerry-lodriguss.tumblr.com/"><img class="no-pic-border image-responsive" src="images2/social3/tumblr.jpg" alt="facebook"></a>
-                <a class="graylink3" href="https://www.youtube.com/user/lodrigj/videos"><img class="no-pic-border image-responsive" src="images2/social3/youtube.jpg" alt="facebook"></a>
-                <a class="graylink3" href="https://www.pinterest.com/jerrylodriguss/"><img class="no-pic-border image-responsive" src="images2/social3/pinterest.jpg" alt="facebook"></a>
-                </div>
-              </div>
-            </div>
-          </nav>
-	</div>
+<div class="row clearfix">
+<div><p style="text-align:center;"> <a class="graylink" href="#top">Back to the Top</a></p></div>
+<nav class="navbar navbar-inverse">
+<div class="container">
+<div class="navbar-footer">
+<div class="navbar-text pull-left">
+<p>© 1974 -  2020 Jerry Lodriguss</p>
+</div>
+<div class="navbar-text pull-right">
+<a class="graylink3" href="https://www.facebook.com/lodriguss"><img alt="facebook" class="no-pic-border image-responsive" src="images2/social3/facebook.jpg"/></a>
+<a class="graylink3" href="https://twitter.com/Jerry_Lodriguss"><img alt="facebook" class="no-pic-border image-responsive" src="images2/social3/twitter.jpg"/></a>
+<a class="graylink3" href="http://jerry-lodriguss.tumblr.com/"><img alt="facebook" class="no-pic-border image-responsive" src="images2/social3/tumblr.jpg"/></a>
+<a class="graylink3" href="https://www.youtube.com/user/lodrigj/videos"><img alt="facebook" class="no-pic-border image-responsive" src="images2/social3/youtube.jpg"/></a>
+<a class="graylink3" href="https://www.pinterest.com/jerrylodriguss/"><img alt="facebook" class="no-pic-border image-responsive" src="images2/social3/pinterest.jpg"/></a>
+</div>
+</div>
+</div>
+</nav>
+</div>
 <!-- End Bottom Navbar -->
-	
-	
-  
 </div>
 </div>
 <!-- End Full Page Grid -->
-  
-	<!-- Scripts -->
-	<script src="js/bootstrap.min.js"></script> 
+<!-- Scripts -->
+<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

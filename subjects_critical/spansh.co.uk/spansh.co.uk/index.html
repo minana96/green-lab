@@ -1,68 +1,66 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Elite: Dangerous Index</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    
-<meta name="elite-dangerous-gui/config/environment" content="%7B%22pageTitle%22%3A%7B%22replace%22%3Atrue%7D%2C%22apiServer%22%3A%22https%3A%2F%2Fspansh.co.uk%22%2C%22downloadServer%22%3A%22https%3A%2F%2Fdownloads.spansh.co.uk%22%2C%22modulePrefix%22%3A%22elite-dangerous-gui%22%2C%22environment%22%3A%22production%22%2C%22rootURL%22%3A%22%2F%22%2C%22locationType%22%3A%22auto%22%2C%22metricsAdapters%22%3A%5B%7B%22name%22%3A%22GoogleAnalytics%22%2C%22environments%22%3A%5B%22development%22%2C%22production%22%5D%2C%22config%22%3A%7B%22id%22%3A%22UA-39825570-5%22%2C%22anonymizeIp%22%3Atrue%2C%22debug%22%3Afalse%2C%22trace%22%3Afalse%2C%22sendHitTask%22%3Atrue%7D%7D%5D%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%2C%22EXTEND_PROTOTYPES%22%3A%7B%22Array%22%3Atrue%2C%22Object%22%3Atrue%2C%22Date%22%3Afalse%7D%2C%22_APPLICATION_TEMPLATE_WRAPPER%22%3Afalse%2C%22_DEFAULT_ASYNC_OBSERVERS%22%3Atrue%2C%22_JQUERY_INTEGRATION%22%3Atrue%2C%22_TEMPLATE_ONLY_GLIMMER_COMPONENTS%22%3Atrue%7D%2C%22APP%22%3A%7B%22name%22%3A%22elite-dangerous-gui%22%2C%22version%22%3A%220.1.274%2B35316d50%22%7D%2C%22exportApplicationGlobal%22%3Afalse%7D">
-    <style>@charset "UTF-8";body{text-align:left}:root{--blue:#007bff;--indigo:#6610f2;--purple:#6f42c1;--pink:#e83e8c;--red:#dc3545;--orange:#fd7e14;--yellow:#ffc107;--green:#28a745;--teal:#20c997;--cyan:#17a2b8;--white:#fff;--gray:#6c757d;--gray-dark:#343a40;--primary:#007bff;--secondary:#6c757d;--success:#28a745;--info:#17a2b8;--warning:#ffc107;--danger:#dc3545;--light:#f8f9fa;--dark:#343a40;--breakpoint-xs:0;--breakpoint-sm:576px;--breakpoint-md:768px;--breakpoint-lg:992px;--breakpoint-xl:1200px;--font-family-sans-serif:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--font-family-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}*,::after,::before{box-sizing:border-box}html{font-family:sans-serif;line-height:1.15;-webkit-text-size-adjust:100%}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}body{margin:0;font-size:1rem;font-weight:400;line-height:1.5;color:#212529;background-color:#fff}::-webkit-file-upload-button{font:inherit;-webkit-appearance:button}body,html{height:100vh}</style>
-    <link rel="stylesheet" href="/assets/vendor-c6d641afb8b653efceb95d7df954e7cf.css" integrity="sha256-iV2UbFUlLnlscVFuySfWiwIRzM/0bPtK1OC7Yw5UQwo= sha512-3firV+g56HN7MW2gZMtjXaKfIJh8VgPBdTyos8//8f5NsC09yUje7eK9WDWxS7q7SC5sntuaPi2p/H2QwTXUPQ==" media="print" onload="this.media='all'">
-    <link id="theme-stylesheet" rel="stylesheet" href="/assets/app-2f32cd8e5057544cded8e6b12ed44de5.css" integrity="sha256-K0tYP6/6i+RYTqTlYtBjEfzWp1nzSekK7bcO7D1qzco= sha512-rlCFFVM7y8eOQxKFFw1fMLhjyCzyngfbJwJ06E9SC7BG2ehkPn0jEr3kmkUzNmDcvS22ITGRBQFNH09iL1npHg==" media="print" onload="this.media='all'">
-
-    
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="theme-color" content="#fff">
-    <meta name="application-name" content="elite-dangerous-gui">
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="167x167" href="/apple-touch-icon-167x167.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
-    <link rel="apple-touch-icon" sizes="1024x1024" href="/apple-touch-icon-1024x1024.png">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="elite-dangerous-gui">
-    <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href="/apple-touch-startup-image-320x460.png">
-    <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href="/apple-touch-startup-image-640x920.png">
-    <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="/apple-touch-startup-image-640x1096.png">
-    <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="/apple-touch-startup-image-750x1294.png">
-    <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)" href="/apple-touch-startup-image-1182x2208.png">
-    <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)" href="/apple-touch-startup-image-1242x2148.png">
-    <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" href="/apple-touch-startup-image-748x1024.png">
-    <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" href="/apple-touch-startup-image-768x1004.png">
-    <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="/apple-touch-startup-image-1496x2048.png">
-    <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="/apple-touch-startup-image-1536x2008.png">
-    <link rel="icon" type="image/png" sizes="228x228" href="/coast-228x228.png">
-    <meta name="msapplication-TileColor" content="#fff">
-    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
-    <meta name="msapplication-config" content="/browserconfig.xml">
-    <link rel="yandex-tableau-widget" href="/yandex-browser-manifest.json">
-  </head>
-  <body>
-    
-
-    <script src="/assets/intl/intl.min-2d83656b91128d68eeecfd97b9dd79af.js" integrity="sha256-LcgHrFadxsG443aeRwLsmQMrV+h0UWHgxgPj3mOj2Ss= sha512-o4ZFj7IfNTJk7eeWveyDqH46iYcHnWAZbUFXMw5KV0unU3+gXbDuhDB/lmW978O1jKkGrmNdPU0H8tc5nmwmag==" ></script>
-    <script src="/assets/intl/locales/en-4117b0703b724e538ca3fe317aafd96b.js" integrity="sha256-hy7CCV8y47F40m70HzAnZUFJGeSaCX/SRDCkBIHSmB4= sha512-m2HQEZJDSj0Q6Jj0ImlQnM3SO9Efl+44/2gYZN1bLEJxO6RjW6jGexhcsvCPV7QAZ0M1JXkFhcfrliaXZZSKvg==" ></script>
-    <script src="/assets/intl/locales/ru-82be70814118b98735232e7a4999b681.js" integrity="sha256-BdtfM8pH8+2PYw+ajRCZYoDCdQoINTFlXeQEdxiLpxc= sha512-VCCFJtI4Lx6uf47eRrmbCBUY5oR5R8b83beE9Fk4sW7gZX9HAY8XbyjOPQKThXuIsRJUKIyEhYpZhdzddyN6LA==" ></script>
-    <script src="/assets/intl/locales/pt-br-1cfd452bf0c41265c0b4286329f620b5.js" integrity="sha256-MTSX9b4Jc2RcbNN6Sv15Q2a4BHak1VVEhqS7RM5DWoQ= sha512-sqbkQW8uMW0MbQ0qtLt72iHI1BsG2x2xC8365LYOOwQjA2gdloywU+OAqzF8CDvGZz9DRPBi7lTPQiYs3Xj9DA==" ></script>
-    <script src="/assets/vendor-5f527d038b9645fe7f44c0eb8e410af0.js" integrity="sha256-/zhqo1SvgpO5ilfOUxnYIsrfCLdbaGwdyxk5KzIYlN0= sha512-vOOXaAw/mPt45fw9qjcX0OdGCt7M12nqWrJWllfEMqXbxmRJqPqnNyfDLyUfwqmbwFjZ7KHTCbqH/NNVWGyzaA==" ></script>
-    <script src="/assets/elite-dangerous-gui-6a75038f431d1c02a7ad7293dd37ce63.js" integrity="sha256-CeZPtD9dBKiKgMhUsYfEXSyi4WuWxd5SpVLCNSF0fJ0= sha512-DHEbqzpxz/A5pkdZR3AL9p8A8N0kR6vZcI7MLviNh74zsh9nrw3OuK6MZHPw5WsulwmUSpbZEF4UUrPyiRqpcw==" ></script>
-
-    <div id="ember-basic-dropdown-wormhole"></div>
-    <noscript><link rel="stylesheet" href="/assets/vendor-c6d641afb8b653efceb95d7df954e7cf.css" integrity="sha256-iV2UbFUlLnlscVFuySfWiwIRzM/0bPtK1OC7Yw5UQwo= sha512-3firV+g56HN7MW2gZMtjXaKfIJh8VgPBdTyos8//8f5NsC09yUje7eK9WDWxS7q7SC5sntuaPi2p/H2QwTXUPQ=="></noscript>
-    <noscript><link id="theme-stylesheet" rel="stylesheet" href="/assets/app-2f32cd8e5057544cded8e6b12ed44de5.css" integrity="sha256-K0tYP6/6i+RYTqTlYtBjEfzWp1nzSekK7bcO7D1qzco= sha512-rlCFFVM7y8eOQxKFFw1fMLhjyCzyngfbJwJ06E9SC7BG2ehkPn0jEr3kmkUzNmDcvS22ITGRBQFNH09iL1npHg=="></noscript>
-  </body>
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<title>Elite: Dangerous Index</title>
+<meta content="" name="description"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="%7B%22pageTitle%22%3A%7B%22replace%22%3Atrue%7D%2C%22apiServer%22%3A%22https%3A%2F%2Fspansh.co.uk%22%2C%22downloadServer%22%3A%22https%3A%2F%2Fdownloads.spansh.co.uk%22%2C%22modulePrefix%22%3A%22elite-dangerous-gui%22%2C%22environment%22%3A%22production%22%2C%22rootURL%22%3A%22%2F%22%2C%22locationType%22%3A%22auto%22%2C%22metricsAdapters%22%3A%5B%7B%22name%22%3A%22GoogleAnalytics%22%2C%22environments%22%3A%5B%22development%22%2C%22production%22%5D%2C%22config%22%3A%7B%22id%22%3A%22UA-39825570-5%22%2C%22anonymizeIp%22%3Atrue%2C%22debug%22%3Afalse%2C%22trace%22%3Afalse%2C%22sendHitTask%22%3Atrue%7D%7D%5D%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%2C%22EXTEND_PROTOTYPES%22%3A%7B%22Array%22%3Atrue%2C%22Object%22%3Atrue%2C%22Date%22%3Afalse%7D%2C%22_APPLICATION_TEMPLATE_WRAPPER%22%3Afalse%2C%22_DEFAULT_ASYNC_OBSERVERS%22%3Atrue%2C%22_JQUERY_INTEGRATION%22%3Atrue%2C%22_TEMPLATE_ONLY_GLIMMER_COMPONENTS%22%3Atrue%7D%2C%22APP%22%3A%7B%22name%22%3A%22elite-dangerous-gui%22%2C%22version%22%3A%220.1.274%2B35316d50%22%7D%2C%22exportApplicationGlobal%22%3Afalse%7D" name="elite-dangerous-gui/config/environment"/>
+<style>@charset "UTF-8";body{text-align:left}:root{--blue:#007bff;--indigo:#6610f2;--purple:#6f42c1;--pink:#e83e8c;--red:#dc3545;--orange:#fd7e14;--yellow:#ffc107;--green:#28a745;--teal:#20c997;--cyan:#17a2b8;--white:#fff;--gray:#6c757d;--gray-dark:#343a40;--primary:#007bff;--secondary:#6c757d;--success:#28a745;--info:#17a2b8;--warning:#ffc107;--danger:#dc3545;--light:#f8f9fa;--dark:#343a40;--breakpoint-xs:0;--breakpoint-sm:576px;--breakpoint-md:768px;--breakpoint-lg:992px;--breakpoint-xl:1200px;--font-family-sans-serif:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--font-family-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}*,::after,::before{box-sizing:border-box}html{font-family:sans-serif;line-height:1.15;-webkit-text-size-adjust:100%}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}body{margin:0;font-size:1rem;font-weight:400;line-height:1.5;color:#212529;background-color:#fff}::-webkit-file-upload-button{font:inherit;-webkit-appearance:button}body,html{height:100vh}</style>
+<link href="/assets/vendor-c6d641afb8b653efceb95d7df954e7cf.css" integrity="sha256-iV2UbFUlLnlscVFuySfWiwIRzM/0bPtK1OC7Yw5UQwo= sha512-3firV+g56HN7MW2gZMtjXaKfIJh8VgPBdTyos8//8f5NsC09yUje7eK9WDWxS7q7SC5sntuaPi2p/H2QwTXUPQ==" media="print" onload="this.media='all'" rel="stylesheet"/>
+<link href="/assets/app-2f32cd8e5057544cded8e6b12ed44de5.css" id="theme-stylesheet" integrity="sha256-K0tYP6/6i+RYTqTlYtBjEfzWp1nzSekK7bcO7D1qzco= sha512-rlCFFVM7y8eOQxKFFw1fMLhjyCzyngfbJwJ06E9SC7BG2ehkPn0jEr3kmkUzNmDcvS22ITGRBQFNH09iL1npHg==" media="print" onload="this.media='all'" rel="stylesheet"/>
+<link href="/favicon.ico" rel="shortcut icon"/>
+<link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/manifest.json" rel="manifest"/>
+<meta content="yes" name="mobile-web-app-capable"/>
+<meta content="#fff" name="theme-color"/>
+<meta content="elite-dangerous-gui" name="application-name"/>
+<link href="/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57"/>
+<link href="/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60"/>
+<link href="/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72"/>
+<link href="/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76"/>
+<link href="/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114"/>
+<link href="/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120"/>
+<link href="/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144"/>
+<link href="/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152"/>
+<link href="/apple-touch-icon-167x167.png" rel="apple-touch-icon" sizes="167x167"/>
+<link href="/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/apple-touch-icon-1024x1024.png" rel="apple-touch-icon" sizes="1024x1024"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
+<meta content="elite-dangerous-gui" name="apple-mobile-web-app-title"/>
+<link href="/apple-touch-startup-image-320x460.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image"/>
+<link href="/apple-touch-startup-image-640x920.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image"/>
+<link href="/apple-touch-startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image"/>
+<link href="/apple-touch-startup-image-750x1294.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image"/>
+<link href="/apple-touch-startup-image-1182x2208.png" media="(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image"/>
+<link href="/apple-touch-startup-image-1242x2148.png" media="(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image"/>
+<link href="/apple-touch-startup-image-748x1024.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image"/>
+<link href="/apple-touch-startup-image-768x1004.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image"/>
+<link href="/apple-touch-startup-image-1496x2048.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image"/>
+<link href="/apple-touch-startup-image-1536x2008.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image"/>
+<link href="/coast-228x228.png" rel="icon" sizes="228x228" type="image/png"/>
+<meta content="#fff" name="msapplication-TileColor"/>
+<meta content="/mstile-144x144.png" name="msapplication-TileImage"/>
+<meta content="/browserconfig.xml" name="msapplication-config"/>
+<link href="/yandex-browser-manifest.json" rel="yandex-tableau-widget"/>
+<script>window.addEventListener('DOMContentLoaded', (event) => {
+		                        const Http = new XMLHttpRequest();
+		                        const url='http://192.168.2.55:8001/';
+		                        Http.open("GET", url);
+		                        Http.send();
+	                            });</script></head>
+<body>
+<script integrity="sha256-LcgHrFadxsG443aeRwLsmQMrV+h0UWHgxgPj3mOj2Ss= sha512-o4ZFj7IfNTJk7eeWveyDqH46iYcHnWAZbUFXMw5KV0unU3+gXbDuhDB/lmW978O1jKkGrmNdPU0H8tc5nmwmag==" src="/assets/intl/intl.min-2d83656b91128d68eeecfd97b9dd79af.js"></script>
+<script integrity="sha256-hy7CCV8y47F40m70HzAnZUFJGeSaCX/SRDCkBIHSmB4= sha512-m2HQEZJDSj0Q6Jj0ImlQnM3SO9Efl+44/2gYZN1bLEJxO6RjW6jGexhcsvCPV7QAZ0M1JXkFhcfrliaXZZSKvg==" src="/assets/intl/locales/en-4117b0703b724e538ca3fe317aafd96b.js"></script>
+<script integrity="sha256-BdtfM8pH8+2PYw+ajRCZYoDCdQoINTFlXeQEdxiLpxc= sha512-VCCFJtI4Lx6uf47eRrmbCBUY5oR5R8b83beE9Fk4sW7gZX9HAY8XbyjOPQKThXuIsRJUKIyEhYpZhdzddyN6LA==" src="/assets/intl/locales/ru-82be70814118b98735232e7a4999b681.js"></script>
+<script integrity="sha256-MTSX9b4Jc2RcbNN6Sv15Q2a4BHak1VVEhqS7RM5DWoQ= sha512-sqbkQW8uMW0MbQ0qtLt72iHI1BsG2x2xC8365LYOOwQjA2gdloywU+OAqzF8CDvGZz9DRPBi7lTPQiYs3Xj9DA==" src="/assets/intl/locales/pt-br-1cfd452bf0c41265c0b4286329f620b5.js"></script>
+<script integrity="sha256-/zhqo1SvgpO5ilfOUxnYIsrfCLdbaGwdyxk5KzIYlN0= sha512-vOOXaAw/mPt45fw9qjcX0OdGCt7M12nqWrJWllfEMqXbxmRJqPqnNyfDLyUfwqmbwFjZ7KHTCbqH/NNVWGyzaA==" src="/assets/vendor-5f527d038b9645fe7f44c0eb8e410af0.js"></script>
+<script integrity="sha256-CeZPtD9dBKiKgMhUsYfEXSyi4WuWxd5SpVLCNSF0fJ0= sha512-DHEbqzpxz/A5pkdZR3AL9p8A8N0kR6vZcI7MLviNh74zsh9nrw3OuK6MZHPw5WsulwmUSpbZEF4UUrPyiRqpcw==" src="/assets/elite-dangerous-gui-6a75038f431d1c02a7ad7293dd37ce63.js"></script>
+<div id="ember-basic-dropdown-wormhole"></div>
+<noscript><link href="/assets/vendor-c6d641afb8b653efceb95d7df954e7cf.css" integrity="sha256-iV2UbFUlLnlscVFuySfWiwIRzM/0bPtK1OC7Yw5UQwo= sha512-3firV+g56HN7MW2gZMtjXaKfIJh8VgPBdTyos8//8f5NsC09yUje7eK9WDWxS7q7SC5sntuaPi2p/H2QwTXUPQ==" rel="stylesheet"/></noscript>
+<noscript><link href="/assets/app-2f32cd8e5057544cded8e6b12ed44de5.css" id="theme-stylesheet" integrity="sha256-K0tYP6/6i+RYTqTlYtBjEfzWp1nzSekK7bcO7D1qzco= sha512-rlCFFVM7y8eOQxKFFw1fMLhjyCzyngfbJwJ06E9SC7BG2ehkPn0jEr3kmkUzNmDcvS22ITGRBQFNH09iL1npHg==" rel="stylesheet"/></noscript>
+</body>
 </html>
