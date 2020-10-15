@@ -36,8 +36,8 @@
       "subjects_critical/hcss.com/hcss.com/",
       "subjects/holifestival.org/holifestival.org/",
       "subjects_critical/holifestival.org/holifestival.org/",
-      "subjects/iflyer.js/iflyer.js/",
-      "subjects_critical/iflyer.js/iflyer.js/",
+      "subjects/iflyer.tv/iflyer.tv/",
+      "subjects_critical/iflyer.tv/iflyer.tv/",
       "subjects/iliketubes.com/iliketubes.com/",
       "subjects_critical/iliketubes.com/iliketubes.com/",
       "subjects/kenengba.com/kenengba.com/",
@@ -86,5 +86,5 @@
       "after_run": "Scripts/after_run.py",
       "after_experiment": "Scripts/after_experiment.py"
     },
-    "time_between_run": 120000
+    "time_between_run": 1200
   }
