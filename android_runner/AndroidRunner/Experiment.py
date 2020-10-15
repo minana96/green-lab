@@ -46,11 +46,9 @@ class Experiment(object):
         """Prepare the device for experiment"""
         self.logger.info('Device: %s' % device)
         self.profilers.load(device)
-        device.unplug(restart)
 
     def cleanup(self, device):
         """Cleans up the changes on the devices"""
-        device.plug()
         self.profilers.stop_profiling(device)
         self.profilers.unload(device)
 
@@ -188,6 +186,7 @@ class Experiment(object):
 
     def before_run(self, device, path, run, *args, **kwargs):
         """Hook executed before a run"""
+        device.unplug()
         self.profilers.set_output()
         self.logger.info('Run %s/%s of subject "%s" on %s' % (run, self.repetitions, path, device.name))
         device.shell('logcat -c')
@@ -212,6 +211,7 @@ class Experiment(object):
 
     def after_run(self, device, path, run, *args, **kwargs):
         """Hook executed after a run"""
+        device.plug()
         self.scripts.run('after_run', device, *args, **kwargs)
         self.profilers.collect_results(device)
         Adb.reset(self.reset_adb_among_runs)
