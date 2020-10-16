@@ -1,7 +1,7 @@
 {
     "type": "web",
     "devices": {
-      "nord": {}
+      "nexus6p": {}
     },
     "repetitions": 2,
     "clear_cache": true,
@@ -10,10 +10,10 @@
       "firefox"
     ],
     "paths": [
-      "Desktop/apps/adidasnmd.us/adidasnmd.us/"
+      "subjects/adidasnmd.us/adidasnmd.us/"
     ],
-    "powerprofile_path": "/home/milica/Desktop/power_profile.xml",
-    "systrace_path": "/home/milica/Android/Sdk/platform-tools/systrace/systrace.py",
+    "powerprofile_path": "power_profile.xml",
+    "systrace_path": "platform_tools/systrace/systrace.py",
     "profilers": {
       "batterystats": {
         "cleanup": true,
@@ -29,6 +29,6 @@
       "after_run": "Scripts/after_run.py",
       "after_experiment": "Scripts/after_experiment.py"
     },
-    "time_between_run": 10000
+    "time_between_run": 1000
   }
   
