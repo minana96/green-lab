@@ -1,0 +1,34 @@
+{
+    "type": "web",
+    "devices": {
+      "nord": {}
+    },
+    "repetitions": 2,
+    "clear_cache": true,
+    "randomization": true,
+    "browsers": [
+      "firefox"
+    ],
+    "paths": [
+      "Desktop/apps/adidasnmd.us/adidasnmd.us/"
+    ],
+    "powerprofile_path": "/home/milica/Desktop/power_profile.xml",
+    "systrace_path": "/home/milica/Android/Sdk/platform-tools/systrace/systrace.py",
+    "profilers": {
+      "batterystats": {
+        "cleanup": true,
+        "enable_systrace_parsing": false
+      }
+    },
+    "scripts": {
+      "before_experiment": "Scripts/before_experiment.py",
+      "before_run": "Scripts/before_run.py",
+      "after_launch": "Scripts/after_launch.py",
+      "interaction": "Scripts/interaction.py",
+      "before_close": "Scripts/before_close.py",
+      "after_run": "Scripts/after_run.py",
+      "after_experiment": "Scripts/after_experiment.py"
+    },
+    "time_between_run": 10000
+  }
+  
