@@ -87,7 +87,7 @@ class Device:
                 elif 'disabled' in self.root_plug_value:
                     self.root_plug_value = 'enabled'
 
-    def unplug(self, restart):
+    def unplug(self, restart=False):
         """Makes the device to think it is unplugged, so the Doze mode can be activated"""
         if self.root_unplug:
             self.su_unplug(restart)
