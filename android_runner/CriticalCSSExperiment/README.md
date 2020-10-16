@@ -39,3 +39,29 @@ to keep the screen on. Make sure that you start the experiment with 100% battery
 **Step 11**: You can stop the experiment with pressing `Ctrl+C` and you'll get the `--progress` parameter at the end which you can add next time you run the same 
 configuration file. You'll continue where you left off. The adb deamon can be killed with `adb kill-server`.
 
+
+# Steps to configure battery stats
+
+The instructions for installation are [here](https://github.com/S2-group/android-runner/tree/master/AndroidRunner/Plugins/batterystats). Basically, you need to 
+make sure you have Python2, then they give an istructions how to retrieve `power_profile.xml` via APKTool. I did not follow that since there is already APKtool
+package for Ubuntu. What I did was:
+
+- `sudo apt install apktool` to install apktool
+- I connected my device and ran `adb devices` to start up adb
+- I pulled the apk with `adb pull /system/framework/framework-res.apk ./` 
+- Then I used apk tool to extract an xml file with `apktool d framework-res.apk`
+- Then you can make sure it's successful and inspect it with `cat framework-res/res/xml/power_profile.xml` or however you want and move that file whenever you
+want to
+
+As for the third step in installation, you have to run `sudo apt update && sudo apt install android-sdk` and, once you install it, check if you have in `Android/Sdk/platform-tools/systrace/systrace.py` file. I already had android-sdk and this file, but in case you don't find it (I read that in Ubuntu's repository it may not be there), you can just retrieve `platform-tools` folder from [this link](https://dl.google.com/android/repository/platform-tools-latest-linux.zip).  
+Once you get it, you need to navigate to `systrace` folder and run `python2 systrace.py -l` (with adb running and your phone connected) abd check whether you can
+see `freq` and `idle` in the output.
+
+You can see the `config_battery.json` file I pushed. You need to change `powerprofile_path` to the path of your `power_profile.xml` and `systrace_path` to the
+path of your `systrace.py`. Of course, change the name of the phone and path to some web app you want to test.
+
+**Important Note**: This profiler gives two types of outputs per run, one is `Joule_results...csv` files that calculates an overall energy from `dumpsys` battery 
+prfiler and the other type of files are `results_...csv` files that use `systrace` and break out energy consumption by different hardware components. For me, these types of files with `systrace` could not be collected. In `android-runner` configuration, they have an option `"enable_systrace_parsing": false` (you see it in my config). This is apparently something common, cause this systrace does not work on all devices (lol). Anyway, since we don't need that energy by component output,we only care about overall energy, you can safely leave this option on `false` as I did. If you want to, you can try setting it to `true` and see if it gives you any errors, but either way we won't use those files produces by `systrace`. 
+
+
+
