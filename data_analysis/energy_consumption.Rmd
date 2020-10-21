@@ -1,0 +1,36 @@
+---
+title: "Critcal CSS energy analysis"
+output: html_notebook
+---
+
+The file structure is as follows: *TODO*
+
+```{r}
+# Get the aggregated measures (cpu load, memory usage, energy consumption and load time) for the specific browser (equal to folder name).
+get_energy <- function(browser_name) {
+  subjects <- list.dirs(path = paste("./data", browser_name, "data/nexus6p", sep="/"), full.names = TRUE)[-1]
+  data <- data.frame(
+    name = character(),
+    critical = logical(),
+    energy_consumption = double(),
+    time = integer(),
+    memory_usage = integer(),
+    cpu_usage = double(),
+    stringsAsFactors = FALSE
+  )
+  data
+
+  for (subject in subjects) {
+    for (battery_run in list.files(path = paste(subject, browser_name, "android", sep="/"), full.names = TRUE)[-1]) {
+      print(battery_run)
+    }
+  }
+}
+get_energy("chrome")
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
