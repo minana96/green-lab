@@ -3,12 +3,23 @@ title: "Critcal CSS energy analysis"
 output: html_notebook
 ---
 
-The file structure is as follows: *TODO*
+```{r}
+library(ggplot2)
+library(reshape)
+library(e1071)
+library(effsize)
+library(dunn.test)
+require(plyr)
+require(gridExtra)
+```
+
+Let us first load all measures obtained from the experiment.
 
 ```{r}
-# Get the aggregated measures (cpu load, memory usage, energy consumption and load time) for the specific browser (equal to folder name).
-get_energy <- function(browser_name) {
-  subjects <- list.dirs(path = paste("./data", browser_name, "data/nexus6p", sep="/"), full.names = TRUE)[-1]
+# Get the measures (cpu load, memory usage, energy consumption and load time) for the specific browser (equal to folder name).
+get_data <- function(browser_name) {
+  subjects_path = paste("./data", browser_name, "data/nexus6p", sep="/")
+  subjects <- list.dirs(subjects_path, full.names = FALSE, recursive = FALSE)
   data <- data.frame(
     name = character(),
     critical = logical(),
@@ -18,19 +29,51 @@ get_energy <- function(browser_name) {
     cpu_usage = double(),
     stringsAsFactors = FALSE
   )
-  data
 
   for (subject in subjects) {
-    for (battery_run in list.files(path = paste(subject, browser_name, "android", sep="/"), full.names = TRUE)[-1]) {
-      print(battery_run)
+    # Obtain android measures (CPU usage)
+    cpu_data <- data.frame(cpu_util = numeric())
+    for (run_file in list.files(path = paste(subjects_path, subject, browser_name, "android", sep="/"), full.names = TRUE)[-1]) {
+      android_results <- read.csv(run_file)
+      cpu_data[nrow(cpu_data) + 1, ] <- c(mean(android_results$cpu))
     }
+
+    # Obtain Trepn measures (time and memory usage)
+    memory_data <- data.frame(mem_usage = numeric())
+    time_data <- data.frame(time=numeric())
+    for (run_file in list.files(path = paste(subjects_path, subject, browser_name, "trepn", sep="/"), full.names = TRUE)[-1]) {
+      trepn_results <- read.csv(run_file)
+      memory_data[nrow(memory_data) + 1, ] <- c(mean(trepn_results[, 2]))
+      time_data[nrow(time_data) + 1, ] <- c(max(trepn_results[, 1]))
+    }
+    
+    # Obtain Batterystats measures (energy consumption)
+    energy_data <- data.frame(energy = numeric())
+    for (run_file in list.files(path = paste(subjects_path, subject, browser_name, "batterystats", sep="/"), full.names = TRUE, pattern = "^Joule")) {
+      batterystats_results <- read.csv(run_file)
+      energy_data[nrow(energy_data) + 1, ] <- c(mean(batterystats_results[1, ]))
+    }
+    
+    run_data <- data.frame(
+      rep(strsplit(subject, "-")[[1]][2], nrow(energy_data)),
+      rep(startsWith(subject, "subjects_critical"), nrow(energy_data)),
+      energy_data,
+      time_data,
+      memory_data,
+      cpu_data
+    )
+    names(run_data) <- names(data)
+    data <- rbind(data, run_data)
   }
+
+  return(data)
 }
-get_energy("chrome")
+
+firefox_data <- get_data("firefox")
+chrome_data <- get_data("chrome")
+
+print(firefox_data)
 ```
-
-Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
-
-When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
-
-The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+```{r}
+print(chrome_data)
+```
