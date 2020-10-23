@@ -71,9 +71,64 @@ get_data <- function(browser_name) {
 
 firefox_data <- get_data("firefox")
 chrome_data <- get_data("chrome")
+```
 
+```{r}
+#perform shapiro tests to check for normality. p-values lower than 0.05 are not normally distributed
 print(firefox_data)
+shapiro.test(firefox_data$energy_consumption)
+shapiro.test(firefox_data$time)
+shapiro.test(firefox_data$memory_usage)
+shapiro.test(firefox_data$cpu_usage)
+```
+
+```{r}
+#make qqplots of the data for additional verification (even though our sample size isn't small)
+make_qqplot <- function(column, title, critical=TRUE) {
+  qqnorm(column, main=paste("Normal Q-Q plot of", title, sep=" "))
+  qqline(column, col = "blue")
+}
+make_qqplot(firefox_data[firefox_data$critical == TRUE,]$energy_consumption, "energy consumption for firefox (critical)", TRUE)
+make_qqplot(firefox_data[firefox_data$critical == FALSE,]$energy_consumption, "energy consumption for firefox (non critical)", FALSE)
+
+make_qqplot(firefox_data[firefox_data$critical == FALSE,]$cpu_usage, "CPU usage for firefox (non critical)", FALSE)
+make_qqplot(firefox_data[firefox_data$critical == TRUE,]$cpu_usage, "CPU usage for firefox (critical)", TRUE)
 ```
 ```{r}
-print(chrome_data)
+hist(firefox_data[firefox_data$critical == TRUE,]$energy_consumption, breaks=40, main="Histogram plot of energy consumption for firefox (critical)", xlab = "Energy consumption (J)")
+hist(firefox_data[firefox_data$critical == FALSE,]$energy_consumption, breaks=100, main="Histogram plot of energy consumption for firefox (non critical)", xlab = "Energy consumption (J)")
+hist(firefox_data[firefox_data$critical == TRUE,]$cpu_usage, breaks=30, main="Histogram plot of CPU usage for firefox (critical)", xlab = "CPU usage (%)")
+hist(firefox_data[firefox_data$critical == TRUE,]$memory_usage, breaks=25, main="Histogram plot of memory usage for firefox (critical)", xlab = "Memory usage (kB)")
+
+#perform wilcox test as the data is not normally distributed (at least not before applying transformations or removing outliers)
+wilcox.test(firefox_data[firefox_data$critical == TRUE,]$energy_consumption, firefox_data[firefox_data$critical == FALSE,]$energy_consumption)
 ```
+
+
+```{r}
+print(chrome_data)
+#perform shapiro tests to check for normality. p-values lower than 0.05 are not normally distributed
+shapiro.test(chrome_data$energy_consumption)
+shapiro.test(chrome_data$time)
+shapiro.test(chrome_data$memory_usage)
+shapiro.test(chrome_data$cpu_usage)
+```
+
+```{r}
+make_qqplot(chrome_data[chrome_data$critical == TRUE,]$energy_consumption, "energy consumption for chrome (critical)")
+make_qqplot(chrome_data[chrome_data$critical == FALSE,]$energy_consumption, "energy consumption for chrome (non critical)", FALSE)
+
+make_qqplot(chrome_data[chrome_data$critical == FALSE,]$cpu_usage, "CPU usage for chrome (non critical)", FALSE)
+make_qqplot(chrome_data[chrome_data$critical == TRUE,]$cpu_usage, "CPU usage for chrome (critical)", TRUE)
+```
+
+```{r}
+hist(chrome_data[chrome_data$critical == TRUE,]$energy_consumption, breaks=40, main="Histogram plot of energy consumption for chrome (critical)", xlab = "Energy consumption (J)")
+hist(chrome_data[chrome_data$critical == FALSE,]$energy_consumption, breaks=30, main="Histogram plot of energy consumption for chrome (non critical)", xlab = "Energy consumption (J)")
+hist(chrome_data[chrome_data$critical == TRUE,]$cpu_usage, breaks=20, main="Histogram plot of CPU usage for chrome (critical)", xlab = "CPU usage (%)")
+hist(chrome_data[chrome_data$critical == TRUE,]$memory_usage, breaks=25, main="Histogram plot of memory usage for chrome (critical)", xlab = "Memory usage (kB)")
+
+#perform wilcox test as the data is not normally distributed (at least not before applying transformations or removing outliers)
+wilcox.test(chrome_data[chrome_data$critical == TRUE,]$energy_consumption, chrome_data[chrome_data$critical == FALSE,]$energy_consumption)
+```
+
