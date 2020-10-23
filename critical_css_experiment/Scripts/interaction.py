@@ -1,11 +1,11 @@
 """Interaction script
 
-This script will be executed between the start and end of each run.
+This script will be executed between the start and the end of each run.
 
-It starts up the local server on port 8001 that will listen for the
+It starts up a local server on port 8001 that will listen for the
 custom GET request once the DOMContentLoad event is triggered from a
 target web app. Upon processing the request, the server is stopped 
-and the interaction script ends. This will in fact end the entire run.
+and the interaction script ends. This will result in ending the entire run.
 """
 
 from http.server import BaseHTTPRequestHandler, HTTPServer
@@ -16,6 +16,7 @@ def main(*args: tuple, **kwargs: dict):
     """Starts a local server and ends it upon processing
     one HTTP request
     """
+    
     device = args[0]
     browser = args[1]
     local_address = args[2]
@@ -27,7 +28,7 @@ def main(*args: tuple, **kwargs: dict):
 
 
 class TestHandler(BaseHTTPRequestHandler):
-    """Custom HTTP Request Handler class that is handed 
+    """Custom HTTP request handler class that is handed 
     over to a web server object for processing HTTP requests 
     """
 

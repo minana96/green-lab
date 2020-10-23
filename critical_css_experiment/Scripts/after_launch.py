@@ -5,7 +5,7 @@ but before profiling starts.
 
 Chrome browser displays pop-up windows for customization when the
 app data is cleared. This would prevent a web app from launching.
-The purpose of this script is to interract programmatically with
+The purpose of this script is to interact programmatically with
 Chrome so that all pop-ups would be closed before profiling starts.
 The interaction is customized for Nexus6P mobile device and Chrome
 version V85.0.4183.127.
@@ -20,7 +20,7 @@ default_wait_time = 0.3
 
 def tap(device: Device, x: int, y: int, time_to_sleep = 4):
     """Executes a tap on a device's screen on (x, y) position with 
-    waiting time for a resulting action
+    a waiting time for a resulting action
     """
 
     device.shell('input tap %s %s' % (x, y))
@@ -28,8 +28,8 @@ def tap(device: Device, x: int, y: int, time_to_sleep = 4):
 
 
 def chrome_launch(device: Device):
-    """Performs three taps on the screen once Chrome browser is 
-    launched to close all pop-ups
+    """Performs three taps on the screen with 0.3 seconds delay
+    once Chrome browser is launched to close all pop-ups
     """
 
     # Uncheck allow
@@ -43,7 +43,7 @@ def chrome_launch(device: Device):
 
 
 def main(device: Device, *args, **kwargs):
-    """Performs the pop-up interraction only if currently launched
+    """Performs the pop-up interaction only if currently launched
     browser is Chrome
     """
 

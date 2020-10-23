@@ -6,11 +6,11 @@ to dependent resources of some web apps whose paths are set to web server's
 root folder. The paths are set in this way by the automated tool for 
 downloading an entire web app.
 
-The start method is called from before_run sciprt. The stop method is called
+The start method is called from before_run script. The stop method is called
 from the after_run script. The local server is hosting a web app in a separate
 subprocess. Since the global variables are not preserved during a run, the 
-process id of the web server's subprocessed is preserved in a custom file so 
-that the subprocessed can be terminated.
+process id of the web server's subprocess is preserved in a file so that the 
+subprocessed can be terminated.
 """
 
 import time

@@ -6,7 +6,7 @@ Its purpose is to stop the local web server.
 """
 
 from android_runner.AndroidRunner.Device import Device
-from CriticalCSSExperiment.Scripts.Server import stop 
+from critical_css_experiment.Scripts.Server import stop 
 
 
 # noinspection PyUnusedLocal

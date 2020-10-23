@@ -2,13 +2,13 @@
 
 This script will be executed before every run.
 
-Its purpose is to start the local web server from a target web app's
-own directory so that all dependencies would be accessed using
+Its purpose is to start a local web server from a target web app's
+directory so that all dependent resources would be accessed using 
 correct paths.
 """
 
 from android_runner.AndroidRunner.Device import Device
-from CriticalCSSExperiment.Scripts.Server import start 
+from critical_css_experiment.Scripts.Server import start 
 
 
 # noinspection PyUnusedLocal
