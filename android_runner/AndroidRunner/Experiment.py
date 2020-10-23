@@ -191,7 +191,10 @@ class Experiment(object):
         self.logger.info('Run %s/%s of subject "%s" on %s' % (run, self.repetitions, path, device.name))
         device.shell('logcat -c')
         self.logger.info('Logcat cleared')
-        self.scripts.run('before_run', device, path, *args, **kwargs)
+
+        # Path argument added for ability to switch to the web app's directory
+        # for running a local web server
+        self.scripts.run('before_run', device, path)
 
     def after_launch(self, device, path, run, *args, **kwargs):
         self.scripts.run('after_launch', device, device.id, device.current_activity())
@@ -199,9 +202,11 @@ class Experiment(object):
     def start_profiling(self, device, path, run, *args, **kwargs):
         self.profilers.start_profiling(device)
 
-    def interaction(self, device, path, run, *args, **kwargs):
+    def interaction(self, device, local_address, run, *args, **kwargs):
         """Interactions on the device to be profiled"""
-        self.scripts.run('interaction', device, *args, **kwargs)
+
+        # Browser is passed as aditional argument for web app launching
+        self.scripts.run('interaction', device, args[0], local_address)
 
     def stop_profiling(self, device, path, run, *args, **kwargs):
         self.profilers.stop_profiling(device)
