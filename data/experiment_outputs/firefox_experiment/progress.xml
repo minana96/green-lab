@@ -1,0 +1,3008 @@
+<experiment>
+  <configHash>2d86fd97a3a2c84a8328d5e1d89646ea</configHash>
+  <outputDir>/home/engel/UvA_VU/green-lab/android_runner/CriticalCSSExperiment/output/2020.10.17_230431/</outputDir>
+  <runsToRun>
+    </runsToRun>
+  <runsDone>
+    <run runId="284">
+      <device>nexus6p</device>
+      <path>subjects/iliketubes.com/iliketubes.com/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="213">
+      <device>nexus6p</device>
+      <path>subjects_critical/hagley.org/hagley.org/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="161">
+      <device>nexus6p</device>
+      <path>subjects/greasyfork.org/greasyfork.org/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="397">
+      <device>nexus6p</device>
+      <path>subjects_critical/quechua.co.uk/quechua.co.uk/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="44">
+      <device>nexus6p</device>
+      <path>subjects/ammar.cloud/ammar.cloud/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="274">
+      <device>nexus6p</device>
+      <path>subjects_critical/iflyer.tv/iflyer.tv/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="454">
+      <device>nexus6p</device>
+      <path>subjects_critical/telfer.ru/telfer.ru/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="453">
+      <device>nexus6p</device>
+      <path>subjects_critical/telfer.ru/telfer.ru/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="467">
+      <device>nexus6p</device>
+      <path>subjects/ubersocial.com/ubersocial.com/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="447">
+      <device>nexus6p</device>
+      <path>subjects/telfer.ru/telfer.ru/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="486">
+      <device>nexus6p</device>
+      <path>subjects/velovita.com/velovita.com/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="152">
+      <device>nexus6p</device>
+      <path>subjects_critical/gildedserpent.com/gildedserpent.com/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="91">
+      <device>nexus6p</device>
+      <path>subjects_critical/compresse-per-articolazioni.eu/compresse-per-articolazioni.eu/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="27">
+      <device>nexus6p</device>
+      <path>subjects/adriaticbasket.info/adriaticbasket.info/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="402">
+      <device>nexus6p</device>
+      <path>subjects/sciencebeta.com/sciencebeta.com/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="251">
+      <device>nexus6p</device>
+      <path>subjects_critical/holifestival.org/holifestival.org/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="455">
+      <device>nexus6p</device>
+      <path>subjects_critical/telfer.ru/telfer.ru/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="34">
+      <device>nexus6p</device>
+      <path>subjects_critical/adriaticbasket.info/adriaticbasket.info/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="172">
+      <device>nexus6p</device>
+      <path>subjects_critical/greasyfork.org/greasyfork.org/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="259">
+      <device>nexus6p</device>
+      <path>subjects_critical/holifestival.org/holifestival.org/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="112">
+      <device>nexus6p</device>
+      <path>subjects_critical/cottagelife.com/cottagelife.com/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="318">
+      <device>nexus6p</device>
+      <path>subjects_critical/kenengba.com/kenengba.com/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="45">
+      <device>nexus6p</device>
+      <path>subjects/ammar.cloud/ammar.cloud/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="117">
+      <device>nexus6p</device>
+      <path>subjects_critical/cottagelife.com/cottagelife.com/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="164">
+      <device>nexus6p</device>
+      <path>subjects/greasyfork.org/greasyfork.org/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="0">
+      <device>nexus6p</device>
+      <path>subjects/adidasnmd.us/adidasnmd.us/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="247">
+      <device>nexus6p</device>
+      <path>subjects/holifestival.org/holifestival.org/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="369">
+      <device>nexus6p</device>
+      <path>subjects/mrob.com/mrob.com/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="346">
+      <device>nexus6p</device>
+      <path>subjects/lekhafoods.com/lekhafoods.com/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="116">
+      <device>nexus6p</device>
+      <path>subjects_critical/cottagelife.com/cottagelife.com/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="236">
+      <device>nexus6p</device>
+      <path>subjects_critical/hcss.com/hcss.com/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="84">
+      <device>nexus6p</device>
+      <path>subjects/compresse-per-articolazioni.eu/compresse-per-articolazioni.eu/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="52">
+      <device>nexus6p</device>
+      <path>subjects_critical/ammar.cloud/ammar.cloud/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="43">
+      <device>nexus6p</device>
+      <path>subjects/ammar.cloud/ammar.cloud/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="232">
+      <device>nexus6p</device>
+      <path>subjects_critical/hcss.com/hcss.com/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="225">
+      <device>nexus6p</device>
+      <path>subjects/hcss.com/hcss.com/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="468">
+      <device>nexus6p</device>
+      <path>subjects/ubersocial.com/ubersocial.com/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="228">
+      <device>nexus6p</device>
+      <path>subjects/hcss.com/hcss.com/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="421">
+      <device>nexus6p</device>
+      <path>subjects/sportravel.es/sportravel.es/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="76">
+      <device>nexus6p</device>
+      <path>subjects_critical/cbdvapejuice.net/cbdvapejuice.net/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="202">
+      <device>nexus6p</device>
+      <path>subjects/hagley.org/hagley.org/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="46">
+      <device>nexus6p</device>
+      <path>subjects/ammar.cloud/ammar.cloud/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="211">
+      <device>nexus6p</device>
+      <path>subjects_critical/hagley.org/hagley.org/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="86">
+      <device>nexus6p</device>
+      <path>subjects/compresse-per-articolazioni.eu/compresse-per-articolazioni.eu/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="376">
+      <device>nexus6p</device>
+      <path>subjects_critical/mrob.com/mrob.com/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="265">
+      <device>nexus6p</device>
+      <path>subjects/iflyer.tv/iflyer.tv/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="115">
+      <device>nexus6p</device>
+      <path>subjects_critical/cottagelife.com/cottagelife.com/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="411">
+      <device>nexus6p</device>
+      <path>subjects_critical/sciencebeta.com/sciencebeta.com/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="394">
+      <device>nexus6p</device>
+      <path>subjects_critical/quechua.co.uk/quechua.co.uk/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="350">
+      <device>nexus6p</device>
+      <path>subjects_critical/lekhafoods.com/lekhafoods.com/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="199">
+      <device>nexus6p</device>
+      <path>subjects_critical/greentechmedia.com/greentechmedia.com/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="392">
+      <device>nexus6p</device>
+      <path>subjects_critical/quechua.co.uk/quechua.co.uk/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="119">
+      <device>nexus6p</device>
+      <path>subjects_critical/cottagelife.com/cottagelife.com/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="469">
+      <device>nexus6p</device>
+      <path>subjects/ubersocial.com/ubersocial.com/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="313">
+      <device>nexus6p</device>
+      <path>subjects_critical/kenengba.com/kenengba.com/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="338">
+      <device>nexus6p</device>
+      <path>subjects_critical/legalaidnc.org/legalaidnc.org/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="54">
+      <device>nexus6p</device>
+      <path>subjects_critical/ammar.cloud/ammar.cloud/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="88">
+      <device>nexus6p</device>
+      <path>subjects/compresse-per-articolazioni.eu/compresse-per-articolazioni.eu/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="490">
+      <device>nexus6p</device>
+      <path>subjects_critical/velovita.com/velovita.com/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="245">
+      <device>nexus6p</device>
+      <path>subjects/holifestival.org/holifestival.org/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="51">
+      <device>nexus6p</device>
+      <path>subjects_critical/ammar.cloud/ammar.cloud/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="452">
+      <device>nexus6p</device>
+      <path>subjects_critical/telfer.ru/telfer.ru/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="413">
+      <device>nexus6p</device>
+      <path>subjects_critical/sciencebeta.com/sciencebeta.com/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="435">
+      <device>nexus6p</device>
+      <path>subjects_critical/sportravel.es/sportravel.es/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="427">
+      <device>nexus6p</device>
+      <path>subjects/sportravel.es/sportravel.es/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="305">
+      <device>nexus6p</device>
+      <path>subjects/kenengba.com/kenengba.com/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="107">
+      <device>nexus6p</device>
+      <path>subjects/cottagelife.com/cottagelife.com/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="410">
+      <device>nexus6p</device>
+      <path>subjects_critical/sciencebeta.com/sciencebeta.com/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="424">
+      <device>nexus6p</device>
+      <path>subjects/sportravel.es/sportravel.es/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="244">
+      <device>nexus6p</device>
+      <path>subjects/holifestival.org/holifestival.org/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="23">
+      <device>nexus6p</device>
+      <path>subjects/adriaticbasket.info/adriaticbasket.info/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="409">
+      <device>nexus6p</device>
+      <path>subjects/sciencebeta.com/sciencebeta.com/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="100">
+      <device>nexus6p</device>
+      <path>subjects/cottagelife.com/cottagelife.com/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="460">
+      <device>nexus6p</device>
+      <path>subjects/ubersocial.com/ubersocial.com/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="270">
+      <device>nexus6p</device>
+      <path>subjects_critical/iflyer.tv/iflyer.tv/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="105">
+      <device>nexus6p</device>
+      <path>subjects/cottagelife.com/cottagelife.com/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="171">
+      <device>nexus6p</device>
+      <path>subjects_critical/greasyfork.org/greasyfork.org/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="428">
+      <device>nexus6p</device>
+      <path>subjects/sportravel.es/sportravel.es/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="74">
+      <device>nexus6p</device>
+      <path>subjects_critical/cbdvapejuice.net/cbdvapejuice.net/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="475">
+      <device>nexus6p</device>
+      <path>subjects_critical/ubersocial.com/ubersocial.com/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="33">
+      <device>nexus6p</device>
+      <path>subjects_critical/adriaticbasket.info/adriaticbasket.info/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="67">
+      <device>nexus6p</device>
+      <path>subjects/cbdvapejuice.net/cbdvapejuice.net/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="187">
+      <device>nexus6p</device>
+      <path>subjects/greentechmedia.com/greentechmedia.com/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="17">
+      <device>nexus6p</device>
+      <path>subjects_critical/adidasnmd.us/adidasnmd.us/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="182">
+      <device>nexus6p</device>
+      <path>subjects/greentechmedia.com/greentechmedia.com/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="127">
+      <device>nexus6p</device>
+      <path>subjects/fusion.org/fusion.org/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="496">
+      <device>nexus6p</device>
+      <path>subjects_critical/velovita.com/velovita.com/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="179">
+      <device>nexus6p</device>
+      <path>subjects_critical/greasyfork.org/greasyfork.org/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="489">
+      <device>nexus6p</device>
+      <path>subjects/velovita.com/velovita.com/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="293">
+      <device>nexus6p</device>
+      <path>subjects_critical/iliketubes.com/iliketubes.com/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="229">
+      <device>nexus6p</device>
+      <path>subjects/hcss.com/hcss.com/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="216">
+      <device>nexus6p</device>
+      <path>subjects_critical/hagley.org/hagley.org/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="396">
+      <device>nexus6p</device>
+      <path>subjects_critical/quechua.co.uk/quechua.co.uk/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="432">
+      <device>nexus6p</device>
+      <path>subjects_critical/sportravel.es/sportravel.es/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="140">
+      <device>nexus6p</device>
+      <path>subjects/gildedserpent.com/gildedserpent.com/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="335">
+      <device>nexus6p</device>
+      <path>subjects_critical/legalaidnc.org/legalaidnc.org/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="81">
+      <device>nexus6p</device>
+      <path>subjects/compresse-per-articolazioni.eu/compresse-per-articolazioni.eu/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="479">
+      <device>nexus6p</device>
+      <path>subjects_critical/ubersocial.com/ubersocial.com/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="306">
+      <device>nexus6p</device>
+      <path>subjects/kenengba.com/kenengba.com/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="332">
+      <device>nexus6p</device>
+      <path>subjects_critical/legalaidnc.org/legalaidnc.org/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="362">
+      <device>nexus6p</device>
+      <path>subjects/mrob.com/mrob.com/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="70">
+      <device>nexus6p</device>
+      <path>subjects_critical/cbdvapejuice.net/cbdvapejuice.net/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="461">
+      <device>nexus6p</device>
+      <path>subjects/ubersocial.com/ubersocial.com/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="436">
+      <device>nexus6p</device>
+      <path>subjects_critical/sportravel.es/sportravel.es/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="239">
+      <device>nexus6p</device>
+      <path>subjects_critical/hcss.com/hcss.com/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="201">
+      <device>nexus6p</device>
+      <path>subjects/hagley.org/hagley.org/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="340">
+      <device>nexus6p</device>
+      <path>subjects/lekhafoods.com/lekhafoods.com/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="93">
+      <device>nexus6p</device>
+      <path>subjects_critical/compresse-per-articolazioni.eu/compresse-per-articolazioni.eu/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="252">
+      <device>nexus6p</device>
+      <path>subjects_critical/holifestival.org/holifestival.org/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="39">
+      <device>nexus6p</device>
+      <path>subjects_critical/adriaticbasket.info/adriaticbasket.info/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="95">
+      <device>nexus6p</device>
+      <path>subjects_critical/compresse-per-articolazioni.eu/compresse-per-articolazioni.eu/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="470">
+      <device>nexus6p</device>
+      <path>subjects_critical/ubersocial.com/ubersocial.com/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="401">
+      <device>nexus6p</device>
+      <path>subjects/sciencebeta.com/sciencebeta.com/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="197">
+      <device>nexus6p</device>
+      <path>subjects_critical/greentechmedia.com/greentechmedia.com/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="64">
+      <device>nexus6p</device>
+      <path>subjects/cbdvapejuice.net/cbdvapejuice.net/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="311">
+      <device>nexus6p</device>
+      <path>subjects_critical/kenengba.com/kenengba.com/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="240">
+      <device>nexus6p</device>
+      <path>subjects/holifestival.org/holifestival.org/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="445">
+      <device>nexus6p</device>
+      <path>subjects/telfer.ru/telfer.ru/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="253">
+      <device>nexus6p</device>
+      <path>subjects_critical/holifestival.org/holifestival.org/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="170">
+      <device>nexus6p</device>
+      <path>subjects_critical/greasyfork.org/greasyfork.org/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="146">
+      <device>nexus6p</device>
+      <path>subjects/gildedserpent.com/gildedserpent.com/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="2">
+      <device>nexus6p</device>
+      <path>subjects/adidasnmd.us/adidasnmd.us/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="365">
+      <device>nexus6p</device>
+      <path>subjects/mrob.com/mrob.com/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="159">
+      <device>nexus6p</device>
+      <path>subjects_critical/gildedserpent.com/gildedserpent.com/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="399">
+      <device>nexus6p</device>
+      <path>subjects_critical/quechua.co.uk/quechua.co.uk/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="66">
+      <device>nexus6p</device>
+      <path>subjects/cbdvapejuice.net/cbdvapejuice.net/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="271">
+      <device>nexus6p</device>
+      <path>subjects_critical/iflyer.tv/iflyer.tv/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="89">
+      <device>nexus6p</device>
+      <path>subjects/compresse-per-articolazioni.eu/compresse-per-articolazioni.eu/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="404">
+      <device>nexus6p</device>
+      <path>subjects/sciencebeta.com/sciencebeta.com/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="319">
+      <device>nexus6p</device>
+      <path>subjects_critical/kenengba.com/kenengba.com/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="20">
+      <device>nexus6p</device>
+      <path>subjects/adriaticbasket.info/adriaticbasket.info/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="249">
+      <device>nexus6p</device>
+      <path>subjects/holifestival.org/holifestival.org/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="297">
+      <device>nexus6p</device>
+      <path>subjects_critical/iliketubes.com/iliketubes.com/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="415">
+      <device>nexus6p</device>
+      <path>subjects_critical/sciencebeta.com/sciencebeta.com/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="324">
+      <device>nexus6p</device>
+      <path>subjects/legalaidnc.org/legalaidnc.org/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="69">
+      <device>nexus6p</device>
+      <path>subjects/cbdvapejuice.net/cbdvapejuice.net/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="102">
+      <device>nexus6p</device>
+      <path>subjects/cottagelife.com/cottagelife.com/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="380">
+      <device>nexus6p</device>
+      <path>subjects/quechua.co.uk/quechua.co.uk/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="71">
+      <device>nexus6p</device>
+      <path>subjects_critical/cbdvapejuice.net/cbdvapejuice.net/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="278">
+      <device>nexus6p</device>
+      <path>subjects_critical/iflyer.tv/iflyer.tv/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="276">
+      <device>nexus6p</device>
+      <path>subjects_critical/iflyer.tv/iflyer.tv/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="418">
+      <device>nexus6p</device>
+      <path>subjects_critical/sciencebeta.com/sciencebeta.com/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="349">
+      <device>nexus6p</device>
+      <path>subjects/lekhafoods.com/lekhafoods.com/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="495">
+      <device>nexus6p</device>
+      <path>subjects_critical/velovita.com/velovita.com/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="367">
+      <device>nexus6p</device>
+      <path>subjects/mrob.com/mrob.com/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="387">
+      <device>nexus6p</device>
+      <path>subjects/quechua.co.uk/quechua.co.uk/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="352">
+      <device>nexus6p</device>
+      <path>subjects_critical/lekhafoods.com/lekhafoods.com/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="220">
+      <device>nexus6p</device>
+      <path>subjects/hcss.com/hcss.com/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="214">
+      <device>nexus6p</device>
+      <path>subjects_critical/hagley.org/hagley.org/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="370">
+      <device>nexus6p</device>
+      <path>subjects_critical/mrob.com/mrob.com/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="303">
+      <device>nexus6p</device>
+      <path>subjects/kenengba.com/kenengba.com/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="14">
+      <device>nexus6p</device>
+      <path>subjects_critical/adidasnmd.us/adidasnmd.us/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="191">
+      <device>nexus6p</device>
+      <path>subjects_critical/greentechmedia.com/greentechmedia.com/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="395">
+      <device>nexus6p</device>
+      <path>subjects_critical/quechua.co.uk/quechua.co.uk/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="186">
+      <device>nexus6p</device>
+      <path>subjects/greentechmedia.com/greentechmedia.com/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="328">
+      <device>nexus6p</device>
+      <path>subjects/legalaidnc.org/legalaidnc.org/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="304">
+      <device>nexus6p</device>
+      <path>subjects/kenengba.com/kenengba.com/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="329">
+      <device>nexus6p</device>
+      <path>subjects/legalaidnc.org/legalaidnc.org/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="189">
+      <device>nexus6p</device>
+      <path>subjects/greentechmedia.com/greentechmedia.com/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="358">
+      <device>nexus6p</device>
+      <path>subjects_critical/lekhafoods.com/lekhafoods.com/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="439">
+      <device>nexus6p</device>
+      <path>subjects_critical/sportravel.es/sportravel.es/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="438">
+      <device>nexus6p</device>
+      <path>subjects_critical/sportravel.es/sportravel.es/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="203">
+      <device>nexus6p</device>
+      <path>subjects/hagley.org/hagley.org/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="344">
+      <device>nexus6p</device>
+      <path>subjects/lekhafoods.com/lekhafoods.com/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="281">
+      <device>nexus6p</device>
+      <path>subjects/iliketubes.com/iliketubes.com/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="295">
+      <device>nexus6p</device>
+      <path>subjects_critical/iliketubes.com/iliketubes.com/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="72">
+      <device>nexus6p</device>
+      <path>subjects_critical/cbdvapejuice.net/cbdvapejuice.net/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="493">
+      <device>nexus6p</device>
+      <path>subjects_critical/velovita.com/velovita.com/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="356">
+      <device>nexus6p</device>
+      <path>subjects_critical/lekhafoods.com/lekhafoods.com/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="416">
+      <device>nexus6p</device>
+      <path>subjects_critical/sciencebeta.com/sciencebeta.com/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="129">
+      <device>nexus6p</device>
+      <path>subjects/fusion.org/fusion.org/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="205">
+      <device>nexus6p</device>
+      <path>subjects/hagley.org/hagley.org/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="11">
+      <device>nexus6p</device>
+      <path>subjects_critical/adidasnmd.us/adidasnmd.us/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="353">
+      <device>nexus6p</device>
+      <path>subjects_critical/lekhafoods.com/lekhafoods.com/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="113">
+      <device>nexus6p</device>
+      <path>subjects_critical/cottagelife.com/cottagelife.com/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="83">
+      <device>nexus6p</device>
+      <path>subjects/compresse-per-articolazioni.eu/compresse-per-articolazioni.eu/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="26">
+      <device>nexus6p</device>
+      <path>subjects/adriaticbasket.info/adriaticbasket.info/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="154">
+      <device>nexus6p</device>
+      <path>subjects_critical/gildedserpent.com/gildedserpent.com/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="40">
+      <device>nexus6p</device>
+      <path>subjects/ammar.cloud/ammar.cloud/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="406">
+      <device>nexus6p</device>
+      <path>subjects/sciencebeta.com/sciencebeta.com/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="233">
+      <device>nexus6p</device>
+      <path>subjects_critical/hcss.com/hcss.com/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="149">
+      <device>nexus6p</device>
+      <path>subjects/gildedserpent.com/gildedserpent.com/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="279">
+      <device>nexus6p</device>
+      <path>subjects_critical/iflyer.tv/iflyer.tv/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="56">
+      <device>nexus6p</device>
+      <path>subjects_critical/ammar.cloud/ammar.cloud/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="31">
+      <device>nexus6p</device>
+      <path>subjects_critical/adriaticbasket.info/adriaticbasket.info/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="4">
+      <device>nexus6p</device>
+      <path>subjects/adidasnmd.us/adidasnmd.us/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="223">
+      <device>nexus6p</device>
+      <path>subjects/hcss.com/hcss.com/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="361">
+      <device>nexus6p</device>
+      <path>subjects/mrob.com/mrob.com/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="15">
+      <device>nexus6p</device>
+      <path>subjects_critical/adidasnmd.us/adidasnmd.us/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="290">
+      <device>nexus6p</device>
+      <path>subjects_critical/iliketubes.com/iliketubes.com/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="141">
+      <device>nexus6p</device>
+      <path>subjects/gildedserpent.com/gildedserpent.com/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="473">
+      <device>nexus6p</device>
+      <path>subjects_critical/ubersocial.com/ubersocial.com/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="184">
+      <device>nexus6p</device>
+      <path>subjects/greentechmedia.com/greentechmedia.com/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="480">
+      <device>nexus6p</device>
+      <path>subjects/velovita.com/velovita.com/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="123">
+      <device>nexus6p</device>
+      <path>subjects/fusion.org/fusion.org/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="472">
+      <device>nexus6p</device>
+      <path>subjects_critical/ubersocial.com/ubersocial.com/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="331">
+      <device>nexus6p</device>
+      <path>subjects_critical/legalaidnc.org/legalaidnc.org/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="483">
+      <device>nexus6p</device>
+      <path>subjects/velovita.com/velovita.com/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="372">
+      <device>nexus6p</device>
+      <path>subjects_critical/mrob.com/mrob.com/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="142">
+      <device>nexus6p</device>
+      <path>subjects/gildedserpent.com/gildedserpent.com/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="342">
+      <device>nexus6p</device>
+      <path>subjects/lekhafoods.com/lekhafoods.com/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="7">
+      <device>nexus6p</device>
+      <path>subjects/adidasnmd.us/adidasnmd.us/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="133">
+      <device>nexus6p</device>
+      <path>subjects_critical/fusion.org/fusion.org/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="173">
+      <device>nexus6p</device>
+      <path>subjects_critical/greasyfork.org/greasyfork.org/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="298">
+      <device>nexus6p</device>
+      <path>subjects_critical/iliketubes.com/iliketubes.com/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="61">
+      <device>nexus6p</device>
+      <path>subjects/cbdvapejuice.net/cbdvapejuice.net/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="459">
+      <device>nexus6p</device>
+      <path>subjects_critical/telfer.ru/telfer.ru/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="30">
+      <device>nexus6p</device>
+      <path>subjects_critical/adriaticbasket.info/adriaticbasket.info/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="134">
+      <device>nexus6p</device>
+      <path>subjects_critical/fusion.org/fusion.org/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="363">
+      <device>nexus6p</device>
+      <path>subjects/mrob.com/mrob.com/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="442">
+      <device>nexus6p</device>
+      <path>subjects/telfer.ru/telfer.ru/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="325">
+      <device>nexus6p</device>
+      <path>subjects/legalaidnc.org/legalaidnc.org/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="241">
+      <device>nexus6p</device>
+      <path>subjects/holifestival.org/holifestival.org/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="429">
+      <device>nexus6p</device>
+      <path>subjects/sportravel.es/sportravel.es/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="103">
+      <device>nexus6p</device>
+      <path>subjects/cottagelife.com/cottagelife.com/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="124">
+      <device>nexus6p</device>
+      <path>subjects/fusion.org/fusion.org/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="238">
+      <device>nexus6p</device>
+      <path>subjects_critical/hcss.com/hcss.com/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="47">
+      <device>nexus6p</device>
+      <path>subjects/ammar.cloud/ammar.cloud/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="351">
+      <device>nexus6p</device>
+      <path>subjects_critical/lekhafoods.com/lekhafoods.com/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="37">
+      <device>nexus6p</device>
+      <path>subjects_critical/adriaticbasket.info/adriaticbasket.info/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="327">
+      <device>nexus6p</device>
+      <path>subjects/legalaidnc.org/legalaidnc.org/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="403">
+      <device>nexus6p</device>
+      <path>subjects/sciencebeta.com/sciencebeta.com/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="386">
+      <device>nexus6p</device>
+      <path>subjects/quechua.co.uk/quechua.co.uk/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="357">
+      <device>nexus6p</device>
+      <path>subjects_critical/lekhafoods.com/lekhafoods.com/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="78">
+      <device>nexus6p</device>
+      <path>subjects_critical/cbdvapejuice.net/cbdvapejuice.net/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="195">
+      <device>nexus6p</device>
+      <path>subjects_critical/greentechmedia.com/greentechmedia.com/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="375">
+      <device>nexus6p</device>
+      <path>subjects_critical/mrob.com/mrob.com/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="155">
+      <device>nexus6p</device>
+      <path>subjects_critical/gildedserpent.com/gildedserpent.com/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="183">
+      <device>nexus6p</device>
+      <path>subjects/greentechmedia.com/greentechmedia.com/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="485">
+      <device>nexus6p</device>
+      <path>subjects/velovita.com/velovita.com/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="360">
+      <device>nexus6p</device>
+      <path>subjects/mrob.com/mrob.com/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="291">
+      <device>nexus6p</device>
+      <path>subjects_critical/iliketubes.com/iliketubes.com/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="474">
+      <device>nexus6p</device>
+      <path>subjects_critical/ubersocial.com/ubersocial.com/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="207">
+      <device>nexus6p</device>
+      <path>subjects/hagley.org/hagley.org/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="465">
+      <device>nexus6p</device>
+      <path>subjects/ubersocial.com/ubersocial.com/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="371">
+      <device>nexus6p</device>
+      <path>subjects_critical/mrob.com/mrob.com/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="366">
+      <device>nexus6p</device>
+      <path>subjects/mrob.com/mrob.com/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="219">
+      <device>nexus6p</device>
+      <path>subjects_critical/hagley.org/hagley.org/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="339">
+      <device>nexus6p</device>
+      <path>subjects_critical/legalaidnc.org/legalaidnc.org/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="310">
+      <device>nexus6p</device>
+      <path>subjects_critical/kenengba.com/kenengba.com/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="22">
+      <device>nexus6p</device>
+      <path>subjects/adriaticbasket.info/adriaticbasket.info/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="5">
+      <device>nexus6p</device>
+      <path>subjects/adidasnmd.us/adidasnmd.us/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="48">
+      <device>nexus6p</device>
+      <path>subjects/ammar.cloud/ammar.cloud/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="341">
+      <device>nexus6p</device>
+      <path>subjects/lekhafoods.com/lekhafoods.com/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="263">
+      <device>nexus6p</device>
+      <path>subjects/iflyer.tv/iflyer.tv/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="97">
+      <device>nexus6p</device>
+      <path>subjects_critical/compresse-per-articolazioni.eu/compresse-per-articolazioni.eu/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="165">
+      <device>nexus6p</device>
+      <path>subjects/greasyfork.org/greasyfork.org/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="368">
+      <device>nexus6p</device>
+      <path>subjects/mrob.com/mrob.com/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="497">
+      <device>nexus6p</device>
+      <path>subjects_critical/velovita.com/velovita.com/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="316">
+      <device>nexus6p</device>
+      <path>subjects_critical/kenengba.com/kenengba.com/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="13">
+      <device>nexus6p</device>
+      <path>subjects_critical/adidasnmd.us/adidasnmd.us/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="482">
+      <device>nexus6p</device>
+      <path>subjects/velovita.com/velovita.com/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="269">
+      <device>nexus6p</device>
+      <path>subjects/iflyer.tv/iflyer.tv/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="420">
+      <device>nexus6p</device>
+      <path>subjects/sportravel.es/sportravel.es/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="138">
+      <device>nexus6p</device>
+      <path>subjects_critical/fusion.org/fusion.org/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="122">
+      <device>nexus6p</device>
+      <path>subjects/fusion.org/fusion.org/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="275">
+      <device>nexus6p</device>
+      <path>subjects_critical/iflyer.tv/iflyer.tv/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="426">
+      <device>nexus6p</device>
+      <path>subjects/sportravel.es/sportravel.es/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="315">
+      <device>nexus6p</device>
+      <path>subjects_critical/kenengba.com/kenengba.com/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="126">
+      <device>nexus6p</device>
+      <path>subjects/fusion.org/fusion.org/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="333">
+      <device>nexus6p</device>
+      <path>subjects_critical/legalaidnc.org/legalaidnc.org/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="128">
+      <device>nexus6p</device>
+      <path>subjects/fusion.org/fusion.org/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="59">
+      <device>nexus6p</device>
+      <path>subjects_critical/ammar.cloud/ammar.cloud/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="354">
+      <device>nexus6p</device>
+      <path>subjects_critical/lekhafoods.com/lekhafoods.com/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="378">
+      <device>nexus6p</device>
+      <path>subjects_critical/mrob.com/mrob.com/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="135">
+      <device>nexus6p</device>
+      <path>subjects_critical/fusion.org/fusion.org/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="466">
+      <device>nexus6p</device>
+      <path>subjects/ubersocial.com/ubersocial.com/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="425">
+      <device>nexus6p</device>
+      <path>subjects/sportravel.es/sportravel.es/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="471">
+      <device>nexus6p</device>
+      <path>subjects_critical/ubersocial.com/ubersocial.com/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="42">
+      <device>nexus6p</device>
+      <path>subjects/ammar.cloud/ammar.cloud/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="273">
+      <device>nexus6p</device>
+      <path>subjects_critical/iflyer.tv/iflyer.tv/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="419">
+      <device>nexus6p</device>
+      <path>subjects_critical/sciencebeta.com/sciencebeta.com/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="178">
+      <device>nexus6p</device>
+      <path>subjects_critical/greasyfork.org/greasyfork.org/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="147">
+      <device>nexus6p</device>
+      <path>subjects/gildedserpent.com/gildedserpent.com/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="359">
+      <device>nexus6p</device>
+      <path>subjects_critical/lekhafoods.com/lekhafoods.com/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="320">
+      <device>nexus6p</device>
+      <path>subjects/legalaidnc.org/legalaidnc.org/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="35">
+      <device>nexus6p</device>
+      <path>subjects_critical/adriaticbasket.info/adriaticbasket.info/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="156">
+      <device>nexus6p</device>
+      <path>subjects_critical/gildedserpent.com/gildedserpent.com/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="464">
+      <device>nexus6p</device>
+      <path>subjects/ubersocial.com/ubersocial.com/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="57">
+      <device>nexus6p</device>
+      <path>subjects_critical/ammar.cloud/ammar.cloud/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="343">
+      <device>nexus6p</device>
+      <path>subjects/lekhafoods.com/lekhafoods.com/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="21">
+      <device>nexus6p</device>
+      <path>subjects/adriaticbasket.info/adriaticbasket.info/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="139">
+      <device>nexus6p</device>
+      <path>subjects_critical/fusion.org/fusion.org/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="364">
+      <device>nexus6p</device>
+      <path>subjects/mrob.com/mrob.com/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="206">
+      <device>nexus6p</device>
+      <path>subjects/hagley.org/hagley.org/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="446">
+      <device>nexus6p</device>
+      <path>subjects/telfer.ru/telfer.ru/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="49">
+      <device>nexus6p</device>
+      <path>subjects/ammar.cloud/ammar.cloud/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="407">
+      <device>nexus6p</device>
+      <path>subjects/sciencebeta.com/sciencebeta.com/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="262">
+      <device>nexus6p</device>
+      <path>subjects/iflyer.tv/iflyer.tv/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="398">
+      <device>nexus6p</device>
+      <path>subjects_critical/quechua.co.uk/quechua.co.uk/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="208">
+      <device>nexus6p</device>
+      <path>subjects/hagley.org/hagley.org/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="194">
+      <device>nexus6p</device>
+      <path>subjects_critical/greentechmedia.com/greentechmedia.com/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="431">
+      <device>nexus6p</device>
+      <path>subjects_critical/sportravel.es/sportravel.es/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="484">
+      <device>nexus6p</device>
+      <path>subjects/velovita.com/velovita.com/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="408">
+      <device>nexus6p</device>
+      <path>subjects/sciencebeta.com/sciencebeta.com/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="393">
+      <device>nexus6p</device>
+      <path>subjects_critical/quechua.co.uk/quechua.co.uk/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="317">
+      <device>nexus6p</device>
+      <path>subjects_critical/kenengba.com/kenengba.com/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="292">
+      <device>nexus6p</device>
+      <path>subjects_critical/iliketubes.com/iliketubes.com/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="137">
+      <device>nexus6p</device>
+      <path>subjects_critical/fusion.org/fusion.org/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="321">
+      <device>nexus6p</device>
+      <path>subjects/legalaidnc.org/legalaidnc.org/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="163">
+      <device>nexus6p</device>
+      <path>subjects/greasyfork.org/greasyfork.org/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="288">
+      <device>nexus6p</device>
+      <path>subjects/iliketubes.com/iliketubes.com/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="299">
+      <device>nexus6p</device>
+      <path>subjects_critical/iliketubes.com/iliketubes.com/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="336">
+      <device>nexus6p</device>
+      <path>subjects_critical/legalaidnc.org/legalaidnc.org/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="188">
+      <device>nexus6p</device>
+      <path>subjects/greentechmedia.com/greentechmedia.com/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="498">
+      <device>nexus6p</device>
+      <path>subjects_critical/velovita.com/velovita.com/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="347">
+      <device>nexus6p</device>
+      <path>subjects/lekhafoods.com/lekhafoods.com/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="177">
+      <device>nexus6p</device>
+      <path>subjects_critical/greasyfork.org/greasyfork.org/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="94">
+      <device>nexus6p</device>
+      <path>subjects_critical/compresse-per-articolazioni.eu/compresse-per-articolazioni.eu/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="285">
+      <device>nexus6p</device>
+      <path>subjects/iliketubes.com/iliketubes.com/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="230">
+      <device>nexus6p</device>
+      <path>subjects_critical/hcss.com/hcss.com/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="218">
+      <device>nexus6p</device>
+      <path>subjects_critical/hagley.org/hagley.org/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="19">
+      <device>nexus6p</device>
+      <path>subjects_critical/adidasnmd.us/adidasnmd.us/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="73">
+      <device>nexus6p</device>
+      <path>subjects_critical/cbdvapejuice.net/cbdvapejuice.net/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="382">
+      <device>nexus6p</device>
+      <path>subjects/quechua.co.uk/quechua.co.uk/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="289">
+      <device>nexus6p</device>
+      <path>subjects/iliketubes.com/iliketubes.com/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="314">
+      <device>nexus6p</device>
+      <path>subjects_critical/kenengba.com/kenengba.com/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="25">
+      <device>nexus6p</device>
+      <path>subjects/adriaticbasket.info/adriaticbasket.info/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="437">
+      <device>nexus6p</device>
+      <path>subjects_critical/sportravel.es/sportravel.es/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="204">
+      <device>nexus6p</device>
+      <path>subjects/hagley.org/hagley.org/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="109">
+      <device>nexus6p</device>
+      <path>subjects/cottagelife.com/cottagelife.com/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="282">
+      <device>nexus6p</device>
+      <path>subjects/iliketubes.com/iliketubes.com/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="136">
+      <device>nexus6p</device>
+      <path>subjects_critical/fusion.org/fusion.org/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="53">
+      <device>nexus6p</device>
+      <path>subjects_critical/ammar.cloud/ammar.cloud/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="221">
+      <device>nexus6p</device>
+      <path>subjects/hcss.com/hcss.com/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="32">
+      <device>nexus6p</device>
+      <path>subjects_critical/adriaticbasket.info/adriaticbasket.info/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="307">
+      <device>nexus6p</device>
+      <path>subjects/kenengba.com/kenengba.com/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="373">
+      <device>nexus6p</device>
+      <path>subjects_critical/mrob.com/mrob.com/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="50">
+      <device>nexus6p</device>
+      <path>subjects_critical/ammar.cloud/ammar.cloud/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="85">
+      <device>nexus6p</device>
+      <path>subjects/compresse-per-articolazioni.eu/compresse-per-articolazioni.eu/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="388">
+      <device>nexus6p</device>
+      <path>subjects/quechua.co.uk/quechua.co.uk/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="130">
+      <device>nexus6p</device>
+      <path>subjects_critical/fusion.org/fusion.org/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="9">
+      <device>nexus6p</device>
+      <path>subjects/adidasnmd.us/adidasnmd.us/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="383">
+      <device>nexus6p</device>
+      <path>subjects/quechua.co.uk/quechua.co.uk/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="477">
+      <device>nexus6p</device>
+      <path>subjects_critical/ubersocial.com/ubersocial.com/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="111">
+      <device>nexus6p</device>
+      <path>subjects_critical/cottagelife.com/cottagelife.com/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="6">
+      <device>nexus6p</device>
+      <path>subjects/adidasnmd.us/adidasnmd.us/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="462">
+      <device>nexus6p</device>
+      <path>subjects/ubersocial.com/ubersocial.com/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="181">
+      <device>nexus6p</device>
+      <path>subjects/greentechmedia.com/greentechmedia.com/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="235">
+      <device>nexus6p</device>
+      <path>subjects_critical/hcss.com/hcss.com/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+  <run runId="63">
+      <device>nexus6p</device>
+      <path>subjects/cbdvapejuice.net/cbdvapejuice.net/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="334">
+      <device>nexus6p</device>
+      <path>subjects_critical/legalaidnc.org/legalaidnc.org/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="287">
+      <device>nexus6p</device>
+      <path>subjects/iliketubes.com/iliketubes.com/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="448">
+      <device>nexus6p</device>
+      <path>subjects/telfer.ru/telfer.ru/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="190">
+      <device>nexus6p</device>
+      <path>subjects_critical/greentechmedia.com/greentechmedia.com/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="24">
+      <device>nexus6p</device>
+      <path>subjects/adriaticbasket.info/adriaticbasket.info/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="132">
+      <device>nexus6p</device>
+      <path>subjects_critical/fusion.org/fusion.org/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="121">
+      <device>nexus6p</device>
+      <path>subjects/fusion.org/fusion.org/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="110">
+      <device>nexus6p</device>
+      <path>subjects_critical/cottagelife.com/cottagelife.com/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="499">
+      <device>nexus6p</device>
+      <path>subjects_critical/velovita.com/velovita.com/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+  <run runId="254">
+      <device>nexus6p</device>
+      <path>subjects_critical/holifestival.org/holifestival.org/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="258">
+      <device>nexus6p</device>
+      <path>subjects_critical/holifestival.org/holifestival.org/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="450">
+      <device>nexus6p</device>
+      <path>subjects_critical/telfer.ru/telfer.ru/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="82">
+      <device>nexus6p</device>
+      <path>subjects/compresse-per-articolazioni.eu/compresse-per-articolazioni.eu/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="157">
+      <device>nexus6p</device>
+      <path>subjects_critical/gildedserpent.com/gildedserpent.com/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="243">
+      <device>nexus6p</device>
+      <path>subjects/holifestival.org/holifestival.org/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="312">
+      <device>nexus6p</device>
+      <path>subjects_critical/kenengba.com/kenengba.com/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="176">
+      <device>nexus6p</device>
+      <path>subjects_critical/greasyfork.org/greasyfork.org/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="441">
+      <device>nexus6p</device>
+      <path>subjects/telfer.ru/telfer.ru/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="250">
+      <device>nexus6p</device>
+      <path>subjects_critical/holifestival.org/holifestival.org/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="158">
+      <device>nexus6p</device>
+      <path>subjects_critical/gildedserpent.com/gildedserpent.com/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="75">
+      <device>nexus6p</device>
+      <path>subjects_critical/cbdvapejuice.net/cbdvapejuice.net/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="38">
+      <device>nexus6p</device>
+      <path>subjects_critical/adriaticbasket.info/adriaticbasket.info/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="487">
+      <device>nexus6p</device>
+      <path>subjects/velovita.com/velovita.com/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="322">
+      <device>nexus6p</device>
+      <path>subjects/legalaidnc.org/legalaidnc.org/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="326">
+      <device>nexus6p</device>
+      <path>subjects/legalaidnc.org/legalaidnc.org/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="379">
+      <device>nexus6p</device>
+      <path>subjects_critical/mrob.com/mrob.com/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="492">
+      <device>nexus6p</device>
+      <path>subjects_critical/velovita.com/velovita.com/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="423">
+      <device>nexus6p</device>
+      <path>subjects/sportravel.es/sportravel.es/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="168">
+      <device>nexus6p</device>
+      <path>subjects/greasyfork.org/greasyfork.org/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="267">
+      <device>nexus6p</device>
+      <path>subjects/iflyer.tv/iflyer.tv/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="215">
+      <device>nexus6p</device>
+      <path>subjects_critical/hagley.org/hagley.org/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="309">
+      <device>nexus6p</device>
+      <path>subjects/kenengba.com/kenengba.com/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="36">
+      <device>nexus6p</device>
+      <path>subjects_critical/adriaticbasket.info/adriaticbasket.info/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="355">
+      <device>nexus6p</device>
+      <path>subjects_critical/lekhafoods.com/lekhafoods.com/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="308">
+      <device>nexus6p</device>
+      <path>subjects/kenengba.com/kenengba.com/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="286">
+      <device>nexus6p</device>
+      <path>subjects/iliketubes.com/iliketubes.com/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="108">
+      <device>nexus6p</device>
+      <path>subjects/cottagelife.com/cottagelife.com/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="196">
+      <device>nexus6p</device>
+      <path>subjects_critical/greentechmedia.com/greentechmedia.com/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="212">
+      <device>nexus6p</device>
+      <path>subjects_critical/hagley.org/hagley.org/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="98">
+      <device>nexus6p</device>
+      <path>subjects_critical/compresse-per-articolazioni.eu/compresse-per-articolazioni.eu/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="125">
+      <device>nexus6p</device>
+      <path>subjects/fusion.org/fusion.org/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="151">
+      <device>nexus6p</device>
+      <path>subjects_critical/gildedserpent.com/gildedserpent.com/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="175">
+      <device>nexus6p</device>
+      <path>subjects_critical/greasyfork.org/greasyfork.org/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="400">
+      <device>nexus6p</device>
+      <path>subjects/sciencebeta.com/sciencebeta.com/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="96">
+      <device>nexus6p</device>
+      <path>subjects_critical/compresse-per-articolazioni.eu/compresse-per-articolazioni.eu/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="246">
+      <device>nexus6p</device>
+      <path>subjects/holifestival.org/holifestival.org/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="114">
+      <device>nexus6p</device>
+      <path>subjects_critical/cottagelife.com/cottagelife.com/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="169">
+      <device>nexus6p</device>
+      <path>subjects/greasyfork.org/greasyfork.org/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="256">
+      <device>nexus6p</device>
+      <path>subjects_critical/holifestival.org/holifestival.org/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="272">
+      <device>nexus6p</device>
+      <path>subjects_critical/iflyer.tv/iflyer.tv/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="457">
+      <device>nexus6p</device>
+      <path>subjects_critical/telfer.ru/telfer.ru/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="224">
+      <device>nexus6p</device>
+      <path>subjects/hcss.com/hcss.com/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="348">
+      <device>nexus6p</device>
+      <path>subjects/lekhafoods.com/lekhafoods.com/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="101">
+      <device>nexus6p</device>
+      <path>subjects/cottagelife.com/cottagelife.com/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="430">
+      <device>nexus6p</device>
+      <path>subjects_critical/sportravel.es/sportravel.es/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="185">
+      <device>nexus6p</device>
+      <path>subjects/greentechmedia.com/greentechmedia.com/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="62">
+      <device>nexus6p</device>
+      <path>subjects/cbdvapejuice.net/cbdvapejuice.net/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="80">
+      <device>nexus6p</device>
+      <path>subjects/compresse-per-articolazioni.eu/compresse-per-articolazioni.eu/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="264">
+      <device>nexus6p</device>
+      <path>subjects/iflyer.tv/iflyer.tv/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="106">
+      <device>nexus6p</device>
+      <path>subjects/cottagelife.com/cottagelife.com/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="491">
+      <device>nexus6p</device>
+      <path>subjects_critical/velovita.com/velovita.com/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="226">
+      <device>nexus6p</device>
+      <path>subjects/hcss.com/hcss.com/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="283">
+      <device>nexus6p</device>
+      <path>subjects/iliketubes.com/iliketubes.com/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="10">
+      <device>nexus6p</device>
+      <path>subjects_critical/adidasnmd.us/adidasnmd.us/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="174">
+      <device>nexus6p</device>
+      <path>subjects_critical/greasyfork.org/greasyfork.org/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="449">
+      <device>nexus6p</device>
+      <path>subjects/telfer.ru/telfer.ru/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="160">
+      <device>nexus6p</device>
+      <path>subjects/greasyfork.org/greasyfork.org/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="29">
+      <device>nexus6p</device>
+      <path>subjects/adriaticbasket.info/adriaticbasket.info/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="434">
+      <device>nexus6p</device>
+      <path>subjects_critical/sportravel.es/sportravel.es/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="237">
+      <device>nexus6p</device>
+      <path>subjects_critical/hcss.com/hcss.com/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="294">
+      <device>nexus6p</device>
+      <path>subjects_critical/iliketubes.com/iliketubes.com/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="192">
+      <device>nexus6p</device>
+      <path>subjects_critical/greentechmedia.com/greentechmedia.com/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="390">
+      <device>nexus6p</device>
+      <path>subjects_critical/quechua.co.uk/quechua.co.uk/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="8">
+      <device>nexus6p</device>
+      <path>subjects/adidasnmd.us/adidasnmd.us/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="385">
+      <device>nexus6p</device>
+      <path>subjects/quechua.co.uk/quechua.co.uk/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="417">
+      <device>nexus6p</device>
+      <path>subjects_critical/sciencebeta.com/sciencebeta.com/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="255">
+      <device>nexus6p</device>
+      <path>subjects_critical/holifestival.org/holifestival.org/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="200">
+      <device>nexus6p</device>
+      <path>subjects/hagley.org/hagley.org/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="301">
+      <device>nexus6p</device>
+      <path>subjects/kenengba.com/kenengba.com/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="266">
+      <device>nexus6p</device>
+      <path>subjects/iflyer.tv/iflyer.tv/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="118">
+      <device>nexus6p</device>
+      <path>subjects_critical/cottagelife.com/cottagelife.com/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="55">
+      <device>nexus6p</device>
+      <path>subjects_critical/ammar.cloud/ammar.cloud/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="60">
+      <device>nexus6p</device>
+      <path>subjects/cbdvapejuice.net/cbdvapejuice.net/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="381">
+      <device>nexus6p</device>
+      <path>subjects/quechua.co.uk/quechua.co.uk/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="242">
+      <device>nexus6p</device>
+      <path>subjects/holifestival.org/holifestival.org/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="217">
+      <device>nexus6p</device>
+      <path>subjects_critical/hagley.org/hagley.org/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="162">
+      <device>nexus6p</device>
+      <path>subjects/greasyfork.org/greasyfork.org/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="412">
+      <device>nexus6p</device>
+      <path>subjects_critical/sciencebeta.com/sciencebeta.com/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="337">
+      <device>nexus6p</device>
+      <path>subjects_critical/legalaidnc.org/legalaidnc.org/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="389">
+      <device>nexus6p</device>
+      <path>subjects/quechua.co.uk/quechua.co.uk/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="433">
+      <device>nexus6p</device>
+      <path>subjects_critical/sportravel.es/sportravel.es/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="330">
+      <device>nexus6p</device>
+      <path>subjects_critical/legalaidnc.org/legalaidnc.org/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="476">
+      <device>nexus6p</device>
+      <path>subjects_critical/ubersocial.com/ubersocial.com/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="58">
+      <device>nexus6p</device>
+      <path>subjects_critical/ammar.cloud/ammar.cloud/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="414">
+      <device>nexus6p</device>
+      <path>subjects_critical/sciencebeta.com/sciencebeta.com/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="374">
+      <device>nexus6p</device>
+      <path>subjects_critical/mrob.com/mrob.com/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="222">
+      <device>nexus6p</device>
+      <path>subjects/hcss.com/hcss.com/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="68">
+      <device>nexus6p</device>
+      <path>subjects/cbdvapejuice.net/cbdvapejuice.net/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="451">
+      <device>nexus6p</device>
+      <path>subjects_critical/telfer.ru/telfer.ru/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="268">
+      <device>nexus6p</device>
+      <path>subjects/iflyer.tv/iflyer.tv/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="90">
+      <device>nexus6p</device>
+      <path>subjects_critical/compresse-per-articolazioni.eu/compresse-per-articolazioni.eu/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="384">
+      <device>nexus6p</device>
+      <path>subjects/quechua.co.uk/quechua.co.uk/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="16">
+      <device>nexus6p</device>
+      <path>subjects_critical/adidasnmd.us/adidasnmd.us/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="296">
+      <device>nexus6p</device>
+      <path>subjects_critical/iliketubes.com/iliketubes.com/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="167">
+      <device>nexus6p</device>
+      <path>subjects/greasyfork.org/greasyfork.org/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="391">
+      <device>nexus6p</device>
+      <path>subjects_critical/quechua.co.uk/quechua.co.uk/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="478">
+      <device>nexus6p</device>
+      <path>subjects_critical/ubersocial.com/ubersocial.com/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="209">
+      <device>nexus6p</device>
+      <path>subjects/hagley.org/hagley.org/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="345">
+      <device>nexus6p</device>
+      <path>subjects/lekhafoods.com/lekhafoods.com/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="422">
+      <device>nexus6p</device>
+      <path>subjects/sportravel.es/sportravel.es/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="145">
+      <device>nexus6p</device>
+      <path>subjects/gildedserpent.com/gildedserpent.com/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="153">
+      <device>nexus6p</device>
+      <path>subjects_critical/gildedserpent.com/gildedserpent.com/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="248">
+      <device>nexus6p</device>
+      <path>subjects/holifestival.org/holifestival.org/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="79">
+      <device>nexus6p</device>
+      <path>subjects_critical/cbdvapejuice.net/cbdvapejuice.net/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="198">
+      <device>nexus6p</device>
+      <path>subjects_critical/greentechmedia.com/greentechmedia.com/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="180">
+      <device>nexus6p</device>
+      <path>subjects/greentechmedia.com/greentechmedia.com/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="143">
+      <device>nexus6p</device>
+      <path>subjects/gildedserpent.com/gildedserpent.com/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="488">
+      <device>nexus6p</device>
+      <path>subjects/velovita.com/velovita.com/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="120">
+      <device>nexus6p</device>
+      <path>subjects/fusion.org/fusion.org/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="277">
+      <device>nexus6p</device>
+      <path>subjects_critical/iflyer.tv/iflyer.tv/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="3">
+      <device>nexus6p</device>
+      <path>subjects/adidasnmd.us/adidasnmd.us/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="377">
+      <device>nexus6p</device>
+      <path>subjects_critical/mrob.com/mrob.com/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="41">
+      <device>nexus6p</device>
+      <path>subjects/ammar.cloud/ammar.cloud/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="444">
+      <device>nexus6p</device>
+      <path>subjects/telfer.ru/telfer.ru/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="18">
+      <device>nexus6p</device>
+      <path>subjects_critical/adidasnmd.us/adidasnmd.us/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="280">
+      <device>nexus6p</device>
+      <path>subjects/iliketubes.com/iliketubes.com/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="323">
+      <device>nexus6p</device>
+      <path>subjects/legalaidnc.org/legalaidnc.org/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="210">
+      <device>nexus6p</device>
+      <path>subjects_critical/hagley.org/hagley.org/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="77">
+      <device>nexus6p</device>
+      <path>subjects_critical/cbdvapejuice.net/cbdvapejuice.net/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="302">
+      <device>nexus6p</device>
+      <path>subjects/kenengba.com/kenengba.com/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="456">
+      <device>nexus6p</device>
+      <path>subjects_critical/telfer.ru/telfer.ru/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="227">
+      <device>nexus6p</device>
+      <path>subjects/hcss.com/hcss.com/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="1">
+      <device>nexus6p</device>
+      <path>subjects/adidasnmd.us/adidasnmd.us/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="261">
+      <device>nexus6p</device>
+      <path>subjects/iflyer.tv/iflyer.tv/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="131">
+      <device>nexus6p</device>
+      <path>subjects_critical/fusion.org/fusion.org/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="87">
+      <device>nexus6p</device>
+      <path>subjects/compresse-per-articolazioni.eu/compresse-per-articolazioni.eu/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="12">
+      <device>nexus6p</device>
+      <path>subjects_critical/adidasnmd.us/adidasnmd.us/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    <run runId="481">
+      <device>nexus6p</device>
+      <path>subjects/velovita.com/velovita.com/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="443">
+      <device>nexus6p</device>
+      <path>subjects/telfer.ru/telfer.ru/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="463">
+      <device>nexus6p</device>
+      <path>subjects/ubersocial.com/ubersocial.com/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="405">
+      <device>nexus6p</device>
+      <path>subjects/sciencebeta.com/sciencebeta.com/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="494">
+      <device>nexus6p</device>
+      <path>subjects_critical/velovita.com/velovita.com/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="28">
+      <device>nexus6p</device>
+      <path>subjects/adriaticbasket.info/adriaticbasket.info/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="104">
+      <device>nexus6p</device>
+      <path>subjects/cottagelife.com/cottagelife.com/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="193">
+      <device>nexus6p</device>
+      <path>subjects_critical/greentechmedia.com/greentechmedia.com/</path>
+      <browser>firefox</browser>
+      <runCount>4</runCount>
+    </run>
+    <run runId="300">
+      <device>nexus6p</device>
+      <path>subjects/kenengba.com/kenengba.com/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="440">
+      <device>nexus6p</device>
+      <path>subjects/telfer.ru/telfer.ru/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="166">
+      <device>nexus6p</device>
+      <path>subjects/greasyfork.org/greasyfork.org/</path>
+      <browser>firefox</browser>
+      <runCount>7</runCount>
+    </run>
+    <run runId="65">
+      <device>nexus6p</device>
+      <path>subjects/cbdvapejuice.net/cbdvapejuice.net/</path>
+      <browser>firefox</browser>
+      <runCount>6</runCount>
+    </run>
+    <run runId="257">
+      <device>nexus6p</device>
+      <path>subjects_critical/holifestival.org/holifestival.org/</path>
+      <browser>firefox</browser>
+      <runCount>8</runCount>
+    </run>
+    <run runId="99">
+      <device>nexus6p</device>
+      <path>subjects_critical/compresse-per-articolazioni.eu/compresse-per-articolazioni.eu/</path>
+      <browser>firefox</browser>
+      <runCount>10</runCount>
+    </run>
+    <run runId="144">
+      <device>nexus6p</device>
+      <path>subjects/gildedserpent.com/gildedserpent.com/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="231">
+      <device>nexus6p</device>
+      <path>subjects_critical/hcss.com/hcss.com/</path>
+      <browser>firefox</browser>
+      <runCount>2</runCount>
+    </run>
+    <run runId="148">
+      <device>nexus6p</device>
+      <path>subjects/gildedserpent.com/gildedserpent.com/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="234">
+      <device>nexus6p</device>
+      <path>subjects_critical/hcss.com/hcss.com/</path>
+      <browser>firefox</browser>
+      <runCount>5</runCount>
+    </run>
+    <run runId="150">
+      <device>nexus6p</device>
+      <path>subjects_critical/gildedserpent.com/gildedserpent.com/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="260">
+      <device>nexus6p</device>
+      <path>subjects/iflyer.tv/iflyer.tv/</path>
+      <browser>firefox</browser>
+      <runCount>1</runCount>
+    </run>
+    <run runId="458">
+      <device>nexus6p</device>
+      <path>subjects_critical/telfer.ru/telfer.ru/</path>
+      <browser>firefox</browser>
+      <runCount>9</runCount>
+    </run>
+    <run runId="92">
+      <device>nexus6p</device>
+      <path>subjects_critical/compresse-per-articolazioni.eu/compresse-per-articolazioni.eu/</path>
+      <browser>firefox</browser>
+      <runCount>3</runCount>
+    </run>
+    </runsDone>
+</experiment>
