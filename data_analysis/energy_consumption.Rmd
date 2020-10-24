@@ -9,8 +9,11 @@ library(reshape)
 library(e1071)
 library(effsize)
 library(dunn.test)
-require(plyr)
-require(gridExtra)
+library(plyr)
+library(gridExtra)
+library(stringr)
+library(e1071)  
+library(effsize)
 ```
 
 Let us first load all measures obtained from the experiment.
@@ -73,37 +76,64 @@ firefox_data <- get_data("firefox")
 chrome_data <- get_data("chrome")
 ```
 
+Next, let us define a function to plot two histograms of values for non-critical and critical categories, as well as their qq plots.
+
+```{r}
+plot_hist_qq <- function(data, column, metric_label, unit_label, browser_name) {
+  # Plot histogram
+  hist_plot <- ggplot(chrome_data, aes_string(x = column, fill = 'critical', color = 'critical')) + geom_histogram(position = 'identity', alpha = 0.5) + xlab(paste(metric_label, ' (', unit_label, ')', sep='')) + ylab('Frequency') + ggtitle(paste('Histogram of ', metric_label, ' (', browser_name, ')', sep=''))+ scale_color_manual(labels=c('Original', 'Critical'), values=c('red', 'blue')) + scale_fill_manual(labels=c('Original', 'Critical'), values=c('red', 'blue')) + theme_minimal() +
+    theme(plot.title = element_text(hjust = 0.5),
+          axis.text.y   = element_text(size=14),
+          axis.text.x   = element_text(size=14),
+          axis.title.y  = element_text(size=14),
+          axis.title.x  = element_text(size=14),
+          panel.background = element_blank(),
+          legend.position = c(0.9, 0.9),
+          legend.title=element_blank(),
+          axis.line = element_line(colour = "black"))
+
+  # Plot qq
+  qq_plot <- ggplot(chrome_data, aes_string(sample = column, fill = 'critical', color = 'critical')) + stat_qq(alpha = 0.5) +  stat_qq_line() + xlab('Theoretical Quantile') + ylab('Actual Quantile') + ggtitle(paste('Q-Q Plot of ', metric_label, ' (', browser_name, ')', sep='')) + scale_color_manual(labels=c('Original', 'Critical'), values=c('red', 'blue')) + scale_fill_manual(labels=c('Original', 'Critical'), values=c('red', 'blue')) + theme_minimal() +
+    theme(plot.title = element_text(hjust = 0.5),
+          axis.text.y   = element_text(size=14),
+          axis.text.x   = element_text(size=14),
+          axis.title.y  = element_text(size=14),
+          axis.title.x  = element_text(size=14),
+          panel.background = element_blank(),
+          legend.position = c(0.1, 0.9),
+          legend.title=element_blank(),
+          axis.line = element_line(colour = "black"))
+  
+  show(hist_plot)
+  show(qq_plot)
+}
+
+plot_hist_qq(chrome_data, 'energy_consumption', "Energy Consumption", "Joules", 'Chrome')
+plot_hist_qq(chrome_data, 'time', "Initial Load Time", "Milliseconds", 'Chrome')
+plot_hist_qq(chrome_data, 'cpu_usage', "CPU Utilisation", "%", 'Chrome')
+plot_hist_qq(chrome_data, 'memory_usage', "Memory Utilisation", "kB", 'Chrome')
+
+plot_hist_qq(firefox_data, 'energy_consumption', "Energy Consumption", "Joules", 'Firefox')
+plot_hist_qq(firefox_data, 'time', "Initial Load Time", "Milliseconds", 'Firefox')
+plot_hist_qq(firefox_data, 'cpu_usage', "CPU Utilisation", "%", 'Firefox')
+plot_hist_qq(firefox_data, 'memory_usage', "Memory Utilisation", "kB", 'Firefox')
+```
+
+# RQ1
+
 ```{r}
 #perform shapiro tests to check for normality. p-values lower than 0.05 are not normally distributed
 print(firefox_data)
-shapiro.test(firefox_data$energy_consumption)
-shapiro.test(firefox_data$time)
-shapiro.test(firefox_data$memory_usage)
-shapiro.test(firefox_data$cpu_usage)
+shapiro.test(firefox_data[firefox_data$critical == TRUE,]$energy_consumption)
+shapiro.test(firefox_data[firefox_data$critical == TRUE,]$time)
+shapiro.test(firefox_data[firefox_data$critical == TRUE,]$memory_usage)
+shapiro.test(firefox_data[firefox_data$critical == TRUE,]$cpu_usage)
 ```
 
 ```{r}
-#make qqplots of the data for additional verification (even though our sample size isn't small)
-make_qqplot <- function(column, title, critical=TRUE) {
-  qqnorm(column, main=paste("Normal Q-Q plot of", title, sep=" "))
-  qqline(column, col = "blue")
-}
-make_qqplot(firefox_data[firefox_data$critical == TRUE,]$energy_consumption, "energy consumption for firefox (critical)", TRUE)
-make_qqplot(firefox_data[firefox_data$critical == FALSE,]$energy_consumption, "energy consumption for firefox (non critical)", FALSE)
-
-make_qqplot(firefox_data[firefox_data$critical == FALSE,]$cpu_usage, "CPU usage for firefox (non critical)", FALSE)
-make_qqplot(firefox_data[firefox_data$critical == TRUE,]$cpu_usage, "CPU usage for firefox (critical)", TRUE)
-```
-```{r}
-hist(firefox_data[firefox_data$critical == TRUE,]$energy_consumption, breaks=40, main="Histogram plot of energy consumption for firefox (critical)", xlab = "Energy consumption (J)")
-hist(firefox_data[firefox_data$critical == FALSE,]$energy_consumption, breaks=100, main="Histogram plot of energy consumption for firefox (non critical)", xlab = "Energy consumption (J)")
-hist(firefox_data[firefox_data$critical == TRUE,]$cpu_usage, breaks=30, main="Histogram plot of CPU usage for firefox (critical)", xlab = "CPU usage (%)")
-hist(firefox_data[firefox_data$critical == TRUE,]$memory_usage, breaks=25, main="Histogram plot of memory usage for firefox (critical)", xlab = "Memory usage (kB)")
-
 #perform wilcox test as the data is not normally distributed (at least not before applying transformations or removing outliers)
 wilcox.test(firefox_data[firefox_data$critical == TRUE,]$energy_consumption, firefox_data[firefox_data$critical == FALSE,]$energy_consumption)
 ```
-
 
 ```{r}
 print(chrome_data)
@@ -115,20 +145,8 @@ shapiro.test(chrome_data$cpu_usage)
 ```
 
 ```{r}
-make_qqplot(chrome_data[chrome_data$critical == TRUE,]$energy_consumption, "energy consumption for chrome (critical)")
-make_qqplot(chrome_data[chrome_data$critical == FALSE,]$energy_consumption, "energy consumption for chrome (non critical)", FALSE)
-
-make_qqplot(chrome_data[chrome_data$critical == FALSE,]$cpu_usage, "CPU usage for chrome (non critical)", FALSE)
-make_qqplot(chrome_data[chrome_data$critical == TRUE,]$cpu_usage, "CPU usage for chrome (critical)", TRUE)
-```
-
-```{r}
-hist(chrome_data[chrome_data$critical == TRUE,]$energy_consumption, breaks=40, main="Histogram plot of energy consumption for chrome (critical)", xlab = "Energy consumption (J)")
-hist(chrome_data[chrome_data$critical == FALSE,]$energy_consumption, breaks=30, main="Histogram plot of energy consumption for chrome (non critical)", xlab = "Energy consumption (J)")
-hist(chrome_data[chrome_data$critical == TRUE,]$cpu_usage, breaks=20, main="Histogram plot of CPU usage for chrome (critical)", xlab = "CPU usage (%)")
-hist(chrome_data[chrome_data$critical == TRUE,]$memory_usage, breaks=25, main="Histogram plot of memory usage for chrome (critical)", xlab = "Memory usage (kB)")
 
 #perform wilcox test as the data is not normally distributed (at least not before applying transformations or removing outliers)
-wilcox.test(chrome_data[chrome_data$critical == TRUE,]$energy_consumption, chrome_data[chrome_data$critical == FALSE,]$energy_consumption)
+wilcox.test(chrome_data[chrome_data$critical == TRUE,]$energy_consumption, chrome_data[chrome_data$critical == FALSE,]$energy_consumption, mu = 0)
 ```
 
