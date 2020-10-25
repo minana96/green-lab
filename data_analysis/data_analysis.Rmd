@@ -1,0 +1,342 @@
+---
+title: "Critcal CSS experiment - Data analysis"
+output: html_notebook
+---
+
+```{r}
+library(ggplot2)
+library(reshape)
+library(e1071)
+library(effsize)
+library(dunn.test)
+library(plyr)
+library(gridExtra)
+library(stringr)
+library(e1071)  
+library(effsize)
+```
+
+Let us first load all measures obtained from the experiment.
+
+```{r}
+# Get the measures (cpu load, memory usage, energy consumption and load time) for the specific browser (equal to folder name).
+get_data <- function(browser_name) {
+  subjects_path = paste("./data", browser_name, "data/nexus6p", sep="/")
+  subjects <- list.dirs(subjects_path, full.names = FALSE, recursive = FALSE)
+  data <- data.frame(
+    name = character(),
+    critical = logical(),
+    energy_consumption = double(),
+    time = integer(),
+    memory_usage = integer(),
+    cpu_usage = double(),
+    stringsAsFactors = FALSE
+  )
+
+  for (subject in subjects) {
+    # Obtain android measures (CPU usage)
+    cpu_data <- data.frame(cpu_util = numeric())
+    for (run_file in list.files(path = paste(subjects_path, subject, browser_name, "android", sep="/"), full.names = TRUE)[-1]) {
+      android_results <- read.csv(run_file)
+      cpu_data[nrow(cpu_data) + 1, ] <- c(mean(android_results$cpu))
+    }
+
+    # Obtain Trepn measures (time and memory usage)
+    memory_data <- data.frame(mem_usage = numeric())
+    time_data <- data.frame(time=numeric())
+    for (run_file in list.files(path = paste(subjects_path, subject, browser_name, "trepn", sep="/"), full.names = TRUE)[-1]) {
+      trepn_results <- read.csv(run_file)
+      memory_data[nrow(memory_data) + 1, ] <- c(mean(trepn_results[, 2]))
+      time_data[nrow(time_data) + 1, ] <- c(max(trepn_results[, 1]))
+    }
+    
+    # Obtain Batterystats measures (energy consumption)
+    energy_data <- data.frame(energy = numeric())
+    for (run_file in list.files(path = paste(subjects_path, subject, browser_name, "batterystats", sep="/"), full.names = TRUE, pattern = "^Joule")) {
+      batterystats_results <- read.csv(run_file)
+      energy_data[nrow(energy_data) + 1, ] <- c(mean(batterystats_results[1, ]))
+    }
+    
+    run_data <- data.frame(
+      rep(strsplit(subject, "-")[[1]][2], nrow(energy_data)),
+      rep(startsWith(subject, "subjects_critical"), nrow(energy_data)),
+      energy_data,
+      time_data,
+      memory_data,
+      cpu_data
+    )
+    names(run_data) <- names(data)
+    data <- rbind(data, run_data)
+  }
+
+  return(data)
+}
+
+firefox_data <- get_data("firefox")
+chrome_data <- get_data("chrome")
+```
+
+Next, let us define a function to plot two histograms of values for non-critical and critical categories, as well as their qq plots.
+
+```{r}
+plot_hist_qq <- function(data, column, metric_label, unit_label, browser_name) {
+  # Plot histogram
+  hist_plot <- ggplot(data, aes_string(x = column, fill = 'critical', color = 'critical')) + geom_histogram(position = 'identity', alpha = 0.5) + xlab(paste(metric_label, ' (', unit_label, ')', sep='')) + ylab('Frequency') + ggtitle(paste('Histogram of ', metric_label, ' (', browser_name, ')', sep=''))+ scale_color_manual(labels=c('Original', 'Critical'), values=c('red', 'blue')) + scale_fill_manual(labels=c('Original', 'Critical'), values=c('red', 'blue')) + theme_minimal() +
+    theme(plot.title = element_text(hjust = 0.5),
+          axis.text.y   = element_text(size=14),
+          axis.text.x   = element_text(size=14),
+          axis.title.y  = element_text(size=14),
+          axis.title.x  = element_text(size=14),
+          panel.background = element_blank(),
+          legend.position = c(0.9, 0.9),
+          legend.title=element_blank(),
+          axis.line = element_line(colour = "black"))
+
+  # Plot qq
+  qq_plot <- ggplot(data, aes_string(sample = column, fill = 'critical', color = 'critical')) + stat_qq(alpha = 0.5) +  stat_qq_line() + xlab('Theoretical Quantile') + ylab('Actual Quantile') + ggtitle(paste('Q-Q Plot of ', metric_label, ' (', browser_name, ')', sep='')) + scale_color_manual(labels=c('Original', 'Critical'), values=c('red', 'blue')) + scale_fill_manual(labels=c('Original', 'Critical'), values=c('red', 'blue')) + theme_minimal() +
+    theme(plot.title = element_text(hjust = 0.5),
+          axis.text.y   = element_text(size=14),
+          axis.text.x   = element_text(size=14),
+          axis.title.y  = element_text(size=14),
+          axis.title.x  = element_text(size=14),
+          panel.background = element_blank(),
+          legend.position = c(0.1, 0.9),
+          legend.title=element_blank(),
+          axis.line = element_line(colour = "black"))
+  
+  show(hist_plot)
+  show(qq_plot)
+}
+```
+
+## RQ1
+
+To get an impression of the distribution of the data, we first plot the histogram and qq plot of the energy consumption.
+
+```{r}
+plot_hist_qq(chrome_data, 'energy_consumption', "Energy Consumption", "Joules", 'Chrome')
+
+plot_hist_qq(firefox_data, 'energy_consumption', "Energy Consumption", "Joules", 'Firefox')
+```
+In the above plots we observe some outliers, which we will *not* remove, to prevent potential bias. The actual quantiles seem to diverge from the theoretical quantiles, especially for Chrome, so we do not think these measures follow a normal distribution. To confirm, let us compute the skewness and perform a shapiro-wilk test.
+
+```{r}
+skewness_and_shapiro <- function(data, column) {
+  print(paste('Skewness critical:', skewness(data[data$critical == TRUE, ][[column]])))
+  print(paste('Skewness original:', skewness(data[data$critical == FALSE, ][[column]])))
+  
+  show(shapiro.test(data[data$critical == TRUE, ][[column]]))
+  show(shapiro.test(data[data$critical == FALSE, ][[column]]))
+}
+```
+
+```{r}
+skewness_and_shapiro(chrome_data, 'energy_consumption')
+```
+```{r}
+skewness_and_shapiro(firefox_data, 'energy_consumption')
+```
+For both chrome and firefox and both the original and critical versions of the web apps, a positive skewness is observed. Also, all shapiro-wilk test results yield a p-value < 0.05, meaning that we can reject H0 that these measures originate from a normal distribution.
+
+To compensate for the skewness, let us consider transforming the data using log, square root and reciprocal transformations. All are suitable for positively skewed data.
+
+```{r}
+transform_and_test <- function(data, column, metric_label, unit_label, browser_name) {
+  critical = data$critical
+
+  print('SQRT')
+  sqrt_transformed <- sqrt(data[[column]])
+  plot_hist_qq(data.frame(critical, sqrt_transformed), 'sqrt_transformed', paste('SQRT-Transformed', metric_label), unit_label, browser_name)
+  skewness_and_shapiro(data.frame(critical, sqrt_transformed), 'sqrt_transformed')
+  
+  print('LOG')
+  log_transformed <- log10(data[[column]])
+  plot_hist_qq(data.frame(critical, log_transformed), 'log_transformed', paste('LOG-Transformed', metric_label), unit_label, browser_name)
+  skewness_and_shapiro(data.frame(critical, log_transformed), 'log_transformed')
+  
+  print('INV')
+  inv_transformed <- 1 / data[[column]]
+  plot_hist_qq(data.frame(critical, inv_transformed), 'inv_transformed', paste('INV-Transformed', metric_label), unit_label, browser_name)
+  skewness_and_shapiro(data.frame(critical, inv_transformed), 'inv_transformed')
+}
+```
+
+First, for chrome:
+
+```{r}
+transform_and_test(chrome_data, 'energy_consumption', "Energy Consumption", "Joules", 'Chrome')
+```
+
+Then firefox:
+
+```{r}
+transform_and_test(firefox_data, 'energy_consumption', "Energy Consumption", "Joules", 'Firefox')
+```
+
+As it turns out, none of the sets of measures seem to follow a normal distribution. We therefore perform only non-parametric tests. Let us consider the Wilcoxon non-parametric rank-based test.
+
+```{r}
+wilcox.test(chrome_data[chrome_data$critical == TRUE,]$energy_consumption, chrome_data[chrome_data$critical == FALSE,]$energy_consumption)
+
+wilcox.test(firefox_data[firefox_data$critical == TRUE,]$energy_consumption, firefox_data[firefox_data$critical == FALSE,]$energy_consumption)
+```
+For both chrome and firefox the Wilcoxon test yields a p-value > 0.05, meaning that we cannot reject H0 that the difference between pairs follows a symmetric distribution around zero. Hence, we are not able to claim that web apps with or without application of the Critical CSS Technique consume different amounts of energy on our mobile device.
+
+## RQ2
+
+### Time
+
+To get an impression of the distribution of the data, we first plot the histogram and qq plot of the energy consumption.
+
+```{r}
+plot_hist_qq(chrome_data, 'time', "Initial Load Time", "Milliseconds", 'Chrome')
+
+plot_hist_qq(firefox_data, 'time', "Initial Load Time", "Milliseconds", 'Firefox')
+```
+
+In the above plots we observe some outliers, which we will *not* remove, to prevent potential bias. The actual quantiles seem to diverge from the theoretical quantiles, especially for Chrome, so we do not think these measures follow a normal distribution. To confirm, let us compute the skewness and perform a shapiro-wilk test.
+
+```{r}
+skewness_and_shapiro(chrome_data, 'time')
+```
+```{r}
+skewness_and_shapiro(firefox_data, 'time')
+```
+For both chrome and firefox and both the original and critical versions of the web apps, a positive skewness is observed. Also, all shapiro-wilk test results yield a p-value < 0.05, meaning that we can reject H0 that these measures originate from a normal distribution.
+
+To compensate for the skewness, let us consider transforming the data using log, square root and reciprocal transformations. All are suitable for positively skewed data.
+
+First, for chrome:
+
+```{r}
+transform_and_test(chrome_data, 'time', "Initial Load Time", "Milliseconds", 'Chrome')
+```
+
+Then firefox:
+
+```{r}
+transform_and_test(firefox_data, 'time', "Initial Load Time", "Milliseconds", 'Firefox')
+```
+
+As it turns out, none of the sets of measures (*except* for the inverse transformation of critical measures for firefox) seem to follow a normal distribution. We therefore perform only non-parametric tests. Let us consider the Wilcoxon non-parametric rank-based test.
+
+```{r}
+wilcox.test(chrome_data[chrome_data$critical == TRUE,]$time, chrome_data[chrome_data$critical == FALSE,]$time)
+
+wilcox.test(firefox_data[firefox_data$critical == TRUE,]$time, firefox_data[firefox_data$critical == FALSE,]$time)
+```
+
+For both chrome and firefox the Wilcoxon test yields a p-value > 0.05, meaning that we cannot reject H0 that the difference between pairs follows a symmetric distribution around zero. Hence, we are not able to claim that web apps with or without application of the Critical CSS Technique differ in their initial load time on our mobile device.
+
+### CPU Utilisation
+
+To get an impression of the distribution of the data, we first plot the histogram and qq plot of the energy consumption.
+
+```{r}
+plot_hist_qq(chrome_data, 'cpu_usage', "CPU Utilisation", "%", 'Chrome')
+
+plot_hist_qq(firefox_data, 'cpu_usage', "CPU Utilisation", "%", 'Firefox')
+```
+
+In the above plots we observe some outliers, which we will *not* remove, to prevent potential bias. The actual quantiles seem to diverge from the theoretical quantiles, especially for Chrome, so we do not think these measures follow a normal distribution. To confirm, let us compute the skewness and perform a shapiro-wilk test.
+
+```{r}
+skewness_and_shapiro(chrome_data, 'cpu_usage')
+```
+```{r}
+skewness_and_shapiro(firefox_data, 'cpu_usage')
+```
+For both chrome and firefox and both the original and critical versions of the web apps, a positive skewness is observed. Also, all shapiro-wilk test results yield a p-value < 0.05, meaning that we can reject H0 that these measures originate from a normal distribution.
+
+To compensate for the skewness, let us consider transforming the data using log, square root and reciprocal transformations. All are suitable for positively skewed data.
+
+First, for chrome:
+
+```{r}
+transform_and_test(chrome_data, 'cpu_usage', "CPU Utilisation", "%", 'Chrome')
+```
+
+Then firefox:
+
+```{r}
+transform_and_test(firefox_data, 'cpu_usage', "CPU Utilisation", "%", 'Firefox')
+```
+
+As it turns out, none of the sets of measures seem to follow a normal distribution. We therefore perform only non-parametric tests. Let us consider the Wilcoxon non-parametric rank-based test.
+
+```{r}
+wilcox.test(chrome_data[chrome_data$critical == TRUE,]$cpu_usage, chrome_data[chrome_data$critical == FALSE,]$cpu_usage)
+
+wilcox.test(firefox_data[firefox_data$critical == TRUE,]$cpu_usage, firefox_data[firefox_data$critical == FALSE,]$cpu_usage)
+```
+For both chrome and firefox the Wilcoxon test yields a p-value > 0.05, meaning that we cannot reject H0 that the difference between pairs follows a symmetric distribution around zero. Hence, we are not able to claim that web apps with or without application of the Critical CSS Technique differ in their CPU utilisation on our mobile device.
+
+### Memory Utilisation
+
+To get an impression of the distribution of the data, we first plot the histogram and qq plot of the energy consumption.
+
+```{r}
+plot_hist_qq(chrome_data, 'memory_usage', "Memory Utilisation", "KB", 'Chrome')
+
+plot_hist_qq(firefox_data, 'memory_usage', "Memory Utilisation", "KB", 'Firefox')
+```
+
+In the above plots we observe some outliers, which we will *not* remove, to prevent potential bias. The actual quantiles seem to diverge from the theoretical quantiles, especially for Chrome, so we do not think these measures follow a normal distribution. To confirm, let us compute the skewness and perform a shapiro-wilk test.
+
+```{r}
+skewness_and_shapiro(chrome_data, 'memory_usage')
+```
+```{r}
+skewness_and_shapiro(firefox_data, 'memory_usage')
+```
+For both chrome and firefox and both the original and critical versions of the web apps, a positive skewness is observed. Also, all shapiro-wilk test results yield a p-value < 0.05, meaning that we can reject H0 that these measures originate from a normal distribution.
+
+To compensate for the skewness, let us consider transforming the data using log, square root and reciprocal transformations. All are suitable for positively skewed data.
+
+First, for chrome:
+
+```{r}
+transform_and_test(chrome_data, 'memory_usage', "Memory Utilisation", "KB", 'Chrome')
+```
+
+Then firefox:
+
+```{r}
+transform_and_test(firefox_data, 'memory_usage', "Memory Utilisation", "KB", 'Firefox')
+```
+
+As it turns out, none of the sets of measures seem to follow a normal distribution. We therefore perform only non-parametric tests. Let us consider the Wilcoxon non-parametric rank-based test.
+
+```{r}
+wilcox.test(chrome_data[chrome_data$critical == TRUE,]$memory_usage, chrome_data[chrome_data$critical == FALSE,]$memory_usage)
+
+wilcox.test(firefox_data[firefox_data$critical == TRUE,]$memory_usage, firefox_data[firefox_data$critical == FALSE,]$memory_usage)
+```
+
+For firefox the Wilcoxon test yields a p-value > 0.05, meaning that we cannot reject H0 that the difference between pairs follows a symmetric distribution around zero. Hence, we are not able to claim that web apps with or without application of the Critical CSS Technique differ in their memory utilisation while using firefox on our mobile device.
+
+For chrome on the other hand, the Wilcoxon test yields a p-value < 0.05, meaning that we reject H0 that the difference between pairs follows a symmetric distribution around zero. Hence, we are able to claim that web apps with or without application of the Critical CSS Technique differ in their 
+memory utilisation while using chrome on our mobile device.
+
+#### Effect size
+To quantify the impact of Critical CSS on memory utilisation, we compute Cliff’s delta effect size measure to the data related to the memory utilisation of the web apps.
+
+```{r}
+cliff.delta(chrome_data[chrome_data$critical == TRUE,]$memory_usage, chrome_data[chrome_data$critical == FALSE,]$memory_usage)
+```
+The obtained Cliff’s delta effect size measure is 0.10694, thus
+indicating a negligible effect size (|d| < 0.147). Judging from the 
+
+```{r}
+ggplot(chrome_data, group=critical) + theme_minimal() + scale_color_manual(labels=c('Original', 'Critical'), values=c('red', 'blue')) + scale_fill_manual(labels=c('Original', 'Critical'), values=c('red', 'blue')) + theme_minimal() + ggtitle('Density Curve for Memory Utilisation') + xlab('Memory Utilisation (KB)') + ylab('Density') + 
+  theme(plot.title = element_text(hjust = 0.5),
+        axis.text.y = element_text(size=14),
+        axis.text.x   = element_text(size=14),
+        axis.title.y  = element_text(size=14),
+        axis.title.x  = element_text(size=14),
+        legend.position = c(0.9, 0.9),
+        legend.title=element_blank(),
+        panel.background = element_blank(),
+        axis.line = element_line(colour = "black")) + geom_density(aes(x = memory_usage, fill=critical, color=critical), alpha=0.4)
+```
+
