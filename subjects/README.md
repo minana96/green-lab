@@ -20,7 +20,7 @@ their properties:
 |---|---|---|---|---|---|---|
 | 1 | [adidasnmd](http://www.adidasnmd.us/) | 4 | 0.0 | 93.075 | false | firefox |
 | 2 | [adriaticbasket](http://www.adriaticbasket.info/) | 4 | 0.0 | 96.850 | false | firefox |
-| 3 | [alliedtelesis](https://www.alliedtelesis.com/en) | 8 | 56.4 | 98.425 | false | chrome |
+| 3 | [alliedtelesis](https://www.alliedtelesis.com/en) | 8 | 56.4 | 98.425 | true | chrome |
 | 4 | [ammar](https://ammar.cloud/) | 18 | 24.0 | 98.128 | false | firefox |
 | 5 | [andreaswaelti](http://andreaswaelti.com/) | 3 | 0.0 | 75.800 | false | chrome |
 | 6 | [astropix](https://astropix.com/) | 2 | 80.4 | 85.3 | false | chrome |
@@ -44,28 +44,28 @@ their properties:
 | 24 | [japassie](http://japassie.com/) | 12 | 1.8 | 94.508 | false | chrome
 | 25 | [kasteelhoensbroek](https://www.kasteelhoensbroek.nl/) | 16 | 58.1 | 93.675 | false | chrome
 | 26 | [kenengba](https://kenengba.com/) | 9 | 69.1 | 90.622 | false | firefox |
-| 27 | [kpoe](http://kpoe.at/) | 11 | 0.0 | 87.127 | false |  |
-| 28 | [legalaidnc](https://legalaidnc.org/) | 8 | 0.0 | 92.712 | false | |
-| 29 | [lekhafoods](https://www.lekhafoods.com/) | 4 | 0.0 | 87.175 | false | |
-| 30 | [magnetadservices](https://magnetadservices.com/) | 1 | 0.0 | 94.5 | false | |
-| 31 | [marketlii](http://marketlii.com/) | 6 | 0.0 | 70.767 | false | |
-| 32 | [megatorrentshd](https://megatorrentshd.biz/) | 4 | 88.1 | 95.225 | true | |
-| 33 | [mrob](http://mrob.com/) | 1 | 0.0 | 75.200 | false | |
-| 34 | [nflpenalties](https://www.nflpenalties.com/) | 5 | 0.0 | 81.340 | false | |
-| 35 | [pieterhugo](https://pieterhugo.com/) | 2 | 16.1 | 87.05 | false | |
-| 36 | [porn5f](https://www.porn5f.com/) | 3 | 49.9 | 97.033 | false | |
-| 37 | [quechua](https://www.quechua.com/) | 7 | 0.0 | 95.714 | false | |
-| 38 | [renesia](https://www.renesia.com/) | 5 | 100.0 | 96.420 | false | |
-| 39 | [sciencebeta](https://sciencebeta.com/) | 1 | 0.0 | 84.6 | false | |
-| 40 | [spansh](https://spansh.co.uk/plotter) | 2 | 0.0 | 95.850 | false | |
-| 41 | [sportravel](https://sportravel.es/) | 12 | 75.4 | 96.692 | false | |
-| 42 | [swimply](https://swimply.com/) | 8 | 0.0 | 83.688 | false | |
-| 43 | [telfer](https://telfer.ru/) | 5 | 0.0 | 95.56 | false | |
-| 44 | [ubersocial](https://ubersocial.com/) | 3 | 0.0 | 85.967 | false | |
-| 45 | [velovita](https://velovita.com/) | 28 | 0.0 | 92.207 | false | |
-| 46 | [vergecampus](https://vergecampus.com/) | 11 | 53.5 | 84.781 | false | |
-| 47 | [visit-sidney](https://visit-sidney.com) | 3 | 0.0 | 73.567 | false | |
-| 48 | [worldlink](https://worldlink.com.np/) | 20 | 0.0 | 86.435 | false | |
-| 49 | [xobor](http://xobor.com/) | 8 | 0.0 | 83.450 | false | |
-| 50 | [zuver](https://zuver.net.au/) | 10 | 10.5 | 99.000 | false | |
+| 27 | [kpoe](http://kpoe.at/) | 11 | 0.0 | 87.127 | false | chrome |
+| 28 | [legalaidnc](https://legalaidnc.org/) | 8 | 0.0 | 92.712 | false | firefox |
+| 29 | [lekhafoods](https://www.lekhafoods.com/) | 4 | 0.0 | 87.175 | false | firefox |
+| 30 | [magnetadservices](https://magnetadservices.com/) | 1 | 0.0 | 94.5 | false | chrome |
+| 31 | [marketlii](http://marketlii.com/) | 6 | 0.0 | 70.767 | false | chrome |
+| 32 | [megatorrentshd](https://megatorrentshd.biz/) | 4 | 88.1 | 95.225 | true | chrome |
+| 33 | [mrob](http://mrob.com/) | 1 | 0.0 | 75.200 | false | firefox |
+| 34 | [nflpenalties](https://www.nflpenalties.com/) | 5 | 0.0 | 81.340 | false | chrome |
+| 35 | [pieterhugo](https://pieterhugo.com/) | 2 | 16.1 | 87.05 | false | chrome |
+| 36 | [porn5f](https://www.porn5f.com/) | 3 | 49.9 | 97.033 | false | chrome |
+| 37 | [quechua](https://www.quechua.com/) | 7 | 0.0 | 95.714 | false | firefox |
+| 38 | [renesia](https://www.renesia.com/) | 5 | 100.0 | 96.420 | false | chrome |
+| 39 | [sciencebeta](https://sciencebeta.com/) | 1 | 0.0 | 84.6 | false | firefox |
+| 40 | [spansh](https://spansh.co.uk/plotter) | 2 | 0.0 | 95.850 | false | chrome |
+| 41 | [sportravel](https://sportravel.es/) | 12 | 75.4 | 96.692 | false | firefox |
+| 42 | [swimply](https://swimply.com/) | 8 | 0.0 | 83.688 | false | chrome |
+| 43 | [telfer](https://telfer.ru/) | 5 | 0.0 | 95.56 | false | firefox |
+| 44 | [ubersocial](https://ubersocial.com/) | 3 | 0.0 | 85.967 | false | firefox |
+| 45 | [velovita](https://velovita.com/) | 28 | 0.0 | 92.207 | false | firefox |
+| 46 | [vergecampus](https://vergecampus.com/) | 11 | 53.5 | 84.781 | false | chrome |
+| 47 | [visit-sidney](https://visit-sidney.com) | 3 | 0.0 | 73.567 | false | chrome |
+| 48 | [worldlink](https://worldlink.com.np/) | 20 | 0.0 | 86.435 | false | chrome |
+| 49 | [xobor](http://xobor.com/) | 8 | 0.0 | 83.450 | false | chrome |
+| 50 | [zuver](https://zuver.net.au/) | 10 | 10.5 | 99.000 | false | chrome |
 
