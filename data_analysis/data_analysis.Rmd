@@ -325,7 +325,7 @@ To quantify the impact of Critical CSS on memory utilisation, we compute Cliffâ€
 cliff.delta(chrome_data[chrome_data$critical == TRUE,]$memory_usage, chrome_data[chrome_data$critical == FALSE,]$memory_usage)
 ```
 The obtained Cliffâ€™s delta effect size measure is 0.10694, thus
-indicating a negligible effect size (|d| < 0.147). Judging from the 
+indicating a negligible effect size (|d| < 0.147).
 
 ```{r}
 ggplot(chrome_data, group=critical) + theme_minimal() + scale_color_manual(labels=c('Original', 'Critical'), values=c('red', 'blue')) + scale_fill_manual(labels=c('Original', 'Critical'), values=c('red', 'blue')) + theme_minimal() + ggtitle('Density Curve for Memory Utilisation') + xlab('Memory Utilisation (KB)') + ylab('Density') + 
