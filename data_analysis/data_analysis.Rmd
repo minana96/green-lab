@@ -127,14 +127,17 @@ skewness_and_shapiro <- function(data, column) {
   
   show(shapiro.test(data[data$critical == TRUE, ][[column]]))
   show(shapiro.test(data[data$critical == FALSE, ][[column]]))
+  return(c(shapiro.test(data[data$critical == TRUE, ][[column]]), shapiro.test(data[data$critical == FALSE, ][[column]])))
 }
 ```
 
 ```{r}
-skewness_and_shapiro(chrome_data, 'energy_consumption')
+shapiro_chrome <- skewness_and_shapiro(chrome_data, 'energy_consumption')
 ```
 ```{r}
-skewness_and_shapiro(firefox_data, 'energy_consumption')
+shapiro_firefox <- skewness_and_shapiro(firefox_data, 'energy_consumption')
+p.adjust(c(shapiro_chrome[[2]], shapiro_firefox[[2]]), method="BH")
+p.adjust(c(shapiro_chrome[[6]], shapiro_firefox[[6]]), method="BH")
 ```
 For both chrome and firefox and both the original and critical versions of the web apps, a positive skewness is observed. Also, all shapiro-wilk test results yield a p-value < 0.05, meaning that we can reject H0 that these measures originate from a normal distribution.
 
@@ -148,12 +151,12 @@ transform_and_test <- function(data, column, metric_label, unit_label, browser_n
   sqrt_transformed <- sqrt(data[[column]])
   plot_hist_qq(data.frame(critical, sqrt_transformed), 'sqrt_transformed', paste('SQRT-Transformed', metric_label), unit_label, browser_name)
   skewness_and_shapiro(data.frame(critical, sqrt_transformed), 'sqrt_transformed')
-  
+
   print('LOG')
   log_transformed <- log10(data[[column]])
   plot_hist_qq(data.frame(critical, log_transformed), 'log_transformed', paste('LOG-Transformed', metric_label), unit_label, browser_name)
   skewness_and_shapiro(data.frame(critical, log_transformed), 'log_transformed')
-  
+
   print('INV')
   inv_transformed <- 1 / data[[column]]
   plot_hist_qq(data.frame(critical, inv_transformed), 'inv_transformed', paste('INV-Transformed', metric_label), unit_label, browser_name)
@@ -176,9 +179,13 @@ transform_and_test(firefox_data, 'energy_consumption', "Energy Consumption", "Jo
 As it turns out, none of the sets of measures seem to follow a normal distribution. We therefore perform only non-parametric tests. Let us consider the Wilcoxon non-parametric rank-based test.
 
 ```{r}
-wilcox.test(chrome_data[chrome_data$critical == TRUE,]$energy_consumption, chrome_data[chrome_data$critical == FALSE,]$energy_consumption)
+wilcox_chrome <- wilcox.test(chrome_data[chrome_data$critical == TRUE,]$energy_consumption, chrome_data[chrome_data$critical == FALSE,]$energy_consumption)
+wilcox_chrome
 
-wilcox.test(firefox_data[firefox_data$critical == TRUE,]$energy_consumption, firefox_data[firefox_data$critical == FALSE,]$energy_consumption)
+wilcox_firefox <- wilcox.test(firefox_data[firefox_data$critical == TRUE,]$energy_consumption, firefox_data[firefox_data$critical == FALSE,]$energy_consumption)
+wilcox_firefox
+
+print(p.adjust(c(wilcox_chrome[[3]], wilcox_firefox[[3]]), method="BH"))
 ```
 For both chrome and firefox the Wilcoxon test yields a p-value > 0.05, meaning that we cannot reject H0 that the difference between pairs follows a symmetric distribution around zero. Hence, we are not able to claim that web apps with or without application of the Critical CSS Technique consume different amounts of energy on our mobile device.
 
@@ -197,10 +204,15 @@ plot_hist_qq(firefox_data, 'time', "Initial Load Time", "Milliseconds", 'Firefox
 In the above plots we observe some outliers, which we will *not* remove, to prevent potential bias. The actual quantiles seem to diverge from the theoretical quantiles, especially for Chrome, so we do not think these measures follow a normal distribution. To confirm, let us compute the skewness and perform a shapiro-wilk test.
 
 ```{r}
-skewness_and_shapiro(chrome_data, 'time')
+shapiro_chrome <- skewness_and_shapiro(chrome_data, 'time')
+shapiro_chrome
 ```
 ```{r}
-skewness_and_shapiro(firefox_data, 'time')
+shapiro_firefox <- skewness_and_shapiro(firefox_data, 'time')
+shapiro_firefox
+
+p.adjust(c(shapiro_chrome[[2]], shapiro_firefox[[2]]), method="BH")
+p.adjust(c(shapiro_chrome[[6]], shapiro_firefox[[6]]), method="BH")
 ```
 For both chrome and firefox and both the original and critical versions of the web apps, a positive skewness is observed. Also, all shapiro-wilk test results yield a p-value < 0.05, meaning that we can reject H0 that these measures originate from a normal distribution.
 
@@ -221,9 +233,13 @@ transform_and_test(firefox_data, 'time', "Initial Load Time", "Milliseconds", 'F
 As it turns out, none of the sets of measures (*except* for the inverse transformation of critical measures for firefox) seem to follow a normal distribution. We therefore perform only non-parametric tests. Let us consider the Wilcoxon non-parametric rank-based test.
 
 ```{r}
-wilcox.test(chrome_data[chrome_data$critical == TRUE,]$time, chrome_data[chrome_data$critical == FALSE,]$time)
+wilcox_chrome <- wilcox.test(chrome_data[chrome_data$critical == TRUE,]$time, chrome_data[chrome_data$critical == FALSE,]$time)
+wilcox_chrome
 
-wilcox.test(firefox_data[firefox_data$critical == TRUE,]$time, firefox_data[firefox_data$critical == FALSE,]$time)
+wilcox_firefox <- wilcox.test(firefox_data[firefox_data$critical == TRUE,]$time, firefox_data[firefox_data$critical == FALSE,]$time)
+wilcox_firefox
+
+print(p.adjust(c(wilcox_chrome[[3]], wilcox_firefox[[3]]), method="BH"))
 ```
 
 For both chrome and firefox the Wilcoxon test yields a p-value > 0.05, meaning that we cannot reject H0 that the difference between pairs follows a symmetric distribution around zero. Hence, we are not able to claim that web apps with or without application of the Critical CSS Technique differ in their initial load time on our mobile device.
@@ -241,10 +257,13 @@ plot_hist_qq(firefox_data, 'cpu_usage', "CPU Utilisation", "%", 'Firefox')
 In the above plots we observe some outliers, which we will *not* remove, to prevent potential bias. The actual quantiles seem to diverge from the theoretical quantiles, especially for Chrome, so we do not think these measures follow a normal distribution. To confirm, let us compute the skewness and perform a shapiro-wilk test.
 
 ```{r}
-skewness_and_shapiro(chrome_data, 'cpu_usage')
+shapiro_chrome <- skewness_and_shapiro(chrome_data, 'cpu_usage')
 ```
 ```{r}
-skewness_and_shapiro(firefox_data, 'cpu_usage')
+shapiro_firefox <- skewness_and_shapiro(firefox_data, 'cpu_usage')
+
+p.adjust(c(shapiro_chrome[[2]], shapiro_firefox[[2]]), method="BH")
+p.adjust(c(shapiro_chrome[[6]], shapiro_firefox[[6]]), method="BH")
 ```
 For both chrome and firefox and both the original and critical versions of the web apps, a positive skewness is observed. Also, all shapiro-wilk test results yield a p-value < 0.05, meaning that we can reject H0 that these measures originate from a normal distribution.
 
@@ -265,9 +284,13 @@ transform_and_test(firefox_data, 'cpu_usage', "CPU Utilisation", "%", 'Firefox')
 As it turns out, none of the sets of measures seem to follow a normal distribution. We therefore perform only non-parametric tests. Let us consider the Wilcoxon non-parametric rank-based test.
 
 ```{r}
-wilcox.test(chrome_data[chrome_data$critical == TRUE,]$cpu_usage, chrome_data[chrome_data$critical == FALSE,]$cpu_usage)
+wilcox_chrome <- wilcox.test(chrome_data[chrome_data$critical == TRUE,]$cpu_usage, chrome_data[chrome_data$critical == FALSE,]$cpu_usage)
+wilcox_chrome
 
-wilcox.test(firefox_data[firefox_data$critical == TRUE,]$cpu_usage, firefox_data[firefox_data$critical == FALSE,]$cpu_usage)
+wilcox_firefox <- wilcox.test(firefox_data[firefox_data$critical == TRUE,]$cpu_usage, firefox_data[firefox_data$critical == FALSE,]$cpu_usage)
+wilcox_firefox
+
+print(p.adjust(c(wilcox_chrome[[3]], wilcox_firefox[[3]]), method="BH"))
 ```
 For both chrome and firefox the Wilcoxon test yields a p-value > 0.05, meaning that we cannot reject H0 that the difference between pairs follows a symmetric distribution around zero. Hence, we are not able to claim that web apps with or without application of the Critical CSS Technique differ in their CPU utilisation on our mobile device.
 
@@ -284,10 +307,13 @@ plot_hist_qq(firefox_data, 'memory_usage', "Memory Utilisation", "KB", 'Firefox'
 In the above plots we observe some outliers, which we will *not* remove, to prevent potential bias. The actual quantiles seem to diverge from the theoretical quantiles, especially for Chrome, so we do not think these measures follow a normal distribution. To confirm, let us compute the skewness and perform a shapiro-wilk test.
 
 ```{r}
-skewness_and_shapiro(chrome_data, 'memory_usage')
+shapiro_chrome <- skewness_and_shapiro(chrome_data, 'memory_usage')
 ```
 ```{r}
-skewness_and_shapiro(firefox_data, 'memory_usage')
+shapiro_firefox <- skewness_and_shapiro(firefox_data, 'memory_usage')
+
+p.adjust(c(shapiro_chrome[[2]], shapiro_firefox[[2]]), method="BH")
+p.adjust(c(shapiro_chrome[[6]], shapiro_firefox[[6]]), method="BH")
 ```
 For both chrome and firefox and both the original and critical versions of the web apps, a positive skewness is observed. Also, all shapiro-wilk test results yield a p-value < 0.05, meaning that we can reject H0 that these measures originate from a normal distribution.
 
@@ -308,9 +334,13 @@ transform_and_test(firefox_data, 'memory_usage', "Memory Utilisation", "KB", 'Fi
 As it turns out, none of the sets of measures seem to follow a normal distribution. We therefore perform only non-parametric tests. Let us consider the Wilcoxon non-parametric rank-based test.
 
 ```{r}
-wilcox.test(chrome_data[chrome_data$critical == TRUE,]$memory_usage, chrome_data[chrome_data$critical == FALSE,]$memory_usage)
+wilcox_chrome <- wilcox.test(chrome_data[chrome_data$critical == TRUE,]$memory_usage, chrome_data[chrome_data$critical == FALSE,]$memory_usage)
+wilcox_chrome
 
-wilcox.test(firefox_data[firefox_data$critical == TRUE,]$memory_usage, firefox_data[firefox_data$critical == FALSE,]$memory_usage)
+wilcox_firefox <- wilcox.test(firefox_data[firefox_data$critical == TRUE,]$memory_usage, firefox_data[firefox_data$critical == FALSE,]$memory_usage)
+wilcox_firefox
+
+print(p.adjust(c(wilcox_chrome[[3]], wilcox_firefox[[3]]), method="BH"))
 ```
 
 For firefox the Wilcoxon test yields a p-value > 0.05, meaning that we cannot reject H0 that the difference between pairs follows a symmetric distribution around zero. Hence, we are not able to claim that web apps with or without application of the Critical CSS Technique differ in their memory utilisation while using firefox on our mobile device.
@@ -339,4 +369,3 @@ ggplot(chrome_data, group=critical) + theme_minimal() + scale_color_manual(label
         panel.background = element_blank(),
         axis.line = element_line(colour = "black")) + geom_density(aes(x = memory_usage, fill=critical, color=critical), alpha=0.4)
 ```
-
