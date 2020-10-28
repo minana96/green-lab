@@ -2,8 +2,7 @@
 
 **Step 1**: Create a virtual environment called `venv` in the root folder of the repository. Make sure this is active from now on for any further interaction (`source venv/bin/activate`). Install all required python packages using `pip install -r requirements.txt`.
 
-**Step 2**: Follow the Step 5 from instructions [here](https://github.com/S2-group/android-runner/blob/master/CONTRIBUTING.md) to install the dependencies of  
-android-runner for your platform (Linux or Mac OS).
+**Step 2**: Follow the Step 5 from instructions [here](https://github.com/S2-group/android-runner/blob/master/CONTRIBUTING.md) to install the dependencies of android-runner for your platform (Linux or Mac OS).
 
 **Step 3**: Turn on `Developer Options` on your Android mobile device (detailed information depending on the Android version can be found [here](https://developer.android.com/studio/debug/dev-options)). Under `Developer Options`, turn on `USB debugging` and enable `Stay Awake` option.
 
