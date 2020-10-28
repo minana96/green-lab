@@ -1,6 +1,6 @@
 # Steps to configure experiment
 
-This document gives an overview over the sequence of steps that you need to execute to replicate the experiment using your laptop and Android mobile device.
+This document gives an overview over the sequence of steps that you need to execute to replicate the Critical CSS experiment using your laptop and Android mobile device.
 
 **Step 1**: Create a virtual environment called `venv` in the root folder of the repository. Make sure this is active from now on for any further interaction (`source venv/bin/activate`). Install all required python packages using `pip install -r requirements.txt`.
 
