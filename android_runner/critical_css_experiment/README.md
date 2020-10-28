@@ -8,7 +8,7 @@
 
 **Step 4**: Plug in the mobile device to your laptop via USB and run `adb devices` command to start up a deamon. You should see the device's identifier. If not, unplug the USB cable and try again. If this does not solve the problem, try restarting the mobile device. 
 
-**Step 5**: Add the device to the list in the `devices.json` file by the format `<name> : <identifier>`. The `<indetifier>` is an output from the previous step whereas `<name>` should reflect the name of the device (by your choice).
+**Step 5**: Add the device to the list in the `android_runner/devices.json` file by the format `<name>: <identifier>`. The `<indetifier>` is an output from the previous step whereas `<name>` should reflect the name of the device by your choice.
 
 **Step 6**: Navigate to `android-runner/AndroidRunner/Plugins/trepn` and install Trepn profiler on the mobile device by running `adb install com.quicinc.trepn.apk` command. You can verify that Trepn installed by running `adb shell pm list packages`. It will list all apks installed on the mobile device.
 
