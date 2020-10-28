@@ -1,4 +1,4 @@
-"""Bofore run script
+"""Before run script
 
 This script will be executed before every run.
 
@@ -7,12 +7,13 @@ directory so that all dependent resources would be accessed using
 correct paths.
 """
 
-from android_runner.AndroidRunner.Device import Device
-from critical_css_experiment.Scripts.Server import start 
+from AndroidRunner.Device import Device
+from critical_css_experiment.Scripts.web_server import start
 
 
 # noinspection PyUnusedLocal
 def main(device: Device, *args: tuple, **kwargs: dict):
-    path = args[0]
-    start(path)
+    subject_dir_path = args[0]
+    start(subject_dir_path)
+
 

@@ -5,8 +5,8 @@ This script will be executed upon completion of each run.
 Its purpose is to stop the local web server.
 """
 
-from android_runner.AndroidRunner.Device import Device
-from critical_css_experiment.Scripts.Server import stop 
+from AndroidRunner.Device import Device
+from critical_css_experiment.Scripts.web_server import stop 
 
 
 # noinspection PyUnusedLocal

@@ -12,7 +12,7 @@ version V85.0.4183.127.
 """
 
 import time
-from android_runner.AndroidRunner.Device import Device
+from AndroidRunner.Device import Device
 
 
 default_wait_time = 0.3

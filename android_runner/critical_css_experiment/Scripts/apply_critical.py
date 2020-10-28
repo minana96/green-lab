@@ -19,6 +19,7 @@ import os
 
 from distutils.dir_util import copy_tree
 
+
 def apply_critical(directory):
     copy_tree(directory, f"{directory[:-1]}_critical")
     directory = f"{directory[:-1]}_critical"

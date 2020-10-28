@@ -18,6 +18,7 @@ python3 add_get_on_load.py path/To/Directory/With/All/WebApps/ <IP_ADDRESS>
 import os, sys
 from bs4 import BeautifulSoup
 
+
 def add_get_on_load(directory, ip):
     """Adds a custom DOMContentLoaded event listener
     """
