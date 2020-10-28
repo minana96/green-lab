@@ -15,13 +15,21 @@ library(stringr)
 library(e1071)  
 library(effsize)
 ```
+```{r setup, include=FALSE, echo=FALSE}
+plots_dir <- paste(getwd(), "/plots", sep="")
+if (!dir.exists(plots_dir)) {
+  dir.create(plots_dir)
+}
+require("knitr")
+opts_knit$set(root.dir = plots_dir)
+```
 
 Let us first load all measures obtained from the experiment.
 
 ```{r}
 # Get the measures (cpu load, memory usage, energy consumption and load time) for the specific browser (equal to folder name).
 get_data <- function(browser_name) {
-  subjects_path = paste("./data", browser_name, "data/nexus6p", sep="/")
+  subjects_path = paste(".././data", browser_name, "data/nexus6p", sep="/")
   subjects <- list.dirs(subjects_path, full.names = FALSE, recursive = FALSE)
   data <- data.frame(
     name = character(),
@@ -79,7 +87,7 @@ chrome_data <- get_data("chrome")
 Next, let us define a function to plot two histograms of values for non-critical and critical categories, as well as their qq plots.
 
 ```{r}
-plot_hist_qq <- function(data, column, metric_label, unit_label, browser_name, save=FALSE) {
+plot_hist_qq <- function(data, column, metric_label, unit_label, browser_name, transformation="") {
   # Plot histogram
   hist_plot <- ggplot(data, aes_string(x = column, fill = 'critical', color = 'critical')) + geom_histogram(position = 'identity', alpha = 0.5) + xlab(paste(metric_label, ' (', unit_label, ')', sep='')) + ylab('Frequency') + ggtitle(paste('Histogram of ', metric_label, ' (', browser_name, ')', sep=''))+ scale_color_manual(labels=c('Original', 'Critical'), values=c('red', 'blue')) + scale_fill_manual(labels=c('Original', 'Critical'), values=c('red', 'blue')) + theme_minimal() +
     theme(plot.title = element_text(hjust = 0.5),
@@ -105,14 +113,11 @@ plot_hist_qq <- function(data, column, metric_label, unit_label, browser_name, s
           axis.line = element_line(colour = "black"))
   
   show(hist_plot)
-  if (save == TRUE) {
-    ggsave(paste("hist", "_", str_replace_all(metric_label, "[^[:alnum:]]", ""), "_", browser_name, ".pdf", sep="")) 
-  }
+  ggsave(paste("hist", "_", str_replace_all(metric_label, "[^[:alnum:]]", ""), "_", browser_name, ".pdf", sep="")) 
 
   show(qq_plot)
-  if (save == TRUE) {
-   ggsave(paste("qq", "_", str_replace_all(metric_label, "[^[:alnum:]]", ""), "_", browser_name, ".pdf", sep="")) 
-  }
+  ggsave(paste("qq", "_", str_replace_all(metric_label, "[^[:alnum:]]", ""), "_", browser_name, ".pdf", sep="")) 
+
 
 }
 ```
@@ -122,12 +127,9 @@ plot_hist_qq <- function(data, column, metric_label, unit_label, browser_name, s
 To get an impression of the distribution of the data, we first plot the histogram and qq plot of the energy consumption.
 
 ```{r}
-dir.create(paste(getwd(), "/plots", sep=""))
-plots_dir <- paste(getwd(), "/plots", sep="")
-setwd(plots_dir)
-plot_hist_qq(chrome_data, 'energy_consumption', "Energy Consumption", "Joules", 'Chrome', TRUE)
+plot_hist_qq(chrome_data, 'energy_consumption', "Energy Consumption", "Joules", 'Chrome')
 
-plot_hist_qq(firefox_data, 'energy_consumption', "Energy Consumption", "Joules", 'Firefox', TRUE)
+plot_hist_qq(firefox_data, 'energy_consumption', "Energy Consumption", "Joules", 'Firefox')
 ```
 In the above plots we observe some outliers, which we will *not* remove, to prevent potential bias. The actual quantiles seem to diverge from the theoretical quantiles, especially for Chrome, so we do not think these measures follow a normal distribution. To confirm, let us compute the skewness and perform a shapiro-wilk test.
 
@@ -207,10 +209,9 @@ For both chrome and firefox the Wilcoxon test yields a p-value > 0.05, meaning t
 To get an impression of the distribution of the data, we first plot the histogram and qq plot of the energy consumption.
 
 ```{r}
-setwd(plots_dir)
-plot_hist_qq(chrome_data, 'time', "Initial Load Time", "Milliseconds", 'Chrome', TRUE)
+plot_hist_qq(chrome_data, 'time', "Initial Load Time", "Milliseconds", 'Chrome')
 
-plot_hist_qq(firefox_data, 'time', "Initial Load Time", "Milliseconds", 'Firefox', TRUE)
+plot_hist_qq(firefox_data, 'time', "Initial Load Time", "Milliseconds", 'Firefox')
 ```
 
 In the above plots we observe some outliers, which we will *not* remove, to prevent potential bias. The actual quantiles seem to diverge from the theoretical quantiles, especially for Chrome, so we do not think these measures follow a normal distribution. To confirm, let us compute the skewness and perform a shapiro-wilk test.
@@ -261,10 +262,9 @@ For both chrome and firefox the Wilcoxon test yields a p-value > 0.05, meaning t
 To get an impression of the distribution of the data, we first plot the histogram and qq plot of the energy consumption.
 
 ```{r}
-setwd(plots_dir)
-plot_hist_qq(chrome_data, 'cpu_usage', "CPU Utilisation", "%", 'Chrome', TRUE)
+plot_hist_qq(chrome_data, 'cpu_usage', "CPU Utilisation", "%", 'Chrome')
 
-plot_hist_qq(firefox_data, 'cpu_usage', "CPU Utilisation", "%", 'Firefox', TRUE)
+plot_hist_qq(firefox_data, 'cpu_usage', "CPU Utilisation", "%", 'Firefox')
 ```
 
 In the above plots we observe some outliers, which we will *not* remove, to prevent potential bias. The actual quantiles seem to diverge from the theoretical quantiles, especially for Chrome, so we do not think these measures follow a normal distribution. To confirm, let us compute the skewness and perform a shapiro-wilk test.
@@ -312,10 +312,9 @@ For both chrome and firefox the Wilcoxon test yields a p-value > 0.05, meaning t
 To get an impression of the distribution of the data, we first plot the histogram and qq plot of the energy consumption.
 
 ```{r}
-setwd(plots_dir)
-plot_hist_qq(chrome_data, 'memory_usage', "Memory Utilisation", "KB", 'Chrome', TRUE)
+plot_hist_qq(chrome_data, 'memory_usage', "Memory Utilisation", "KB", 'Chrome')
 
-plot_hist_qq(firefox_data, 'memory_usage', "Memory Utilisation", "KB", 'Firefox', TRUE)
+plot_hist_qq(firefox_data, 'memory_usage', "Memory Utilisation", "KB", 'Firefox')
 ```
 
 In the above plots we observe some outliers, which we will *not* remove, to prevent potential bias. The actual quantiles seem to diverge from the theoretical quantiles, especially for Chrome, so we do not think these measures follow a normal distribution. To confirm, let us compute the skewness and perform a shapiro-wilk test.
@@ -372,7 +371,6 @@ The obtained Cliff’s delta effect size measure is 0.10694, thus
 indicating a negligible effect size (|d| < 0.147).
 
 ```{r}
-setwd(plots_dir)
 ggplot(chrome_data, group=critical) + theme_minimal() + scale_color_manual(labels=c('Original', 'Critical'), values=c('red', 'blue')) + scale_fill_manual(labels=c('Original', 'Critical'), values=c('red', 'blue')) + theme_minimal() + ggtitle('Density Curve for Memory Utilisation') + xlab('Memory Utilisation (KB)') + ylab('Density') + 
   theme(plot.title = element_text(hjust = 0.5),
         axis.text.y = element_text(size=14),
