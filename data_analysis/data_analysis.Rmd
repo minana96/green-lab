@@ -140,17 +140,14 @@ skewness_and_shapiro <- function(data, column) {
   
   show(shapiro.test(data[data$critical == TRUE, ][[column]]))
   show(shapiro.test(data[data$critical == FALSE, ][[column]]))
-  return(c(shapiro.test(data[data$critical == TRUE, ][[column]]), shapiro.test(data[data$critical == FALSE, ][[column]])))
 }
 ```
 
 ```{r}
-shapiro_chrome <- skewness_and_shapiro(chrome_data, 'energy_consumption')
+skewness_and_shapiro(chrome_data, 'energy_consumption')
 ```
 ```{r}
-shapiro_firefox <- skewness_and_shapiro(firefox_data, 'energy_consumption')
-p.adjust(c(shapiro_chrome[[2]], shapiro_firefox[[2]]), method="BH")
-p.adjust(c(shapiro_chrome[[6]], shapiro_firefox[[6]]), method="BH")
+skewness_and_shapiro(firefox_data, 'energy_consumption')
 ```
 For both chrome and firefox and both the original and critical versions of the web apps, a positive skewness is observed. Also, all shapiro-wilk test results yield a p-value < 0.05, meaning that we can reject H0 that these measures originate from a normal distribution.
 
@@ -217,15 +214,10 @@ plot_hist_qq(firefox_data, 'time', "Initial Load Time", "Milliseconds", 'Firefox
 In the above plots we observe some outliers, which we will *not* remove, to prevent potential bias. The actual quantiles seem to diverge from the theoretical quantiles, especially for Chrome, so we do not think these measures follow a normal distribution. To confirm, let us compute the skewness and perform a shapiro-wilk test.
 
 ```{r}
-shapiro_chrome <- skewness_and_shapiro(chrome_data, 'time')
-shapiro_chrome
+skewness_and_shapiro(chrome_data, 'time')
 ```
 ```{r}
-shapiro_firefox <- skewness_and_shapiro(firefox_data, 'time')
-shapiro_firefox
-
-p.adjust(c(shapiro_chrome[[2]], shapiro_firefox[[2]]), method="BH")
-p.adjust(c(shapiro_chrome[[6]], shapiro_firefox[[6]]), method="BH")
+skewness_and_shapiro(firefox_data, 'time')
 ```
 For both chrome and firefox and both the original and critical versions of the web apps, a positive skewness is observed. Also, all shapiro-wilk test results yield a p-value < 0.05, meaning that we can reject H0 that these measures originate from a normal distribution.
 
@@ -270,13 +262,10 @@ plot_hist_qq(firefox_data, 'cpu_usage', "CPU Utilisation", "%", 'Firefox')
 In the above plots we observe some outliers, which we will *not* remove, to prevent potential bias. The actual quantiles seem to diverge from the theoretical quantiles, especially for Chrome, so we do not think these measures follow a normal distribution. To confirm, let us compute the skewness and perform a shapiro-wilk test.
 
 ```{r}
-shapiro_chrome <- skewness_and_shapiro(chrome_data, 'cpu_usage')
+skewness_and_shapiro(chrome_data, 'cpu_usage')
 ```
 ```{r}
-shapiro_firefox <- skewness_and_shapiro(firefox_data, 'cpu_usage')
-
-p.adjust(c(shapiro_chrome[[2]], shapiro_firefox[[2]]), method="BH")
-p.adjust(c(shapiro_chrome[[6]], shapiro_firefox[[6]]), method="BH")
+skewness_and_shapiro(firefox_data, 'cpu_usage')
 ```
 For both chrome and firefox and both the original and critical versions of the web apps, a positive skewness is observed. Also, all shapiro-wilk test results yield a p-value < 0.05, meaning that we can reject H0 that these measures originate from a normal distribution.
 
@@ -320,13 +309,10 @@ plot_hist_qq(firefox_data, 'memory_usage', "Memory Utilisation", "KB", 'Firefox'
 In the above plots we observe some outliers, which we will *not* remove, to prevent potential bias. The actual quantiles seem to diverge from the theoretical quantiles, especially for Chrome, so we do not think these measures follow a normal distribution. To confirm, let us compute the skewness and perform a shapiro-wilk test.
 
 ```{r}
-shapiro_chrome <- skewness_and_shapiro(chrome_data, 'memory_usage')
+skewness_and_shapiro(chrome_data, 'memory_usage')
 ```
 ```{r}
-shapiro_firefox <- skewness_and_shapiro(firefox_data, 'memory_usage')
-
-p.adjust(c(shapiro_chrome[[2]], shapiro_firefox[[2]]), method="BH")
-p.adjust(c(shapiro_chrome[[6]], shapiro_firefox[[6]]), method="BH")
+skewness_and_shapiro(firefox_data, 'memory_usage')
 ```
 For both chrome and firefox and both the original and critical versions of the web apps, a positive skewness is observed. Also, all shapiro-wilk test results yield a p-value < 0.05, meaning that we can reject H0 that these measures originate from a normal distribution.
 
