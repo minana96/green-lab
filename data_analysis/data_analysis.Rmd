@@ -200,7 +200,7 @@ wilcox_firefox
 
 print(p.adjust(c(wilcox_chrome[[3]], wilcox_firefox[[3]]), method="BH"))
 ```
-For both chrome and firefox the Wilcoxon test yields a p-value > 0.05, meaning that we cannot reject H0 that the difference between pairs follows a symmetric distribution around zero. Hence, we are not able to claim that web apps with or without application of the Critical CSS Technique consume different amounts of energy on our mobile device.
+For both chrome and firefox the Wilcoxon test yields a p-value > 0.05 after p-value corrections, meaning that we cannot reject H0 that the difference between pairs follows a symmetric distribution around zero. Hence, we are not able to claim that web apps with or without application of the Critical CSS Technique consume different amounts of energy on our mobile device.
 
 ## RQ2
 
@@ -255,7 +255,7 @@ wilcox_firefox
 print(p.adjust(c(wilcox_chrome[[3]], wilcox_firefox[[3]]), method="BH"))
 ```
 
-For both chrome and firefox the Wilcoxon test yields a p-value > 0.05, meaning that we cannot reject H0 that the difference between pairs follows a symmetric distribution around zero. Hence, we are not able to claim that web apps with or without application of the Critical CSS Technique differ in their initial load time on our mobile device.
+For both chrome and firefox the Wilcoxon test yields a p-value > 0.05 after p-value corrections, meaning that we cannot reject H0 that the difference between pairs follows a symmetric distribution around zero. Hence, we are not able to claim that web apps with or without application of the Critical CSS Technique differ in their initial load time on our mobile device.
 
 ### CPU Utilisation
 
@@ -305,7 +305,7 @@ wilcox_firefox
 
 print(p.adjust(c(wilcox_chrome[[3]], wilcox_firefox[[3]]), method="BH"))
 ```
-For both chrome and firefox the Wilcoxon test yields a p-value > 0.05, meaning that we cannot reject H0 that the difference between pairs follows a symmetric distribution around zero. Hence, we are not able to claim that web apps with or without application of the Critical CSS Technique differ in their CPU utilisation on our mobile device.
+For both chrome and firefox the Wilcoxon test yields a p-value > 0.05 after p-value corrections, meaning that we cannot reject H0 that the difference between pairs follows a symmetric distribution around zero. Hence, we are not able to claim that web apps with or without application of the Critical CSS Technique differ in their CPU utilisation on our mobile device.
 
 ### Memory Utilisation
 
@@ -356,30 +356,4 @@ wilcox_firefox
 print(p.adjust(c(wilcox_chrome[[3]], wilcox_firefox[[3]]), method="BH"))
 ```
 
-For firefox the Wilcoxon test yields a p-value > 0.05, meaning that we cannot reject H0 that the difference between pairs follows a symmetric distribution around zero. Hence, we are not able to claim that web apps with or without application of the Critical CSS Technique differ in their memory utilisation while using firefox on our mobile device.
-
-For chrome on the other hand, the Wilcoxon test yields a p-value < 0.05, meaning that we reject H0 that the difference between pairs follows a symmetric distribution around zero. Hence, we are able to claim that web apps with or without application of the Critical CSS Technique differ in their 
-memory utilisation while using chrome on our mobile device.
-
-#### Effect size
-To quantify the impact of Critical CSS on memory utilisation, we compute Cliff’s delta effect size measure to the data related to the memory utilisation of the web apps.
-
-```{r}
-cliff.delta(chrome_data[chrome_data$critical == TRUE,]$memory_usage, chrome_data[chrome_data$critical == FALSE,]$memory_usage)
-```
-The obtained Cliff’s delta effect size measure is 0.10694, thus
-indicating a negligible effect size (|d| < 0.147).
-
-```{r}
-ggplot(chrome_data, group=critical) + theme_minimal() + scale_color_manual(labels=c('Original', 'Critical'), values=c('red', 'blue')) + scale_fill_manual(labels=c('Original', 'Critical'), values=c('red', 'blue')) + theme_minimal() + ggtitle('Density Curve for Memory Utilisation') + xlab('Memory Utilisation (KB)') + ylab('Density') + 
-  theme(plot.title = element_text(hjust = 0.5),
-        axis.text.y = element_text(size=14),
-        axis.text.x   = element_text(size=14),
-        axis.title.y  = element_text(size=14),
-        axis.title.x  = element_text(size=14),
-        legend.position = c(0.9, 0.9),
-        legend.title=element_blank(),
-        panel.background = element_blank(),
-        axis.line = element_line(colour = "black")) + geom_density(aes(x = memory_usage, fill=critical, color=critical), alpha=0.4)
-ggsave("density_memory_utilisation.pdf")
-```
+For firefox and chrome the Wilcoxon test yields a p-value > 0.05 after p-value corrections, meaning that we cannot reject H0 that the difference between pairs follows a symmetric distribution around zero. Hence, we are not able to claim that web apps with or without application of the Critical CSS Technique differ in their memory utilisation while using firefox or chrome on our mobile device.
