@@ -33,6 +33,7 @@ def main():
                      'To continue, add progress file argument to experiment startup: '
                      '--progress {}'.format(progress_file))
     except KeyboardInterrupt:
+        # web_server stopped if running when experiment ends prematurely
         web_server.stop()
         logger.error('Experiment stopped by user. '
                      'To continue, add progress file argument to experiment startup: '
