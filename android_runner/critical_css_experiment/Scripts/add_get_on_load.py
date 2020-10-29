@@ -12,7 +12,7 @@ listener programatically.
 
 The script should be called once before the experiment execution with the
 following command:
-python3 add_get_on_load.py path/To/Directory/With/All/WebApps/ <IP_ADDRESS>
+python3 add_get_on_load.py path/to/subjects_{original|critical} <IP_ADDRESS>
 """
 
 import os, sys
@@ -50,4 +50,8 @@ def add_get_on_load(directory, ip):
 
 
 if __name__ == '__main__':
+    if len(sys.argv) != 3:
+        print('Invalid amount of arguments. Usage:\n'
+              'python3 add_get_on_load.py path/to/subjects_{original|critical} <IP_ADDRESS>')
+        exit(1)
     add_get_on_load(sys.argv[1], sys.argv[2])

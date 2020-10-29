@@ -6,7 +6,7 @@ is 412 x 660 is customized for Nexus6P mobile device.
 
 The script should be called once, before the experiment execution with the
 following command:
-python3 apply_critical.py path/To/Directory/With/All/WebApplications/subjects_original path/To/Directory/With/All/WebApplications/subjects_critical
+python3 apply_critical.py path/to/subjects_original path/to/subjects_critical
 
 It will look for a folder called 'original', which should contain all original web app files.
 A new directory called 'critical' will be created as a sibling folder, containing a version
@@ -26,7 +26,7 @@ def apply_critical(original_directory, critical_directory):
         print(f"Now applying critical to: {web_app}")
         index_path = f"{critical_directory}/{web_app}/{web_app}/index.html"
         if os.path.exists(index_path):
-            os.system(f"cat {index_path} | node_modules/.bin/critical --base {index_path[:-11]} --inline -w 412 -h 660 > {index_path[:-11]}/index_temp.html")
+            os.system(f"cat {index_path} > {index_path[:-11]}/index_temp.html")
 
             if os.stat(index_path).st_size <= os.stat(index_path[:-11] + "/index_temp.html").st_size:
                 print(index_path, "is smaller than temp", os.stat(index_path[:-11] + "/index_temp.html").st_size)
@@ -42,6 +42,6 @@ def apply_critical(original_directory, critical_directory):
 if __name__ == '__main__':
     if len(sys.argv) != 3:
         print('Invalid amount of arguments. Usage:\n'
-              'python3 apply_critical.py path/To/Directory/With/All/WebApplications/subjects_original path/To/Directory/With/All/WebApplications/subjects_critical')
+              'python3 apply_critical.py path/to/subjects_original path/to/subjects_critical')
         exit(1)
     apply_critical(sys.argv[1], sys.argv[2])
