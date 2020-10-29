@@ -9,7 +9,7 @@
   "browsers": [
     "chrome"
   ],
-  "local_server_address": "http://192.168.2.55:8000",
+  "local_server_address": "http://<INSERT_IP_HERE>:8000",
   "paths": [
     "subjects/subjects_original/alliedtelesis.com/alliedtelesis.com/",
     "subjects/subjects_critical/alliedtelesis.com/alliedtelesis.com/",

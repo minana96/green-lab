@@ -9,7 +9,7 @@
   "browsers": [
     "firefox"
   ],
-  "local_server_address": "http://192.168.2.55:8000",
+  "local_server_address": "http://<INSERT_IP_HERE>:8000",
   "paths": [
     "subjects/subjects_original/adidasnmd.us/adidasnmd.us/",
     "subjects/subjects_critical/adidasnmd.us/adidasnmd.us/",
