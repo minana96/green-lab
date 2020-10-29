@@ -23,7 +23,7 @@ their properties:
 | 3 | [alliedtelesis](https://www.alliedtelesis.com/en) | 8 | 56.4 | 98.425 | true | chrome |
 | 4 | [ammar](https://ammar.cloud/) | 18 | 24.0 | 98.128 | false | firefox |
 | 5 | [andreaswaelti](http://andreaswaelti.com/) | 3 | 0.0 | 75.800 | false | chrome |
-| 6 | [astropix](https://astropix.com/) | 2 | 80.4 | 85.3 | false | chrome |
+| 6 | [astropix](https://astropix.com/) | 2 | 80.4 | 85.300 | false | chrome |
 | 7 | [bdfor](https://bdfor.com/) | 12 | 81.5 | 87.858 | false | chrome |
 | 8 | [cbdvapejuice](https://cbdvapejuice.net/) | 6 | 16.1 | 99.200 | false | firefox |
 | 9 | [coloradoboulevard](https://www.coloradoboulevard.net/) | 26 | 92.2 | 92.515 | false | chrome |
@@ -32,13 +32,13 @@ their properties:
 | 12 | [denverite](https://denverite.com/) | 5 | 0.0 | 93.940 | false | chrome
 | 13 | [drivenxdesign](https://drivenxdesign.com/d100/) | 12 | 0.0 | 98.683 | false | chrome |
 | 14 | [fusion](https://www.fusion.org/) | 3 | 0.0 | 93.633 | false | firefox |
-| 15 | [gildedserpent](http://gildedserpent.com/) | 2 | 96.6 | 56.8 | false | firefox |
-| 16 | [greasyfork](https://greasyfork.org/en) | 2 | 0.0 | 92.9 | false | firefox |
+| 15 | [gildedserpent](http://gildedserpent.com/) | 2 | 96.6 | 56.800 | false | firefox |
+| 16 | [greasyfork](https://greasyfork.org/en) | 2 | 0.0 | 92.900 | false | firefox |
 | 17 | [greentechmedia](https://www.greentechmedia.com/) | 8 | 0.0 | 98.738 | false | firefox
 | 18 | [hagley](https://www.hagley.org/) | 10 | 0.0 | 89.490 | false | firefox
 | 19 | [hcss](https://www.hcss.com/) | 13 | 39.9 | 98.585 | false | firefox
 | 20 | [heinlein-support](https://heinlein-support.de/) | 2 | 0.0 | 91.000 | false | chrome
-| 21 | [holifestival](https://www.holifestival.org/) | 4 | 0.0 | 82.6 | false | firefox
+| 21 | [holifestival](https://www.holifestival.org/) | 4 | 0.0 | 82.600 | false | firefox
 | 22 | [iflyer](https://iflyer.tv/) | 3 | 0.0 | 90.133 | true | firefox
 | 23 | [iliketubes](http://www.iliketubes.com/en/) | 3 | 0.0 | 85.633 | false | firefox
 | 24 | [japassie](http://japassie.com/) | 12 | 1.8 | 94.508 | false | chrome
@@ -47,7 +47,7 @@ their properties:
 | 27 | [kpoe](http://kpoe.at/) | 11 | 0.0 | 87.127 | false | chrome |
 | 28 | [legalaidnc](https://legalaidnc.org/) | 8 | 0.0 | 92.712 | false | firefox |
 | 29 | [lekhafoods](https://www.lekhafoods.com/) | 4 | 0.0 | 87.175 | false | firefox |
-| 30 | [magnetadservices](https://magnetadservices.com/) | 1 | 0.0 | 94.5 | false | chrome |
+| 30 | [magnetadservices](https://magnetadservices.com/) | 1 | 0.0 | 94.500 | false | chrome |
 | 31 | [marketlii](http://marketlii.com/) | 6 | 0.0 | 70.767 | false | chrome |
 | 32 | [megatorrentshd](https://megatorrentshd.biz/) | 4 | 88.1 | 95.225 | true | chrome |
 | 33 | [mrob](http://mrob.com/) | 1 | 0.0 | 75.200 | false | firefox |
@@ -56,11 +56,11 @@ their properties:
 | 36 | [porn5f](https://www.porn5f.com/) | 3 | 49.9 | 97.033 | false | chrome |
 | 37 | [quechua](https://www.quechua.com/) | 7 | 0.0 | 95.714 | false | firefox |
 | 38 | [renesia](https://www.renesia.com/) | 5 | 100.0 | 96.420 | false | chrome |
-| 39 | [sciencebeta](https://sciencebeta.com/) | 1 | 0.0 | 84.6 | false | firefox |
+| 39 | [sciencebeta](https://sciencebeta.com/) | 1 | 0.0 | 84.600 | false | firefox |
 | 40 | [spansh](https://spansh.co.uk/plotter) | 2 | 0.0 | 95.850 | false | chrome |
 | 41 | [sportravel](https://sportravel.es/) | 12 | 75.4 | 96.692 | false | firefox |
 | 42 | [swimply](https://swimply.com/) | 8 | 0.0 | 83.688 | false | chrome |
-| 43 | [telfer](https://telfer.ru/) | 5 | 0.0 | 95.56 | false | firefox |
+| 43 | [telfer](https://telfer.ru/) | 5 | 0.0 | 95.560 | false | firefox |
 | 44 | [ubersocial](https://ubersocial.com/) | 3 | 0.0 | 85.967 | false | firefox |
 | 45 | [velovita](https://velovita.com/) | 28 | 0.0 | 92.207 | false | firefox |
 | 46 | [vergecampus](https://vergecampus.com/) | 11 | 53.5 | 84.781 | false | chrome |
