@@ -4,14 +4,13 @@ This script applies Critical CSS technique programatically with an
 external npm module, the Critical tool by Addy Osmani. The viewport of 
 is 412 x 660 is customized for Nexus6P mobile device.
 
-%% SAY MORE ABOUT THE SCRIPT %%
-
 The script should be called once, before the experiment execution with the
 following command:
-python3 apply_critical.py path/To/Directory/With/All/WebApplication/
+python3 apply_critical.py path/To/Directory/With/All/WebApplications/subjects_original path/To/Directory/With/All/WebApplications/subjects_critical
 
-It will create another folder with '_critical' appended to original name 
-with inlined crtitical CSS content within index.html file of each web app.
+It will look for a folder called 'original', which should contain all original web app files.
+A new directory called 'critical' will be created as a sibling folder, containing a version
+of the original web apps with inlined crtitical CSS content within the index.html file.
 """
 
 import sys
@@ -20,13 +19,12 @@ import os
 from distutils.dir_util import copy_tree
 
 
-def apply_critical(directory):
-    copy_tree(directory, f"{directory[:-1]}_critical")
-    directory = f"{directory[:-1]}_critical"
+def apply_critical(original_directory, critical_directory):
+    copy_tree(original_directory, critical_directory)
 
-    for web_app in os.listdir(directory):
+    for web_app in os.listdir(critical_directory):
         print(f"Now applying critical to: {web_app}")
-        index_path = f"{directory}/{web_app}/{web_app}/index.html"
+        index_path = f"{critical_directory}/{web_app}/{web_app}/index.html"
         if os.path.exists(index_path):
             os.system(f"cat {index_path} | node_modules/.bin/critical --base {index_path[:-11]} --inline -w 412 -h 660 > {index_path[:-11]}/index_temp.html")
 
@@ -42,4 +40,8 @@ def apply_critical(directory):
             print("Couldn't find index of ", web_app)
 
 if __name__ == '__main__':
-    apply_critical(sys.argv[1])
+    if len(sys.argv) != 3:
+        print('Invalid amount of arguments. Usage:\n'
+              'python3 apply_critical.py path/To/Directory/With/All/WebApplications/subjects_original path/To/Directory/With/All/WebApplications/subjects_critical')
+        exit(1)
+    apply_critical(sys.argv[1], sys.argv[2])

@@ -59,7 +59,7 @@ class WebExperiment(Experiment):
  
         # URL loading moved to the interaction script since it needs 
         # to be performed after local server on port 8001 is launched
-        #browser.load_url(device, 'http://192.168.2.55:8000')
+        #browser.load_url(device, path)
 
         # Sleep commented out for ability to catch GET request for web
         # apps that load in under 5 seconds
