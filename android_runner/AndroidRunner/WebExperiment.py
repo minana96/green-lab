@@ -15,6 +15,10 @@ class WebExperiment(Experiment):
         Tests.check_dependencies(self.devices, [b.package_name for b in self.browsers])
         self.duration = Tests.is_integer(config.get('duration', 0)) / 1000
 
+        # Local server adress added to config files to always
+        # run the same URL from the directory of each web app
+        self.local_address = config.get('local_server_address')
+
     def run(self, device, path, run, browser_name):
         browser = None
         for browserItem in self.browsers:
@@ -52,9 +56,18 @@ class WebExperiment(Experiment):
 
     def interaction(self, device, path, run, *args, **kwargs):
         browser = args[0]
-        browser.load_url(device, 'http://192.168.2.55:8000')
+ 
+        # URL loading moved to the interaction script since it needs 
+        # to be performed after local server on port 8001 is launched
+        #browser.load_url(device, path)
+
+        # Sleep commented out for ability to catch GET request for web
+        # apps that load in under 5 seconds
         #time.sleep(5)
-        super(WebExperiment, self).interaction(device, path, run, *args, **kwargs)
+
+        # Browser added as a parameter to launch a web app inside the
+        # interaction script. Path parameter changed to local_adress
+        super(WebExperiment, self).interaction(device, self.local_address, run, browser)
 
         # TODO: Fix web experiments running longer than self.duration
         time.sleep(self.duration)

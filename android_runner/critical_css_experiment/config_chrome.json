@@ -1,0 +1,96 @@
+{
+  "type": "web",
+  "devices": {
+    "<INSERT_DEVICE_NAME_HERE>": {}
+  },
+  "repetitions": 10,
+  "clear_cache": true,
+  "randomization": true,
+  "browsers": [
+    "chrome"
+  ],
+  "local_server_address": "http://<INSERT_IP_HERE>:8000",
+  "paths": [
+    "subjects/subjects_original/alliedtelesis.com/alliedtelesis.com/",
+    "subjects/subjects_critical/alliedtelesis.com/alliedtelesis.com/",
+    "subjects/subjects_original/andreaswaelti.com/andreaswaelti.com/",
+    "subjects/subjects_critical/andreaswaelti.com/andreaswaelti.com/",
+    "subjects/subjects_original/astropix.com/astropix.com/",
+    "subjects/subjects_critical/astropix.com/astropix.com/",
+    "subjects/subjects_original/bdfor.com/bdfor.com/",
+    "subjects/subjects_critical/bdfor.com/bdfor.com/",
+    "subjects/subjects_original/coloradoboulevard.net/coloradoboulevard.net/",
+    "subjects/subjects_critical/coloradoboulevard.net/coloradoboulevard.net/",
+    "subjects/subjects_original/denverite.com/denverite.com/",
+    "subjects/subjects_critical/denverite.com/denverite.com/",
+    "subjects/subjects_original/drivenxdesign.com/drivenxdesign.com/",
+    "subjects/subjects_critical/drivenxdesign.com/drivenxdesign.com/",
+    "subjects/subjects_original/heinlein-support.de/heinlein-support.de/",
+    "subjects/subjects_critical/heinlein-support.de/heinlein-support.de/",
+    "subjects/subjects_original/japassie.com/japassie.com/",
+    "subjects/subjects_critical/japassie.com/japassie.com/",
+    "subjects/subjects_original/kasteelhoensbroek.nl/kasteelhoensbroek.nl/",
+    "subjects/subjects_critical/kasteelhoensbroek.nl/kasteelhoensbroek.nl/",
+    "subjects/subjects_original/kpoe.at/kpoe.at/",
+    "subjects/subjects_critical/kpoe.at/kpoe.at/",
+    "subjects/subjects_original/magnetadservices.com/magnetadservices.com/",
+    "subjects/subjects_critical/magnetadservices.com/magnetadservices.com/",
+    "subjects/subjects_original/marketlii.com/marketlii.com/",
+    "subjects/subjects_critical/marketlii.com/marketlii.com/",
+    "subjects/subjects_original/megatorrentshd.biz/megatorrentshd.biz/",
+    "subjects/subjects_critical/megatorrentshd.biz/megatorrentshd.biz/",
+    "subjects/subjects_original/nflpenalties.com/nflpenalties.com/",
+    "subjects/subjects_critical/nflpenalties.com/nflpenalties.com/",
+    "subjects/subjects_original/pieterhugo.com/pieterhugo.com/",
+    "subjects/subjects_critical/pieterhugo.com/pieterhugo.com/",
+    "subjects/subjects_original/porn5f.com/porn5f.com/",
+    "subjects/subjects_critical/porn5f.com/porn5f.com/",
+    "subjects/subjects_original/renesia.com/renesia.com/",
+    "subjects/subjects_critical/renesia.com/renesia.com/",
+    "subjects/subjects_original/Spansh.co.uk/Spansh.co.uk/",
+    "subjects/subjects_critical/Spansh.co.uk/Spansh.co.uk/",
+    "subjects/subjects_original/swimply.com/swimply.com/",
+    "subjects/subjects_critical/swimply.com/swimply.com/",
+    "subjects/subjects_original/vergecampus.com/vergecampus.com/",
+    "subjects/subjects_critical/vergecampus.com/vergecampus.com/",
+    "subjects/subjects_original/visit-sidney.com/visit-sidney.com/",
+    "subjects/subjects_critical/visit-sidney.com/visit-sidney.com/",
+    "subjects/subjects_original/worldlink.com.np/worldlink.com.np/",
+    "subjects/subjects_critical/worldlink.com.np/worldlink.com.np/",
+    "subjects/subjects_original/xobor.com/xobor.com/",
+    "subjects/subjects_critical/xobor.com/xobor.com/",
+    "subjects/subjects_original/zuver.net.au/zuver.net.au/",
+    "subjects/subjects_critical/zuver.net.au/zuver.net.au/"
+  ],
+  "powerprofile_path": "path/to/power_profile.xml/here",
+  "systrace_path": "android_runner/critical_css_experiment/systrace/systrace.py",
+  "profilers": {
+    "batterystats": {
+      "cleanup": true,
+      "enable_systrace_parsing": false
+    },
+    "trepn": {
+      "preferences": {
+        "profiling_interval": 100
+      },
+      "data_points": [
+        "mem_usage"
+      ]
+    },
+    "android": {
+      "sample_interval": 100,
+      "data_points": ["cpu"]
+    }
+  },
+  "scripts": {
+    "before_experiment": "Scripts/before_experiment.py",
+    "before_run": "Scripts/before_run.py",
+    "after_launch": "Scripts/after_launch.py",
+    "interaction": "Scripts/interaction.py",
+    "before_close": "Scripts/before_close.py",
+    "after_run": "Scripts/after_run.py",
+    "after_experiment": "Scripts/after_experiment.py"
+  },
+  "time_between_run": 12000
+}
+  

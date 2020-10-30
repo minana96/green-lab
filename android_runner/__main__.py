@@ -8,7 +8,7 @@ import paths
 from AndroidRunner.ExperimentFactory import ExperimentFactory
 from AndroidRunner.Progress import Progress
 from AndroidRunner.util import makedirs
-from CriticalCSSExperiment.Scripts import Server
+from critical_css_experiment.Scripts import web_server
 
 
 def main():
@@ -33,7 +33,8 @@ def main():
                      'To continue, add progress file argument to experiment startup: '
                      '--progress {}'.format(progress_file))
     except KeyboardInterrupt:
-        Server.stop()
+        # web_server stopped if running when experiment ends prematurely
+        web_server.stop()
         logger.error('Experiment stopped by user. '
                      'To continue, add progress file argument to experiment startup: '
 
