@@ -15,22 +15,14 @@ library(stringr)
 library(e1071)  
 library(effsize)
 ```
-```{r setup, include=FALSE, echo=FALSE}
-plots_dir <- paste(getwd(), "/plots", sep="")
-if (!dir.exists(plots_dir)) {
-  dir.create(plots_dir)
-}
-require("knitr")
-opts_knit$set(root.dir = plots_dir)
-```
-
 Let us first load all measures obtained from the experiment.
 
 ```{r}
 # Get the measures (cpu load, memory usage, energy consumption and load time) for the specific browser (equal to folder name).
 get_data <- function(browser_name) {
-  subjects_path = paste(".././data", browser_name, "data/nexus6p", sep="/")
+  subjects_path = paste(getwd(), "data", browser_name, "data/nexus6p", sep="/")
   subjects <- list.dirs(subjects_path, full.names = FALSE, recursive = FALSE)
+  print(subjects_path)
   data <- data.frame(
     name = character(),
     critical = logical(),
@@ -82,6 +74,25 @@ get_data <- function(browser_name) {
 
 firefox_data <- get_data("firefox")
 chrome_data <- get_data("chrome")
+```
+
+Save the collected data to the output folder. Set the current directory to "/plots" such that all plots are saved there.
+
+```{r setup, include=FALSE, echo=FALSE}
+output_dir <- paste(getwd(), "output", sep="/")
+if (!dir.exists(output_dir)) {
+  dir.create(output_dir)
+}
+
+write.csv(chrome_data, paste(output_dir, "chrome_data.csv", sep="/"))
+write.csv(firefox_data, paste(output_dir, "firefox_data.csv", sep="/"))
+
+plots_dir <- paste(output_dir, "/plots", sep="")
+if (!dir.exists(plots_dir)) {
+  dir.create(plots_dir)
+}
+require("knitr")
+opts_knit$set(root.dir = plots_dir)
 ```
 
 Next, let us define a function to plot two histograms of values for non-critical and critical categories, as well as their qq plots.
