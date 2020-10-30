@@ -128,7 +128,11 @@ To get an impression of the distribution of the data, we first calculate the qua
 
 ```{r}
 quantile(chrome_data$energy_consumption)
+mean(chrome_data$energy_consumption)
+sd(chrome_data$energy_consumption)
 quantile(firefox_data$energy_consumption)
+mean(firefox_data$energy_consumption)
+sd(firefox_data$energy_consumption)
 
 plot_hist_qq(chrome_data, 'energy_consumption', "Energy Consumption", "Joules", 'Chrome')
 
@@ -210,7 +214,12 @@ To get an impression of the distribution of the data, we first calculate the qua
 
 ```{r}
 quantile(chrome_data$time)
+mean(chrome_data$time)
+sd(chrome_data$time)
+
 quantile(firefox_data$time)
+mean(firefox_data$time)
+sd(firefox_data$time)
 
 plot_hist_qq(chrome_data, 'time', "Initial Load Time", "Milliseconds", 'Chrome')
 
@@ -261,7 +270,12 @@ To get an impression of the distribution of the data, we first calculate the qua
 
 ```{r}
 quantile(chrome_data$cpu_usage)
-quantile(firefox_data$time)
+mean(chrome_data$cpu_usage)
+sd(chrome_data$cpu_usage)
+
+quantile(firefox_data$cpu_usage)
+mean(firefox_data$cpu_usage)
+sd(firefox_data$cpu_usage)
 
 plot_hist_qq(chrome_data, 'cpu_usage', "CPU Utilisation", "%", 'Chrome')
 
@@ -311,7 +325,12 @@ To get an impression of the distribution of the data, we first calculate the qua
 
 ```{r}
 quantile(chrome_data$memory_usage)
+mean(chrome_data$memory_usage)
+sd(chrome_data$memory_usage)
+
 quantile(firefox_data$memory_usage)
+mean(firefox_data$memory_usage)
+sd(firefox_data$memory_usage)
 
 plot_hist_qq(chrome_data, 'memory_usage', "Memory Utilisation", "KB", 'Chrome')
 
