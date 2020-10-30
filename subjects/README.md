@@ -13,8 +13,7 @@ was inlined as a result of this process. This means that the subject already imp
 
 ## Selected subjects
 
-The total of 50 web apps that fullfil both above mention crieteria were chosen as subjects of the experiment. The table below gives an overview of the subjects and
-their properties:
+A total of 50 web apps that fulfill both the above mention criteria were chosen as subjects of the experiment. The table below gives an insight into the organisation of the CSS code within selected subjects. The columns of the table represent the name and the URL of a subject, the number of external CSS files, the percentage of the inlined code that is categorised as critical, the average percentage of non-critical code in the external CSS files, the information whether some of the CSS files are loaded asynchronously and the browser assigned to the subject for the experiment execution. If a web has no CSS content inlined, the percentage of the critical content is 0.0.
 
 |  # | Name and URL | No of CSS files | Inlined critical (%) | Avg external non-critical (%) | Asyncronous CSS | Browser
 |----|---|---|---|---|---|---|
@@ -69,6 +68,7 @@ their properties:
 | 49 | [xobor](http://xobor.com/) | 8 | 0.0 | 83.450 | false | chrome |
 | 50 | [zuver](https://zuver.net.au/) | 10 | 10.5 | 99.000 | false | chrome |
 
+The table below lists the web apps that did were discarded during the subject selection process. The columns represent the URL of a web app and the criterion that the web app did not fullfil.
 
 |  # | URL                             | Criterion |
 |----|---------------------------------|-----------|
