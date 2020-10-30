@@ -2,9 +2,9 @@
 
 This repository represents the replication package of the Critical CSS experiment performed as part of the Green Lab course at the Vrije Universiteit Amsterdam. The experiment is performed with the [android-runner](https://github.com/S2-group/android-runner) tool.
 
-The repository contains all the material needed for the replication of the experiment: 
-- The total of 50 subjects of the experiment with and without Critical CSS treatment applied 
-- The android-runner tool along with the custom experiment scripts and configurations 
+The repository contains all material required for the replication of the experiment: 
+- The total of 50 subjects of the experiment with and without Critical CSS technique applied 
+- The android-runner tool along with the custom experiment scripts and configuration files
 - Raw data outputs and statistical analysis script
 
 Selected subjects
@@ -36,6 +36,35 @@ The detailed steps for the replication of the experiment are listed [here](https
 Data analysis
 ------
 
-The statical analysis was performed over the raw data outputs presented [here](https://github.com/minana96/green-lab/tree/master/data_analysis/data) of the experiment. The analysis was performed in `R` and the details are available in both `R-Markdown` file format [here](https://github.com/minana96/green-lab/blob/master/data_analysis/data_analysis.Rmd) and `R-notebook HTML` format [here](https://github.com/minana96/green-lab/blob/repo-organize/data_analysis/data_analysis.nb.html) formats. Additionally, reliability of measures is assessed in the `R-script` available [here](https://github.com/minana96/green-lab/master/data_analysis/reliability_of_measures.R).
+The statical analysis was performed over the raw data outputs of the experiment presented [here](https://github.com/minana96/green-lab/tree/master/data_analysis/data). The analysis was performed in `R` and the details are available in both `R-Markdown` file format [here](https://github.com/minana96/green-lab/blob/master/data_analysis/data_analysis.Rmd) and `R-notebook HTML` format [here](https://github.com/minana96/green-lab/blob/master/data_analysis/data_analysis.nb.html) formats. Additionally, reliability of measures is assessed in the `R-script` available [here](https://github.com/minana96/green-lab/master/data_analysis/reliability_of_measures.R).
 
-The tranformed data outputs of the statistical analysis can be found here [here](https://github.com/minana96/green-lab/tree/master/data_analysis/analysis_results). Descriptive plots as aditional output of statistical analysis can be found here.
+The tranformed data outputs of the statistical analysis can be found here [here](https://github.com/minana96/green-lab/tree/master/data_analysis/analysis_results). Descriptive plots as aditional output of the statistical analysis can be found [here](https://github.com/minana96/green-lab/tree/master/data_analysis/analysis_results/plots).
+
+Repository Structure Overview
+-----
+
+The repository is structured as follows:
+
+    green-lab
+     .
+     |
+     |--- android_runner/                     Source code of the android-runner tool.
+     |      |
+     |      |
+     |      |--- critical_css_experiment/     Scripts and configuration files for the Critical CSS experiment.
+     |
+     |
+     |--- data_analysis/                      Scripts for statistical analysis.
+     |        |
+     |        |
+     |        |--- analysis_results/          Transformed data outputs.
+     |        |           |
+     |        |           |
+     |        |           |--- plots/         Plots as outputs of the statistical analysis.
+     |        |
+     |        |
+     |        |--- data/                      Raw data outputs of the experiment.
+     |
+     |
+     |--- subjects/                           Subjects of the experiment.
+     
