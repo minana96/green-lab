@@ -1,7 +1,7 @@
 {
   "type": "web",
   "devices": {
-    "nexus6p": {}
+    "<INSERT_DEVICE_NAME_HERE>": {}
   },
   "repetitions": 10,
   "clear_cache": true,
@@ -62,7 +62,7 @@
     "subjects/subjects_original/zuver.net.au/zuver.net.au/",
     "subjects/subjects_critical/zuver.net.au/zuver.net.au/"
   ],
-  "powerprofile_path": "android_runner/critical_css_experiment/power_profile.xml",
+  "powerprofile_path": "path/to/power_profile.xml/here",
   "systrace_path": "android_runner/critical_css_experiment/systrace/systrace.py",
   "profilers": {
     "batterystats": {
