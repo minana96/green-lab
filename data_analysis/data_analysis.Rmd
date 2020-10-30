@@ -124,9 +124,12 @@ plot_hist_qq <- function(data, column, metric_label, unit_label, browser_name, t
 
 ## RQ1
 
-To get an impression of the distribution of the data, we first plot the histogram and qq plot of the energy consumption.
+To get an impression of the distribution of the data, we first calculate the quantiles and plot the histogram and qq plot of the energy consumption.
 
 ```{r}
+quantile(chrome_data$energy_consumption)
+quantile(firefox_data$energy_consumption)
+
 plot_hist_qq(chrome_data, 'energy_consumption', "Energy Consumption", "Joules", 'Chrome')
 
 plot_hist_qq(firefox_data, 'energy_consumption', "Energy Consumption", "Joules", 'Firefox')
@@ -203,9 +206,12 @@ For both chrome and firefox the Wilcoxon test yields a p-value > 0.05 after p-va
 
 ### Time
 
-To get an impression of the distribution of the data, we first plot the histogram and qq plot of the energy consumption.
+To get an impression of the distribution of the data, we first calculate the quantiles and plot the histogram and qq plot of the initial load time
 
 ```{r}
+quantile(chrome_data$time)
+quantile(firefox_data$time)
+
 plot_hist_qq(chrome_data, 'time', "Initial Load Time", "Milliseconds", 'Chrome')
 
 plot_hist_qq(firefox_data, 'time', "Initial Load Time", "Milliseconds", 'Firefox')
@@ -251,9 +257,12 @@ For both chrome and firefox the Wilcoxon test yields a p-value > 0.05 after p-va
 
 ### CPU Utilisation
 
-To get an impression of the distribution of the data, we first plot the histogram and qq plot of the energy consumption.
+To get an impression of the distribution of the data, we first calculate the quantiles and plot the histogram and qq plot of the cpu utilisation
 
 ```{r}
+quantile(chrome_data$cpu_usage)
+quantile(firefox_data$time)
+
 plot_hist_qq(chrome_data, 'cpu_usage', "CPU Utilisation", "%", 'Chrome')
 
 plot_hist_qq(firefox_data, 'cpu_usage', "CPU Utilisation", "%", 'Firefox')
@@ -298,9 +307,12 @@ For both chrome and firefox the Wilcoxon test yields a p-value > 0.05 after p-va
 
 ### Memory Utilisation
 
-To get an impression of the distribution of the data, we first plot the histogram and qq plot of the energy consumption.
+To get an impression of the distribution of the data, we first calculate the quantiles and plot the histogram and qq plot of the memory utilisation
 
 ```{r}
+quantile(chrome_data$memory_usage)
+quantile(firefox_data$memory_usage)
+
 plot_hist_qq(chrome_data, 'memory_usage', "Memory Utilisation", "KB", 'Chrome')
 
 plot_hist_qq(firefox_data, 'memory_usage', "Memory Utilisation", "KB", 'Firefox')
