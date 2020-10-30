@@ -27,7 +27,7 @@ their properties:
 | 7 | [bdfor](https://bdfor.com/) | 12 | 81.5 | 87.858 | false | chrome |
 | 8 | [cbdvapejuice](https://cbdvapejuice.net/) | 6 | 16.1 | 99.200 | false | firefox |
 | 9 | [coloradoboulevard](https://www.coloradoboulevard.net/) | 26 | 92.2 | 92.515 | false | chrome |
-| 10 | [compresse-per-articolazioni](http://compresse-per-articolazioni.eu/) | 3 | 0.0 | 93.067 | false | firefox |
+| 10 | [compresse](http://compresse-per-articolazioni.eu/) | 3 | 0.0 | 93.067 | false | firefox |
 | 11 | [cottagelife](https://cottagelife.com/) | 13 | 0.0 | 92.528 | false | firefox |
 | 12 | [denverite](https://denverite.com/) | 5 | 0.0 | 93.940 | false | chrome
 | 13 | [drivenxdesign](https://drivenxdesign.com/d100/) | 12 | 0.0 | 98.683 | false | chrome |
@@ -37,7 +37,7 @@ their properties:
 | 17 | [greentechmedia](https://www.greentechmedia.com/) | 8 | 0.0 | 98.738 | false | firefox
 | 18 | [hagley](https://www.hagley.org/) | 10 | 0.0 | 89.490 | false | firefox
 | 19 | [hcss](https://www.hcss.com/) | 13 | 39.9 | 98.585 | false | firefox
-| 20 | [heinlein-support](https://heinlein-support.de/) | 2 | 0.0 | 91.000 | false | chrome
+| 20 | [heinlein](https://heinlein-support.de/) | 2 | 0.0 | 91.000 | false | chrome
 | 21 | [holifestival](https://www.holifestival.org/) | 4 | 0.0 | 82.600 | false | firefox
 | 22 | [iflyer](https://iflyer.tv/) | 3 | 0.0 | 90.133 | true | firefox
 | 23 | [iliketubes](http://www.iliketubes.com/en/) | 3 | 0.0 | 85.633 | false | firefox
@@ -64,7 +64,7 @@ their properties:
 | 44 | [ubersocial](https://ubersocial.com/) | 3 | 0.0 | 85.967 | false | firefox |
 | 45 | [velovita](https://velovita.com/) | 28 | 0.0 | 92.207 | false | firefox |
 | 46 | [vergecampus](https://vergecampus.com/) | 11 | 53.5 | 84.781 | false | chrome |
-| 47 | [visit-sidney](https://visit-sidney.com) | 3 | 0.0 | 73.567 | false | chrome |
+| 47 | [visit](https://visit-sidney.com) | 3 | 0.0 | 73.567 | false | chrome |
 | 48 | [worldlink](https://worldlink.com.np/) | 20 | 0.0 | 86.435 | false | chrome |
 | 49 | [xobor](http://xobor.com/) | 8 | 0.0 | 83.450 | false | chrome |
 | 50 | [zuver](https://zuver.net.au/) | 10 | 10.5 | 99.000 | false | chrome |
