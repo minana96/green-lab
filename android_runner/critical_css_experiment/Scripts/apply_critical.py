@@ -1,16 +1,19 @@
 """Apply critical script
 
-This script applies Critical CSS technique programatically with an 
-external npm module, the Critical tool by Addy Osmani. The viewport of 
-is 412 x 660 is customized for Nexus6P mobile device.
+This script applies the Critical CSS technique programatically using Addy
+Osmani's critical tool. The command line version shall be installed available
+in the node_modules folder.
+
+The viewport used to determine what is above the fold content is set to 412 x
+660, which is the viewport size of a Nexus 6P device.
 
 The script should be called once, before the experiment execution with the
 following command:
 python3 apply_critical.py path/to/subjects_original path/to/subjects_critical
 
-It will look for a folder called 'original', which should contain all original web app files.
-A new directory called 'critical' will be created as a sibling folder, containing a version
-of the original web apps with inlined crtitical CSS content within the index.html file.
+For each subject in the given subjects_original folder, a copy will be created
+in the given subjects_critical folder. This copy will have inlined crtitical
+CSS content within the index.html file.
 """
 
 import sys
