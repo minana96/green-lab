@@ -63,7 +63,7 @@
     "subjects/subjects_critical/velovita.com/velovita.com/"
   ],
   "powerprofile_path": "android_runner/critical_css_experiment/power_profile.xml",
-  "systrace_path": "platform_tools/systrace/systrace.py",
+  "systrace_path": "android_runner/critical_css_experiment/systrace/systrace.py",
   "profilers": {
     "batterystats": {
       "cleanup": true,
