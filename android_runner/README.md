@@ -9,5 +9,3 @@ A few adjustments were performed on the original source code of the `android-run
 2. `AndroidRunner/Experiment.py`: the arguments of `before_run` script [here](https://github.com/minana96/green-lab/blob/repo-organize/android_runner/AndroidRunner/Experiment.py#L197) and `interaction` script [here](https://github.com/minana96/green-lab/blob/repo-organize/android_runner/AndroidRunner/Experiment.py#L209) are adjusted. 
 
 3. `__main__.py`: a local web server is stopped if running when user terminates the experiment prematurely via keyboard [here](https://github.com/minana96/green-lab/blob/repo-organize/android_runner/__main__.py#L36).
-
-**TODO**: was something changed for charging purposes? 
