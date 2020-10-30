@@ -22,7 +22,6 @@ Let us first load all measures obtained from the experiment.
 get_data <- function(browser_name) {
   subjects_path = paste(getwd(), "data", browser_name, "data/nexus6p", sep="/")
   subjects <- list.dirs(subjects_path, full.names = FALSE, recursive = FALSE)
-  print(subjects_path)
   data <- data.frame(
     name = character(),
     critical = logical(),
